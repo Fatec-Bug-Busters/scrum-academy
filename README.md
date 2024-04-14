@@ -1,23 +1,20 @@
 # Scrum Academy
 
-![Bug Busters](./src/static/images/bug-busters-logo-black.jpg)
-
 Projeto de API - 1° Semestre de 2024 da Fatec São José dos Campos - BUG BUSTERS
 
-| Cliente       | Periodo/Curso | Professor M2 | Professor P2 | Contato Cliente |
-| --------------------- | ------------- | - | -  |  ------------ |
-| Antonio Egydio | 1º ADS (Análise e Desenvolvimento de Sistemas) | Jean Carlos | Antonio Egydio | antonio.graca@fatec.sp.gov.br |
+Projeto fundamentado na metodologia ágil SCRUM que busca fomentar a proatividade, autonomia, colaboração e efetividade na entrega de resultados por parte dos estudantes participantes.
 
-Projeto fundamentado na metodologia ágil SCRUM, busca-se fomentar a proatividade, autonomia, colaboração e efetividade na entrega de resultados por parte dos estudantes participantes.
+| Cliente        | Periodo/Curso                                  | Professor M2 | Professor P2   | Contato Cliente               |
+| -------------- | ---------------------------------------------- | ------------ | -------------- | ----------------------------- |
+| Antonio Egydio | 1º ADS (Análise e Desenvolvimento de Sistemas) | Jean Carlos  | Antonio Egydio | <antonio.graca@fatec.sp.gov.br> |
 
 ## Índice
 
 - [Scrum Academy](#scrum-academy)
   - [Índice](#índice)
-  - [Projeto (API)](#projeto-api)
   - [Objetivo do Projeto](#objetivo-do-projeto)
-  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-  - [Backlog do produto](#backlog-do-produto)
+  - [Visão do Produto](#visão-do-produto)
+  - [Cronograma e Sprints](#cronograma-e-sprints)
     - [Sprint 1. Concepção](#sprint-1-concepção)
     - [Sprint 2. Desenvolvimento do Projeto](#sprint-2-desenvolvimento-do-projeto)
     - [Sprint 3. Implementação](#sprint-3-implementação)
@@ -25,39 +22,27 @@ Projeto fundamentado na metodologia ágil SCRUM, busca-se fomentar a proatividad
   - [Competências desenvolvidas](#competências-desenvolvidas)
     - [Hard Skills](#hard-skills)
     - [Soft Skills](#soft-skills)
+  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
   - [Autores](#autores)
-
-## Projeto (API)
-
-Um projeto educacional embasado na Metodologia API emerge como um ambiente propício para o desenvolvimento de habilidades e competências dos estudantes, ancorando-se nos preceitos do aprendizado baseado em problemas reais (RPBL), validação externa e cultura ágil. Esta abordagem visa explorar estratégias que visam compreender a problemática, conceber soluções viáveis e implementar protótipos mínimos viáveis (MVP), seguidos de operações com foco em colaboração, design, implementação e operação (CDIO). Os desdobramentos destes projetos são regidos pelas diretrizes estabelecidas no Aviso Legal disponível no website da Fatec SJC, incluindo definições precisas das datas de início e execução das etapas (kickoff e sprints).
-
-| Sprint | Previsão | Status|
-|--------|--------|------|
-|Kick Off | 15/03/2024 | concluído|
-|01 | 14/04/2024 | concluído|
-|02|  05/05/2024| em progresso |
-|03| 26/05/2024 | a fazer|
-|04| 16/06/2024 |a fazer |
-|Feira de Soluções|27/06/2024 |a fazer |
 
 ## Objetivo do Projeto
 
-Aplicação Web de instruções para desenvolvimento de projetos ágeis (SCRUM) na área de TI, visando:
+Desenvolver uma aplicação Web que dissemine eficientemente todas as informações relevantes sobre os processos e artefatos da metodologia ágil (SCRUM), de modo que o conteúdo esteja claro e possa ser compreendido por quaisquer usuários.
 
-- Agrupar as atividades e planos;
-- Dispor e dar forma aos dados;
-- Gerir e monitorar as modificações;
-- Simplificar a troca e avaliação;
-- Aperfeiçoar aptidões técnicas.
+## Visão do Produto
 
-## Tecnologias Utilizadas
+Edificar-se como exemplo de excelência no que diz respeito à divulgação de informações sobre a metodologia ágil, fazendo com que muitas equipes sejam capazes de especializar seus funcionários utilizando a plataforma.
 
-- Google Sheets
-- Figma
-- GitHub
-- Discord
+## Cronograma e Sprints
 
-## Backlog do produto
+| Sprint            | Previsão   | Status       |
+| ----------------- | ---------- | ------------ |
+| Kick Off          | 15/03/2024 | concluído    |
+| 01                | 14/04/2024 | concluído    |
+| 02                | 05/05/2024 | em progresso |
+| 03                | 26/05/2024 | a fazer      |
+| 04                | 16/06/2024 | a fazer      |
+| Feira de Soluções | 27/06/2024 | a fazer      |
 
 ### Sprint 1. Concepção
 
@@ -94,6 +79,8 @@ Hard skills desenvolvidas
 
 - Habilidades analíticas;
 - Conhecimento em ferramentas;
+  - Figma
+  - Google Sheets
 - Gestão de projetos;
 - Competências técnicas;
 - Trabalho com metodologia ágil SCRUM (papéis, seus eventos e artefatos).
@@ -125,6 +112,13 @@ Soft skills desenvolvidas
 | Adaptabilidade | ★ ★ ★ ★ ★ ★ ★ ☆ ☆ ☆ |
 | Resiliência | ★ ★ ★ ★ ★ ★ ★ ☆ ☆ ☆ | -->
 
+## Tecnologias Utilizadas
+
+- Google Sheets
+- Figma
+- GitHub
+- Discord
+
 ## Autores
 
 | Função |Nome | GitHub |
@@ -135,3 +129,5 @@ Soft skills desenvolvidas
 | Team Member   | Gabriel Viell           |          [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/GabrielViellCastilho)        |
 | Team Member   | Vinicius Elias             |          [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/ViniElias)        |
 | Team Member   | Allan Couto             |          [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/allancouto)        |
+
+![Bug Busters](./src/static/images/bug-busters-logo-black.jpg)
