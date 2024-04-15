@@ -35,6 +35,10 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 ## Cronograma e Sprints
 
+[Backlog do Produto](./backlog-do-produto.xlsx)
+
+![Roadmap](./src/static/images/Roadmap.jpg)
+
 | Sprint            | Previsão   | Status       |
 | ----------------- | ---------- | ------------ |
 | Kick Off          | 15/03/2024 | concluído    |
@@ -45,6 +49,8 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 | Feira de Soluções | 27/06/2024 | a fazer      |
 
 ### Sprint 1. Concepção
+
+[Protótipo - Imagens](./prototipo.md)
 
 - [x] Protótipo interativo Figma;
 - [x] Protótipo da página principal;
