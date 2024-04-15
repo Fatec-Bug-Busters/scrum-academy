@@ -52,6 +52,8 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 [Protótipo - Imagens](./prototipo.md)
 
+[Protótipo - Figma](./prototipo-figma.fig)
+
 - [x] Protótipo interativo Figma;
 - [x] Protótipo da página principal;
 - [x] Protótipo da página de conteúdo;
