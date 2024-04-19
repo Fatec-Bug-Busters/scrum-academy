@@ -1,32 +1,143 @@
-.logo-navbar
-{
- min-width: 180px;
- margin-left: 2%;
- width: 30%;
+
+.fundo-degrade {
+background-image: linear-gradient(to bottom, #0c3954, #3e505b);
+  height: 100%;
+  color: #ffffff;
+}
+.logo-navbar {
+  min-width: 180px;
+  margin-left: 2%;
+  width: 30%;
 }
 
-.icon-navbar
-{
-    width: 40px;
-    margin-right: 2%;
+.icon-navbar {
+  width: 40px;
+  margin-right: 2%;
 }
 
-.bg-green
-{
+.bg-green {
+  background-color: rgb(69, 112, 104);
+}
+
+.icon-github-footer {
+  margin-left: 2%;
+  min-width: 40px;
+  width: 3%;
+}
+
+.icon-logo-bug-busters-footer {
+  width: 10%;
+  min-width: 100px;
+}
+.container-cover-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 420px;
+}
+
+.imagem-cover-home {
+    position: absolute; 
+}
+
+.texto-cover-home {
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    z-index: 1; 
+}
+
+.card-conteudo-fundo{
+    background: #232D33;
+    height: 150%;
+    border-radius: 80px;
+    max-width: 100%;
+    margin: 0 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+.decoracao-titulo{
+    background-color: #457068;
+    margin-top: 100px;
+    padding: 8px;
+    max-width: 22%;
+    display: flex;
+    justify-content: end;
+    border-radius: 0 100px 100px 0;
+}
+.texto-introducao-home{
+    margin-top: 40px;
+    justify-content: center;
+    padding: 0 11%  ;
+}
+.conteudo-home .decoracao-titulo{
+    background-color: #457068;
+    margin-top: 70px;
+    padding: 8px;
+    max-width: 21%;
+    justify-content: end;
+    border-radius: 0 100px 100px 0;
+}
+
+/* TESTES */
+.conteudos {
+    padding: 40px 0 70px;
+}
+
+.conteudos .container-conteudos {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.conteudos .conteudo {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: none;
+}
+
+.conteudos .conteudo.ativo {
+    display: block;
+    border-radius: 50px;
+}
+
+.conteudos .conteudo img {
+    height: 100%;
+    max-width: 300px;
+    border-radius: 50px;
+}
+
+h3 {
     background-color: rgb(69, 112, 104);
+    width: 100%;
+    padding: 10px 0 10px 20px;
+    position: absolute;
+    bottom: 115px;
+    color: #ffffff;
 }
 
-.icon-github-footer
-{
-    margin-left: 2%;
-    min-width: 40px;
-    width: 3%;
+.informacoes-conteudo {
+    background-color: #040203;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+    border-radius: 50px;
+    color: aliceblue;
 }
 
-.icon-logo-bug-busters-footer
-{
-    width: 10%;
-    min-width: 100px;
-    
+.conteudo:hover .informacoes-conteudo {
+    opacity: 0.8;
+    background-color: #000;
+    border-radius: 50px;
 }
-  

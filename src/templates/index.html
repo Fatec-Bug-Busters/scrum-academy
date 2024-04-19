@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Home</title>
+</head>
+
+<body class=fundo-degrade>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg  " data-bs-theme="dark" style="background-color: rgb(69, 112, 104);">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+
+                <img class="logo-navbar" src="{{ url_for('static', filename='images/logo-principal-white.png') }}"
+                    alt="Scrum Academy">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+
+                        <a class="nav-link text-sm-left text-center" aria-current="page" href="/"><img
+                                class="icon-navbar" src="{{ url_for('static', filename='images/home_icon.png') }}"
+                                alt="Icon Home">
+
+                            Home</a>
+
+
+
+
+
+
+                    </li>
+                    <li class="nav-item dropdown">
+
+
+                        <a class="nav-link text-sm-left text-center" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="true">
+                            <img src="{{ url_for('static', filename='images/conteudo_icon.png') }}" alt="Icon Conteudo"
+                                class="icon-navbar">Conteúdo
+                        </a>
+                        <div>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+
+
+
+                            </ul>
+                        </div>
+
+
+
+
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link text-sm-left text-center" href="#"><img class="icon-navbar"
+                                src="{{ url_for('static', filename='images/exam_icon.png') }}"
+                                alt="Icon Exame">Exames</a>
+
+
+                    </li>
+                    <li class="nav-item ">
+
+                        <a class="nav-link text-sm-left text-center" href="#"><img class="icon-navbar"
+                                src="{{ url_for('static', filename='images/resultados_icon.png') }}"
+                                alt="Icon Resultados">Resultados</a>
+
+
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Conteudo -->
+
+    <!-- COVER -->
+    <div class="container-cover-home">
+        <div class="imagem-cover-home">
+            <img src="{{url_for('static', filename='images/scrum.png')}}" alt="Cover Home">
+        </div>
+        <div class="texto-cover-home">
+            <H1 class="texto-cover-home">Bem vindo a SCRUM ACADEMY</H1>
+        </div>
+    </div>
+
+    <div class="card-conteudo-fundo">
+        <section class="introducao-home">
+            <div class="decoracao-titulo">
+                <h2>Introdução: </h2>
+            </div>
+            <div class="texto-introducao-home">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint ocbcaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum. <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </section>
+        <section class="conteudo-home">
+            <div class="decoracao-titulo">
+                <h2>Conteúdos: </h2>
+            </div>
+        </section>
+        <!-- TESTES -->
+        <section class="conteudos" id="conteudos">
+            <div class="container-conteudos">
+                <div class="conteudo ativo">
+                    <a href="" target="_blank">
+                        <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 1">
+                        <h3>Conteúdo 1</h3>
+                        <div class="informacoes-conteudo">
+                            <p>Descrição do Conteúdo</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="conteudo ativo">
+                    <a href="" target="_blank">
+                        <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 1">
+                        <h3>Conteúdo 1</h3>
+                        <div class="informacoes-conteudo">
+                            <p>Descrição do Conteúdo</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="conteudo ativo">
+                    <a href="" target="_blank">
+                        <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 1">
+                        <h3>Conteúdo 1</h3>
+                        <div class="informacoes-conteudo">
+                            <p>Descrição do Conteúdo</p>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <div class="container-fluid bg-dark text-center" style="padding-top: 1%;">
+
+            <p style="color: white;">© Copyright 2024</p>
+            <p style="color: white;">Feito por: <img
+                    src="{{ url_for('static', filename='images/bug-busters-logo-white.png') }}" alt="BubBusters Logo"
+                    class="rounded icon-logo-bug-busters-footer"> <a
+                    class="link-light link-offset-2 link-underline link-underline-opacity-0"
+                    href="https://github.com/Fatec-Bug-Busters/scrum-academy.git" target="_blank"><img
+                        class="icon-github-footer" src="{{ url_for('static', filename='images/github_icon.png') }}"
+                        alt="GitHub_Icon">
+                    GitHub</a></p>
+
+        </div>
+        <!-- JavaScript -->
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+</body>
+
+</html>
