@@ -1,0 +1,32 @@
+.logo-navbar
+{
+ min-width: 180px;
+ margin-left: 2%;
+ width: 30%;
+}
+
+.icon-navbar
+{
+    width: 40px;
+    margin-right: 2%;
+}
+
+.bg-green
+{
+    background-color: rgb(69, 112, 104);
+}
+
+.icon-github-footer
+{
+    margin-left: 2%;
+    min-width: 40px;
+    width: 3%;
+}
+
+.icon-logo-bug-busters-footer
+{
+    width: 10%;
+    min-width: 100px;
+    
+}
+  
