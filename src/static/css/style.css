@@ -63,8 +63,9 @@ background-image: linear-gradient(to bottom, #0c3954, #3e505b);
     margin-top: 100px;
     padding: 8px;
     max-width: 22%;
+    min-width: 180px;
     display: flex;
-    justify-content: end;
+    justify-content: right;
     border-radius: 0 100px 100px 0;
 }
 .texto-introducao-home{
