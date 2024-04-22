@@ -142,3 +142,27 @@ h3 {
     background-color: #000;
     border-radius: 50px;
 }
+
+.card-exame {
+    background-color: rgb(69, 112, 104);
+    color: white;
+    height: 250px;
+    position: relative;
+    width: 90%;
+    background-image: linear-gradient(rgb(69, 112, 104), rgb(62, 152, 114));
+
+}
+
+.btn-exame {
+    align-items: end;
+    position: absolute;
+    bottom: 10%;
+    left: 42%;
+    width: 150px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-exame .card-text {
+    font-size: 20px;
+}
