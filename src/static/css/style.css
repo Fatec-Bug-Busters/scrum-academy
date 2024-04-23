@@ -1,143 +1,167 @@
-
 .fundo-degrade {
-background-image: linear-gradient(to bottom, #0c3954, #3e505b);
-  height: 100%;
+  background-image: linear-gradient(to bottom, #0c3954, #3e505b);
   color: #ffffff;
 }
-.logo-navbar {
+
+.bg-green {
+  background-color: #457068;
+}
+
+header,
+header nav {
+  background-color: #457068;
+}
+
+header .logo-navbar {
   min-width: 180px;
   margin-left: 2%;
   width: 30%;
 }
 
-.icon-navbar {
+header .icon-navbar {
   width: 40px;
   margin-right: 2%;
 }
 
-.bg-green {
-  background-color: rgb(69, 112, 104);
+main {
+  padding-top: 100px;
 }
 
-.icon-github-footer {
+main .content {
+  min-height: 2500px;
+  background: #232D33;
+  border-radius: 80px 80px 80px 80px;
+  -webkit-border-radius: 80px 80px 80px 80px;
+  -moz-border-radius: 80px 80px 80px 80px;
+  -ms-border-radius: 80px 80px 80px 80px;
+  -o-border-radius: 80px 80px 80px 80px;
+}
+
+/* COVER */
+.cover {
+  margin-bottom: 32px;
+}
+
+.cover img {
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.cover .card {
+  background: transparent !important;
+  border: 0;
+}
+
+.cover .titulo {
+  top: 40%;
+}
+
+.cover .titulo h1 {
+  text-align: center;
+  color: white;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+footer {
+  color: white;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .logo-github {
   margin-left: 2%;
   min-width: 40px;
   width: 3%;
 }
 
-.icon-logo-bug-busters-footer {
+footer .logo-bug-busters {
   width: 10%;
   min-width: 100px;
 }
-.container-cover-home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 420px;
+
+
+.title {
+  margin-top: 100px;
 }
 
-.imagem-cover-home {
-    position: absolute; 
+.title h2 {
+  display: inline;
+  padding: 8px 32px 8px 10%;
+  text-align: right;
+  background-color: #457068;
+  border-radius: 0 100px 100px 0;
+  -webkit-border-radius: 0 100px 100px 0;
+  -moz-border-radius: 0 100px 100px 0;
+  -ms-border-radius: 0 100px 100px 0;
+  -o-border-radius: 0 100px 100px 0;
 }
 
-.texto-cover-home {
-    color: white;
-    font-size: 70px;
-    text-align: center;
-    z-index: 1; 
+.texto-introducao-home {
+  margin-top: 40px;
+  padding: 0 11%;
 }
 
-.card-conteudo-fundo{
-    background: #232D33;
-    height: 150%;
-    border-radius: 80px;
-    max-width: 100%;
-    margin: 0 8%;
-    display: flex;
-    flex-direction: column;
-}
-
-.decoracao-titulo{
-    background-color: #457068;
-    margin-top: 100px;
-    padding: 8px;
-    max-width: 22%;
-    display: flex;
-    justify-content: end;
-    border-radius: 0 100px 100px 0;
-}
-.texto-introducao-home{
-    margin-top: 40px;
-    justify-content: center;
-    padding: 0 11%  ;
-}
-.conteudo-home .decoracao-titulo{
-    background-color: #457068;
-    margin-top: 70px;
-    padding: 8px;
-    max-width: 21%;
-    justify-content: end;
-    border-radius: 0 100px 100px 0;
-}
 
 /* TESTES */
 .conteudos {
-    padding: 40px 0 70px;
+  padding: 40px 0 70px;
 }
 
 .conteudos .container-conteudos {
-    display: flex;
-    gap: 100px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    justify-content: center;
-    max-width: 100%;
+  display: flex;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .conteudos .conteudo {
-    width: 300px;
-    height: 300px;
-    position: relative;
-    display: none;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: none;
 }
 
 .conteudos .conteudo.ativo {
-    display: block;
-    border-radius: 50px;
+  display: block;
+  border-radius: 50px;
 }
 
 .conteudos .conteudo img {
-    height: 100%;
-    max-width: 300px;
-    border-radius: 50px;
+  height: 100%;
+  max-width: 300px;
+  border-radius: 50px;
 }
 
 h3 {
-    background-color: rgb(69, 112, 104);
-    width: 100%;
-    padding: 10px 0 10px 20px;
-    position: absolute;
-    bottom: 115px;
-    color: #ffffff;
+  background-color: #457068;
+  width: 100%;
+  padding: 10px 0 10px 20px;
+  position: absolute;
+  bottom: 115px;
+  color: #ffffff;
 }
 
 .informacoes-conteudo {
-    background-color: #040203;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    font-weight: 600;
-    opacity: 0;
-    transition: 0.3s;
-    padding: 20px;
-    border-radius: 50px;
-    color: aliceblue;
+  background-color: #040203;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.3s;
+  padding: 20px;
+  border-radius: 50px;
+  color: aliceblue;
 }
 
 .conteudo:hover .informacoes-conteudo {
-    opacity: 0.8;
-    background-color: #000;
-    border-radius: 50px;
+  opacity: 0.8;
+  background-color: #000;
+  border-radius: 50px;
 }
