@@ -40,7 +40,23 @@ Bem vindo a SCRUM ACADEMY
     <div class="conteudo ativo">
       <a href="" target="_blank">
         <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 1">
-        <h3>Conteúdo 1</h3>
+        <h3 class="titulo">Conteúdo 1</h3>
+        <div class="informacoes-conteudo">
+          {% if respostas %}
+          <input value="{{ corrigido[0]  }}">
+          {% else %}
+          <input value="">
+
+          {% endif %}
+
+          <p>Descrição do Conteúdo</p>
+        </div>
+      </a>
+    </div>
+    <div class="conteudo ativo">
+      <a href="" target="_blank">
+        <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 1">
+        <h3 class="titulo">Conteúdo 1</h3>
         <div class="informacoes-conteudo">
           <p>Descrição do Conteúdo</p>
         </div>
@@ -49,16 +65,7 @@ Bem vindo a SCRUM ACADEMY
     <div class="conteudo ativo">
       <a href="" target="_blank">
         <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 1">
-        <h3>Conteúdo 1</h3>
-        <div class="informacoes-conteudo">
-          <p>Descrição do Conteúdo</p>
-        </div>
-      </a>
-    </div>
-    <div class="conteudo ativo">
-      <a href="" target="_blank">
-        <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 1">
-        <h3>Conteúdo 1</h3>
+        <h3 class="titulo">Conteúdo 1</h3>
         <div class="informacoes-conteudo">
           <p>Descrição do Conteúdo</p>
         </div>

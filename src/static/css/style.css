@@ -1,15 +1,171 @@
-.fundo-degrade {
-  background-image: linear-gradient(to bottom, #0c3954, #3e505b);
-  color: #ffffff;
+:root,
+[data-bs-theme=light] {
+  /* https://getbootstrap.com/docs/5.3/customize/color/
+
+  /* body * /
+  --bs-body-color: ;
+  --bs-body-color-rgb: ;
+  --bs-body-bg: ;
+  --bs-body-bg-rgb: ;
+  /* Emphasis * /
+  --bs-emphasis-color: ;
+  --bs-emphasis-color-rgb: ;
+  /* Borders * /
+  --bs-border-color: ;
+  --bs-border-color-rgb: ;
+  /* Primary * /
+  --bs-primary: #457068;
+  --bs-primary-rgb: rgb(69, 112, 104);
+  --bs-primary-bg-subtle: #31524c;
+  --bs-primary-border-subtle: ;
+  --bs-primary-text-emphasis: ;
+  /* secondary */
+  --bs-secondary: #457068;
+  --bs-secondary-rgb: 57, 90, 84;
+  --bs-secondary-color: #457068;
+  --bs-secondary-color-rgb: 33, 37, 41;
+  --bs-secondary-bg: #457068;
+  --bs-secondary-bg-rgb: 57, 90, 84;
+  --bs-secondary-bg-subtle: #cff4da;
+  --bs-secondary-border-subtle: #184f44;
+  --bs-secondary-text-emphasis: #0e4b3f;
+  /* Tertiary */
+  --bs-tertiary: #d7edfb;
+  --bs-tertiary-rgb: 215, 237, 251;
+  --bs-tertiary-color: #d7edfb;
+  --bs-tertiary-color-rgb: 215, 237, 251;
+  --bs-tertiary-bg: #d7edfb;
+  --bs-tertiary-bg-rgb: 215, 237, 251;
+  --bs-tertiary-text-emphasis: #d7edfb;
+  /* Success * /
+  --bs-success: ;
+  --bs-success-rgb: ;
+  --bs-success-bg-subtle: ;
+  --bs-success-border-subtle: ;
+  --bs-success-text-emphasis: ;
+  /* Danger * /
+  --bs-danger: ;
+  --bs-danger-rgb: ;
+  --bs-danger-bg-subtle: ;
+  --bs-danger-border-subtle: ;
+  --bs-danger-text-emphasis: ;
+  /* Warning * /
+  --bs-warning: ;
+  --bs-warning-rgb: ;
+  --bs-warning-bg-subtle: ;
+  --bs-warning-border-subtle: ;
+  --bs-warning-text-emphasis: ;
+  /* Info * /
+  --bs-info: ;
+  --bs-info-rgb: ;
+  --bs-info-bg-subtle: ;
+  --bs-info-border-subtle: ;
+  --bs-info-text-emphasis: ;
+  /* Light - additional theme options * /
+  --bs-light: ;
+  --bs-light-rgb: ;
+  --bs-light-bg-subtle: ;
+  --bs-light-border-subtle: ;
+  --bs-light-text-emphasis: ;
+  /* Dark - additional theme options * /
+  --bs-dark: ;
+  --bs-dark-rgb: ;
+  --bs-dark-bg-subtle: ;
+  --bs-dark-border-subtle: ;
+  --bs-dark-text-emphasis: ; */
 }
 
-.bg-green {
-  background-color: #457068;
+[data-bs-theme=dark] {
+  color-scheme: dark;
+  /* https://getbootstrap.com/docs/5.3/customize/color/ */
+
+  /* body */
+  --bs-body-color: #f6f8fb;
+  --bs-body-color-rgb: 222, 226, 230;
+  --bs-body-bg: #0c3954;
+  --bs-body-bg-rgb: 12, 57, 84;
+  /* Emphasis */
+  --bs-emphasis-color: #fff;
+  --bs-emphasis-color-rgb: 255, 255, 255;
+  /* Borders */
+  /* --bs-border-color: ;
+  --bs-border-color-rgb: ; */
+  /* Primary */
+  /* --bs-primary: #457068;
+  --bs-primary-rgb: rgb(69, 112, 104);
+  --bs-primary-bg-subtle: #31524c;
+  --bs-primary-border-subtle: #243330;
+  --bs-primary-text-emphasis: #15ba9f;
+   */
+
+  /* secondary */
+  --bs-secondary: #457068;
+  --bs-secondary-rgb: 57, 90, 84;
+  --bs-secondary-color: #f6f8fb;
+  --bs-secondary-color-rgb: 246, 248, 251;
+  --bs-secondary-bg: #457068;
+  --bs-secondary-bg-rgb: 57, 90, 84;
+  --bs-secondary-bg-subtle: #102f29;
+  --bs-secondary-border-subtle: #184f44;
+  --bs-secondary-text-emphasis: #1ba78f;
+
+  /* Tertiary */
+  --bs-tertiary: #d7edfb;
+  --bs-tertiary-rgb: 215, 237, 251;
+  --bs-tertiary-color: #d7edfb;
+  --bs-tertiary-color-rgb: 215, 237, 251;
+  --bs-tertiary-bg: #232D33;
+  --bs-tertiary-bg-rgb: 35, 45, 51;
+  --bs-tertiary-text-emphasis: #d7edfb;
+  /* Success * /
+  --bs-success: ;
+  --bs-success-rgb: ;
+  --bs-success-bg-subtle: ;
+  --bs-success-border-subtle: ;
+  --bs-success-text-emphasis: ;
+  /* Danger * /
+  --bs-danger: ;
+  --bs-danger-rgb: ;
+  --bs-danger-bg-subtle: ;
+  --bs-danger-border-subtle: ;
+  --bs-danger-text-emphasis: ;
+  /* Warning * /
+  --bs-warning: ;
+  --bs-warning-rgb: ;
+  --bs-warning-bg-subtle: ;
+  --bs-warning-border-subtle: ;
+  --bs-warning-text-emphasis: ;
+  /* Info * /
+  --bs-info: ;
+  --bs-info-rgb: ;
+  --bs-info-bg-subtle: ;
+  --bs-info-border-subtle: ;
+  --bs-info-text-emphasis: ;
+  /* Light - additional theme options * /
+  --bs-light: ;
+  --bs-light-rgb: ;
+  --bs-light-bg-subtle: ;
+  --bs-light-border-subtle: ;
+  --bs-light-text-emphasis: ;
+  /* Dark - additional theme options * /
+  --bs-dark: ;
+  --bs-dark-rgb: ;
+  --bs-dark-bg-subtle: ;
+  --bs-dark-border-subtle: ;
+  --bs-dark-text-emphasis: ;
+  */
+
+  --gradient-darker: #457068;
+  --gradient-lighter: #3e9872;
+}
+
+body {
+  background-image: var(--bs-gradient);
 }
 
 header,
 header nav {
-  background-color: #457068;
+  background-color: var(--bs-secondary);
 }
 
 header .logo-navbar {
@@ -29,7 +185,7 @@ main {
 
 main .content {
   min-height: 500px;
-  background: #232D33;
+  background: var(--bs-tertiary-bg);
   border-radius: 80px 80px 80px 80px;
   -webkit-border-radius: 80px 80px 80px 80px;
   -moz-border-radius: 80px 80px 80px 80px;
@@ -59,12 +215,12 @@ main .content {
 
 .cover .titulo h1 {
   text-align: center;
-  color: white;
+  color: var(--bs-emphasis-color);
   font-size: clamp(2.5rem, 5vw, 4.5rem);
 }
 
 footer {
-  color: white;
+  color: var(--bs-body-color);
 }
 
 footer p {
@@ -92,7 +248,7 @@ footer .logo-bug-busters {
   display: inline;
   padding: 8px 32px 8px 10%;
   text-align: right;
-  background-color: #457068;
+  background-color: var(--bs-secondary-bg);
   border-radius: 0 100px 100px 0;
   -webkit-border-radius: 0 100px 100px 0;
   -moz-border-radius: 0 100px 100px 0;
@@ -136,17 +292,17 @@ footer .logo-bug-busters {
   border-radius: 50px;
 }
 
-h3 {
-  background-color: #457068;
+h3.titulo {
+  background-color: var(--bs-secondary-bg);
   width: 100%;
   padding: 10px 0 10px 20px;
   position: absolute;
   bottom: 115px;
-  color: #ffffff;
+  color: var(--bs-secondary-color);
 }
 
 .informacoes-conteudo {
-  background-color: #040203;
+  background-color: var(--bs-dark);
   position: absolute;
   top: 0;
   width: 100%;
@@ -156,23 +312,22 @@ h3 {
   transition: 0.3s;
   padding: 20px;
   border-radius: 50px;
-  color: aliceblue;
+  color: var(--bs-body-color);
 }
 
 .conteudo:hover .informacoes-conteudo {
   opacity: 0.8;
-  background-color: #000;
+  background-color: var(--bs-dark);
   border-radius: 50px;
 }
 
 .card-exame {
-  background-color: rgb(69, 112, 104);
-  color: white;
+  background-color: var(--bs-secondary-bg);
+  color: var(--bs-secondary-color);
   height: 250px;
   position: relative;
   width: 90%;
-  background-image: linear-gradient(rgb(69, 112, 104), rgb(62, 152, 114));
-
+  background-image: linear-gradient(var(--gradient-darker), var(--gradient-lighter));
 }
 
 .btn-exame {
