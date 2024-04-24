@@ -343,3 +343,23 @@ h3.titulo {
 .card-exame .card-text {
   font-size: 20px;
 }
+
+.card-sobre-nos
+{
+  max-width: 80%;
+}
+
+.img-card-sobre-nos
+{
+  width: 100%;
+  min-width: 10rem;
+}
+
+.text-card-sobre-nos
+{
+  text-align: justify;
+}
+
+.bg-card-sobre-nos {
+  background-color: var(--bs-secondary);
+}
