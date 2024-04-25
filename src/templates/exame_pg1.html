@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Exame{% endblock %}
+
+{% block content %}
+
+{% block cover_img %}
+{% endblock %}
+<section class="section-exame">
+  <div class="title">
+    <h2>Exame</h2>
+  </div>
+  <div class="conteudo-exame">
+    Insira seu nome e não deixe nenhuma questão em branco. As respostas serão salvas após o término da prova.<hr>
+    <form action="">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome"><br><br>
+      <p>1 - Enunciado</p>
+      <input type="radio" id="q1-alt1" name="q1" value="">
+      <label for="q1-alt1">Alternativa A</label><br>
+      <input type="radio" id="q1-alt2" name="q1" value="">
+      <label for="q1-alt2">Alternativa B</label><br>
+      <input type="radio" id="q1-alt3" name="q1" value="">
+      <label for="q1-alt3">Alternativa C</label><br>
+      <input type="radio" id="q1-alt4" name="q1" value="">
+      <label for="q1-alt4">Alternativa D</label><br>
+      <input type="radio" id="q1-alt5" name="q1" value="">
+      <label for="q1-alt5">Alternativa E</label><br><br>
+      <p>2 - Enunciado</p>
+      <input type="radio" id="q2-alt1" name="q2" value="">
+      <label for="q2-alt1">Alternativa A</label><br>
+      <input type="radio" id="q2-alt2" name="q2" value="">
+      <label for="q2-alt2">Alternativa B</label><br>
+      <input type="radio" id="q2-alt3" name="q2" value="">
+      <label for="q2-alt3">Alternativa C</label><br>
+      <input type="radio" id="q2-alt4" name="q2" value="">
+      <label for="q2-alt4">Alternativa D</label><br>
+      <input type="radio" id="q2-alt5" name="q2" value="">
+      <label for="q2-alt5">Alternativa E</label><br><br>
+      <p>3 - Enunciado</p>
+      <input type="radio" id="q3-alt1" name="q3" value="">
+      <label for="q3-alt1">Alternativa A</label><br>
+      <input type="radio" id="q3-alt2" name="q3" value="">
+      <label for="q3-alt2">Alternativa B</label><br>
+      <input type="radio" id="q3-alt3" name="q3" value="">
+      <label for="q3-alt3">Alternativa C</label><br>
+      <input type="radio" id="q3-alt4" name="q3" value="">
+      <label for="q3-alt4">Alternativa D</label><br>
+      <input type="radio" id="q3-alt5" name="q3" value="">
+      <label for="q3-alt5">Alternativa E</label><br><br>
+      <p>4 - Enunciado</p>
+      <input type="radio" id="q4-alt1" name="q4" value="">
+      <label for="q4-alt1">Alternativa A</label><br>
+      <input type="radio" id="q4-alt2" name="q4" value="">
+      <label for="q4-alt2">Alternativa B</label><br>
+      <input type="radio" id="q4-alt3" name="q4" value="">
+      <label for="q4-alt3">Alternativa C</label><br>
+      <input type="radio" id="q4-alt4" name="q4" value="">
+      <label for="q4-alt4">Alternativa D</label><br>
+      <input type="radio" id="q4-alt5" name="q4" value="">
+      <label for="q4-alt5">Alternativa E</label><br><br>
+      <p>5 - Enunciado</p>
+      <input type="radio" id="q5-alt1" name="q5" value="">
+      <label for="q5-alt1">Alternativa A</label><br>
+      <input type="radio" id="q5-alt2" name="q5" value="">
+      <label for="q5-alt2">Alternativa B</label><br>
+      <input type="radio" id="q5-alt3" name="q5" value="">
+      <label for="q5-alt3">Alternativa C</label><br>
+      <input type="radio" id="q5-alt4" name="q5" value="">
+      <label for="q5-alt4">Alternativa D</label><br>
+      <input type="radio" id="q5-alt5" name="q5" value="">
+      <label for="q5-alt5">Alternativa E</label><br><br>
+    </form><hr>
+    <div class="btn-group btns-exame">
+      <a href="/exame_pg1" class="btn btn-primary">1</a>
+      <a href="/exame_pg2" class="btn btn-primary">2</a>
+      <a href="/exame_pg3" class="btn btn-primary">3</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
