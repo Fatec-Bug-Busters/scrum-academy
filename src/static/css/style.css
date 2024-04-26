@@ -363,3 +363,21 @@ h3.titulo {
 .bg-card-sobre-nos {
   background-color: var(--bs-secondary);
 }
+
+.conteudo-exame {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btns-exame {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin: auto;
+}
+
+.btn-link {
+  padding: 10px !important;
+}
