@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 
-{% block title %}Título Conteúdo{% endblock %}
+{% block title %}Quem Somos{% endblock %}
+
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="Cover Conteudo">
+{% endblock %}
+
+{% block cover_text %}
+{% endblock %}
 
 {% block content %}
 
-{% block cover_img %}
-<img src="{{url_for('static', filename='images/Conteudo1-img.jpg') }}" class="card-img" alt="cover_conteudo">
-{% endblock %}
 <section>
   <div class="title">
     <h2>Título Conteúdo</h2>
