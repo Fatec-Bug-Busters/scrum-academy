@@ -381,3 +381,49 @@ h3.titulo {
 .btn-link {
   padding: 10px !important;
 }
+
+.txt-conteudo {
+  margin: 50px;
+  font-size: 18px;
+}
+
+.div-card-resumo {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.card-resumo {
+  width: 70%;
+  text-shadow: 0 0 5px black;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.card-resumo .card-img {
+  opacity: 60%;
+}
+
+.card-title {
+  font-size: 30px;
+}
+
+.title p {
+  text-align: justify;
+}
+
+.div-card-quiz {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.card-quiz {
+  width: 80%;
+}
+
+.btns-quiz {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}

@@ -21,5 +21,9 @@ def exame_pg2():
 def exame_pg3():
     return render_template("exame_pg3.html")
 
+@app.route('/conteudo')
+def conteudo():
+    return render_template("conteudo.html")
+
 if __name__ == '__main__':
     app.run(debug=True)

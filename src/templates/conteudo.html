@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Título Conteúdo{% endblock %}
+
+{% block content %}
+
+{% block cover_img %}
+<img src="{{url_for('static', filename='images/Conteudo1-img.jpg') }}" class="card-img" alt="cover_conteudo">
+{% endblock %}
+<section>
+  <div class="title">
+    <h2>Título Conteúdo</h2>
+    <p class="txt-conteudo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos sunt, harum nihil rerum autem animi non totam dicta recusandae sint, eum, expedita laudantium odit accusantium deleniti nisi quia architecto. Ipsa aliquam in, dolore laborum eligendi aperiam nobis, dolorum, blanditiis laudantium nam amet itaque quis placeat facere ipsum architecto repellendus dicta.</p>
+  </div>
+  <div class="title">
+    <h2>Em Resumo</h2>
+    <div class="div-card-resumo">
+      <div class="card text-bg-dark card-resumo">
+        <img src="{{url_for('static', filename='images/objetivo.png') }}" class="card-img" alt="card-resumo">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Título Conteúdo</h5>
+          <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint magnam dolorem sapiente excepturi vel placeat repellendus tempore. Reprehenderit dolorum quod deserunt asperiores facilis veniam. Animi eveniet modi officiis natus.</p>
+          <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint magnam dolorem sapiente excepturi vel placeat repellendus tempore. Reprehenderit dolorum quod deserunt asperiores facilis veniam. Animi eveniet modi officiis natus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="title">
+    <h2>Na Prática</h2>
+  </div>
+  <div class="title">
+    <h2>Quiz</h2>
+    <div class="div-card-resumo">
+      <div class="card card-quiz">
+        <div class="card-body">
+          <h5 class="card-title">Descubra seu nível ágil!</h5>
+          <p class="card-text">Questão 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?</p>
+          <div class="btns-quiz">
+            <button type="button" class="btn btn-secondary">Lorem.</button>
+            <button type="button" class="btn btn-secondary">Lorem.</button>
+            <button type="button" class="btn btn-secondary">Lorem.</button>
+            <button type="button" class="btn btn-secondary">Lorem.</button>
+            <button type="button" class="btn btn-secondary">Lorem.</button>
+          </div>
+          <p class="card-text">Questão 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?</p>
+          <div class="btns-quiz">
+            <button type="button" class="btn btn-secondary">Lorem.</button>
+            <button type="button" class="btn btn-secondary">Lorem.</button>
+            <button type="button" class="btn btn-secondary">Lorem.</button>
+            <button type="button" class="btn btn-secondary">Lorem.</button>
+            <button type="button" class="btn btn-secondary">Lorem.</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
