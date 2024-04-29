@@ -72,7 +72,7 @@
   </header>
 
   <main>
-    <div class="container">
+    <div class="container-lg">
 
       <!-- COVER -->
       <div class="row cover">
@@ -89,10 +89,22 @@
       </div>
 
       <!-- CONTENT -->
-      <div class="row content">
-        <div class="col-12 p-0">
+      <!-- {#
+        Direction: Column on <= small screens. Row on>= medium screens
+        Column 2 becomes first row on <= small screens (direction column)
+        Block 'sidebar' is displayed only if defined on child template
+      #} -->
+      <div class="row content flex-column flex-md-row">
+        <div class="col p-0">
           {% block content required %}{% endblock %}
         </div>
+
+        {% if self.sidebar() %}
+        <div class="col col-md-2 order-first order-md-last pt-4 ps-4">
+          {% block sidebar %}{% endblock %}
+        </div>
+        {% endif %}
+
       </div>
     </div>
   </main>
@@ -123,7 +135,7 @@
                   style="font-size: 120%; margin-left: 3%;">Conteúdo3</a></li>
               <li><a class="link-dark link-offset-2 link-underline link-underline-opacity-0" href="/conteudo"
                   style="font-size: 120%; margin-left: 3%;">Conteúdo4</a></li>
-              <li><a class="link-dark link-offset-2 link-underline link-underline-opacity-0" href="/conteudo" 
+              <li><a class="link-dark link-offset-2 link-underline link-underline-opacity-0" href="/conteudo"
                   style="font-size: 120%; margin-left: 3%;">Conteúdo5</a></li>
             </ul>
           </div>
