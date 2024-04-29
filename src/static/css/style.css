@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* @import url('../fonts/Lato/Lato-Regular.woff');
+@font-face {
+  font-family: "Lato", Tahoma, sans-serif;
+  src: url('../fonts/Lato/Lato-Regular.woff') format("woff");
+} */
+
 :root,
 [data-bs-theme=light] {
-  /* https://getbootstrap.com/docs/5.3/customize/color/
+  /* https://getbootstrap.com/docs/5.3/customize/color/ */
 
   /* body * /
   --bs-body-color: ;
@@ -157,6 +165,12 @@
 
   --gradient-darker: #457068;
   --gradient-lighter: #3e9872;
+}
+
+
+html,
+body {
+  font-family: "Lato", sans-serif !important;
 }
 
 body {
@@ -344,19 +358,16 @@ h3.titulo {
   font-size: 20px;
 }
 
-.card-sobre-nos
-{
+.card-sobre-nos {
   max-width: 80%;
 }
 
-.img-card-sobre-nos
-{
+.img-card-sobre-nos {
   width: 100%;
   min-width: 10rem;
 }
 
-.text-card-sobre-nos
-{
+.text-card-sobre-nos {
   text-align: justify;
 }
 
