@@ -70,7 +70,13 @@
   <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos">
 </div>
 <div class="col">
-  <p>O Product Backlog além de uma lista de tarefas; é um instrumento estratégico que impulsiona o desenvolvimento do produto, facilitando a comunicação, a colaboração e a entrega de valor consistente ao longo do tempo. Ele é moldado pelo constante fluxo de interações com o cliente, pela definição clara da visão do produto e pela meticulosa priorização e refinamento dos itens do backlog. Como o epicentro do processo Scrum, o Product Backlog é uma ferramenta essencial para o sucesso de qualquer projeto ágil.</p>
+  <p><ul>
+    <li>O Product Backlog é uma lista dinâmica de requisitos e funcionalidades, essencial para guiar o desenvolvimento do produto.</li>
+    <li>O Product Owner é responsável por gerenciar o backlog, alinhando-o aos objetivos do produto.</li>
+    <li>As reuniões com o cliente ajudam a capturar requisitos e obter feedback para refinamento contínuo.</li>
+    <li>A definição da visão do produto e o uso de User Stories garantem uma direção clara para a equipe.</li>
+    <li>As iterações ágeis e a adaptação constante são fundamentais para o sucesso do Scrum.</li>
+  </ul></p>
 </div>
 {% endblock em_resumo %}
 
@@ -132,7 +138,5 @@
 <!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
 <!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
 {% block navegacao_interna %}
-<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
-  Título 2
-</a>
+
 {% endblock %}
