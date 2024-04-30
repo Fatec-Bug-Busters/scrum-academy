@@ -398,21 +398,11 @@ h3.titulo {
   font-size: 18px;
 }
 
-.div-card-resumo {
-  display: flex;
-  justify-content: center;
-  margin: 50px;
-}
 
 .card-resumo {
-  width: 70%;
-  text-shadow: 0 0 5px black;
-  font-size: 20px;
-  text-align: justify;
-}
-
-.card-resumo .card-img {
-  opacity: 60%;
+  padding: 2%;
+  max-width: 80%;
+  background-color: var(--bs-secondary);
 }
 
 .card-title {
@@ -437,4 +427,15 @@ h3.titulo {
   display: flex;
   justify-content: space-around;
   margin: 20px;
+}
+
+.Scrollspy-conteudo
+{
+  top: 11rem;
+  width: 85%;
+}
+
+.Items-Scrollspy-conteudo
+{
+  background-color: var(--bs-secondary);
 }
