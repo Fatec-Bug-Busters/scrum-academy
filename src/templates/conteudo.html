@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Quem Somos{% endblock %}
+{% block title %}{% endblock %}
 
 {% block cover_img %}
 <br>
@@ -11,84 +11,36 @@
 {% endblock %}
 
 
-
-
 {% block content %}
+<div class="title" id="list-item-1">
+  {% block text required %}{% endblock %}
+</div>
+<div class="title" id="em-resumo">
+  <h2>Em resumo </h2>
+</div>
+<br>
+<div class="container rounded card-resumo ">
+  {% block em_resumo required %}{% endblock %}
+</div>
 
-
-<section>
-
-  <div class="title" id="list-item-1">
-    <h2>Título Conteúdo</h2>
-    <p class="txt-conteudo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos sunt, harum nihil
-      rerum autem animi non totam dicta recusandae sint, eum, expedita laudantium odit accusantium deleniti nisi quia
-      architecto. Ipsa aliquam in, dolore laborum eligendi aperiam nobis, dolorum, blanditiis laudantium nam amet itaque
-      quis placeat facere ipsum architecto repellendus dicta.</p>
-  </div>
-
-  <div class="title" id="list-item-2">
-    <h2>Em resumo </h2>
-  </div>
-  <br>
-  <div class="container rounded card-resumo ">
-
-    <div class="row align-items-center">
-      <div class="col-12 col-lg-3 "><img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1"
-          class="rounded img-card-sobre-nos"></div>
-      <div class="col">
-        
-        <ul>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<div class="title" id="list-item-3">
+<div class="title" id="na-pratica">
   <h2>Na Prática</h2>
-  <p class="txt-conteudo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos sunt, harum nihil
-    rerum autem animi non totam dicta recusandae sint, eum, expedita laudantium odit accusantium deleniti nisi quia
-    architecto. Ipsa aliquam in, dolore laborum eligendi aperiam nobis, dolorum, blanditiis laudantium nam amet itaque
-    quis placeat facere ipsum architecto repellendus dicta.</p>
+  <div class="txt-conteudo">
+    {% block na_pratica required %}{% endblock %}
+  </div>
 </div>
 
-<div class="title" id="list-item-4">
+<div class="title" id="quiz">
   <h2>Quiz</h2>
-  <center>
-    <div class="my-4">
-      <div class="card card-quiz">
-        <div class="card-body">
-          <h5 class="card-title">Descubra seu nível ágil!</h5>
-          <p class="card-text">Questão 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
-          </p>
-          <div class="btns-quiz">
-            <button type="button" class="btn btn-secondary">Lorem.</button>
-            <button type="button" class="btn btn-secondary">Lorem.</button>
-            <button type="button" class="btn btn-secondary">Lorem.</button>
-            <button type="button" class="btn btn-secondary">Lorem.</button>
-            <button type="button" class="btn btn-secondary">Lorem.</button>
-          </div>
-          <p class="card-text">Questão 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
-          </p>
-          <div class="btns-quiz">
-            <button type="button" class="btn btn-secondary">Lorem.</button>
-            <button type="button" class="btn btn-secondary">Lorem.</button>
-            <button type="button" class="btn btn-secondary">Lorem.</button>
-            <button type="button" class="btn btn-secondary">Lorem.</button>
-            <button type="button" class="btn btn-secondary">Lorem.</button>
-          </div>
-        </div>
-      </div>
+  <div class="card w-75 border-0 my-4 mx-auto">
+    <div class="card-header border-0">
+      <h5 class="card-title">Descubra seu nível ágil!</h5>
     </div>
-  </center>
+    <div class="card-body">
+      {% block quiz required %}{% endblock %}
+    </div>
+  </div>
 </div>
-</section>
 {% endblock %}
 
 {% block sidebar %}
@@ -97,28 +49,23 @@
 
   <div class="row">
     <div class="col-12">
-      <div id="list-example" class="list-group ">
-        <center>
-          <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo" href="#list-item-1">Título
-            Conteúdo</a><br>
-          <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo" href="#list-item-2">Em
-            resumo</a><br>
-          <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo" href="#list-item-3">Na
-            Prática</a><br>
-          <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo" href="#list-item-4">Quiz</a>
-        </center>
+      <div id="list-example" class="list-group">
+        <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#list-item-1">
+          Título Conteúdo
+        </a>
+        {% block navegacao_interna %}{% endblock %}
+        <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#em-resumo">
+          Em resumo
+        </a>
+        <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#na-pratica">
+          Na Prática
+        </a>
+        <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#quiz">
+          Quiz
+        </a>
       </div>
     </div>
-
   </div>
-
-
-
-
-
-
-
-
 </div>
 </div>
 {% endblock %}

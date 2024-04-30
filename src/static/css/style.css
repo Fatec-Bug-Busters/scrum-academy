@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-/* @import url('../fonts/Lato/Lato-Regular.woff');
+/* @import url('/static/fonts/Lato/Lato-Regular.woff');
 @font-face {
   font-family: "Lato", Tahoma, sans-serif;
-  src: url('../fonts/Lato/Lato-Regular.woff') format("woff");
+  src: url('/static/fonts/Lato/Lato-Regular.woff') format("woff");
 } */
 
 :root,
@@ -419,23 +419,17 @@ h3.titulo {
   margin: 50px;
 }
 
-.card-quiz {
-  width: 80%;
-}
-
 .btns-quiz {
   display: flex;
   justify-content: space-around;
   margin: 20px;
 }
 
-.Scrollspy-conteudo
-{
+.Scrollspy-conteudo {
   top: 11rem;
   width: 85%;
 }
 
-.Items-Scrollspy-conteudo
-{
+.Items-Scrollspy-conteudo {
   background-color: var(--bs-secondary);
 }
