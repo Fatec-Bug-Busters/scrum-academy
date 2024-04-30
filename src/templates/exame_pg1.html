@@ -11,10 +11,51 @@
     <h2>Exame</h2>
   </div>
   <div class="conteudo-exame">
-    Insira seu nome e não deixe nenhuma questão em branco. As respostas serão salvas após o término da prova.<hr>
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+      <div style="color: #fff;">
+        Insira seu nome e não deixe nenhuma questão em branco. As respostas serão salvas após o término da prova.
+      </div>
+    </div>
+    <hr>
+
+
     <form action="">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome"><br><br>
+      <div class="nome-exame">
+        <label for="nome" style="font-size: 30px;">Nome:</label>
+        <input type="text" id="nome" name="nome">
+      </div>
+      <!-- QUESTOES -->
+      <div>
+        <div class="numeracao-questoes">
+
+        </div>
+        <div class="container">
+          <div class="question">
+            <ul class="options">
+              <li class="option">
+                <input type="radio" name="q1" id="q1a" value="a">
+                <label for="q1a">a) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q1" id="q1b" value="b">
+                <label for="q1b">b) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q1" id="q1c" value="c">
+                <label for="q1c">c) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q1" id="q1d" value="d">
+                <label for="q1d">d) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q1" id="q1e" value="e">
+                <label for="q1e">e) Lorem</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <p>1 - Enunciado</p>
       <input type="radio" id="q1-alt1" name="q1" value="">
       <label for="q1-alt1">Alternativa A</label><br>
@@ -70,7 +111,8 @@
       <label for="q5-alt4">Alternativa D</label><br>
       <input type="radio" id="q5-alt5" name="q5" value="">
       <label for="q5-alt5">Alternativa E</label><br><br>
-    </form><hr>
+    </form>
+    <hr>
     <div class="btn-group btns-exame">
       <a href="/exame_pg1" class="btn btn-primary">1</a>
       <a href="/exame_pg2" class="btn btn-primary">2</a>
