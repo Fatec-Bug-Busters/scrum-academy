@@ -43,7 +43,7 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 | ----------------- | ---------- | ------------ |
 | Kick Off          | 15/03/2024 | concluído    |
 | 01                | 14/04/2024 | concluído    |
-| 02                | 05/05/2024 | em progresso |
+| 02                | 05/05/2024 | concluído    |
 | 03                | 26/05/2024 | a fazer      |
 | 04                | 16/06/2024 | a fazer      |
 | Feira de Soluções | 27/06/2024 | a fazer      |
@@ -64,8 +64,10 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 ### Sprint 2. Desenvolvimento do Projeto
 
-- [ ] Interface do usuário;
-- [ ] Parte do conteúdo.
+- [x] Interface do usuário: páginas principais
+- [x] Conteúdo: Introdução à Metodologia Ágil SCRUM
+- [x] Conteúdo: Artefatos e Eventos
+- [x] Conteúdo: Algumas questões do conteúdo
 
 ### Sprint 3. Implementação
 
@@ -89,6 +91,12 @@ Hard skills desenvolvidas
 - Conhecimento em ferramentas;
   - Figma
   - Google Sheets
+  - HTML
+  - CSS
+  - Ferramenta Bootstrap
+  - Flask com Python
+  - Git e GitHub
+  - Ambiente virtual com pacote Python `venv`
 - Gestão de projetos;
 - Competências técnicas;
 - Trabalho com metodologia ágil SCRUM (papéis, seus eventos e artefatos).
@@ -126,6 +134,11 @@ Soft skills desenvolvidas
 - Figma
 - GitHub
 - Discord
+- HTML
+- CSS
+- Bootstrap
+- Flask com Python
+- Git e GitHub
 
 ## Autores
 
