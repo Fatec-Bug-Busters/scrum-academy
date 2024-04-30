@@ -1,0 +1,138 @@
+{% extends "conteudo.html" %}
+
+
+<!-- Titulo da pagina -->
+{% block title %}Exemplo{% endblock %}
+
+
+<!-- Imagem cover -->
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="Cover Conteudo">
+{% endblock %}
+
+
+<!-- Texto da cover -->
+{% block cover_text %}
+{% endblock %}
+
+
+<!-- Conteúdo / texto -->
+{% block text %}
+<h2>Product Backlog</h2>
+<p class="txt-conteudo">Dentro do contexto do framework Scrum, o Product Backlog assume uma posição central como um artefato dinâmico e estratégico que orienta o desenvolvimento do produto. Ele não apenas enumera tarefas, mas sim encapsula a essência das necessidades do cliente e das expectativas do mercado, servindo como um guia contínuo para a equipe Scrum. Aqui está uma exploração mais aprofundada de seus componentes e importância:</p>
+<p>
+  <ol>
+    <li><strong>Natureza do Product Backlog:</strong>
+      <ul>
+        <li>O Product Backlog é uma lista dinâmica e priorizada de requisitos, funcionalidades, melhorias e correções necessárias para o produto.</li>
+        <li>É um artefato em constante evolução, refinado e atualizado ao longo do ciclo de vida do projeto.</li>
+        <li>Funciona como uma ponte entre as necessidades do cliente e a entrega de valor pelo time de desenvolvimento.</li>
+      </ul>
+    </li>
+    <br><li><strong>Responsabilidade do Product Owner:</strong>
+      <ul>
+        <li>O Product Owner é responsável por gerenciar e manter o Product Backlog.</li>
+        <li>Ele trabalha em estreita colaboração com os stakeholders para entender e priorizar os requisitos do produto.</li>
+        <li>O Product Owner atua como o guardião do backlog, garantindo que ele permaneça relevante e alinhado aos objetivos do produto.</li>
+      </ul>
+    </li>
+    <br><li><strong>Reuniões com o Cliente:</strong>
+      <ul>
+        <li>As reuniões com o cliente desempenham um papel crucial na elaboração e refinamento do Product Backlog.</li>
+        <li>Durante essas interações, o Product Owner e a equipe Scrum se envolvem com os stakeholders para capturar requisitos e obter feedback sobre o produto.</li>
+        <li>Essas reuniões são oportunidades para alinhar as expectativas do cliente com a visão do produto e definir prioridades de desenvolvimento.</li>
+      </ul>
+    </li>
+    <br><li><strong>Visão do Produto:</strong>
+      <ul>
+        <li>A visão do produto é uma declaração clara e concisa que define o propósito, os objetivos e o valor esperado do produto.</li>
+        <li>Ela serve como um guia estratégico para toda a equipe Scrum, ajudando a manter o foco nos resultados desejados.</li>
+        <li>A visão do produto é criada pelo Product Owner em colaboração com os stakeholders e fornece um contexto para o desenvolvimento do Product Backlog.</li>
+      </ul>
+    </li>
+    <br><li><strong>User Stories e Outros Itens do Backlog:</strong>
+      <ul>
+        <li>As User Stories são elementos-chave do Product Backlog, descrevendo requisitos do usuário em um formato compreensível.</li>
+        <li>Além das User Stories, o backlog pode incluir bugs, melhorias técnicas e qualquer outra demanda relevante para o produto.</li>
+        <li>Cada item do backlog é avaliado quanto ao seu valor, risco e dependências, para garantir uma priorização eficaz.</li>
+      </ul>
+    </li>
+  </ol>
+</p>
+
+{% endblock text %}
+
+
+<!-- Seção Em Resumo -->
+{% block em_resumo %}
+<div class="col-12 col-lg-3 ">
+  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos">
+</div>
+<div class="col">
+  <p>O Product Backlog além de uma lista de tarefas; é um instrumento estratégico que impulsiona o desenvolvimento do produto, facilitando a comunicação, a colaboração e a entrega de valor consistente ao longo do tempo. Ele é moldado pelo constante fluxo de interações com o cliente, pela definição clara da visão do produto e pela meticulosa priorização e refinamento dos itens do backlog. Como o epicentro do processo Scrum, o Product Backlog é uma ferramenta essencial para o sucesso de qualquer projeto ágil.</p>
+</div>
+{% endblock em_resumo %}
+
+
+<!-- Seção Na Prática -->
+{% block na_pratica %}
+<p>
+  Considere uma equipe de desenvolvimento que está trabalhando em um novo aplicativo de gestão de projetos. Eles estão enfrentando desafios para definir as funcionalidades prioritárias e garantir que o produto final atenda às expectativas dos clientes. Vamos ver como o Product Backlog e os conceitos do Scrum podem ser aplicados nesta situação:
+</p>
+<ul>
+  <li>
+    <strong>Criação do Product Backlog:</strong> A equipe começa listando todas as possíveis funcionalidades e requisitos do aplicativo, desde a criação de tarefas até a geração de relatórios. Essas são inseridas no Product Backlog em ordem de prioridade, com base no valor que cada uma traz para os usuários e para o sucesso do produto.
+  </li>
+  <li>
+    <strong>Reuniões com o Cliente:</strong> Durante as reuniões com os clientes e stakeholders, o Product Owner lidera discussões para entender suas necessidades e expectativas. Com base nesse feedback, a equipe ajusta e prioriza o Product Backlog, garantindo que as funcionalidades mais importantes sejam implementadas primeiro.
+  </li>
+  <li>
+    <strong>Definição da Visão do Produto:</strong> Com base nas conversas com os clientes e em sua própria análise de mercado, o Product Owner define uma visão clara e concisa para o aplicativo. Isso ajuda a equipe a manter o foco nos objetivos do produto e a orientar suas decisões de desenvolvimento.
+  </li>
+  <li>
+    <strong>User Stories e Refinamento do Backlog:</strong> As User Stories são criadas para descrever as funcionalidades de maneira detalhada e compreensível. Elas são adicionadas ao Product Backlog e refinadas continuamente à medida que a equipe recebe feedback e novas informações dos clientes.
+  </li>
+  <li>
+    <strong>Iterações e Adaptação:</strong> Durante cada sprint, a equipe seleciona um conjunto de itens do Product Backlog para trabalhar. Eles trabalham de forma colaborativa para implementar as funcionalidades selecionadas e revisam seu progresso regularmente em reuniões diárias. Com base nesse feedback contínuo, eles podem adaptar e ajustar o Product Backlog para refletir melhor as necessidades do cliente e as mudanças no mercado.
+  </li>
+</ul>
+<p>
+  Ao seguir essas práticas do Scrum e utilizar o Product Backlog como guia, a equipe é capaz de desenvolver um aplicativo que não apenas atende às expectativas dos clientes, mas também oferece valor consistente e duradouro ao longo do tempo.
+</p>
+{% endblock na_pratica %}
+
+
+<!-- Seção Quiz -->
+{% block quiz %}
+<p class="card-text">
+  Questão 1 - Qual é a responsabilidade do Product Owner em relação ao Product Backlog?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary"> Criar User Stories</button>
+  <button type="button" class="btn btn-secondary">Gerenciar e manter o Product Backlog</button>
+  <button type="button" class="btn btn-secondary">Conduzir reuniões diárias com a equipe</button>
+  <button type="button" class="btn btn-secondary">Desenvolver a visão do produto</button>
+  <button type="button" class="btn btn-secondary">Definir os prazos de entrega do projeto</button>
+</div>
+<p class="card-text">
+  Questão 2 - Qual é a importância das reuniões com o cliente para o desenvolvimento do Product Backlog?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary">Definir a visão do produto</button>
+  <button type="button" class="btn btn-secondary"> Refinar as User Stories</button>
+  <button type="button" class="btn btn-secondary"> Capturar requisitos e obter feedback</button>
+  <button type="button" class="btn btn-secondary"> Priorizar as funcionalidades do aplicativomas </button>
+  <button type="button" class="btn btn-secondary">Realizar testes de aceitação com o cliente</button>
+</div>
+{% endblock quiz %}
+
+
+<!-- Navegação interna  -->
+<!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
+<!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
+{% block navegacao_interna %}
+<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
+  Título 2
+</a>
+{% endblock %}

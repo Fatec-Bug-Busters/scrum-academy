@@ -33,5 +33,10 @@ def conteudo():
     return render_template("conteudos/exemplo.html")
 
 
+@app.route("/artefatos-e-eventos-1")
+def conteudo():
+    return render_template("conteudos/artefatos-e-eventos-1.html")
+    
+
 if __name__ == "__main__":
     app.run(debug=True)
