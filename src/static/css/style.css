@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 /* @import url('/static/fonts/Lato/Lato-Regular.woff');
 @font-face {
@@ -7,7 +7,7 @@
 } */
 
 :root,
-[data-bs-theme=light] {
+[data-bs-theme="light"] {
   /* https://getbootstrap.com/docs/5.3/customize/color/ */
 
   /* body * /
@@ -83,7 +83,7 @@
   --bs-dark-text-emphasis: ; */
 }
 
-[data-bs-theme=dark] {
+[data-bs-theme="dark"] {
   color-scheme: dark;
   /* https://getbootstrap.com/docs/5.3/customize/color/ */
 
@@ -122,7 +122,7 @@
   --bs-tertiary-rgb: 215, 237, 251;
   --bs-tertiary-color: #d7edfb;
   --bs-tertiary-color-rgb: 215, 237, 251;
-  --bs-tertiary-bg: #232D33;
+  --bs-tertiary-bg: #232d33;
   --bs-tertiary-bg-rgb: 35, 45, 51;
   --bs-tertiary-text-emphasis: #d7edfb;
   /* Success * /
@@ -166,7 +166,6 @@
   --gradient-darker: #457068;
   --gradient-lighter: #327e5e;
 }
-
 
 html,
 body {
@@ -252,7 +251,6 @@ footer .logo-bug-busters {
   min-width: 100px;
 }
 
-
 .title {
   margin-top: 100px;
   margin-bottom: 40px;
@@ -288,7 +286,6 @@ footer .logo-bug-busters {
   margin-bottom: 20px;
   justify-content: center;
   max-width: 100%;
-
 }
 
 .conteudos .conteudo {
@@ -345,10 +342,13 @@ h3.titulo {
   height: 380px;
   position: relative;
   width: 90%;
-  background-image: linear-gradient(var(--gradient-darker), var(--gradient-lighter));
+  background-image: linear-gradient(
+    var(--gradient-darker),
+    var(--gradient-lighter)
+  );
   margin-top: 50px;
 }
-.card-body{
+.card-body {
   max-width: 90%;
   margin: 50px 0 0 50px;
 }
@@ -369,7 +369,6 @@ h3.titulo {
 
 .card-exame .card-text {
   font-size: 20px;
-  
 }
 
 .card-sobre-nos {
@@ -412,7 +411,6 @@ h3.titulo {
   font-size: 18px;
 }
 
-
 .card-resumo {
   padding: 2%;
   max-width: 80%;
@@ -448,14 +446,17 @@ h3.titulo {
   background-color: var(--bs-secondary);
 }
 
-.nome-exame{
+.nome-exame {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(var(--gradient-darker), var(--gradient-lighter));
+  background-image: linear-gradient(
+    var(--gradient-darker),
+    var(--gradient-lighter)
+  );
   padding: 20px;
   max-width: 90%;
   margin: 0 5%;
-  border-radius: 100px;
+  border-radius: 30px;
   align-items: center;
   gap: 30px;
 }
@@ -464,17 +465,21 @@ h3.titulo {
   padding: 10px;
   border: 1px solid var(--bs-body-color);
   border-radius: 5px;
-  font-size: 16px;
-  width: 200px;
+  font-size: 20px;
+  width: 60%;
+  background-color: var(--bs-secondary);
 }
 
 .nome-exame input[type="text"]:focus {
-  border-color: var(--bs-body-bg); 
+  border-color: var(--bs-body-bg);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .nome-exame input[type="text"]::placeholder {
-  background-image: linear-gradient(var(--gradient-darker), var(--gradient-lighter));
+  background-image: linear-gradient(
+    var(--gradient-darker),
+    var(--gradient-lighter)
+  );
 }
 
 form .container {
@@ -486,10 +491,29 @@ form .container {
   box-shadow: 0 0 20px rgba(80, 173, 88, 0.1);
   height: auto;
 }
-.numeracao-questoes{
-  max-width: 10%;
+.questoes-container{
+  margin: 100px 0 20px 0;
 }
+.enunciado-questoes { 
+  display: flex;
+}
+.numeracao-questoes {
+  align-content: center;
+  width: 100px;
+  height: 70px;
+  border-radius: 50%; 
+  background-image: linear-gradient(
+    var(--gradient-darker),
+    var(--gradient-lighter)
+  );
+  color: #fff;  
+  font-size: 24px;
+  font-weight: bold;
+}
+.enunciado-texto{
 
+  margin-left: 15px;
+}
 .question {
   margin: 10px 0;
 }
@@ -515,14 +539,36 @@ form .container {
 .option input[type="radio"] {
   display: none;
 }
+.option input[type="radio"]:hover + label {
+  background-color: var(--bs-dark);
+  padding: 40px;
+  transition: 0.4s ease;
+}
 
 .option input[type="radio"]:checked + label {
   background-color: var(--gradient-lighter);
 }
 
 .option input[type="radio"]:checked + label::before {
-  content: '\2714';
+  content: "\2714";
   display: inline-block;
   margin-right: 10px;
   font-size: 20px;
+}
+.submit-btn {
+  margin: 0 5%;
+  width: 90%;
+  background-color: var(--bs-secondary);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.submit-btn:hover {
+  background-color: var(--gradient-lighter);
+  transition: 0.4s ease;
+  padding: 20px;
 }
