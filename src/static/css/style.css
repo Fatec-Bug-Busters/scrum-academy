@@ -164,7 +164,7 @@
   */
 
   --gradient-darker: #457068;
-  --gradient-lighter: #3e9872;
+  --gradient-lighter: #327e5e;
 }
 
 
@@ -336,26 +336,36 @@ h3.titulo {
 }
 
 .card-exame {
+  border-radius: 70px !important;
   background-color: var(--bs-secondary-bg);
   color: var(--bs-secondary-color);
-  height: 250px;
+  height: 380px;
   position: relative;
   width: 90%;
   background-image: linear-gradient(var(--gradient-darker), var(--gradient-lighter));
 }
+.card-body{
+  max-width: 90%;
+  margin: 50px 0 0 50px;
+}
 
 .btn-exame {
+  border-radius: 20px;
   align-items: end;
   position: absolute;
   bottom: 10%;
   left: 42%;
   width: 150px;
-  font-size: 20px;
+  font-size: 25px;
+  text-transform: uppercase;
   font-weight: bold;
+  border: solid 4px var(--bs-body-color);
+  padding: 20px;
 }
 
 .card-exame .card-text {
   font-size: 20px;
+  
 }
 
 .card-sobre-nos {
