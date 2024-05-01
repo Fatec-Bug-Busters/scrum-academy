@@ -19,11 +19,14 @@
 
 <!-- Conteúdo / texto -->
 {% block text %}
-<h2>Product Backlog</h2>
-<p class="txt-conteudo">Dentro do contexto do framework Scrum, o Product Backlog assume uma posição central como um
-  artefato dinâmico e estratégico que orienta o desenvolvimento do produto. Ele não apenas enumera tarefas, mas sim
-  encapsula a essência das necessidades do cliente e das expectativas do mercado, servindo como um guia contínuo para a
-  equipe Scrum. Aqui está uma exploração mais aprofundada de seus componentes e importância:</p>
+  <h2>Product Backlog</h2>
+  <div class="div-backlog">
+    <p class="txt-conteudo">Dentro do contexto do framework Scrum, o Product Backlog assume uma posição central como um
+      artefato dinâmico e estratégico que orienta o desenvolvimento do produto. Ele não apenas enumera tarefas, mas sim
+      encapsula a essência das necessidades do cliente e das expectativas do mercado, servindo como um guia contínuo para a
+      equipe Scrum. Aqui está uma exploração mais aprofundada de seus componentes e importância:</p>
+    <img src="{{url_for('static', filename='images/backlog.png')}}" alt="backlog" id="backlog-img">
+  </div>  
 <div class="subtitles">
   <p>
   <ol>
@@ -88,7 +91,7 @@
 {% block em_resumo %}
 
 <div class="col">
-  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos">
+  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos-atf">
   <p>
   <ul>
     <li>O Product Backlog é uma lista dinâmica de requisitos e funcionalidades, essencial para guiar o desenvolvimento

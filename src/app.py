@@ -18,16 +18,6 @@ def exame_pg1():
     return render_template("exame_pg1.html")
 
 
-@app.route("/exame_pg2")
-def exame_pg2():
-    return render_template("exame_pg2.html")
-
-
-@app.route("/exame_pg3")
-def exame_pg3():
-    return render_template("exame_pg3.html")
-
-
 @app.route("/exemplo")
 def conteudo():
     return render_template("conteudos/exemplo.html")

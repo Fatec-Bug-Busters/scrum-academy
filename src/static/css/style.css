@@ -376,7 +376,14 @@ h3.titulo {
 }
 
 .img-card-sobre-nos {
-  width: 290px;
+  width: 100%;
+  min-width: 10rem;
+  float: left;
+  margin: 0 30px 20px 0;
+}
+
+.img-card-sobre-nos-atf {
+  width: 50%;
   min-width: 10rem;
   float: left;
   margin: 0 30px 20px 0;
@@ -574,9 +581,17 @@ form .container {
 .submit-btn:hover {
   background-color: var(--gradient-lighter);
   transition: 0.4s ease;
-  padding: 20px;
+  padding: 15px;
 }
 
 .alert{
   font-size: 20px;
+}
+
+.div-backlog {
+  display: flex;
+}
+
+#backlog-img {
+  width: 40%;
 }
