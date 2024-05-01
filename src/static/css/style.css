@@ -376,8 +376,10 @@ h3.titulo {
 }
 
 .img-card-sobre-nos {
-  width: 100%;
+  width: 290px;
   min-width: 10rem;
+  float: left;
+  margin: 0 30px 20px 0;
 }
 
 .text-card-sobre-nos {
@@ -410,7 +412,10 @@ h3.titulo {
   margin: 50px;
   font-size: 18px;
 }
-
+.subtitles{
+  margin-left: 50px;
+  font-size: 18px;
+}
 .card-resumo {
   padding: 2%;
   max-width: 80%;
@@ -491,27 +496,26 @@ form .container {
   box-shadow: 0 0 20px rgba(80, 173, 88, 0.1);
   height: auto;
 }
-.questoes-container{
+.questoes-container {
   margin: 100px 0 20px 0;
 }
-.enunciado-questoes { 
+.enunciado-questoes {
   display: flex;
 }
 .numeracao-questoes {
   align-content: center;
   width: 100px;
   height: 70px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background-image: linear-gradient(
     var(--gradient-darker),
     var(--gradient-lighter)
   );
-  color: #fff;  
+  color: #fff;
   font-size: 24px;
   font-weight: bold;
 }
-.enunciado-texto{
-
+.enunciado-texto {
   margin-left: 15px;
 }
 .question {
@@ -571,4 +575,8 @@ form .container {
   background-color: var(--gradient-lighter);
   transition: 0.4s ease;
   padding: 20px;
+}
+
+.alert{
+  font-size: 20px;
 }
