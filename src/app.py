@@ -13,9 +13,9 @@ def sobre_nos():
     return render_template("sobre_nos.html")
 
 
-@app.route("/exame_pg1")
-def exame_pg1():
-    return render_template("exame_pg1.html")
+@app.route("/exame")
+def exame():
+    return render_template("exame.html")
 
 
 @app.route("/exemplo")

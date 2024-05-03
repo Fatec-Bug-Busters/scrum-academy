@@ -342,12 +342,11 @@ h3.titulo {
   height: 380px;
   position: relative;
   width: 90%;
-  background-image: linear-gradient(
-    var(--gradient-darker),
-    var(--gradient-lighter)
-  );
+  background-image: linear-gradient(var(--gradient-darker),
+      var(--gradient-lighter));
   margin-top: 50px;
 }
+
 .card-body {
   max-width: 90%;
   margin: 50px 0 0 50px;
@@ -419,10 +418,12 @@ h3.titulo {
   margin: 50px;
   font-size: 18px;
 }
-.subtitles{
+
+.subtitles {
   margin-left: 50px;
   font-size: 18px;
 }
+
 .card-resumo {
   padding: 2%;
   max-width: 80%;
@@ -461,10 +462,8 @@ h3.titulo {
 .nome-exame {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(
-    var(--gradient-darker),
-    var(--gradient-lighter)
-  );
+  background-image: linear-gradient(var(--gradient-darker),
+      var(--gradient-lighter));
   padding: 20px;
   max-width: 90%;
   margin: 0 5%;
@@ -488,10 +487,8 @@ h3.titulo {
 }
 
 .nome-exame input[type="text"]::placeholder {
-  background-image: linear-gradient(
-    var(--gradient-darker),
-    var(--gradient-lighter)
-  );
+  background-image: linear-gradient(var(--gradient-darker),
+      var(--gradient-lighter));
 }
 
 form .container {
@@ -503,28 +500,31 @@ form .container {
   box-shadow: 0 0 20px rgba(80, 173, 88, 0.1);
   height: auto;
 }
+
 .questoes-container {
   margin: 100px 0 20px 0;
 }
+
 .enunciado-questoes {
   display: flex;
 }
+
 .numeracao-questoes {
   align-content: center;
   width: 100px;
   height: 70px;
   border-radius: 50%;
-  background-image: linear-gradient(
-    var(--gradient-darker),
-    var(--gradient-lighter)
-  );
+  background-image: linear-gradient(var(--gradient-darker),
+      var(--gradient-lighter));
   color: #fff;
   font-size: 24px;
   font-weight: bold;
 }
+
 .enunciado-texto {
   margin-left: 15px;
 }
+
 .question {
   margin: 10px 0;
 }
@@ -550,22 +550,24 @@ form .container {
 .option input[type="radio"] {
   display: none;
 }
-.option input[type="radio"]:hover + label {
+
+.option input[type="radio"]:hover+label {
   background-color: var(--bs-dark);
   padding: 40px;
   transition: 0.4s ease;
 }
 
-.option input[type="radio"]:checked + label {
+.option input[type="radio"]:checked+label {
   background-color: var(--gradient-lighter);
 }
 
-.option input[type="radio"]:checked + label::before {
+.option input[type="radio"]:checked+label::before {
   content: "\2714";
   display: inline-block;
   margin-right: 10px;
   font-size: 20px;
 }
+
 .submit-btn {
   margin: 0 5%;
   width: 90%;
@@ -584,8 +586,27 @@ form .container {
   padding: 15px;
 }
 
-.alert{
+.alert {
   font-size: 20px;
+}
+
+.botao-seta {
+  width: 100px;
+  height: auto;
+  background-color: var(--bs-secondary);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.botao-seta::after {
+  content: '\25BC';
+  /* Adicione a seta para baixo usando o código Unicode */
+  margin-left: 5px;
+  /* Adicione um pequeno espaçamento entre o texto e a seta */
 }
 
 .div-backlog {
