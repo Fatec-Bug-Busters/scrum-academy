@@ -18,6 +18,11 @@ def exame():
     return render_template("exame.html")
 
 
+@app.route("/resultados")
+def resultados():
+    return render_template("resultados.html")
+
+
 @app.route("/exemplo")
 def conteudo():
     return render_template("conteudos/exemplo.html")
