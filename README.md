@@ -23,6 +23,7 @@ Projeto fundamentado na metodologia ágil SCRUM que busca fomentar a proatividad
     - [Hard Skills](#hard-skills)
     - [Soft Skills](#soft-skills)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Veja Também](#veja-também)
   - [Autores](#autores)
 
 ## Objetivo do Projeto
@@ -140,6 +141,10 @@ Soft skills desenvolvidas
 - Flask com Python
 - Git e GitHub
 
+## Veja Também
+
+[Como Contribuir](./CONTRIBUTING.md) para você que quer contribuir no desenvolvimento desse projeto.
+
 ## Autores
 
 | Função |Nome | GitHub |
@@ -153,3 +158,4 @@ Soft skills desenvolvidas
 | Team Member | Felipe Chagas | [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/oFelipeChagas) |
 
 ![Bug Busters](./src/static/images/bug-busters-logo-black.jpg)
+

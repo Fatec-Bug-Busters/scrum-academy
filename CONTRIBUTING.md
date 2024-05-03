@@ -27,7 +27,7 @@ Contribuir para o nosso projeto é fácil e estamos ansiosos para receber suas c
 
     ```sh
     # rodar o projeto localmente
-    flask run --debug
+    flask run
     # abra http://localhost:5000 no navegador
     ```
 
