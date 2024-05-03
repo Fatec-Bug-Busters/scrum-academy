@@ -178,7 +178,10 @@ body {
 
 header,
 header nav {
-  background-color: var(--bs-secondary);
+  background-image: linear-gradient(
+    var(--gradient-lighter),
+    var(--gradient-darker)
+  );
 }
 
 header .logo-navbar {
@@ -419,7 +422,7 @@ h3.titulo {
 }
 
 .subtitles {
-  margin-left: 50px;
+  margin: 0 50px;
   font-size: 18px;
 }
 
@@ -492,12 +495,16 @@ h3.titulo {
 
 form .container {
   max-width: 90%;
+  height: auto;
   margin: 50px auto;
-  background-color: #1f1f1f;
   padding: 30px;
   border-radius: 30px;
-  box-shadow: 0 0 20px rgba(80, 173, 88, 0.1);
-  height: auto;
+  background-color: #1f1f1f;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .questoes-container {
@@ -523,9 +530,17 @@ form .container {
 .enunciado-texto {
   margin-left: 15px;
 }
+.container .card-content{
+  position: relative;
+  z-index: 1; 
+}
 
-.question {
+.question.hidden {
   margin: 10px 0;
+  display: none;
+}
+.container.active .question{
+  display: block;
 }
 
 .options {
@@ -589,39 +604,20 @@ form .container {
   font-size: 20px;
 }
 
-.botao-seta {
-  width: 100px;
-  height: auto;
-  background-color: var(--bs-secondary);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.botao-seta::after {
-  content: '\25BC';
-  /* Adicione a seta para baixo usando o código Unicode */
-  margin-left: 5px;
-  /* Adicione um pequeno espaçamento entre o texto e a seta */
-}
-
 .div-backlog {
   display: flex;
 }
 
 #backlog-img {
-  width: 40%;
+  max-width: 40%;
+  max-height: 300px;
 }
 
 .resultados-stats {
   height: 100%;
 }
 
-.btn-conteudo-footer
-{
+.btn-conteudo-footer{
   border-color: rgba(0, 0, 255, 0);
   color: white;
 }
