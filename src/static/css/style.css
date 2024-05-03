@@ -339,14 +339,14 @@ h3.titulo {
   border-radius: 70px !important;
   background-color: var(--bs-secondary-bg);
   color: var(--bs-secondary-color);
-  height: 380px;
-  position: relative;
   width: 90%;
-  background-image: linear-gradient(var(--gradient-darker),
-      var(--gradient-lighter));
+  background-image: linear-gradient(
+    var(--gradient-darker),
+    var(--gradient-lighter)
+  );
   margin-top: 50px;
+  padding: 6%
 }
-
 .card-body {
   max-width: 90%;
   margin: 50px 0 0 50px;
@@ -355,7 +355,6 @@ h3.titulo {
 .btn-exame {
   border-radius: 20px;
   align-items: end;
-  position: absolute;
   bottom: 10%;
   left: 42%;
   width: 150px;
@@ -619,4 +618,16 @@ form .container {
 
 .resultados-stats {
   height: 100%;
+}
+
+.btn-conteudo-footer
+{
+  border-color: rgba(0, 0, 255, 0);
+  color: white;
+}
+
+.bg-cards-conteudo-index
+{
+  background-color: #45706874;
+  max-width: 90%;
 }
