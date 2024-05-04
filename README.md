@@ -135,8 +135,10 @@ Soft skills desenvolvidas
 - Figma
 - GitHub
 - Discord
+- Visual Studio Code
 - HTML
 - CSS
+- JavaScript
 - Bootstrap
 - Flask com Python
 - Git e GitHub

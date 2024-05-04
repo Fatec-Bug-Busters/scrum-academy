@@ -187,6 +187,10 @@ header .logo-navbar {
   margin-left: 2%;
   width: 30%;
 }
+header .navbar{
+  display: flex;
+  justify-content: end;
+}
 
 header .icon-navbar {
   width: 40px;
@@ -231,6 +235,7 @@ main .content {
   text-align: center;
   color: var(--bs-emphasis-color);
   font-size: clamp(2.5rem, 5vw, 4.5rem);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 footer {
@@ -272,12 +277,14 @@ footer .logo-bug-busters {
 .texto-introducao-home {
   padding: 0 11%;
   margin-top: 70px;
+  font-size: 20px;
+  text-align: justify;
 }
 
 /* TESTES */
 .conteudos {
-  margin-top: 70px;
-  padding: 0 0 70px;
+  margin-top: 30px;
+  padding: 0 0 30px;
 }
 
 .conteudos .container-conteudos {
@@ -294,6 +301,7 @@ footer .logo-bug-busters {
   height: 300px;
   position: relative;
   display: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .conteudos .conteudo.ativo {
@@ -313,6 +321,8 @@ h3.titulo {
   padding: 10px 0 10px 20px;
   position: absolute;
   bottom: 115px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   color: var(--bs-secondary-color);
 }
 
@@ -417,7 +427,9 @@ h3.titulo {
   margin: 50px;
   font-size: 18px;
 }
-
+.conteudo-papeis-pilares-lista{
+  margin: 0 10%;
+}
 .subtitles {
   margin: 0 50px;
   font-size: 18px;
@@ -577,6 +589,7 @@ form .container {
 
 .option input[type="radio"]:checked+label {
   background-color: var(--gradient-lighter);
+  box-shadow: 0px 0px 10px 0px rgba(60, 167, 65, 0.5);
 }
 
 .option input[type="radio"]:checked+label::before {
@@ -629,6 +642,58 @@ form .container {
 .bg-cards-conteudo-index {
   background-color: #45706874;
   max-width: 90%;
+}
+
+.container-botao-nextpage{
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 10px;
+}
+.container-botao-nextpage a{
+  text-decoration: none;
+}
+.botao-nextpage {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica,"sans-serif";
+  transition: all .2s;
+  padding: 20px 20px;
+  border-radius: 100px;
+  background: #457068;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: white;
+  box-shadow: 0 0 5px rgba(57, 136, 87, 0.5);
+}
+.botao-previouspage{
+  margin-left: 50px;
+  box-shadow: 0 0 5px rgba(57, 136, 87, 0.5);
+}
+button:hover {
+  background: #0e4b3f;
+}
+
+button > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+}
+button.botao-previouspage > svg {
+  width: 34px;
+  margin-right: 10px;
+  transition: transform .3s ease-in-out;
+}
+
+button:hover svg {
+  transform: translateX(5px);
+}
+button.botao-previouspage:hover svg {
+  transform: translateX(-5px);
+}
+button:active {
+  transform: scale(0.95);
 }
 
 #sprint-plan-met-img{

@@ -41,6 +41,14 @@
     </div>
   </div>
 </div>
+<div class="container-botao-nextpage">
+
+{%block nextpage%}
+
+{%endblock%}
+
+</div>
+
 {% endblock %}
 
 {% block sidebar %}
@@ -50,9 +58,6 @@
   <div class="row">
     <div class="col-12">
       <div id="list-example" class="list-group">
-        <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#list-item-1">
-          Título Conteúdo
-        </a>
         {% block navegacao_interna %}{% endblock %}
         <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#em-resumo">
           Em resumo

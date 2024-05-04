@@ -20,7 +20,7 @@ Pilares e Papéis do Scrum
 
 <!-- Conteúdo / texto -->
 {% block text %}
-<h2>Pilares do Scrum</h2>
+<h2 id="titulo1">Pilares do Scrum</h2>
 <div class="div-pilares">
   <img src="{{url_for('static', filename='images/pilares.png')}}" alt="pilares-img" id="pilares-img">
   <p class="txt-conteudo">Nos alicerces do Scrum, repousam três pilares inabaláveis: Transparência, Inspeção e Adaptação.
@@ -28,7 +28,7 @@ Pilares e Papéis do Scrum
     de forma eficiente e eficaz. Vamos explorar cada um desses pilares e entender como eles formam a espinha dorsal de um
     processo ágil e dinâmico, capaz de se adaptar às mudanças e entregar resultados excepcionais.</p>
 </div>
-<ul>
+<ul class="conteudo-papeis-pilares-lista">
   <li> <strong>Transparência:</strong> No contexto do Scrum, a transparência é um dos pilares fundamentais que sustentam
     a metodologia ágil. Ela se refere à necessidade de que todos os aspectos relevantes do trabalho sejam visíveis e
     compreensíveis para todos os membros da equipe. Isso inclui o estado das tarefas, os objetivos do projeto, os
@@ -67,6 +67,7 @@ Pilares e Papéis do Scrum
     tem responsabilidades claras dentro do framework Scrum.</p>
   <img src="{{url_for('static', filename='images/papeis.png')}}" alt="papeis-img" id="papeis-img">
 </div>
+<div>
 <br>
 <ol>
   <li><strong>Product Owner</strong>
@@ -275,12 +276,37 @@ Pilares e Papéis do Scrum
 </div>
 {% endblock quiz %}
 
+{%block nextpage%}
+<a href="/introducao">
+  <button class="botao-nextpage botao-previouspage">
+    <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
+      <path d="M24.25 37L42.75 18.5L41.25 17L22.75 37L41.25 57.5L42.75 56L24.25 37Z" fill="white"></path>
+    </svg>
+    <span>Conteúdo Anterior</span>
+  </button>
+</a>
+
+<a href="/artefatos-e-eventos-1">
+  <button class="botao-nextpage">
+    <span>Proximo Conteúdo</span>
+    <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
+      <path d="M49.5 37L31 55.5L32.5 57L51 37L32.5 17.5L31 19L49.5 37Z" fill="white"></path>
+    </svg>
+  </button>
+</a>
+{%endblock%}
+
 
 <!-- Navegação interna  -->
 <!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
 <!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
 {% block navegacao_interna %}
+<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo1">
+  Pilares do Scrum
+</a>
 <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
-  Título 2
+  Papéis e Responsabilidades
 </a>
 {% endblock %}
