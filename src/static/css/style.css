@@ -323,8 +323,9 @@ h3.titulo {
   position: absolute;
   bottom: 115px;
   color: var(--bs-secondary-color);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 5px rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
 
 .informacoes-conteudo {
@@ -355,7 +356,8 @@ h3.titulo {
   background-image: linear-gradient(var(--gradient-darker),
       var(--gradient-lighter));
   margin-top: 50px;
-  padding: 6%
+  padding: 6%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card-body {
@@ -374,6 +376,7 @@ h3.titulo {
   font-weight: bold;
   border: solid 4px var(--bs-body-color);
   padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card-exame .card-text {
@@ -382,6 +385,9 @@ h3.titulo {
 
 .card-sobre-nos {
   max-width: 80%;
+  padding: 50px;
+  border-radius: 40px !important;
+  
 }
 
 .img-card-sobre-nos {
@@ -405,7 +411,10 @@ h3.titulo {
 .bg-card-sobre-nos {
   background-color: var(--bs-secondary);
 }
-
+.fundo-conteudos{
+  border-radius: 50px !important;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) !important ;
+}
 .conteudo-exame {
   margin: 30px;
   display: flex;
