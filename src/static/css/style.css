@@ -362,6 +362,7 @@ h3.titulo {
 .card-body {
   max-width: 90%;
   margin: 50px 0 0 50px;
+  border-radius: 40px !important;
 }
 
 .btn-exame {
@@ -378,6 +379,14 @@ h3.titulo {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
+.title .card{
+  border-radius: 40px !important;
+}
+.title .card .card-header{
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 20px;
+}
 .card-exame .card-text {
   font-size: 20px;
 }
@@ -385,9 +394,17 @@ h3.titulo {
 .card-sobre-nos {
   max-width: 80%;
   padding: 50px;
-  border-radius: 40px !important;
   
 }
+.img-em-resumo{
+  width: 50%;
+  height: auto;
+  float: left;
+  min-width: 300px;
+  margin: 0 30px 10px 0;
+  border-radius: 40px;
+}
+
 
 .img-card-sobre-nos {
   width: 100%;
@@ -450,6 +467,8 @@ h3.titulo {
   padding: 2%;
   max-width: 80%;
   background-color: var(--bs-secondary);
+  height: auto;
+  border-radius: 40px !important;
 }
 
 .card-title {
@@ -719,6 +738,13 @@ button:active {
   margin: 0 10px 10px 20px;
   border-radius: 30px;
 }
+.em-resumo-introdução{
+  margin-bottom: 70px;
+}
+
 #imagem-planningmeetin{
   background: white;
+}
+#img-pilares1{
+  background: white;  
 }

@@ -21,12 +21,14 @@
 <h2>Product Backlog</h2>
 <div class="div-textoimagem">
   <p class="txt-conteudo">
-  <img src="{{url_for('static', filename='images/backlog.png')}}" alt="introducao-img" class="imagem-com-texto-paragrafo">
-  Dentro do contexto do framework Scrum, o Product Backlog assume uma posição central como um
+    <img src="{{url_for('static', filename='images/backlog.png')}}" alt="introducao-img"
+      class="imagem-com-texto-paragrafo">
+    Dentro do contexto do framework Scrum, o Product Backlog assume uma posição central como um
     artefato dinâmico e estratégico que orienta o desenvolvimento do produto. Ele não apenas enumera tarefas, mas sim
     encapsula a essência das necessidades do cliente e das expectativas do mercado, servindo como um guia contínuo para
     a
-    equipe Scrum. Aqui está uma exploração mais aprofundada de seus componentes e importância:</p>
+    equipe Scrum. Aqui está uma exploração mais aprofundada de seus componentes e importância:
+  </p>
 </div>
 <div class="subtitles">
   <p>
@@ -90,20 +92,18 @@
 
 <!-- Seção Em Resumo -->
 {% block em_resumo %}
+<img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="img-em-resumo">
+<p>
+<ul>
+  <li>O Product Backlog é uma lista dinâmica de requisitos e funcionalidades, essencial para guiar o desenvolvimento
+    do produto.</li>
+  <li>O Product Owner é responsável por gerenciar o backlog, alinhando-o aos objetivos do produto.</li>
+  <li>As reuniões com o cliente ajudam a capturar requisitos e obter feedback para refinamento contínuo.</li>
+  <li>A definição da visão do produto e o uso de User Stories garantem uma direção clara para a equipe.</li>
+  <li>As iterações ágeis e a adaptação constante são fundamentais para o sucesso do Scrum.</li>
+</ul>
+</p>
 
-<div class="col">
-  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos-atf">
-  <p>
-  <ul>
-    <li>O Product Backlog é uma lista dinâmica de requisitos e funcionalidades, essencial para guiar o desenvolvimento
-      do produto.</li>
-    <li>O Product Owner é responsável por gerenciar o backlog, alinhando-o aos objetivos do produto.</li>
-    <li>As reuniões com o cliente ajudam a capturar requisitos e obter feedback para refinamento contínuo.</li>
-    <li>A definição da visão do produto e o uso de User Stories garantem uma direção clara para a equipe.</li>
-    <li>As iterações ágeis e a adaptação constante são fundamentais para o sucesso do Scrum.</li>
-  </ul>
-  </p>
-</div>
 {% endblock em_resumo %}
 
 
@@ -260,6 +260,6 @@
 <!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
 {% block navegacao_interna %}
 <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#list-item-1">
-Product Backlog
+  Product Backlog
 </a>
 {% endblock %}
