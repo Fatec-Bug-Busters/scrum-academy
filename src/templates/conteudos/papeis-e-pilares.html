@@ -21,11 +21,13 @@ Pilares e Papéis do Scrum
 <!-- Conteúdo / texto -->
 {% block text %}
 <h2 id="titulo1">Pilares do Scrum</h2>
-<p class="txt-conteudo">Nos alicerces do Scrum, repousam três pilares inabaláveis: Transparência, Inspeção e Adaptação.
-  Esses pilares não apenas sustentam a estrutura do Scrum, mas também fornecem uma base sólida para equipes trabalharem
-  de forma eficiente e eficaz. Vamos explorar cada um desses pilares e entender como eles formam a espinha dorsal de um
-  processo ágil e dinâmico, capaz de se adaptar às mudanças e entregar resultados excepcionais.</p>
-<p>
+<div class="div-pilares">
+  <img src="{{url_for('static', filename='images/pilares.png')}}" alt="pilares-img" id="pilares-img">
+  <p class="txt-conteudo">Nos alicerces do Scrum, repousam três pilares inabaláveis: Transparência, Inspeção e Adaptação.
+    Esses pilares não apenas sustentam a estrutura do Scrum, mas também fornecem uma base sólida para equipes trabalharem
+    de forma eficiente e eficaz. Vamos explorar cada um desses pilares e entender como eles formam a espinha dorsal de um
+    processo ágil e dinâmico, capaz de se adaptar às mudanças e entregar resultados excepcionais.</p>
+</div>
 <ul class="conteudo-papeis-pilares-lista">
   <li> <strong>Transparência:</strong> No contexto do Scrum, a transparência é um dos pilares fundamentais que sustentam
     a metodologia ágil. Ela se refere à necessidade de que todos os aspectos relevantes do trabalho sejam visíveis e
@@ -59,69 +61,69 @@ Pilares e Papéis do Scrum
 <br>
 
 <h2 id="titulo-2">Papéis e Responsabilidades</h2>
-<p class="txt-conteudo">O Método Scrum define três papéis principais que são fundamentais para o sucesso do processo: o
-  Product Owner, o Scrum Master e a equipe de Desenvolvimento. Cada um desses papéis desempenha funções específicas e
-  tem responsabilidades claras dentro do framework Scrum.
-</p>
-<div class="conteudo-papeis-pilares-lista">
-
-  <ol>
-    <li><strong>Product Owner</strong>
-      <p>O Product Owner é responsável por maximizar o valor do produto e do trabalho da
-        equipe. Suas principais responsabilidades incluem:</p>
-      <ul>
-        <li>Gerenciar o Product Backlog: O Product Owner é responsável por manter e priorizar o Product Backlog,
-          garantindo que
-          ele esteja sempre atualizado e refletindo as necessidades e prioridades do cliente e do negócio.</li>
-        <br>
-        <li>
-          Definir Requisitos e Critérios de Aceitação: O Product Owner trabalha em estreita colaboração com os
-          stakeholders para entender e capturar os requisitos do produto. Eles também definem critérios claros de
-          aceitação para cada item do Product Backlog.
-        </li>
-        <br>
-        <li>
-          Tomar Decisões Prioritárias: O Product Owner é responsável por tomar decisões claras e informadas sobre quais
-          funcionalidades e melhorias devem ser implementadas em cada sprint, com base nas necessidades do cliente e nos
-          objetivos do negócio.
-        </li>
-      </ul>
-    </li>
-    <br>
-    <li><strong>Scrum Master</strong>
-      <p>O Scrum Master atua como um facilitador e servo-líder para a equipe Scrum. Suas principais responsabilidades
-        incluem:</p>
-      <ul>
-        <li>Remover Obstáculos: O Scrum Master trabalha para identificar e remover quaisquer obstáculos que estejam
-          impedindo a equipe de alcançar seus objetivos durante o sprint.</li>
-        <br>
-        <li>Facilitar as Cerimônias do Scrum: O Scrum Master é responsável por facilitar as cerimônias do Scrum, como o
-          Sprint Planning, o Daily Scrum, o Sprint Review e a Sprint Retrospective, garantindo que elas ocorram de forma
-          eficiente e eficaz.</li>
-        <br>
-        <li>Promover a Autonomia da Equipe: O Scrum Master ajuda a equipe a se auto-organizar e a assumir a
-          responsabilidade pelo seu próprio trabalho, incentivando a colaboração e a comunicação eficaz.</li>
-      </ul>
-    </li>
-    <br>
-    <li><strong>Equipe de Desenvolvimento</strong>
-      <p>A equipe de Desenvolvimento é composta por profissionais multifuncionais que trabalham juntos para entregar
-        incrementos de produto utilizáveis a cada sprint. Suas principais responsabilidades incluem:</p>
-      <ul>
-        <li>Desenvolver Funcionalidades: A equipe de Desenvolvimento é responsável por transformar os itens do Product
-          Backlog em incrementos de produto funcionais e de alta qualidade a cada sprint.</li>
-        <br>
-        <li>Colaborar e Comunicar: Os membros da equipe de Desenvolvimento devem colaborar de forma eficaz,
-          compartilhando
-          conhecimento, habilidades e responsabilidades para garantir o sucesso do sprint.</li>
-        <br>
-        <li>Manter a Qualidade: A equipe de Desenvolvimento é responsável por garantir que o produto entregue atenda aos
-          padrões de qualidade estabelecidos, realizando testes adequados e garantindo a integridade do código.</li>
-        <br>
-      </ul>
-    </li>
-  </ol>
+<div class="div-papeis">
+  <p class="txt-conteudo">O Método Scrum define três papéis principais que são fundamentais para o sucesso do processo: o
+    Product Owner, o Scrum Master e a equipe de Desenvolvimento. Cada um desses papéis desempenha funções específicas e
+    tem responsabilidades claras dentro do framework Scrum.</p>
+  <img src="{{url_for('static', filename='images/papeis.png')}}" alt="papeis-img" id="papeis-img">
 </div>
+<div>
+<br>
+<ol>
+  <li><strong>Product Owner</strong>
+    <p>O Product Owner é responsável por maximizar o valor do produto e do trabalho da
+      equipe. Suas principais responsabilidades incluem:</p>
+    <ul>
+      <li>Gerenciar o Product Backlog: O Product Owner é responsável por manter e priorizar o Product Backlog,
+        garantindo que
+        ele esteja sempre atualizado e refletindo as necessidades e prioridades do cliente e do negócio.</li>
+      <br>
+      <li>
+        Definir Requisitos e Critérios de Aceitação: O Product Owner trabalha em estreita colaboração com os
+        stakeholders para entender e capturar os requisitos do produto. Eles também definem critérios claros de
+        aceitação para cada item do Product Backlog.
+      </li>
+      <br>
+      <li>
+        Tomar Decisões Prioritárias: O Product Owner é responsável por tomar decisões claras e informadas sobre quais
+        funcionalidades e melhorias devem ser implementadas em cada sprint, com base nas necessidades do cliente e nos
+        objetivos do negócio.
+      </li>
+    </ul>
+  </li>
+  <br>
+  <li><strong>Scrum Master</strong>
+    <p>O Scrum Master atua como um facilitador e servo-líder para a equipe Scrum. Suas principais responsabilidades
+      incluem:</p>
+    <ul>
+      <li>Remover Obstáculos: O Scrum Master trabalha para identificar e remover quaisquer obstáculos que estejam
+        impedindo a equipe de alcançar seus objetivos durante o sprint.</li>
+      <br>
+      <li>Facilitar as Cerimônias do Scrum: O Scrum Master é responsável por facilitar as cerimônias do Scrum, como o
+        Sprint Planning, o Daily Scrum, o Sprint Review e a Sprint Retrospective, garantindo que elas ocorram de forma
+        eficiente e eficaz.</li>
+      <br>
+      <li>Promover a Autonomia da Equipe: O Scrum Master ajuda a equipe a se auto-organizar e a assumir a
+        responsabilidade pelo seu próprio trabalho, incentivando a colaboração e a comunicação eficaz.</li>
+    </ul>
+  </li>
+  <br>
+  <li><strong>Equipe de Desenvolvimento</strong>
+    <p>A equipe de Desenvolvimento é composta por profissionais multifuncionais que trabalham juntos para entregar
+      incrementos de produto utilizáveis a cada sprint. Suas principais responsabilidades incluem:</p>
+    <ul>
+      <li>Desenvolver Funcionalidades: A equipe de Desenvolvimento é responsável por transformar os itens do Product
+        Backlog em incrementos de produto funcionais e de alta qualidade a cada sprint.</li>
+      <br>
+      <li>Colaborar e Comunicar: Os membros da equipe de Desenvolvimento devem colaborar de forma eficaz, compartilhando
+        conhecimento, habilidades e responsabilidades para garantir o sucesso do sprint.</li>
+      <br>
+      <li>Manter a Qualidade: A equipe de Desenvolvimento é responsável por garantir que o produto entregue atenda aos
+        padrões de qualidade estabelecidos, realizando testes adequados e garantindo a integridade do código.</li>
+      <br>
+    </ul>
+  </li>
+</ol>
 <p class="txt-conteudo">
   Os papéis no Método Scrum são claramente definidos e têm responsabilidades específicas que contribuem para o sucesso
   do processo. O Product Owner, o Scrum Master e a equipe de Desenvolvimento trabalham em conjunto para maximizar o

@@ -229,7 +229,6 @@ main .content {
 
 .cover .titulo {
   top: 40%;
-
 }
 
 .cover .titulo h1 {
@@ -636,8 +635,8 @@ form .container {
 }
 
 #backlog-img {
-  max-width: 40%;
-  max-height: 300px;
+  width: 40%;
+  height: auto;
 }
 
 .resultados-stats {
@@ -704,4 +703,69 @@ button.botao-previouspage:hover svg {
 }
 button:active {
   transform: scale(0.95);
+}
+
+#sprint-plan-met-img{
+  width: 60%;
+  height: 50%;
+  float: right;
+}
+
+.div-introducao {
+  display: flex;
+}
+
+#introducao-img {
+  width: 40%;
+  height: 40%;
+  float: right;
+  margin-right: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#pilares-img {
+  width: 60%;
+  height: 45%;
+  float: right;
+  margin-bottom: -20px;
+}
+
+.div-papeis {
+  display: flex;
+}
+
+#papeis-img {
+  width: 50%;
+  float: right;
+}
+
+@media only screen and (max-width: 425px) {
+  .div-backlog, .div-sprint-plan-met, .div-pilares, .div-papeis, .div-introducao {
+    display: flex;
+    flex-direction: column;
+  }
+  #backlog-img, #sprint-plan-met-img, #papeis-img {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #pilares-img {
+    width: 80%;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #introducao-img {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+  .img-card-sobre-nos-atf {
+    width: 100%;
+  }
+  #titulo-2 {
+    font-size: 16px;
+  }
 }
