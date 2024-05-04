@@ -1,0 +1,223 @@
+{% extends "conteudo.html" %}
+
+
+<!-- Titulo da pagina -->
+{% block title %} Pilares e Responsabilidades {% endblock %}
+
+
+<!-- Imagem cover -->
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="Cover Conteudo">
+{% endblock %}
+
+
+<!-- Texto da cover -->
+{% block cover_text %}
+Pilares e Responsabilidades no Método Scrum
+{% endblock %}
+
+
+<!-- Conteúdo / texto -->
+{% block text %}
+<h2>Pilares do Scrum</h2>
+<p class="txt-conteudo">Nos alicerces do Scrum, repousam três pilares inabaláveis: Transparência, Inspeção e Adaptação.
+  Esses pilares não apenas sustentam a estrutura do Scrum, mas também fornecem uma base sólida para equipes trabalharem
+  de forma eficiente e eficaz. Vamos explorar cada um desses pilares e entender como eles formam a espinha dorsal de um
+  processo ágil e dinâmico, capaz de se adaptar às mudanças e entregar resultados excepcionais.</p>
+<p>
+<ul>
+  <li> <strong>Transparência:</strong> No contexto do Scrum, a transparência é um dos pilares fundamentais que sustentam
+    a metodologia ágil. Ela se refere à necessidade de que todos os aspectos relevantes do trabalho sejam visíveis e
+    compreensíveis para todos os membros da equipe. Isso inclui o estado das tarefas, os objetivos do projeto, os
+    critérios de aceitação das entregas, as métricas de desempenho e qualquer obstáculo que esteja impedindo o
+    progresso. Para garantir a transparência, as equipes frequentemente utilizam artefatos como quadros Kanban ou
+    softwares de gestão de projetos, nos quais o status do trabalho é atualizado regularmente e pode ser acessado por
+    todos os membros da equipe. A transparência promove a confiança e a colaboração, pois permite que todos tenham uma
+    compreensão clara do que está acontecendo e do que precisa ser feito para alcançar os objetivos do projeto.
+  </li>
+  <br>
+  <li><strong>Inspeção:</strong> A inspeção é outro pilar vital do Scrum, enfatizando a importância de avaliar
+    regularmente o progresso do trabalho e os resultados obtidos. Isso ocorre por meio de diversas cerimônias e
+    práticas, como as reuniões diárias (Daily Scrum), as revisões de sprint (Sprint Reviews) e as retrospectivas (Sprint
+    Retrospectives). Durante essas reuniões, a equipe revisa o trabalho concluído, verifica se está alinhado com as
+    expectativas e identifica áreas de melhoria ou possíveis obstáculos que precisam ser abordados. A inspeção contínua
+    ajuda a garantir que o trabalho realizado esteja de acordo com as necessidades do cliente e com os padrões de
+    qualidade estabelecidos, permitindo que a equipe faça ajustes rápidos e eficazes, quando necessário.
+  </li>
+  <br>
+  <li><strong>Adaptação:</strong> Por fim, a adaptação completa o tripé dos pilares do Scrum. A capacidade de adaptação
+    é essencial em um ambiente dinâmico e complexo, onde os requisitos e as circunstâncias podem mudar rapidamente. Com
+    base nas informações obtidas durante as inspeções regulares, a equipe pode ajustar suas estratégias, redefinir
+    prioridades, realocar recursos e até mesmo revisar o escopo do projeto, se necessário. Essa flexibilidade permite
+    que a equipe responda de forma ágil e eficaz às mudanças e incertezas, maximizando as chances de sucesso do projeto.
+    A adaptação é incentivada e suportada pelo framework Scrum, que fornece estruturas e práticas que permitem que as
+    equipes sejam ágeis e responsivas às necessidades do cliente e às mudanças no ambiente de negócios.
+  </li>
+</ul>
+</p>
+<br>
+
+<h2 id="titulo-2">Papéis e Responsabilidades</h2>
+<p class="txt-conteudo">O Método Scrum define três papéis principais que são fundamentais para o sucesso do processo: o
+  Product Owner, o Scrum Master e a equipe de Desenvolvimento. Cada um desses papéis desempenha funções específicas e
+  tem responsabilidades claras dentro do framework Scrum.
+</p>
+<br>
+<ol>
+  <li><strong>Product Owner</strong>
+    <p>O Product Owner é responsável por maximizar o valor do produto e do trabalho da
+      equipe. Suas principais responsabilidades incluem:</p>
+    <ul>
+      <li>Gerenciar o Product Backlog: O Product Owner é responsável por manter e priorizar o Product Backlog,
+        garantindo que
+        ele esteja sempre atualizado e refletindo as necessidades e prioridades do cliente e do negócio.</li>
+      <br>
+      <li>
+        Definir Requisitos e Critérios de Aceitação: O Product Owner trabalha em estreita colaboração com os
+        stakeholders para entender e capturar os requisitos do produto. Eles também definem critérios claros de
+        aceitação para cada item do Product Backlog.
+      </li>
+      <br>
+      <li>
+        Tomar Decisões Prioritárias: O Product Owner é responsável por tomar decisões claras e informadas sobre quais
+        funcionalidades e melhorias devem ser implementadas em cada sprint, com base nas necessidades do cliente e nos
+        objetivos do negócio.
+      </li>
+    </ul>
+  </li>
+  <br>
+  <li><strong>Scrum Master</strong>
+    <p>O Scrum Master atua como um facilitador e servo-líder para a equipe Scrum. Suas principais responsabilidades
+      incluem:</p>
+    <ul>
+      <li>Remover Obstáculos: O Scrum Master trabalha para identificar e remover quaisquer obstáculos que estejam
+        impedindo a equipe de alcançar seus objetivos durante o sprint.</li>
+      <br>
+      <li>Facilitar as Cerimônias do Scrum: O Scrum Master é responsável por facilitar as cerimônias do Scrum, como o
+        Sprint Planning, o Daily Scrum, o Sprint Review e a Sprint Retrospective, garantindo que elas ocorram de forma
+        eficiente e eficaz.</li>
+      <br>
+      <li>Promover a Autonomia da Equipe: O Scrum Master ajuda a equipe a se auto-organizar e a assumir a
+        responsabilidade pelo seu próprio trabalho, incentivando a colaboração e a comunicação eficaz.</li>
+    </ul>
+  </li>
+  <br>
+  <li><strong>Equipe de Desenvolvimento</strong>
+    <p>A equipe de Desenvolvimento é composta por profissionais multifuncionais que trabalham juntos para entregar
+      incrementos de produto utilizáveis a cada sprint. Suas principais responsabilidades incluem:</p>
+    <ul>
+      <li>Desenvolver Funcionalidades: A equipe de Desenvolvimento é responsável por transformar os itens do Product
+        Backlog em incrementos de produto funcionais e de alta qualidade a cada sprint.</li>
+      <br>
+      <li>Colaborar e Comunicar: Os membros da equipe de Desenvolvimento devem colaborar de forma eficaz, compartilhando
+        conhecimento, habilidades e responsabilidades para garantir o sucesso do sprint.</li>
+      <br>
+      <li>Manter a Qualidade: A equipe de Desenvolvimento é responsável por garantir que o produto entregue atenda aos
+        padrões de qualidade estabelecidos, realizando testes adequados e garantindo a integridade do código.</li>
+      <br>
+    </ul>
+  </li>
+</ol>
+<p class="txt-conteudo">
+  Os papéis no Método Scrum são claramente definidos e têm responsabilidades específicas que contribuem para o sucesso
+  do processo. O Product Owner, o Scrum Master e a equipe de Desenvolvimento trabalham em conjunto para maximizar o
+  valor do produto, remover obstáculos e entregar incrementos de produto funcionais e de alta qualidade a cada sprint.
+  Ao desempenhar efetivamente seus papéis e colaborar de forma eficaz, as equipes Scrum podem alcançar níveis mais altos
+  de produtividade, qualidade e satisfação do cliente.
+</p>
+<p class="txt-conteudo">
+  No Scrum, a democracia é inerente ao seu funcionamento, pois valoriza a contribuição de todos os membros da equipe,
+  independentemente do papel que desempenham. Tanto o Product Owner quanto o Scrum Master têm funções específicas, mas
+  não detêm mais poder ou importância do que os membros da equipe de desenvolvimento.
+</p>
+<p class="txt-conteudo">
+  Cada voz é valorizada igualmente durante as discussões e decisões, promovendo um ambiente onde todos têm liberdade
+  para expressar suas opiniões, ideias e preocupações. Essa abordagem democrática garante que as melhores soluções sejam
+  encontradas em conjunto, alinhadas com os objetivos do projeto e as necessidades do cliente, fortalecendo assim o
+  trabalho colaborativo e a eficácia do Scrum como um todo.
+</p>
+{% endblock text %}
+
+
+<!-- Seção Em Resumo -->
+{% block em_resumo %}
+<div class="col-12 col-lg-3 ">
+  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos">
+</div>
+<div class="col">
+  <ul>
+    <li>Papéis principais no Scrum: Product Owner, Scrum Master e equipe de Desenvolvimento.</li>
+    <li>Responsabilidades do Product Owner: Gerenciar o Product Backlog, definir requisitos e tomar decisões
+      prioritárias.</li>
+    <li>Funções do Scrum Master: Remover obstáculos, facilitar cerimônias do Scrum e promover a autonomia da equipe.
+    </li>
+    <li>Transparência: Aspectos do trabalho visíveis e compreensíveis para a equipe.</li>
+    <li>Inspeção regular: Realizada por meio de cerimônias como Daily Scrum, Sprint Reviews e Sprint Retrospectives.
+    </li>
+    <li>Importância da Inspeção: Garantir alinhamento com expectativas do cliente e padrões de qualidade.</li>
+    <li>Adaptação contínua: Ajustar estratégias, prioridades e escopo conforme necessário.</li>
+    <li>Flexibilidade do Scrum: Estruturas e práticas que incentivam a adaptação ágil.</li>
+    <li>Maximização do sucesso do projeto: Seguir princípios como transparência, inspeção e adaptação para entregar
+      valor consistentemente.</li>
+  </ul>
+</div>
+{% endblock em_resumo %}
+
+
+<!-- Seção Na Prática -->
+{% block na_pratica %}
+<p>Uma compreensão profunda dos papéis do Product Owner, Scrum Master e equipe de Desenvolvimento é essencial. O Product
+  Owner é responsável por maximizar o valor do produto, gerenciando o Product Backlog, definindo requisitos e tomando
+  decisões prioritárias. O Scrum Master atua como facilitador e líder de serviço, removendo obstáculos, facilitando
+  cerimônias do Scrum e promovendo a autonomia da equipe. A equipe de Desenvolvimento é responsável por realizar o
+  trabalho necessário para entregar um Product Increment de alta qualidade.</p>
+<p>A aplicação dos princípios fundamentais do Scrum é crucial para o sucesso do processo. A transparência garante que
+  todos os aspectos relevantes do trabalho sejam visíveis e compreensíveis para a equipe. A inspeção regular, por meio
+  de cerimônias como Daily Scrum e Sprint Reviews, permite avaliar o progresso do trabalho e identificar áreas de
+  melhoria. A adaptação contínua, baseada nas informações obtidas durante as inspeções, permite ajustar estratégias e
+  prioridades conforme necessário.</p>
+<p>Promover uma cultura de colaboração e comunicação aberta é fundamental para o sucesso do Scrum. A colaboração entre o
+  Product Owner, Scrum Master e equipe de Desenvolvimento é essencial para garantir que as necessidades do cliente sejam
+  compreendidas e atendidas. A comunicação eficaz, por meio de atualizações regulares do progresso do trabalho e
+  resolução rápida de obstáculos, mantém todos os membros da equipe alinhados e focados nos objetivos do projeto.</p>
+<p>Buscar constantemente pela melhoria contínua é uma prática central do Scrum. Durante as retrospectivas, a equipe
+  reflete sobre o trabalho realizado, identifica pontos fortes e áreas de melhoria, e implementa ajustes para otimizar
+  processos e entregas. Essa abordagem iterativa e incremental permite que a equipe aprenda e evolua ao longo do tempo,
+  aumentando sua eficácia e eficiência.</p>
+{% endblock na_pratica %}
+
+
+<!-- Seção Quiz -->
+{% block quiz %}
+<p class="card-text">
+  Questão 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+</div>
+<p class="card-text">
+  Questão 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+</div>
+{% endblock quiz %}
+
+
+<!-- Navegação interna  -->
+<!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
+<!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
+{% block navegacao_interna %}
+<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
+  Título 2
+</a>
+{% endblock %}
