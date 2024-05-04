@@ -438,6 +438,7 @@ h3.titulo {
 }
 .conteudo-papeis-pilares-lista{
   margin: 0 10%;
+  text-align: justify;
 }
 .subtitles {
   margin: 0 50px;
