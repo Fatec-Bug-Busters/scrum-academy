@@ -435,6 +435,7 @@ h3.titulo {
 .txt-conteudo {
   margin: 50px;
   font-size: 18px;
+  text-align: justify;
 }
 .conteudo-papeis-pilares-lista{
   margin: 0 10%;
