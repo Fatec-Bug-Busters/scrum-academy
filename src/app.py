@@ -23,11 +23,6 @@ def resultados():
     return render_template("resultados.html")
 
 
-@app.route("/exemplo")
-def conteudo():
-    return render_template("conteudos/exemplo.html")
-
-
 @app.route("/artefatos-e-eventos-1")
 def artefatoseeventos1():
     return render_template("conteudos/artefatos-e-eventos-1.html")
@@ -46,6 +41,16 @@ def artefatoseeventos2():
 @app.route("/papeis-e-pilares")
 def papeisepilares():
     return render_template("conteudos/papeis-epilares.html")
+
+
+@app.route("/exemplo")
+def conteudo():
+    return render_template("conteudos/exemplo.html")
+
+
+@app.route("/questoes")
+def questoes():
+    return render_template("components/questoes.html")
 
 
 if __name__ == "__main__":
