@@ -178,10 +178,8 @@ body {
 
 header,
 header nav {
-  background-image: linear-gradient(
-    var(--gradient-lighter),
-    var(--gradient-darker)
-  );
+  background-image: linear-gradient(var(--gradient-lighter),
+      var(--gradient-darker));
 }
 
 header .logo-navbar {
@@ -343,13 +341,12 @@ h3.titulo {
   background-color: var(--bs-secondary-bg);
   color: var(--bs-secondary-color);
   width: 90%;
-  background-image: linear-gradient(
-    var(--gradient-darker),
-    var(--gradient-lighter)
-  );
+  background-image: linear-gradient(var(--gradient-darker),
+      var(--gradient-lighter));
   margin-top: 50px;
   padding: 6%
 }
+
 .card-body {
   max-width: 90%;
   margin: 50px 0 0 50px;
@@ -527,19 +524,26 @@ form .container {
   font-weight: bold;
 }
 
+.quiz-numeracao {
+  background-image: linear-gradient(var(--gradient-darker), var(--gradient-lighter));
+  color: #fff;
+}
+
 .enunciado-texto {
   margin-left: 15px;
 }
-.container .card-content{
+
+.container .card-content {
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .question.hidden {
   margin: 10px 0;
   display: none;
 }
-.container.active .question{
+
+.container.active .question {
   display: block;
 }
 
@@ -617,13 +621,12 @@ form .container {
   height: 100%;
 }
 
-.btn-conteudo-footer{
+.btn-conteudo-footer {
   border-color: rgba(0, 0, 255, 0);
   color: white;
 }
 
-.bg-cards-conteudo-index
-{
+.bg-cards-conteudo-index {
   background-color: #45706874;
   max-width: 90%;
 }

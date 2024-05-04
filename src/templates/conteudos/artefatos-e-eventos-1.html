@@ -19,14 +19,15 @@
 
 <!-- Conteúdo / texto -->
 {% block text %}
-  <h2>Product Backlog</h2>
-  <div class="div-backlog">
-    <p class="txt-conteudo">Dentro do contexto do framework Scrum, o Product Backlog assume uma posição central como um
-      artefato dinâmico e estratégico que orienta o desenvolvimento do produto. Ele não apenas enumera tarefas, mas sim
-      encapsula a essência das necessidades do cliente e das expectativas do mercado, servindo como um guia contínuo para a
-      equipe Scrum. Aqui está uma exploração mais aprofundada de seus componentes e importância:</p>
-    <img src="{{url_for('static', filename='images/backlog.png')}}" alt="backlog" id="backlog-img">
-  </div>  
+<h2>Product Backlog</h2>
+<div class="div-backlog">
+  <p class="txt-conteudo">Dentro do contexto do framework Scrum, o Product Backlog assume uma posição central como um
+    artefato dinâmico e estratégico que orienta o desenvolvimento do produto. Ele não apenas enumera tarefas, mas sim
+    encapsula a essência das necessidades do cliente e das expectativas do mercado, servindo como um guia contínuo para
+    a
+    equipe Scrum. Aqui está uma exploração mais aprofundada de seus componentes e importância:</p>
+  <img src="{{url_for('static', filename='images/backlog.png')}}" alt="backlog" id="backlog-img">
+</div>
 <div class="subtitles">
   <p>
   <ol>
@@ -91,7 +92,8 @@
 {% block em_resumo %}
 
 <div class="col">
-  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos-atf">
+  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1"
+    class="rounded img-card-sobre-nos-atf">
   <p>
   <ul>
     <li>O Product Backlog é uma lista dinâmica de requisitos e funcionalidades, essencial para guiar o desenvolvimento
@@ -152,25 +154,84 @@
 
 <!-- Seção Quiz -->
 {% block quiz %}
-<p class="card-text">
-  Questão 1 - Qual é a responsabilidade do Product Owner em relação ao Product Backlog?
-</p>
-<div class="btns-quiz">
-  <button type="button" class="btn btn-secondary"> Criar User Stories</button>
-  <button type="button" class="btn btn-secondary">Gerenciar e manter o Product Backlog</button>
-  <button type="button" class="btn btn-secondary">Conduzir reuniões diárias com a equipe</button>
-  <button type="button" class="btn btn-secondary">Desenvolver a visão do produto</button>
-  <button type="button" class="btn btn-secondary">Definir os prazos de entrega do projeto</button>
+<!-- QUESTÃO -->
+<div class="container" onclick="toggleText(this)">
+  <div class="card-content">
+    <div class="enunciado-questoes">
+      <div class="quiz-numeracao rounded-circle p-2 px-3 d-flex align-items-center">
+        <h4 class="text-center m-0 p-0">1</h4>
+      </div>
+      <div class="enunciado-texto d-flex align-items-center">
+        <p class="m-0 p-0">Qual é a responsabilidade do Product Owner em relação ao Product Backlog?</p>
+      </div>
+    </div>
+    <!-- RESPOSTAS -->
+    <div class="question mt-4">
+      <ol class="options">
+        <li class="option">
+          <input type="radio" name="q1" id="q1a" value="a">
+          <label for="q1a">a) Criar User Stories</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q1" id="q1b" value="b">
+          <label for="q1b">b) Gerenciar e manter o Product Backlog</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q1" id="q1c" value="c">
+          <label for="q1c">c) Conduzir reuniões diárias com a equipe</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q1" id="q1d" value="d">
+          <label for="q1d">d) Desenvolver a visão do produto</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q1" id="q1e" value="e">
+          <label for="q1e">e) Definir os prazos de entrega do projeto</label>
+        </li>
+      </ol>
+    </div>
+  </div>
 </div>
-<p class="card-text">
-  Questão 2 - Qual é a importância das reuniões com o cliente para o desenvolvimento do Product Backlog?
-</p>
-<div class="btns-quiz">
-  <button type="button" class="btn btn-secondary">Definir a visão do produto</button>
-  <button type="button" class="btn btn-secondary"> Refinar as User Stories</button>
-  <button type="button" class="btn btn-secondary"> Capturar requisitos e obter feedback</button>
-  <button type="button" class="btn btn-secondary"> Priorizar as funcionalidades do aplicativomas </button>
-  <button type="button" class="btn btn-secondary">Realizar testes de aceitação com o cliente</button>
+
+<!-- QUESTÃO -->
+<div class="container mt-5" onclick="toggleText(this)">
+  <div class="card-content">
+    <div class="enunciado-questoes">
+      <div class="quiz-numeracao rounded-circle p-2 px-3 d-flex align-items-center">
+        <h4 class="text-center m-0 p-0">2</h4>
+      </div>
+      <div class="enunciado-texto d-flex align-items-center">
+        <p class="m-0 p-0">
+          Qual é a importância das reuniões com o cliente para o desenvolvimento do Product Backlog?
+        </p>
+      </div>
+    </div>
+    <!-- RESPOSTAS -->
+    <div class="question my-4">
+      <ol class="options">
+        <li class="option">
+          <input type="radio" name="q2" id="q2a" value="a">
+          <label for="q2a">a) Definir a visão do produto</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q2" id="q2b" value="b">
+          <label for="q2b">b) Refinar as User Stories</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q2" id="q2c" value="c">
+          <label for="q2c">c) Capturar requisitos e obter feedback</label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q2" id="q2d" value="d">
+          <label for="q2d">d) Priorizar as funcionalidades do aplicativomas </label>
+        </li>
+        <li class="option">
+          <input type="radio" name="q2" id="q2e" value="e">
+          <label for="q2e">e) Realizar testes de aceitação com o cliente</label>
+        </li>
+      </ol>
+    </div>
+  </div>
 </div>
 {% endblock quiz %}
 
