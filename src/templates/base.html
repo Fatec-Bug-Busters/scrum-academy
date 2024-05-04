@@ -71,41 +71,39 @@
   </header>
 
   <main>
-    <div class="container-fluid container-lg">
-
+    <div class="container-fluid p-0">
       <!-- COVER -->
-      <div class="row cover">
-        <div class="col-12 text-center">
-          <div class="card text-center align-middle">
-            {% block cover_img %}
-            <img src="{{url_for('static', filename='images/scrum.png') }}" class="card-img" alt="Cover Home">
-            {% endblock %}
-            <div class="card-img-overlay align-middle titulo">
-              <h1 class="">{% block cover_text %}{% endblock %}</h1>
-            </div>
-          </div>
-        </div>
+      {% if cover_img %}
+      <div class="cover d-flex flex-column justify-content-center text-center"
+        style="background-image: url( {{ url_for('static', filename='images/' + cover_img) }} )">
+        <h1 class="mb-5 pb-5"> {% block cover_text %}{% endblock %} </h1>
       </div>
 
-      <!-- CONTENT -->
-      <!-- {#
+      <div class="container-fluid container-lg" style="margin-top: -100px">
+        {% else %}
+        <div class="container-fluid container-lg mt-5">
+          {% endif %}
+
+          <!-- CONTENT -->
+          <!-- {#
         Direction: Column on <= small screens. Row on>= medium screens
         Column 2 becomes first row on <= small screens (direction column)
         Block 'sidebar' is displayed only if defined on child template
       #} -->
-      <div class="row content flex-column flex-md-row">
-        <div class="col p-0">
-          {% block content required %}{% endblock %}
-        </div>
+          <div class="row content flex-column flex-md-row">
+            <div class="col p-0">
+              {% block content required %}{% endblock %}
+            </div>
 
-        {% if self.sidebar() %}
-        <div class="col col-md-2 order-first order-md-last pt-4 ps-4">
-          {% block sidebar %}{% endblock %}
-        </div>
-        {% endif %}
+            {% if self.sidebar() %}
+            <div class="col col-md-2 order-first order-md-last pt-4 ps-4">
+              {% block sidebar %}{% endblock %}
+            </div>
+            {% endif %}
 
+          </div>
+        </div>
       </div>
-    </div>
   </main>
 
   <footer class="my-5 text-center">

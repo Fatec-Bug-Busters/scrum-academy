@@ -6,10 +6,7 @@
 
 
 <!-- Imagem cover -->
-{% block cover_img %}
-<br>
-<img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="Cover Conteudo">
-{% endblock %}
+{% set cover_img = 'Conteudo1-img.jpg' %}
 
 
 <!-- Texto da cover -->
@@ -109,13 +106,15 @@ Artefatos e Eventos - Parte 2
   </li>
   <br>
   <li>
-    <strong>Garantia de Qualidade com a Definição de Pronto:</strong> Adote uma Definição de Pronto clara e específica para cada história de usuário, incluindo
+    <strong>Garantia de Qualidade com a Definição de Pronto:</strong> Adote uma Definição de Pronto clara e específica
+    para cada história de usuário, incluindo
     critérios como testes, revisão de código e integração contínua, para garantir a qualidade do Product Increment
     entregue ao final da sprint.
   </li>
   <br>
   <li>
-    <strong>Melhoria Contínua e Reflexão:</strong> Após cada sprint, promova uma retrospectiva para identificar pontos fortes e áreas de melhoria no
+    <strong>Melhoria Contínua e Reflexão:</strong> Após cada sprint, promova uma retrospectiva para identificar pontos
+    fortes e áreas de melhoria no
     processo do Scrum, permitindo que a equipe ajuste e refine suas práticas para aumentar a eficiência e a entrega de
     valor em sprints futuras.
   </li>

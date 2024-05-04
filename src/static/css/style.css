@@ -209,28 +209,15 @@ main .content {
 
 /* COVER */
 .cover {
-  margin-bottom: 32px;
+  background-size: cover;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  min-height: 50vh;
 }
 
-.cover img {
-  margin: auto;
-  max-width: 100%;
-  height: auto;
-}
-
-.cover .card {
-  background: transparent !important;
-  border: 0;
-}
-
-.cover .titulo {
-  top: 40%;
-}
-
-.cover .titulo h1 {
-  text-align: center;
-  color: var(--bs-emphasis-color);
+.cover h1 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
+  height: 100% !important;
 }
 
 footer {

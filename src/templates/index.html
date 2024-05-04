@@ -3,9 +3,11 @@
 {% block title %}Página Inicial{% endblock %}
 
 <!-- COVER -->
-{% block cover_img %}
-<img src="{{url_for('static', filename='images/scrum.png')}}" alt="Cover Home">
-{% endblock %}
+<!-- Imagem cover -->
+{% set cover_img = 'scrum.png' %}
+
+
+<!-- Texto da cover -->
 {% block cover_text %}
 Bem vindo a SCRUM ACADEMY
 {% endblock %}
@@ -32,7 +34,7 @@ Bem vindo a SCRUM ACADEMY
 
 <!-- TESTES -->
 <center>
-  <div  class="rounded bg-cards-conteudo-index">
+  <div class="rounded bg-cards-conteudo-index">
     <br>
     <!-- Conteúdo 1 -->
     <section class="conteudos" id="conteudos">
@@ -80,7 +82,7 @@ Bem vindo a SCRUM ACADEMY
             <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 4">
             <h3 class="titulo">Conteúdo 4</h3>
             <div class="informacoes-conteudo">
-             
+
 
               <p>
                 Descrição do Conteúdo</p>
@@ -118,7 +120,7 @@ Bem vindo a SCRUM ACADEMY
             <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 7">
             <h3 class="titulo">Conteúdo 7</h3>
             <div class="informacoes-conteudo">
-            
+
 
               <p>
                 Descrição do Conteúdo</p>
@@ -152,7 +154,7 @@ Bem vindo a SCRUM ACADEMY
 
 
 <!-- EXAME -->
-<div class="container  rounded card-exame " >
+<div class="container  rounded card-exame ">
 
   <div class="row align-items-center">
     <div class="col">

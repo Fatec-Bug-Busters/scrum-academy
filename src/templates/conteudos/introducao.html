@@ -6,10 +6,7 @@
 
 
 <!-- Imagem cover -->
-{% block cover_img %}
-<br>
-<img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="Cover Conteudo">
-{% endblock %}
+{% set cover_img = 'Conteudo1-img.jpg' %}
 
 
 <!-- Texto da cover -->
@@ -87,11 +84,11 @@ Introdução ao Scrum
   equipes trabalham em campanhas específicas, definindo metas claras e ajustando suas estratégias com base no feedback
   do
   cliente.</p>
-  <p class="txt-conteudo">
-    O Método Scrum é baseado em princípios simples, mas poderosos. Ele organiza o trabalho em unidades de tempo chamadas
-    "sprints", que geralmente duram de uma a quatro semanas. Durante cada sprint, uma equipe multifuncional trabalha para
-    concluir um conjunto de tarefas prioritárias definidas no início do sprint.
-  </p>
+<p class="txt-conteudo">
+  O Método Scrum é baseado em princípios simples, mas poderosos. Ele organiza o trabalho em unidades de tempo chamadas
+  "sprints", que geralmente duram de uma a quatro semanas. Durante cada sprint, uma equipe multifuncional trabalha para
+  concluir um conjunto de tarefas prioritárias definidas no início do sprint.
+</p>
 <p class="txt-conteudo">Em resumo, o Scrum oferece uma abordagem flexível e adaptável para gerenciar projetos complexos
   em diversos
   setores, promovendo colaboração, transparência e entrega contínua de valor ao cliente.</p>
