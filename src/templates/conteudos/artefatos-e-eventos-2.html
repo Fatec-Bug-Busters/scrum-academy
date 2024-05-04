@@ -1,0 +1,159 @@
+{% extends "conteudo.html" %}
+
+
+<!-- Titulo da pagina -->
+{% block title %} Sprint Planning Meeting {% endblock %}
+
+
+<!-- Imagem cover -->
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="Cover Conteudo">
+{% endblock %}
+
+
+<!-- Texto da cover -->
+{% block cover_text %}
+Artefatos e Eventos 
+{% endblock %}
+
+
+<!-- Conteúdo / texto -->
+{% block text %}
+<h2>Sprint Planning Meeting </h2>
+<p class="txt-conteudo">
+  No Scrum, a Sprint Planning Meeting é uma etapa crucial que inaugura cada sprint, onde a equipe, junto ao Product
+  Owner e Scrum Master, colabora na definição dos objetivos e na seleção das histórias de usuário a serem trabalhadas.
+  Durante essa reunião, o Product Owner apresenta o Product Backlog, discutindo prioridades e metas com a equipe. Em
+  seguida, a equipe analisa as histórias de usuário, estimando esforços e selecionando as que comporão o Sprint Backlog.
+  A partir daí, inicia-se o desenvolvimento, visando produzir um Product Increment ao longo da sprint. Para assegurar a
+  qualidade, a equipe segue uma Definição de Pronto, estabelecendo critérios a serem cumpridos por cada história antes
+  de sua conclusão. Em síntese, a Sprint Planning Meeting é o ponto de partida para a definição do trabalho a ser
+  realizado, culminando na produção de valor consistente a cada sprint, fundamentando o sucesso do Scrum e a eficiência
+  da equipe.</p>
+<div class="col">
+  <ul>
+    <li>No Scrum, a Sprint Planning Meeting é uma cerimônia essencial que marca o início de cada sprint, durante esta
+      reunião, a equipe de desenvolvimento, juntamente com o Product Owner e o Scrum Master, colabora para definir os
+      objetivos da sprint e selecionar as histórias de usuário que serão trabalhadas.</li>
+    <br>
+    <li>Durante a Sprint Planning Meeting, o Product Owner apresenta o Product Backlog e discute as prioridades e
+      objetivos com a equipe. A equipe, então, analisa as histórias de usuário e estima o esforço necessário para
+      concluí-las. Com base nessa análise, eles selecionam as histórias que serão incluídas no Sprint Backlog, que é uma
+      lista de tarefas específicas a serem realizadas durante a sprint.</li>
+    <br>
+    <li>Uma vez que o Sprint Backlog é definido, a equipe começa a trabalhar na implementação das histórias de usuário.
+      Durante a sprint, o objetivo é produzir um Product Increment, que é uma versão potencialmente entregável do
+      produto, contendo as funcionalidades desenvolvidas durante a sprint.</li>
+    <br>
+    <li>Para garantir a qualidade do Product Increment, a equipe segue uma Definição de Pronto (DoD). A Definição de
+      Pronto é um conjunto de critérios que uma história de usuário deve atender antes de ser considerada concluída.
+      Isso pode incluir requisitos de testes, revisão de código, integração contínua e outros padrões de qualidade
+      específicos da equipe.</li>
+    <br>
+    <li>Em resumo, durante a Sprint Planning Meeting, a equipe define o que será feito durante a sprint, cria o Sprint
+      Backlog, trabalha para produzir um Product Increment e segue a Definição de Pronto para garantir a qualidade do
+      trabalho entregue. Esses elementos são fundamentais para o sucesso do Scrum, permitindo que a equipe trabalhe de
+      forma eficiente e produza valor de forma consistente em cada Sprint.</li>
+    <br>
+  </ul>
+</div>
+{% endblock text %}
+
+
+<!-- Seção Em Resumo -->
+{% block em_resumo %}
+<div class="col-12 col-lg-3 ">
+  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos">
+</div>
+<div class="col">
+  <ul>
+    <li>A Sprint Planning inicia cada sprint, onde equipe e Product Owner definem objetivos e selecionam histórias de
+      usuário.</li>
+    <li>Durante a reunião, o Product Owner apresenta o Product Backlog e a equipe escolhe as histórias para o Sprint
+      Backlog.</li>
+    <li>O objetivo da sprint é criar um Product Increment, uma versão entregável com novas funcionalidades.</li>
+    <li>Para garantir qualidade, a equipe segue uma Definição de Pronto com critérios específicos.</li>
+    <li>Esses passos são essenciais para o sucesso do Scrum, permitindo eficiência e entrega de valor a cada sprint.
+    </li>
+  </ul>
+</div>
+{% endblock em_resumo %}
+
+
+<!-- Seção Na Prática -->
+{% block na_pratica %}
+<p>O Scrum é uma metodologia ágil popular para gerenciamento de projetos, com a Sprint Planning Meeting sendo uma de
+  suas principais cerimônias. Durante essa reunião, a equipe define objetivos, seleciona histórias de usuário e cria o
+  Sprint Backlog. Posteriormente, o foco é na produção de um Product Increment de qualidade, seguindo uma Definição de
+  Pronto. Neste contexto, exploraremos cinco maneiras práticas de aplicar esses conhecimentos para aumentar a eficiência
+  e a entrega de valor nos projetos.</p>
+<br>
+<ul>
+  <li>
+    <strong>Planejamento Eficiente de Sprints:</strong> Utilize a Sprint Planning Meeting para
+    definir claramente os objetivos da
+    sprint e selecionar as histórias de usuário mais relevantes, garantindo que a equipe esteja alinhada com as metas do
+    projeto.
+  </li>
+  <br>
+  <li>
+    <strong>Priorização e Estimativa de Tarefas:</strong> Trabalhe em conjunto com o Product Owner para priorizar as
+    histórias de usuário com base no valor para o cliente e na complexidade, permitindo uma alocação eficiente de
+    recursos e tempo durante a sprint.
+  </li>
+  <br>
+  <li>
+    <strong>Foco na Entrega Incremental:</strong> Durante a sprint, concentre-se em produzir um Product Increment
+    funcional e entregável, priorizando as funcionalidades mais importantes para o produto e os requisitos do cliente.
+  </li>
+  <br>
+  <li>
+    <strong>Garantia de Qualidade com a Definição de Pronto:</strong> Adote uma Definição de Pronto clara e específica para cada história de usuário, incluindo
+    critérios como testes, revisão de código e integração contínua, para garantir a qualidade do Product Increment
+    entregue ao final da sprint.
+  </li>
+  <br>
+  <li>
+    <strong>Melhoria Contínua e Reflexão:</strong> Após cada sprint, promova uma retrospectiva para identificar pontos fortes e áreas de melhoria no
+    processo do Scrum, permitindo que a equipe ajuste e refine suas práticas para aumentar a eficiência e a entrega de
+    valor em sprints futuras.
+  </li>
+</ul>
+
+{% endblock na_pratica %}
+
+
+<!-- Seção Quiz -->
+{% block quiz %}
+<p class="card-text">
+  Questão 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+</div>
+<p class="card-text">
+  Questão 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+</div>
+{% endblock quiz %}
+
+
+<!-- Navegação interna  -->
+<!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
+<!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
+{% block navegacao_interna %}
+<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
+  Título 2
+</a>
+{% endblock %}
