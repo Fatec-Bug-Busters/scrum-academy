@@ -40,7 +40,7 @@ def artefatoseeventos2():
 
 @app.route("/papeis-e-pilares")
 def papeisepilares():
-    return render_template("conteudos/papeis-epilares.html")
+    return render_template("conteudos/papeis-e-pilares.html")
 
 
 @app.route("/exemplo")
