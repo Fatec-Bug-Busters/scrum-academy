@@ -8,7 +8,7 @@
 <!-- Imagem cover -->
 {% block cover_img %}
 <br>
-<img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="Cover Conteudo">
+<img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="Cover Conteudo" >
 {% endblock %}
 
 
@@ -20,7 +20,7 @@ Introdução ao Scrum
 
 <!-- Conteúdo / texto -->
 {% block text %}
-<h2>Introdução</h2>
+<h2 id="titulo1">Introdução</h2>
 <p class="txt-conteudo">
   O Método Scrum é uma metodologia de gerenciamento de projetos amplamente difundida no cenário do desenvolvimento ágil
   de software. Com sua ênfase na colaboração, auto-organização e entrega contínua de valor ao cliente, o Scrum tornou-se
@@ -28,7 +28,7 @@ Introdução ao Scrum
   diversos quanto marketing e pesquisa científica. Sua flexibilidade e adaptabilidade o tornam uma escolha popular para
   equipes que buscam maximizar a eficiência e a eficácia em seus processos de trabalho.</p>
 
-<h2>História do Scrum</h2>
+<h2 id="titulo-2">História do Scrum</h2>
 <p class="txt-conteudo">
   O Scrum foi formalizado pela primeira vez por Jeff Sutherland e Ken Schwaber no início dos anos 1990. Ambos foram
   inspirados por métodos de fabricação lean e teorias de gestão ágil. Eles introduziram o Scrum como uma maneira de
@@ -186,7 +186,10 @@ Introdução ao Scrum
 <!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
 <!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
 {% block navegacao_interna %}
+<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo1">
+    Introdução
+</a>
 <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
-  Título 2
+  História do Scrum
 </a>
 {% endblock %}
