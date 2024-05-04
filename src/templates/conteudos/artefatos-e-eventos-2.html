@@ -67,10 +67,7 @@ Artefatos e Eventos - Parte 2
 
 <!-- Seção Em Resumo -->
 {% block em_resumo %}
-<div class="col-12 col-lg-3 ">
-  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos">
-</div>
-<div class="col">
+  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="img-em-resumo">
   <ul>
     <li>A Sprint Planning inicia cada sprint, onde equipe e Product Owner definem objetivos e selecionam histórias de
       usuário.</li>
@@ -81,12 +78,13 @@ Artefatos e Eventos - Parte 2
     <li>Esses passos são essenciais para o sucesso do Scrum, permitindo eficiência e entrega de valor a cada sprint.
     </li>
   </ul>
-</div>
+
 {% endblock em_resumo %}
 
 
 <!-- Seção Na Prática -->
 {% block na_pratica %}
+
 <p>O Scrum é uma metodologia ágil popular para gerenciamento de projetos, com a Sprint Planning Meeting sendo uma de
   suas principais cerimônias. Durante essa reunião, a equipe define objetivos, seleciona histórias de usuário e cria o
   Sprint Backlog. Posteriormente, o foco é na produção de um Product Increment de qualidade, seguindo uma Definição de
