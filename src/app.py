@@ -32,17 +32,21 @@ def conteudo():
 def artefatoseeventos1():
     return render_template("conteudos/artefatos-e-eventos-1.html")
 
+
 @app.route("/introducao")
 def introducao():
     return render_template("conteudos/introducao.html")
+
 
 @app.route("/artefatos-e-eventos-2")
 def artefatoseeventos2():
     return render_template("conteudos/artefatos-e-eventos-2.html")
 
-@app.route("/papeis-epilares")
+
+@app.route("/papeis-e-pilares")
 def papeisepilares():
     return render_template("conteudos/papeis-epilares.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
