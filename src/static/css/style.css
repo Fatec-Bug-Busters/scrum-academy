@@ -707,72 +707,18 @@ button:active {
   transform: scale(0.95);
 }
 
-#sprint-plan-met-img{
-  width: 60%;
-  height: 50%;
-  float: right;
-}
-
-.div-introducao {
+.div-textoimagem {
   display: flex;
+  flex-wrap: wrap;
 }
 
-#introducao-img {
-  width: 40%;
-  height: 40%;
-  float: right;
-  margin-right: 50px;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-#pilares-img {
-  width: 60%;
-  height: 45%;
-  float: right;
-  margin-bottom: -20px;
-}
-
-.div-papeis {
-  display: flex;
-}
-
-#papeis-img {
+.imagem-com-texto-paragrafo {
   width: 50%;
-  float: right;
-  border-top-left-radius: 3rem;
-  border-bottom-left-radius: 3rem;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
- 
+  min-width: 300px !important;
+  float: right ;
+  margin: 0 10px 10px 20px;
+  border-radius: 30px;
 }
-
-@media only screen and (max-width: 425px) {
-  .div-backlog, .div-sprint-plan-met, .div-pilares, .div-papeis, .div-introducao {
-    display: flex;
-    flex-direction: column;
-  }
-  #backlog-img, #sprint-plan-met-img, #papeis-img {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  #pilares-img {
-    width: 80%;
-    margin-top: 50px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  #introducao-img {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-  }
-  .img-card-sobre-nos-atf {
-    width: 100%;
-  }
-  #titulo-2 {
-    font-size: 16px;
-  }
+#imagem-planningmeetin{
+  background: white;
 }

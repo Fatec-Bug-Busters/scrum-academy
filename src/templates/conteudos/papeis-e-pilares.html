@@ -19,10 +19,10 @@ Pilares e Papéis do Scrum
 
 
 <!-- Conteúdo / texto -->
-{% block text %}
+{% block text%}
 <h2 id="titulo1">Pilares do Scrum</h2>
-<div class="div-pilares">
-  <img src="{{url_for('static', filename='images/pilares.png')}}" alt="pilares-img" id="pilares-img">
+<div class="div-textoimagem">
+  <!-- <img src="{{url_for('static', filename='images/pilares.png')}}" alt="pilares-img" class="imagem-com-texto-paragrafo"> -->
   <p class="txt-conteudo">Nos alicerces do Scrum, repousam três pilares inabaláveis: Transparência, Inspeção e Adaptação.
     Esses pilares não apenas sustentam a estrutura do Scrum, mas também fornecem uma base sólida para equipes trabalharem
     de forma eficiente e eficaz. Vamos explorar cada um desses pilares e entender como eles formam a espinha dorsal de um
@@ -61,11 +61,11 @@ Pilares e Papéis do Scrum
 <br>
 
 <h2 id="titulo-2">Papéis e Responsabilidades</h2>
-<div class="div-papeis">
+<div>
   <p class="txt-conteudo">O Método Scrum define três papéis principais que são fundamentais para o sucesso do processo: o
     Product Owner, o Scrum Master e a equipe de Desenvolvimento. Cada um desses papéis desempenha funções específicas e
     tem responsabilidades claras dentro do framework Scrum.</p>
-  <img src="{{url_for('static', filename='images/papeis.png')}}" alt="papeis-img" id="papeis-img">
+  <!-- <img src="{{url_for('static', filename='images/papeis.png')}}" alt="papeis-img" id="papeis-img"> -->
 </div>
 <div class="txt-conteudo">
 <br>
@@ -142,7 +142,7 @@ Pilares e Papéis do Scrum
   encontradas em conjunto, alinhadas com os objetivos do projeto e as necessidades do cliente, fortalecendo assim o
   trabalho colaborativo e a eficácia do Scrum como um todo.
 </p>
-{% endblock text %}
+{% endblock%}
 
 
 <!-- Seção Em Resumo -->
@@ -192,10 +192,10 @@ Pilares e Papéis do Scrum
   aumentando sua eficácia e eficiência.</p>
 {% endblock na_pratica %}
 
-
 <!-- Seção Quiz -->
+
 {% block quiz %}
-<!-- QUESTÃO 1-->
+<!-- QUESTÃO 1 -->
 <div class="container" onclick="toggleText(this)">
   <div class="card-content">
     <div class="enunciado-questoes">
