@@ -187,6 +187,10 @@ header .logo-navbar {
   margin-left: 2%;
   width: 30%;
 }
+header .navbar{
+  display: flex;
+  justify-content: end;
+}
 
 header .icon-navbar {
   width: 40px;
@@ -231,6 +235,7 @@ main .content {
   text-align: center;
   color: var(--bs-emphasis-color);
   font-size: clamp(2.5rem, 5vw, 4.5rem);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 footer {
@@ -272,6 +277,7 @@ footer .logo-bug-busters {
 .texto-introducao-home {
   padding: 0 11%;
   margin-top: 70px;
+  font-size: 20px;
 }
 
 /* TESTES */
