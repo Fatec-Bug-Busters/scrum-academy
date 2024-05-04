@@ -2,11 +2,16 @@
 
 {% block title %}Página Inicial{% endblock %}
 
-<!-- COVER -->
-{# {% block cover_img %}{% endblock %} #}
-{% block cover_text %}
-Resultados dos Exames
+<!-- Imagem cover -->
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/cover-exame.png')}}" alt="Cover Conteudo" style="opacity: 1 !important;">
 {% endblock %}
+<!-- Texto da cover -->
+{% block cover_text %}
+Resultados
+{% endblock %}
+
 
 {% block content %}
 <section>

@@ -2,10 +2,17 @@
 
 {% block title %}Exame{% endblock %}
 
-{% block content %}
-
+<!-- Imagem cover -->
 {% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/cover-exame.png')}}" alt="Cover Conteudo" style="opacity: 1 !important;">
 {% endblock %}
+<!-- Texto da cover -->
+{% block cover_text %}
+Exame Final
+{% endblock %}
+
+{% block content %}
 <section class="section-exame">
   <div class="title">
     <h2>Exame</h2>
