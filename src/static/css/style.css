@@ -198,10 +198,15 @@ header .icon-navbar {
 }
 
 main {
-  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 main .content {
+  margin-top: 700px;
   min-height: 500px;
   background: var(--bs-tertiary-bg);
   border-radius: 80px 80px 80px 80px;
@@ -212,30 +217,34 @@ main .content {
 }
 
 /* COVER */
-.cover {
-  margin-bottom: 32px;
+.covere {
+  top: 22px;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  min-height: 600px !important;
 }
 
-.cover img {
-  margin: auto;
-  max-width: 100%;
-  height: auto;
+.covere img {
+  width: 100%;
+  max-height: 800px;
+  opacity: 0.8;
 }
 
-.cover .card {
-  background: transparent !important;
+.covere .card {
+  background: transparent ;
   border: 0;
 }
 
-.cover .titulo {
+.covere .titulo {
   top: 40%;
 }
 
-.cover .titulo h1 {
+.covere .titulo h1 {
   text-align: center;
   color: var(--bs-emphasis-color);
   font-size: clamp(2.5rem, 5vw, 4.5rem);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 footer {
@@ -285,7 +294,7 @@ footer .logo-bug-busters {
 .conteudos {
   margin-top: 30px;
   padding: 0 0 30px;
-}
+} 
 
 .conteudos .container-conteudos {
   display: flex;
@@ -746,5 +755,5 @@ button:active {
   background: white;
 }
 #img-pilares1{
-  background: white;  
-}
+  background: white; 
+  }

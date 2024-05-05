@@ -71,21 +71,20 @@
   </header>
 
   <main>
-    <div class="container-fluid container-lg">
+    <!-- COVER -->
+    <div class="covere">
 
-      <!-- COVER -->
-      <div class="row cover">
-        <div class="col-12 text-center">
-          <div class="card text-center align-middle">
-            {% block cover_img %}
-            <img src="{{url_for('static', filename='images/scrum.png') }}" class="card-img" alt="Cover Home">
-            {% endblock %}
-            <div class="card-img-overlay align-middle titulo">
-              <h1 class="">{% block cover_text %}{% endblock %}</h1>
-            </div>
-          </div>
+      <div class="card text-center align-middle">
+        {% block cover_img %}
+        
+        {% endblock %}
+        <div class="card-img-overlay align-middle titulo">
+          <h1 class="">{% block cover_text %}{% endblock %}</h1>
         </div>
       </div>
+    </div>
+    <div class="container-fluid container-lg">
+
 
       <!-- CONTENT -->
       <!-- {#
