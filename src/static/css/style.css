@@ -218,11 +218,11 @@ main .content {
 
 /* COVER */
 .covere {
-  top: 0px;
+  top: 22px;
   position: absolute;
   z-index: -1;
   width: 100%;
-  min-height: 400px;
+  min-height: 600px !important;
 }
 
 .covere img {
@@ -232,7 +232,7 @@ main .content {
 }
 
 .covere .card {
-  background: transparent !important;
+  background: transparent ;
   border: 0;
 }
 
