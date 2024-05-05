@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="Cover Conteudo">
+{% endblock %}
+
+{% block cover_text %}
+{% endblock %}
+
+
+{% block content %}
+<div class="title" id="list-item-1">
+  {% block text required %}{% endblock %}
+</div>
+<div class="title" id="em-resumo">
+  <h2>Em resumo </h2>
+</div>
+<br>
+<div class="container rounded card-resumo ">
+  {% block em_resumo required %}{% endblock %}
+</div>
+
+<div class="title" id="na-pratica">
+  <h2>Na Prática</h2>
+  <div>
+    {% block na_pratica required %}{% endblock %}
+  </div>
+</div>
+
+<div class="title" id="quiz">
+  <h2>Quiz</h2>
+  <div class="card w-75 border-0 my-4 mx-auto justify-content-center">
+    <div class="card-header border-0">
+      <h5 class="card-title">Descubra seu nível ágil!</h5>
+    </div>
+    <div class="card-body w-100 mx-auto mx-sm-auto">
+      {% block quiz required %}{% endblock %}
+    </div>
+  </div>
+</div>
+<div class="container-botao-nextpage">
+
+  {%block nextpage%}
+
+  {%endblock%}
+
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+<!-- Scrollspy -->
+<div class="sticky-top d-none d-md-block Scrollspy-conteudo">
+
+  <div class="row">
+    <div class="col-12">
+      <div id="list-example" class="list-group">
+        {% block navegacao_interna %}{% endblock %}
+        <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#em-resumo">
+          Em resumo
+        </a>
+        <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#na-pratica">
+          Na Prática
+        </a>
+        <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#quiz">
+          Quiz
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

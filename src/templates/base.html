@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Scrum Academy - {% block title %}{% endblock %}</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon-32x32.png')}}">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          <a href="/">
+            <img class="logo-navbar" src="{{ url_for('static', filename='images/logo-principal-white.png') }}"
+              alt="Scrum Academy">
+          </a>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-sm-left text-center" aria-current="page" href="/">
+                <img class="icon-navbar" src="{{ url_for('static', filename='images/home_icon.png') }}" alt="Icon Home">
+                Home
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link text-sm-left text-center" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="true">
+                <img src="{{ url_for('static', filename='images/conteudo_icon.png') }}" alt="Icon Conteudo"
+                  class="icon-navbar">
+                Conteúdo
+              </a>
+              <div>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/introducao">Introdução</a></li>
+                  <li><a class="dropdown-item" href="/papeis-e-pilares">Pilares e papéis do Scrum</a></li>
+                  <li><a class="dropdown-item" href="/artefatos-e-eventos-1">Artefatos e Eventos - parte 1</a></li>
+                  <li><a class="dropdown-item" href="/artefatos-e-eventos-2">Artefatos e Eventos - parte 2</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-sm-left text-center" href="/exame">
+                <img class="icon-navbar" src="{{ url_for('static', filename='images/exam_icon.png') }}"
+                  alt="Icon Exame">
+                Exames
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-sm-left text-center" href="/resultados">
+                <img class="icon-navbar" src="{{ url_for('static', filename='images/resultados_icon.png') }}"
+                  alt="Icon Resultados">
+                Resultados
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- COVER -->
+    <div class="covere">
+
+      <div class="card text-center align-middle">
+        {% block cover_img %}
+        
+        {% endblock %}
+        <div class="card-img-overlay align-middle titulo">
+          <h1 class="">{% block cover_text %}{% endblock %}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid container-lg">
+
+
+      <!-- CONTENT -->
+      <!-- {#
+        Direction: Column on <= small screens. Row on>= medium screens
+        Column 2 becomes first row on <= small screens (direction column)
+        Block 'sidebar' is displayed only if defined on child template
+      #} -->
+      <div class="row content flex-column flex-md-row">
+        <div class="col p-0">
+          {% block content required %}{% endblock %}
+        </div>
+
+        {% if self.sidebar() %}
+        <div class="col col-md-2 order-first order-md-last pt-4 ps-4">
+          {% block sidebar %}{% endblock %}
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="my-5 text-center">
+
+    <!-- Links Footer -->
+    <div class="container fw-bold" style="max-width: 1320px; font-size: larger;">
+      <div class="row gy-3 align-items-center">
+        <!-- Home -->
+        <div class="col">
+          <a class="link-light link-offset-2 link-underline link-underline-opacity-0 bg-dark rounded-pill p-1 btn-link"
+            href="/">Home</a>
+        </div>
+        <!-- Conteúdos -->
+        <div class="col">
+          <div class="btn-group">
+            <button class=" fw-bold bg-dark rounded-pill btn-link btn-conteudo-footer" data-bs-toggle="dropdown"
+              aria-expanded="false" >Conteúdo</button>
+            <ul class="dropdown-menu" data-bs-theme="dark">
+              <li>
+                <a class="dropdown-item" href="/introducao" style="font-size: 120%; margin-left: 3%;">
+                  Introdução
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/papeis-e-pilares" style="font-size: 120%; margin-left: 3%;">
+                  Pilares do Scrum
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/artefatos-e-eventos-1" style="font-size: 120%; margin-left: 3%;">
+                  Artefatos e Eventos - parte 1
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/artefatos-e-eventos-2" style="font-size: 120%; margin-left: 3%;">
+                  Artefatos e Eventos - parte 2
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Exames -->
+        <div class="col">
+          <a class="link-light link-offset-2 link-underline link-underline-opacity-0 bg-dark rounded-pill p-1 btn-link"
+            href="/exame">Exames</a>
+        </div>
+        <!-- Resultados -->
+        <div class="col ">
+          <a class="link-light link-offset-2 link-underline link-underline-opacity-0 bg-dark rounded-pill p-1 btn-link"
+            href="/resultados">Resultados</a>
+        </div>
+        <!-- Sobre Nós -->
+        <div class="col">
+          <a class="link-light link-offset-2 link-underline link-underline-opacity-0 bg-dark rounded-pill p-1 btn-link"
+            href="/sobre_nos">Sobre Nós</a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    </div>
+    <br><br>
+
+    <p>&copy; Copyright 2024</p>
+    <p>
+      Feito por:
+
+      <img src="{{ url_for('static', filename='images/bug-busters-logo-white.png') }}" alt="Bug Busters"
+        class="rounded logo-bug-busters">
+      <a class="link-light link-offset-2 link-underline link-underline-opacity-0"
+        href="https://github.com/Fatec-Bug-Busters/scrum-academy.git" target="_blank">
+        <img class="logo-github" src="{{ url_for('static', filename='images/github_icon.png') }}" alt="GitHub_Icon">
+        GitHub
+      </a>
+    </p>
+  </footer>
+
+  <script defer src="{{ url_for('static', filename='/js/bootstrap.bundle.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>

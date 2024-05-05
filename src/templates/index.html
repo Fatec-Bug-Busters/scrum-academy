@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block title %}Página Inicial{% endblock %}
+
+<!-- COVER -->
+{% block cover_img %}
+<img src="{{url_for('static', filename='images/scrum.png')}}" alt="Cover Home">
+{% endblock %}
+{% block cover_text %}
+Bem vindo a SCRUM ACADEMY
+{% endblock %}
+
+{% block content %}
+<section class="introducao-home">
+  <div class="title">
+    <h2>Introdução: </h2>
+  </div>
+  <div class="texto-introducao-home">
+    <p>O Scrum é uma abordagem colaborativa e flexível para o desenvolvimento de projetos, especialmente na área de
+      software. Baseia-se em princípios de transparência, adaptação contínua e entrega incremental. As equipes trabalham
+      em ciclos curtos chamados de "sprints", durante os quais se comprometem a entregar incrementos do produto. A
+      comunicação constante e a colaboração são essenciais, permitindo uma resposta ágil a mudanças e uma melhoria
+      contínua do produto ao longo do tempo. O Scrum promove a autonomia das equipes e valoriza a interação humana,
+      criando um ambiente propício para a inovação e a adaptação às demandas do mercado.</p>
+  </div>
+</section>
+<section class="conteudo-home">
+  <div class="title">
+    <h2>Conteúdos: </h2>
+  </div>
+</section>
+
+<!-- TESTES -->
+<center>
+  <div  class="rounded bg-cards-conteudo-index fundo-conteudos">
+    <br>
+    <!-- Conteúdo 1 -->
+    <section class="conteudos" id="conteudos">
+      <div class="container-conteudos">
+        <div class="conteudo ativo">
+          <a href="/introducao" target="_blank">
+            <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 1">
+            <h3 class="titulo">Introdução</h3>
+            <div class="informacoes-conteudo">
+
+              <p>
+                Explore o mundo ágil do Scrum e descubra como o Product Backlog impulsiona o sucesso do desenvolvimento
+                de
+                produtos, priorizando necessidades e orientando equipes para resultados consistentes.</p>
+            </div>
+          </a>
+        </div>
+        <!-- Conteúdo  2-->
+        <div class="conteudo ativo">
+          <a href="/papeis-e-pilares" target="_blank">
+            <img src="{{url_for('static', filename='images/papeis-e-pilares-card.jpg')}}" alt="conteudo 2">
+            <h3 class="titulo">Papéis e Pilares</h3>
+            <div class="informacoes-conteudo">
+              <p>Descrição do Conteúdo</p>
+            </div>
+          </a>
+        </div>
+        <!-- Conteúdo  3-->
+        <div class="conteudo ativo">
+          <a href="/artefatos-e-eventos-1" target="_blank">
+            <img src="{{url_for('static', filename='images/backlog.png')}}" alt="conteudo 3">
+            <h3 class="titulo">Artefatos e eventos-1</h3>
+            <div class="informacoes-conteudo">
+              <p>Descrição do Conteúdo</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Conteúdo  4-->
+    <section class="conteudos" id="conteudos">
+      <div class="container-conteudos">
+        <div class="conteudo ativo">
+          <a href="/artefatos-e-eventos-2" target="_blank">
+            <img src="{{url_for('static', filename='images/sprint-planning-card.jpg')}}" alt="conteudo 4">
+            <h3 class="titulo">Artefatos e eventos-2</h3>
+            <div class="informacoes-conteudo">
+             
+
+              <p>
+                Descrição do Conteúdo</p>
+            </div>
+          </a>
+        </div>
+        <!-- Conteúdo  5-->
+        <div class="conteudo ativo">
+          <a href="/" target="_blank">
+            <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 5">
+            <h3 class="titulo">Conteúdo 5</h3>
+            <div class="informacoes-conteudo">
+              <p>Descrição do Conteúdo</p>
+            </div>
+          </a>
+        </div>
+        <!-- Conteúdo  6-->
+        <div class="conteudo ativo">
+          <a href="/" target="_blank">
+            <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 6">
+            <h3 class="titulo">Conteúdo 6</h3>
+            <div class="informacoes-conteudo">
+              <p>Descrição do Conteúdo</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFORME FORMOS ADICIONANDO CONTEUDO VAI DESCOMENTANDO OS CARDS -->
+<!-- 
+    <section class="conteudos" id="conteudos">
+      <div class="container-conteudos">
+        Conteúdo 7
+        <div class="conteudo ativo">
+          <a href="/conteudo" target="_blank">
+            <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 7">
+            <h3 class="titulo">Conteúdo 7</h3>
+            <div class="informacoes-conteudo">
+            
+
+              <p>
+                Descrição do Conteúdo</p>
+            </div>
+          </a>
+        </div>
+        Conteúdo 8
+        <div class="conteudo ativo">
+          <a href="/conteudo" target="_blank">
+            <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 8">
+            <h3 class="titulo">Conteúdo 8</h3>
+            <div class="informacoes-conteudo">
+              <p>Descrição do Conteúdo</p>
+            </div>
+          </a>
+        </div>
+        Conteúdo 9
+        <div class="conteudo ativo">
+          <a href="/conteudo" target="_blank">
+            <img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="conteudo 9">
+            <h3 class="titulo">Conteúdo 9</h3>
+            <div class="informacoes-conteudo">
+              <p>Descrição do Conteúdo</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section> -->
+  </div>
+</center>
+
+
+<!-- EXAME -->
+<div class="container  rounded card-exame " >
+
+  <div class="row align-items-center">
+    <div class="col">
+      <h2 class="card-title">Teste seu conhecimento!</h2>
+      <p class="card-text">
+        Faça um exame avaliativo que reúne conteúdo de todos os capítulos apresentados. Seu
+        resultado será salvo juntamente do nome fornecido pelo usuário.
+
+      </p>
+      <center>
+        <a href="/exame" class="btn btn-primary btn-exame">Iniciar</a>
+      </center>
+    </div>
+
+  </div>
+</div>
+<br><br>
+{% endblock content %}

@@ -23,6 +23,7 @@ Projeto fundamentado na metodologia ágil SCRUM que busca fomentar a proatividad
     - [Hard Skills](#hard-skills)
     - [Soft Skills](#soft-skills)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Veja Também](#veja-também)
   - [Autores](#autores)
 
 ## Objetivo do Projeto
@@ -43,7 +44,7 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 | ----------------- | ---------- | ------------ |
 | Kick Off          | 15/03/2024 | concluído    |
 | 01                | 14/04/2024 | concluído    |
-| 02                | 05/05/2024 | em progresso |
+| 02                | 05/05/2024 | concluído    |
 | 03                | 26/05/2024 | a fazer      |
 | 04                | 16/06/2024 | a fazer      |
 | Feira de Soluções | 27/06/2024 | a fazer      |
@@ -64,8 +65,10 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 ### Sprint 2. Desenvolvimento do Projeto
 
-- [ ] Interface do usuário;
-- [ ] Parte do conteúdo.
+- [x] Interface do usuário: páginas principais
+- [x] Conteúdo: Introdução à Metodologia Ágil SCRUM
+- [x] Conteúdo: Artefatos e Eventos
+- [x] Conteúdo: Algumas questões do conteúdo
 
 ### Sprint 3. Implementação
 
@@ -89,6 +92,12 @@ Hard skills desenvolvidas
 - Conhecimento em ferramentas;
   - Figma
   - Google Sheets
+  - HTML
+  - CSS
+  - Ferramenta Bootstrap
+  - Flask com Python
+  - Git e GitHub
+  - Ambiente virtual com pacote Python `venv`
 - Gestão de projetos;
 - Competências técnicas;
 - Trabalho com metodologia ágil SCRUM (papéis, seus eventos e artefatos).
@@ -126,6 +135,17 @@ Soft skills desenvolvidas
 - Figma
 - GitHub
 - Discord
+- Visual Studio Code
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Flask com Python
+- Git e GitHub
+
+## Veja Também
+
+[Como Contribuir](./CONTRIBUTING.md) para você que quer contribuir no desenvolvimento desse projeto.
 
 ## Autores
 
@@ -137,5 +157,7 @@ Soft skills desenvolvidas
 | Team Member   | Gabriel Viell           |          [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/GabrielViellCastilho)        |
 | Team Member   | Vinicius Elias             |          [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/ViniElias)        |
 | Team Member   | Allan Couto             |          [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/allancouto)        |
+| Team Member | Felipe Chagas | [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/oFelipeChagas) |
 
 ![Bug Busters](./src/static/images/bug-busters-logo-black.jpg)
+

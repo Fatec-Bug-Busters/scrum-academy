@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block title %}Página Inicial{% endblock %}
+
+<!-- Imagem cover -->
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/cover-exame.png')}}" alt="Cover Conteudo" style="opacity: 1 !important;">
+{% endblock %}
+<!-- Texto da cover -->
+{% block cover_text %}
+Resultados
+{% endblock %}
+
+
+{% block content %}
+<section>
+  <div class="title">
+    <h2>Resultados por Estudante</h2>
+  </div>
+  <div class="p-5">
+    <p>O Scrum é uma abordagem colaborativa e flexível para o desenvolvimento de projetos, especialmente na área de
+      software. Baseia-se em princípios de transparência, adaptação contínua e entrega incremental. As equipes trabalham
+      em ciclos curtos chamados de "sprints", durante os quais se comprometem a entregar incrementos do produto. A
+      comunicação constante e a colaboração são essenciais, permitindo uma resposta ágil a mudanças e uma melhoria
+      contínua do produto ao longo do tempo. O Scrum promove a autonomia das equipes e valoriza a interação humana,
+      criando um ambiente propício para a inovação e a adaptação às demandas do mercado.</p>
+  </div>
+</section>
+<section class="container p-0 p-lg-5">
+  <table id="resultados" class="table table-hover table-borderless table-striped table-responsive text-center">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nomes</th>
+        <th scope="col">Notas</th>
+        <th scope="col">Data</th>
+      </tr>
+    </thead>
+    <tbody class="align-middle">
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>99/100</td>
+        <td>23/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Bea</td>
+        <td>79/100</td>
+        <td>23/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Pedro</td>
+        <td>23/100</td>
+        <td>20/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Mark</td>
+        <td>99/100</td>
+        <td>23/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Bea</td>
+        <td>79/100</td>
+        <td>23/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Pedro</td>
+        <td>23/100</td>
+        <td>20/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>Mark</td>
+        <td>99/100</td>
+        <td>23/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>Bea</td>
+        <td>79/100</td>
+        <td>23/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>Pedro</td>
+        <td>23/100</td>
+        <td>20/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>Mark</td>
+        <td>99/100</td>
+        <td>23/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">11</th>
+        <td>Bea</td>
+        <td>79/100</td>
+        <td>23/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td>Pedro</td>
+        <td>23/100</td>
+        <td>20/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td>Mark</td>
+        <td>99/100</td>
+        <td>23/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">14</th>
+        <td>Bea</td>
+        <td>79/100</td>
+        <td>23/03/2024</td>
+      </tr>
+      <tr>
+        <th scope="row">15</th>
+        <td>Pedro</td>
+        <td>23/100</td>
+        <td>20/03/2024</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="">Número de registros: 32</td>
+      </tr>
+    </tfoot>
+  </table>
+</section>
+<section class="mb-5">
+  <div class="title">
+    <h2>Aproveitamento</h2>
+  </div>
+  <div class="p-5">
+    <div class="card mx-auto">
+      <div class="card-body mx-0 mb-5">
+        <div class="row gy-5">
+          <div class="col-12 col-md-6 offset-md-3 offset-lg-0 px-3 text-center">
+            <img src="{{ url_for('static', filename='images/sample-resultados-chart.png') }}" style="max-width: 80%">
+          </div>
+          <div class="col-12 col-lg-6 text-center">
+            <div class="resultados-stats d-flex flex-column justify-content-around">
+              <div>
+                <h3>Média de acertos</h3>
+                <p>75%</p>
+              </div>
+              <div>
+                <h3>Média de erros</h3>
+                <p>25%</p>
+              </div>
+              <div>
+                <h3>Número de participantes</h3>
+                <p>12 participantes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

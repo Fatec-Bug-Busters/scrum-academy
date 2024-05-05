@@ -1,0 +1,453 @@
+{% extends "base.html" %}
+
+{% block title %}Exame{% endblock %}
+
+<!-- Imagem cover -->
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/cover-exame.png')}}" alt="Cover Conteudo" style="opacity: 1 !important;">
+{% endblock %}
+<!-- Texto da cover -->
+{% block cover_text %}
+Exame Final
+{% endblock %}
+
+{% block content %}
+<section class="section-exame">
+  <div class="title">
+    <h2>Exame</h2>
+  </div>
+  <div class="conteudo-exame">
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+      <div style="color: #fff;">
+        Insira seu nome e não deixe nenhuma questão em branco. As respostas serão salvas após o término da prova.
+      </div>
+    </div>
+    <hr>
+
+
+    <form action="">
+      <div class="nome-exame">
+        <label for="nome" style="font-size: 30px;">Insira seu nome aqui:</label>
+        <input type="text" id="nome" name="nome">
+      </div>
+      <!-- QUESTOES -->
+
+      <div class="container" onclick="toggleText(this)">
+
+        <!-- PERGUNTA -->
+        <div class="card-content">
+          <div class="enunciado-questoes">
+            <div class="numeracao-questoes">
+              <p style="padding: 30px; margin-top: 15px;">1</p>
+            </div>
+            <div class="enunciado-texto">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
+                quaerat tempora nihil culpa aliquam modi dolores, magnam nemo perspiciatis fugiat distinctio est dolore
+                ipsam molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium earum minima,
+                provident similique dolores omnis atque qui, doloremque enim distinctio placeat autem non inventore
+                molestiae obcaecati sed est rerum sit?</p>
+            </div>
+          </div>
+          <!-- RESPOSTAS -->
+          <div class="question hidden">
+            <ul class="options">
+              <li class="option">
+                <input type="radio" name="q1" id="q1a" value="a">
+                <label for="q1a">a) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q1" id="q1b" value="b">
+                <label for="q1b">b) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q1" id="q1c" value="c">
+                <label for="q1c">c) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q1" id="q1d" value="d">
+                <label for="q1d">d) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q1" id="q1e" value="e">
+                <label for="q1e">e) Lorem</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" onclick="toggleText(this)">
+        <div class="card-content">
+          <div class="enunciado-questoes">
+            <div class="numeracao-questoes">
+              <p style="padding: 30px; margin-top: 15px;">2</p>
+            </div>
+            <div class="enunciado-texto">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
+                quaerat tempora nihil culpa aliquam modi dolores, magnam nemo perspiciatis fugiat distinctio est dolore
+                ipsam molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium earum minima,
+                provident similique dolores omnis atque qui, doloremque enim distinctio placeat autem non inventore
+                molestiae obcaecati sed est rerum sit?</p>
+            </div>
+          </div>
+          <div class="question hidden">
+            <ul class="options">
+              <li class="option">
+                <input type="radio" name="q2" id="q2a" value="a">
+                <label for="q2a">a) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q2" id="q2b" value="b">
+                <label for="q2b">b) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q2" id="q2c" value="c">
+                <label for="q2c">c) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q2" id="q2d" value="d">
+                <label for="q2d">d) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q2" id="q2e" value="e">
+                <label for="q2e">e) Lorem</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" onclick="toggleText(this)">
+        <div class="card-content">
+          <div class="enunciado-questoes">
+            <div class="numeracao-questoes">
+              <p style="padding: 30px; margin-top: 15px;">3</p>
+            </div>
+            <div class="enunciado-texto">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
+                quaerat tempora nihil culpa aliquam modi dolores, magnam nemo perspiciatis fugiat distinctio est dolore
+                ipsam molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium earum minima,
+                provident similique dolores omnis atque qui, doloremque enim distinctio placeat autem non inventore
+                molestiae obcaecati sed est rerum sit?</p>
+            </div>
+          </div>
+          <div class="question hidden">
+            <ul class="options">
+              <li class="option">
+                <input type="radio" name="q3" id="q3a" value="a">
+                <label for="q3a">a) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q3" id="q3b" value="b">
+                <label for="q3b">b) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q3" id="q3c" value="c">
+                <label for="q3c">c) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q3" id="q3d" value="d">
+                <label for="q3d">d) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q3" id="q3e" value="e">
+                <label for="q3e">e) Lorem</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" onclick="toggleText(this)">
+        <div class="card-content">
+          <div class="enunciado-questoes">
+            <div class="numeracao-questoes">
+              <p style="padding: 30px; margin-top: 15px;">4</p>
+            </div>
+            <div class="enunciado-texto">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
+                quaerat tempora nihil culpa aliquam modi dolores, magnam nemo perspiciatis fugiat distinctio est dolore
+                ipsam molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium earum minima,
+                provident similique dolores omnis atque qui, doloremque enim distinctio placeat autem non inventore
+                molestiae obcaecati sed est rerum sit?</p>
+            </div>
+          </div>
+          <div class="question hidden">
+            <ul class="options">
+              <li class="option">
+                <input type="radio" name="q4" id="q4a" value="a">
+                <label for="q4a">a) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q4" id="q4b" value="b">
+                <label for="q4b">b) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q4" id="q4c" value="c">
+                <label for="q4c">c) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q4" id="q4d" value="d">
+                <label for="q4d">d) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q4" id="q4e" value="e">
+                <label for="q4e">e) Lorem</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" onclick="toggleText(this)">
+        <div class="card-content">
+          <div class="enunciado-questoes">
+            <div class="numeracao-questoes">
+              <p style="padding: 30px; margin-top: 15px;">5</p>
+            </div>
+            <div class="enunciado-texto">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
+                quaerat tempora nihil culpa aliquam modi dolores, magnam nemo perspiciatis fugiat distinctio est dolore
+                ipsam molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium earum minima,
+                provident similique dolores omnis atque qui, doloremque enim distinctio placeat autem non inventore
+                molestiae obcaecati sed est rerum sit?</p>
+            </div>
+          </div>
+          <div class="question hidden">
+            <ul class="options">
+              <li class="option">
+                <input type="radio" name="q5" id="q5a" value="a">
+                <label for="q5a">a) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q5" id="q5b" value="b">
+                <label for="q5b">b) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q5" id="q5c" value="c">
+                <label for="q5c">c) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q5" id="q5d" value="d">
+                <label for="q5d">d) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q5" id="q5e" value="e">
+                <label for="q5e">e) Lorem</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" onclick="toggleText(this)">
+        <div class="card-content">
+          <div class="enunciado-questoes">
+            <div class="numeracao-questoes">
+              <p style="padding: 30px; margin-top: 15px;">6</p>
+            </div>
+            <div class="enunciado-texto">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
+                quaerat tempora nihil culpa aliquam modi dolores, magnam nemo perspiciatis fugiat distinctio est dolore
+                ipsam molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium earum minima,
+                provident similique dolores omnis atque qui, doloremque enim distinctio placeat autem non inventore
+                molestiae obcaecati sed est rerum sit?</p>
+            </div>
+          </div>
+          <div class="question hidden">
+            <ul class="options">
+              <li class="option">
+                <input type="radio" name="q6" id="q6a" value="a">
+                <label for="q6a">a) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q6" id="q6b" value="b">
+                <label for="q6b">b) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q6" id="q6c" value="c">
+                <label for="q6c">c) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q6" id="q6d" value="d">
+                <label for="q6d">d) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q6" id="q6e" value="e">
+                <label for="q6e">e) Lorem</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" onclick="toggleText(this)">
+        <div class="card-content">
+          <div class="enunciado-questoes">
+            <div class="numeracao-questoes">
+              <p style="padding: 30px; margin-top: 15px;">7</p>
+            </div>
+            <div class="enunciado-texto">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
+                quaerat tempora nihil culpa aliquam modi dolores, magnam nemo perspiciatis fugiat distinctio est dolore
+                ipsam molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium earum minima,
+                provident similique dolores omnis atque qui, doloremque enim distinctio placeat autem non inventore
+                molestiae obcaecati sed est rerum sit?</p>
+            </div>
+          </div>
+          <div class="question hidden">
+            <ul class="options">
+              <li class="option">
+                <input type="radio" name="q7" id="q7a" value="a">
+                <label for="q7a">a) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q7" id="q7b" value="b">
+                <label for="q7b">b) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q7" id="q7c" value="c">
+                <label for="q7c">c) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q7" id="q7d" value="d">
+                <label for="q7d">d) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q7" id="q7e" value="e">
+                <label for="q7e">e) Lorem</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" onclick="toggleText(this)">
+        <div class="card-content">
+          <div class="enunciado-questoes">
+            <div class="numeracao-questoes">
+              <p style="padding: 30px; margin-top: 15px;">8</p>
+            </div>
+            <div class="enunciado-texto">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
+                quaerat tempora nihil culpa aliquam modi dolores, magnam nemo perspiciatis fugiat distinctio est dolore
+                ipsam molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium earum minima,
+                provident similique dolores omnis atque qui, doloremque enim distinctio placeat autem non inventore
+                molestiae obcaecati sed est rerum sit?</p>
+            </div>
+          </div>
+          <div class="question hidden">
+            <ul class="options">
+              <li class="option">
+                <input type="radio" name="q8" id="q8a" value="a">
+                <label for="q8a">a) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q8" id="q8b" value="b">
+                <label for="q8b">b) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q8" id="q8c" value="c">
+                <label for="q8c">c) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q8" id="q8d" value="d">
+                <label for="q8d">d) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q8" id="q8e" value="e">
+                <label for="q8e">e) Lorem</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" onclick="toggleText(this)">
+        <div class="card-content">
+          <div class="enunciado-questoes">
+            <div class="numeracao-questoes">
+              <p style="padding: 30px; margin-top: 15px;">9</p>
+            </div>
+            <div class="enunciado-texto">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
+                quaerat tempora nihil culpa aliquam modi dolores, magnam nemo perspiciatis fugiat distinctio est dolore
+                ipsam molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium earum minima,
+                provident similique dolores omnis atque qui, doloremque enim distinctio placeat autem non inventore
+                molestiae obcaecati sed est rerum sit?</p>
+            </div>
+          </div>
+          <div class="question hidden">
+            <ul class="options">
+              <li class="option">
+                <input type="radio" name="q9" id="q9a" value="a">
+                <label for="q9a">a) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q9" id="q9b" value="b">
+                <label for="q9b">b) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q9" id="q9c" value="c">
+                <label for="q9c">c) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q9" id="q9d" value="d">
+                <label for="q9d">d) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q9" id="q9e" value="e">
+                <label for="q9e">e) Lorem</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" onclick="toggleText(this)">
+        <div class="card-content">
+          <div class="enunciado-questoes">
+            <div class="numeracao-questoes">
+              <p style="padding: 30px; margin-top: 15px;">10</p>
+            </div>
+            <div class="enunciado-texto">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
+                quaerat tempora nihil culpa aliquam modi dolores, magnam nemo perspiciatis fugiat distinctio est dolore
+                ipsam molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium earum minima,
+                provident similique dolores omnis atque qui, doloremque enim distinctio placeat autem non inventore
+                molestiae obcaecati sed est rerum sit?</p>
+            </div>
+          </div>
+          <div class="question hidden">
+            <ul class="options">
+              <li class="option">
+                <input type="radio" name="q10" id="q10a" value="a">
+                <label for="q10a">a) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q10" id="q10b" value="b">
+                <label for="q10b">b) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q10" id="q10c" value="c">
+                <label for="q10c">c) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q10" id="q10d" value="d">
+                <label for="q10d">d) Lorem</label>
+              </li>
+              <li class="option">
+                <input type="radio" name="q10" id="q10e" value="e">
+                <label for="q10e">e) Lorem</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Enviar exame</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

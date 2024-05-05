@@ -17,7 +17,7 @@ indent_style = space
 indent_size = 4
 
 # 2 space indentation
-[*.{js,json,y{a,}ml,html,cwl}]
+[*.{js,json,y{a,}ml,html,cwl,css,scss}]
 indent_style = space
 indent_size = 2
 
