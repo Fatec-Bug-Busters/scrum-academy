@@ -27,10 +27,10 @@ Exame Final
 
 
     <form action="">
-      <div class="nome-exame">
+      <!-- <div class="nome-exame">
         <label for="nome" style="font-size: 30px;">Insira seu nome aqui:</label>
         <input type="text" id="nome" name="nome">
-      </div>
+      </div> -->
       <!-- QUESTOES -->
 
       <div class="container" onclick="toggleText(this)">
@@ -445,9 +445,69 @@ Exame Final
           </div>
         </div>
       </div>
+      </form>
 
-      <button type="submit" class="submit-btn">Enviar exame</button>
-    </form>
+  
+
   </div>
-</section>
+  
+
+  <script>
+    function submitExam() {
+    
+      const correctAnswers = {
+        q1: 'b',
+        q2: 'b',
+        q3: 'b',
+        q4: 'b',
+        q5: 'b',
+        q6: 'b',
+        q7: 'b',
+        q8: 'b',
+        q9: 'b',
+        q10: 'b'
+      };
+  
+      
+      let totalCorrect = 0;
+  
+     
+      for (const question in correctAnswers) {
+        const selectedOption = document.querySelector(`input[name=${question}]:checked`);
+        const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
+        if (isCorrect) {
+          totalCorrect++;
+        }
+      }
+  
+     
+      const popup = document.getElementById("resultPopup");
+      const overlay = document.getElementById("overlay");
+      popup.innerHTML = `<p>Você acertou ${totalCorrect} de 10 questões.</p>`;
+      popup.style.display = "block";
+      overlay.style.display = "block";
+    }
+  
+    
+    function closePopup() {
+      const popup = document.getElementById("resultPopup");
+      const overlay = document.getElementById("overlay");
+      popup.style.display = "none";
+      overlay.style.display = "none";
+    }
+  </script>
+  
+  
+  <button type="button" class="submit-btn" onclick="submitExam()">Enviar exame</button>
+  
+ 
+  <div id="resultPopup" class="popup" style="display: none;">
+    
+  </div>
+  
+  
+  <div id="overlay" class="opaque" style="display: none;" onclick="closePopup()"></div>
+  
+
+
 {% endblock %}

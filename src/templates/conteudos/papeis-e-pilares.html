@@ -283,6 +283,59 @@ Pilares e Papéis do Scrum
     </div>
   </div>
 </div>
+
+<script>
+  function submitExam() {
+  
+    const correctAnswers = {
+      q1: 'b',
+      q2: 'b'
+    };
+
+  
+    let totalCorrect = 0;
+
+  
+    for (const question in correctAnswers) {
+      const selectedOption = document.querySelector(`input[name=${question}]:checked`);
+      const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
+      if (isCorrect) {
+        totalCorrect++;
+      }
+    }
+
+   
+    const popup = document.getElementById("resultPopup");
+    const overlay = document.getElementById("overlay");
+    const popupContent = document.getElementById("popupContent");
+    popupContent.innerHTML = `<p>Você acertou ${totalCorrect} de 2 questões.</p>`;
+    popup.style.display = "block";
+    overlay.style.display = "block";
+  }
+
+ 
+  function closePopup() {
+    const popup = document.getElementById("resultPopup");
+    const overlay = document.getElementById("overlay");
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  }
+</script>
+
+
+<button type="button" class="submit-btn" onclick="submitExam()">Enviar exame</button>
+
+<div id="resultPopup" class="popup" style="display: none;">
+  <div id="popupContent">
+  </div>
+</div>
+
+<div id="overlay" class="opaque" style="display: none;" onclick="closePopup()"></div>
+
+
+
+
+
 {% endblock quiz %}
 
 {%block nextpage%}
