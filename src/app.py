@@ -52,6 +52,10 @@ def conteudo():
 def questoes():
     return render_template("components/questoes.html")
 
+@app.route("/cadastro")
+def cadastro():
+    return render_template("components/cadastro.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block cover_img %}{% endblock %}
+
+{% block content %}
+<div class="container-cadastro">
+    <div class="card-cadastro1">
+        <span class="titulo-cadastro">Salve seu progresso!</span>
+        <p class="mensagem-cadastro">Insira seu e-mail para que possamos salvar seu progresso e gravar sua nota final.
+        </p>
+        <form class="cadastro">
+            <input placeholder="E-mail" type="email">
+            <button class="botao-enviar-email"> Enviar</button>
+        </form>
+    </div>
+    <div class="card-cadastro1">
+        <span class="titulo-cadastro">Cadastre-se!</span>
+        <p class="mensagem-cadastro">Parece que seu email ainda não está em nosso sistema insira seu e-mail e nome.
+            completo.
+        </p>
+        <form class="cadastro">
+            <input placeholder="Nome completo" type="text">
+            <input placeholder="E-mail" type="email">
+            <button class="botao-enviar-email"> Enviar</button>
+        </form>
+    </div>
+
+</div>
+
+<div class="testes-modal-cadastro">
+    <!-- Botão Modal 1 -->
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+        Testar 1 
+    </button>
+
+    <!-- Botão Modal 2 -->
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+        Testar 2 
+    </button>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="card-cadastro1">
+                    <div class="header-modal">
+                        <span class="titulo-cadastro">Salve seu progresso!</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <p class="mensagem-cadastro">Insira seu e-mail para que possamos salvar seu progresso e gravar sua
+                        nota
+                        final.
+                    </p>
+                    <form class="cadastro">
+                        <input placeholder="E-mail" type="email">
+                        <button class="botao-enviar-email"> Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2-->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="card-cadastro1">
+                    <div class="header-modal">
+                        <span class="titulo-cadastro">Cadastre-se!</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <p class="mensagem-cadastro">Parece que seu email ainda nao esta em nosso sistema insira seu e-mail e nome
+                        completo.
+                    </p>
+                    <form class="cadastro">
+                        <input placeholder="Nome completo" type="text">
+                        <input placeholder="E-mail" type="email">
+                        <button class="botao-enviar-email"> Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
