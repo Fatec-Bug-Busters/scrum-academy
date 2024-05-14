@@ -861,12 +861,12 @@ gap: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgb(67, 90, 85);
-  padding: 20px;
   border: 2px solid black;
-  border-radius: 8px;
+  border-radius: 20px;
   z-index: 9999;
   width: 80%;
-  max-width: 600px;
+  width: auto;
+  height: auto;
 }
 
 #overlay {

@@ -211,7 +211,17 @@ Introdução ao Scrum
     const popup = document.getElementById("resultPopup");
     const overlay = document.getElementById("overlay");
     const popupContent = document.getElementById("popupContent");
-    popupContent.innerHTML = `<p>Você acertou ${totalCorrect} de 2 questões.</p>`;
+    popupContent.innerHTML = `
+    <div class="card-cadastro1">
+        <span class="titulo-cadastro">Parabéns!</span>
+        <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${totalCorrect} de 2 questões.</p>
+        <div class="cadastro" style="display: flex;">
+          <a href="/papeis-e-pilares">
+            <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
+          </a>
+        </div>
+    </div>`
+    ;
     popup.style.display = "block";
     overlay.style.display = "block";
   }
