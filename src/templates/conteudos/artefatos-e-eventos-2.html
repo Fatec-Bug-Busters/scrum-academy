@@ -210,6 +210,44 @@ Artefatos e Eventos - Parte 2
 </div>
 
 
+
+
+<button type="button" class="submit-btn" onclick="submitExam()">Enviar exame</button>
+
+<div id="resultPopup" class="popup" style="display: none;">
+  <div id="popupContent">
+  </div>
+</div>
+
+<div id="overlay" class="opaque" style="display: none;" onclick="closePopup()"></div>
+
+
+
+{% endblock quiz %}
+
+{%block nextpage%}
+<a href="/artefatos-e-eventos-1">
+  <button class="botao-nextpage botao-previouspage">
+    <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
+      <path d="M24.25 37L42.75 18.5L41.25 17L22.75 37L41.25 57.5L42.75 56L24.25 37Z" fill="white"></path>
+    </svg>
+    <span>Conteúdo Anterior</span>
+  </button>
+</a>
+{% endblock%}
+
+
+<!-- Navegação interna  -->
+<!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
+<!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
+{% block navegacao_interna %}
+<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#list-item-1">
+  Sprint Planning Meeting
+</a>
+{% endblock %}
+
+{%block quizjs}
 <script>
   function submitExam() {
   
@@ -267,29 +305,4 @@ Artefatos e Eventos - Parte 2
 </div>
 
 <div id="overlay" class="opaque" style="display: none;" onclick="closePopup()"></div>
-
-
-
-{% endblock quiz %}
-
-{%block nextpage%}
-<a href="/artefatos-e-eventos-1">
-  <button class="botao-nextpage botao-previouspage">
-    <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
-      <path d="M24.25 37L42.75 18.5L41.25 17L22.75 37L41.25 57.5L42.75 56L24.25 37Z" fill="white"></path>
-    </svg>
-    <span>Conteúdo Anterior</span>
-  </button>
-</a>
-{% endblock%}
-
-
-<!-- Navegação interna  -->
-<!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
-<!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
-{% block navegacao_interna %}
-<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#list-item-1">
-  Sprint Planning Meeting
-</a>
-{% endblock %}
+{%endblock%}

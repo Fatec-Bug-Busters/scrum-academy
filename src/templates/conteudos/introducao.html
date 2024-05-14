@@ -278,3 +278,19 @@ Introdução ao Scrum
   História do Scrum
 </a>
 {% endblock %}
+
+{%block quizjs%}
+
+
+<button type="button" class="submit-btn" onclick="submitExam()">Enviar exame</button>
+
+
+<div id="resultPopup" class="popup" style="display: none;">
+  <div id="popupContent">
+  
+  </div>
+</div>
+
+
+<div id="overlay" class="opaque" style="display: none;" onclick="closePopup()"></div>
+{%endblock%}
