@@ -854,3 +854,20 @@ gap: 100px;
   background: var(--bs-secondary-text-emphasis);
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
+.certificado {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.corpo {
+  font-family: helvetica;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}

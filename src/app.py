@@ -56,6 +56,9 @@ def questoes():
 def cadastro():
     return render_template("components/cadastro.html")
 
+@app.route("/certificado")
+def certificado():
+    return render_template("components/certificado.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

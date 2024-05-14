@@ -1,0 +1,55 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    .certificado {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        
+    }
+
+    h2 {
+        color: #333;
+        
+    }
+
+    h1 {
+        color: #007bff;
+        margin-top: 10px;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    span {
+        font-weight: bold;
+    }
+</style>
+
+
+<div class="certificado">
+    <h2>Certificado</h2>
+    <p>Certificamos que o usuário</p>
+    <p>___________________________________________</p>
+    <h1 id="Nome completo"></h1>
+    <p>completou com aproveitamento satisfatório o curso de Metodologia Scrum</p>
+    <p>Emitido em: <span id="date"></span></p>
+    <p>pela plataforma digital de ensino Scrum Academy</p>
+</div>
+
+
+<script>
+    const date = new Date().toLocaleDateString();
+    document.getElementById("date").innerText = date;
+</script>
