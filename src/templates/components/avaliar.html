@@ -1,0 +1,64 @@
+{%extends 'base.html'%}
+
+{%block title%}Avaliação{%endblock%}
+
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="Cover Conteudo">
+{% endblock %}
+
+<!-- Texto da cover -->
+{% block cover_text %}
+Hora de nos avaliar!
+{% endblock %}
+
+
+{% block content %}
+<div class="title">
+    <h2>Página de Avaliação</h2>
+    <div style="display: flex;">
+        <div>
+            <div>
+                <p class="txt-conteudo">
+                    Para ver o resultado e poder emitir seu certificado, basta nos avaliar! Agora que você passou pela
+                    formação ágil da metodologia Scrum da Bug Busters, que tal nos contar um pouco sobre sua experiência
+                    ao longo
+                    dessa percurso? Em seguida, você poderá nos avaliar com nota de 1 a 5 estrelas.
+                </p>
+            </div>
+            <div id="comentario">
+                <div class="txt-conteudo">
+                    <label for="textarea-id">Comentário:</label>
+                    <textarea id="comentario" class="form-control" name="comentario" rows="3" cols="65"></textarea>
+
+                </div>
+                <div>
+                    <div class="estrelas">
+                        <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                        <label for="cm_star-1"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                        <label for="cm_star-2"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                        <label for="cm_star-3"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                        <label for="cm_star-4"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                        <label for="cm_star-5"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="{{url_for('static', filename='images/avaliar.png')}}" alt="prancheta"
+                class="imagem-com-texto-paragrafo">
+        </div>
+    </div>
+
+
+    <div><a href="/resultados"><button type="button" class="submit-btn">Enviar e ver o resultado</button></a></div>
+
+
+</div>
+
+{% endblock %}

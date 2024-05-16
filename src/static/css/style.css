@@ -879,3 +879,26 @@ button:active {
   background: var(--bs-secondary-text-emphasis);
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
+
+
+#comentario {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+#coment {
+  height: max-content;
+}
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa{
+  font-size: 2.5em
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}

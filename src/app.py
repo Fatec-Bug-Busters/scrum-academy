@@ -56,6 +56,9 @@ def questoes():
 def cadastro():
     return render_template("components/cadastro.html")
 
+@app.route('/avaliar')
+def avaliar():
+    return render_template("components/avaliar.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
