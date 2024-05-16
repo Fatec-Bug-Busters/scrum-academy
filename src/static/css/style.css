@@ -229,9 +229,8 @@ main .content {
 
 .covere img {
   width: 100%;
-  max-height: 800px;
+  height: 800px;
   opacity: 0.8;
-  min-height: 300px;
 }
 
 .covere .card {
@@ -891,6 +890,11 @@ button:active {
     -ms-border-radius: 40px 40px 80px 80px;
     -o-border-radius: 40px 40px 80px 80px;
   }
+  .covere img {
+    width: 100%;
+    height: 300px;
+    opacity: 0.8;
+  }
 }
 
 /* @media para tablet */
@@ -904,5 +908,10 @@ button:active {
     -moz-border-radius: 40px 40px 80px 80px;
     -ms-border-radius: 40px 40px 80px 80px;
     -o-border-radius: 40px 40px 80px 80px;
+  }
+  .covere img {
+    width: 100%;
+    height: 600px;
+    opacity: 0.8;
   }
 }
