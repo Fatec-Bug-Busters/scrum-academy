@@ -281,16 +281,52 @@ Introdução ao Scrum
 
 {%block quizjs%}
 
-
-<button type="button" class="submit-btn" onclick="submitExam()">Enviar exame</button>
-
-
-<div id="resultPopup" class="popup" style="display: none;">
-  <div id="popupContent">
+<script>
+  function submitExam() {
   
-  </div>
-</div>
+    const correctAnswers = {
+      q1: 'b',
+      q2: 'd'
+    };
 
+    
+    let totalCorrect = 0;
 
-<div id="overlay" class="opaque" style="display: none;" onclick="closePopup()"></div>
+    
+    for (const question in correctAnswers) {
+      const selectedOption = document.querySelector(`input[name=${question}]:checked`);
+      const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
+      if (isCorrect) {
+        totalCorrect++;
+      }
+    }
+
+   
+    const popup = document.getElementById("resultPopup");
+    const overlay = document.getElementById("overlay");
+    const popupContent = document.getElementById("popupContent");
+    popupContent.innerHTML = `
+    <div class="card-cadastro1">
+        <span class="titulo-cadastro">Parabéns!</span>
+        <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${totalCorrect} de 2 questões.</p>
+        <div class="cadastro" style="display: flex;">
+          <a href="/papeis-e-pilares">
+            <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
+          </a>
+        </div>
+    </div>`
+    ;
+    popup.style.display = "block";
+    overlay.style.display = "block";
+  }
+
+ 
+  function closePopup() {
+    const popup = document.getElementById("resultPopup");
+    const overlay = document.getElementById("overlay");
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  }
+</script>
+
 {%endblock%}
