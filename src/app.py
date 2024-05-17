@@ -87,7 +87,10 @@ def register():
         data = request.get_json()
         NameUser = data['NameUser']
         email = data['email']
-        lst_user[email] = {"NameUser": NameUser, "CreatedAtDate" : date.today(), "id": 4}
+        if len(NameUser.split()) > 1:
+            lst_user[email] = {"NameUser": NameUser, "CreatedAtDate" : date.today(), "id": 4}
+        else:
+            ErrorName = ErrorName
         global name_now
         name_now = lst_user[email]["NameUser"]
     return jsonify({'NameUser': NameUser, 'email': email})

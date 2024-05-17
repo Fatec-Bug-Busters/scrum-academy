@@ -62,7 +62,11 @@ $(document).ready(function () {
         error: function (error) {
           console.log(error);
           $('#ModalNewUser').modal('hide');
-          $('#ModalError').modal('show');
+          $('#ModalIncompleteName').modal('show');
+          setTimeout(function () {
+            $('#ModalIncompleteName').modal('hide');
+            $('#ModalNewUser').modal('show');
+          }, 1500)
         }
       });
     });
