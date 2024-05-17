@@ -142,6 +142,7 @@ Soft skills desenvolvidas
 - Bootstrap
 - Flask com Python
 - Git e GitHub
+- Draw.io
 
 ## Veja Também
 

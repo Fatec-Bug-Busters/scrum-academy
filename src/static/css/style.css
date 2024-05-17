@@ -189,6 +189,7 @@ header .logo-navbar {
   margin-left: 2%;
   width: 30%;
 }
+
 header .navbar {
   display: flex;
   justify-content: end;
@@ -224,12 +225,11 @@ main .content {
   position: absolute;
   z-index: -1;
   width: 100%;
-  min-height: 600px !important;
 }
 
 .covere img {
   width: 100%;
-  max-height: 800px;
+  height: 800px;
   opacity: 0.8;
 }
 
@@ -395,11 +395,13 @@ h3.titulo {
 .title .card {
   border-radius: 40px !important;
 }
+
 .title .card .card-header {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   padding: 20px;
 }
+
 .card-exame .card-text {
   font-size: 20px;
 }
@@ -408,6 +410,7 @@ h3.titulo {
   max-width: 80%;
   padding: 50px;
 }
+
 .img-em-resumo {
   width: 50%;
   height: auto;
@@ -438,10 +441,12 @@ h3.titulo {
 .bg-card-sobre-nos {
   background-color: var(--bs-secondary);
 }
+
 .fundo-conteudos {
   border-radius: 50px !important;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) !important ;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) !important;
 }
+
 .conteudo-exame {
   margin: 30px;
   display: flex;
@@ -461,14 +466,16 @@ h3.titulo {
 }
 
 .txt-conteudo {
-  margin: 50px;
+  margin: 50px 10% 20px 10% ;
   font-size: 18px;
   text-align: justify;
 }
+
 .conteudo-papeis-pilares-lista {
   margin: 0 5%;
   text-align: justify;
 }
+
 .subtitles {
   margin: 0 50px;
   font-size: 18px;
@@ -685,8 +692,16 @@ form .container {
 }
 
 .btn-conteudo-footer {
+  display: flex;
   border-color: rgba(0, 0, 255, 0);
   color: white;
+  text-decoration: none;
+  height: 43px;
+  align-items: center;
+}
+
+.btn-conteudo-footer:hover {
+  color: white !important;
 }
 
 .bg-cards-conteudo-index {
@@ -699,14 +714,16 @@ form .container {
   justify-content: space-between;
   margin: 80px 10px;
 }
+
 .container-botao-nextpage a {
   text-decoration: none;
 }
+
 .botao-nextpage {
   cursor: pointer;
   font-weight: 700;
   font-family: Helvetica, "sans-serif";
-  transition: all 0.2s;
+  transition: all .2s;
   padding: 20px 20px;
   border-radius: 100px;
   background: #457068;
@@ -717,20 +734,23 @@ form .container {
   color: white;
   box-shadow: 0 0 5px rgba(57, 136, 87, 0.5);
 }
+
 .botao-previouspage {
   margin-left: 50px;
   box-shadow: 0 0 5px rgba(57, 136, 87, 0.5);
 }
+
 button:hover {
   background: #0e4b3f;
 }
 
-button > svg {
+button>svg {
   width: 34px;
   margin-left: 10px;
   transition: transform 0.3s ease-in-out;
 }
-button.botao-previouspage > svg {
+
+button.botao-previouspage>svg {
   width: 34px;
   margin-right: 10px;
   transition: transform 0.3s ease-in-out;
@@ -739,9 +759,11 @@ button.botao-previouspage > svg {
 button:hover svg {
   transform: translateX(5px);
 }
+
 button.botao-previouspage:hover svg {
   transform: translateX(-5px);
 }
+
 button:active {
   transform: scale(0.95);
 }
@@ -753,11 +775,12 @@ button:active {
 
 .imagem-com-texto-paragrafo {
   width: 50%;
-  min-width: 300px !important;
+  min-width: 270px ;
   float: right;
   margin: 0 10px 10px 20px;
   border-radius: 30px;
 }
+
 .em-resumo-introdução {
   margin-bottom: 70px;
 }
@@ -765,6 +788,7 @@ button:active {
 #imagem-planningmeetin {
   background: white;
 }
+
 #img-pilares1 {
   background: white;
 }
@@ -781,10 +805,10 @@ button:active {
   gap: 320px;
 }
 .container-cadastro{
-display: flex;
-justify-content: center;
-margin-top: 50px;
-gap: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 100px;
 } 
 
 .card-cadastro1 {
@@ -853,4 +877,41 @@ gap: 100px;
 .botao-enviar-email:hover {
   background: var(--bs-secondary-text-emphasis);
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+/* @media para Mobile */
+@media screen and (max-width: 767px){
+  main .content {
+    margin-top: 310px;
+    min-height: 500px;
+    background: var(--bs-tertiary-bg);
+    border-radius: 40px 40px 80px 80px;
+    -webkit-border-radius: 40px 40px 80px 80px;
+    -moz-border-radius: 40px 40px 80px 80px;
+    -ms-border-radius: 40px 40px 80px 80px;
+    -o-border-radius: 40px 40px 80px 80px;
+  }
+  .covere img {
+    width: 100%;
+    height: 300px;
+    opacity: 0.8;
+  }
+}
+
+/* @media para tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  main .content {
+    margin-top: 500px;
+    min-height: 500px;
+    background: var(--bs-tertiary-bg);
+    border-radius: 40px 40px 80px 80px;
+    -webkit-border-radius: 40px 40px 80px 80px;
+    -moz-border-radius: 40px 40px 80px 80px;
+    -ms-border-radius: 40px 40px 80px 80px;
+    -o-border-radius: 40px 40px 80px 80px;
+  }
+  .covere img {
+    width: 100%;
+    height: 600px;
+    opacity: 0.8;
+  }
 }
