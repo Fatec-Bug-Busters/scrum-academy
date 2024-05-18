@@ -50,7 +50,7 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 | Kick Off          | 15/03/2024 | concluído    |
 | 01                | 14/04/2024 | concluído    |
 | 02                | 05/05/2024 | concluído    |
-| 03                | 26/05/2024 | a fazer      |
+| 03                | 26/05/2024 | concluído    |
 | 04                | 16/06/2024 | a fazer      |
 | Feira de Soluções | 27/06/2024 | a fazer      |
 
@@ -70,22 +70,23 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 ### Sprint 2. Desenvolvimento do Projeto
 
-- [x] Interface do usuário: páginas principais
-- [x] Conteúdo: Introdução à Metodologia Ágil SCRUM
-- [x] Conteúdo: Artefatos e Eventos
-- [x] Conteúdo: Algumas questões do conteúdo
+- [x] Interface do usuário: páginas principais;
+- [x] Conteúdo: Introdução à Metodologia Ágil SCRUM;
+- [x] Conteúdo: Artefatos e Eventos;
+- [x] Conteúdo: Algumas questões do conteúdo.
 
 ### Sprint 3. Implementação
 
-- [ ] Conteúdo detalhado;
-- [ ] Interface;
-- [ ] Quiz.
+- [x] Adição de Conteúdo;
+- [x] Adição de recursos na Interface;
+- [x] Funcionamento inicial do Quiz;
+- [x] Funcionamento inicial do Exames.
 
 ### Sprint 4. Operacionalização
 
-- [ ] Conteúdo;
-- [ ] Exames;
-- [ ] Correções.
+- [ ] Conteúdo completo sobre SCRUM;
+- [ ] Funcionamento completo do Quiz e Exames;
+- [ ] Correções de eventuais erros.
 
 ## Competências desenvolvidas
 
@@ -135,6 +136,8 @@ Soft skills desenvolvidas
 | Resiliência | ★ ★ ★ ★ ★ ★ ★ ☆ ☆ ☆ | -->
 
 ## Tecnologias Utilizadas
+
+![Tecnologias utilizadas](./docs/tecnologias-utilizadas.png)
 
 - Google Sheets
 - Figma
