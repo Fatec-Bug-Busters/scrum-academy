@@ -8,9 +8,14 @@ Projeto fundamentado na metodologia ágil SCRUM que busca fomentar a proatividad
 | -------------- | ---------------------------------------------- | ------------ | -------------- | ----------------------------- |
 | Antonio Egydio | 1º ADS (Análise e Desenvolvimento de Sistemas) | Jean Carlos  | Antonio Egydio | <antonio.graca@fatec.sp.gov.br> |
 
+## Instalação
+
+Siga os passos em [CONTRUBUTING](./CONTRIBUTING.md).
+
 ## Índice
 
 - [Scrum Academy](#scrum-academy)
+  - [Instalação](#instalação)
   - [Índice](#índice)
   - [Objetivo do Projeto](#objetivo-do-projeto)
   - [Visão do Produto](#visão-do-produto)
@@ -161,4 +166,3 @@ Soft skills desenvolvidas
 | Team Member | Felipe Chagas | [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/oFelipeChagas) |
 
 ![Bug Busters](./src/static/images/bug-busters-logo-black.jpg)
-
