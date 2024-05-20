@@ -143,7 +143,6 @@
           <div class="btn-group">
 
             <button class="fw-bold bg-dark rounded-pill btn-link btn-conteudo-footer" data-bs-toggle="dropdown"
-
               aria-expanded="false">Conteúdo</button>
             <ul class="dropdown-menu" data-bs-theme="dark">
               <li>
@@ -208,7 +207,7 @@
   <!-- Modal Login -->
   <div class="modal fade" id="ModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content rounded-pill">
         <div class="card-cadastro1">
           <div class="header-modal">
             <span class="titulo-cadastro">Salve seu progresso!</span>
@@ -230,7 +229,7 @@
   <!-- Modal New User-->
   <div class="modal fade" id="ModalNewUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content rounded-pill">
         <div class="card-cadastro1">
           <div class="header-modal">
             <span class="titulo-cadastro">Cadastre-se!</span>
@@ -252,7 +251,7 @@
   <!-- Modal Login Sucess-->
   <div class="modal fade" id="ModalLoginSucess" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content rounded-pill">
         <div class="card-cadastro1">
           <div class="header-modal">
             <span class="titulo-cadastro">Logado com Sucesso!</span>
@@ -267,7 +266,7 @@
   <!-- Modal Error-->
   <div class="modal fade" id="ModalError" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content rounded-pill">
         <div class="card-cadastro1">
           <div class="header-modal">
             <span class="titulo-cadastro">Erro no servidor tente novamente!</span>
@@ -282,7 +281,7 @@
   <!-- Modal Incomplete Name-->
   <div class="modal fade" id="ModalIncompleteName" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content rounded-pill">
         <div class="card-cadastro1">
           <div class="header-modal">
             <span class="titulo-cadastro">Nome Incompleto</span>
@@ -295,20 +294,21 @@
   </div>
 
   <!-- Modal Logout-->
-  <div class="modal fade" id="ModalLogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="card-cadastro1">
-          <div class="header-modal">
-            <span class="titulo-cadastro">Você tem certeza que deseja sair?</span>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <button type="button" class="btn btn-danger" id="btn_logout">Sair</button>
+    <div class="modal fade" id="ModalLogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-pill">
+          <div class="card-cadastro1">
+            <div class="header-modal">
+              <span class="titulo-cadastro">Você tem certeza que deseja sair?</span>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <button type="button" class="btn btn-danger" id="btn_logout">Sair</button>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
 
   <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
   <script defer src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
