@@ -1,6 +1,17 @@
 from flask import Flask, render_template
+from flask_mysqldb import MySQL
+import os
+import datetime
 
 app = Flask(__name__)
+
+app.config["MYSQL_HOST"] = os.environ.get("MYSQL_HOST")
+app.config["MYSQL_USER"] = os.environ.get("MYSQL_USER")
+app.config["MYSQL_PASSWORD"] = os.environ.get("MYSQL_PASS")
+app.config["MYSQL_DB"] = os.environ.get("MYSQL_DB")
+mysql = MySQL(app)
+
+# now = datetime.datetime.now()
 
 
 @app.route("/")
@@ -51,6 +62,7 @@ def conteudo():
 @app.route("/questoes")
 def questoes():
     return render_template("components/questoes.html")
+
 
 @app.route("/cadastro")
 def cadastro():
