@@ -51,7 +51,33 @@ Agora sim, aqui está um guia passo a passo sobre como você pode enviar suas co
     pip install -r requirements.txt
     ```
 
-5. Execute o servidor Flask
+4. Configure o Banco de Dados MySQL
+
+   Crie o banco de dados com o código em `scripts.sql`
+
+   ```sh
+   mysql -u root -p < scripts.sql
+   # ou
+   sudo mysql < scripts.sql
+   ```
+
+   Copie o arquivo `.env`
+
+   ```sh
+   # copie o arquivo .env
+   cp .env.template .env
+   ```
+
+   Insira as informações do banco de dados
+
+   ```env
+   MYSQL_HOST=localhost
+   MYSQL_USER=root
+   MYSQL_PASS=
+   MYSQL_DB=scrumacademy
+   ```
+
+5. Rode o servidor Flask
 
     ```sh
     # rodar o projeto localmente

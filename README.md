@@ -104,6 +104,7 @@ Hard skills desenvolvidas
   - Flask com Python
   - Git e GitHub
   - Ambiente virtual com pacote Python `venv`
+  - MySQL
 - Gestão de projetos;
 - Competências técnicas;
 - Trabalho com metodologia ágil SCRUM (papéis, seus eventos e artefatos).
@@ -151,6 +152,8 @@ Soft skills desenvolvidas
 - Flask com Python
 - Git e GitHub
 - Draw.io
+- MySQL
+- AWS EC2
 
 ## Veja Também
 
