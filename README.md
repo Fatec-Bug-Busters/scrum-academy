@@ -152,8 +152,8 @@ Soft skills desenvolvidas
 - Flask com Python
 - Git e GitHub
 - Draw.io
+- Markdown
 - MySQL
-- AWS EC2
 
 ## Veja Também
 
