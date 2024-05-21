@@ -73,7 +73,6 @@
   <main>
     <!-- COVER -->
     <div class="covere">
-
       <div class="card text-center align-middle">
         {% block cover_img %}
 
@@ -83,6 +82,8 @@
         </div>
       </div>
     </div>
+
+
     <div class="container-fluid container-lg">
 
 
@@ -185,6 +186,7 @@
 
   <script defer src="{{ url_for('static', filename='/js/bootstrap.bundle.js') }}"></script>
   <script defer src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  {%block quizjs%}{%endblock%}
 </body>
 
 </html>

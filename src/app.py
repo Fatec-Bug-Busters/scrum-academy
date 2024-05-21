@@ -1,6 +1,17 @@
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, render_template
+from flask_mysqldb import MySQL
+import os
+import datetime
 
 app = Flask(__name__)
+
+app.config["MYSQL_HOST"] = os.environ.get("MYSQL_HOST")
+app.config["MYSQL_USER"] = os.environ.get("MYSQL_USER")
+app.config["MYSQL_PASSWORD"] = os.environ.get("MYSQL_PASS")
+app.config["MYSQL_DB"] = os.environ.get("MYSQL_DB")
+mysql = MySQL(app)
+
+# now = datetime.datetime.now()
 
 
 @app.route("/")
@@ -188,6 +199,10 @@ def result():
         comentario=comentario,
         fb=fb,
     )
+
+@app.route("/certificado")
+def certificado():
+    return render_template("components/certificado.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -34,7 +34,7 @@ Pilares e Papéis do Scrum
   </p>
 </div>
 
-<ul class="conteudo-papeis-pilares-lista">
+<ul class="txt-conteudo">
   <li> <strong>Transparência:</strong> No contexto do Scrum, a transparência é um dos pilares fundamentais que sustentam
     a metodologia ágil. Ela se refere à necessidade de que todos os aspectos relevantes do trabalho sejam visíveis e
     compreensíveis para todos os membros da equipe. Isso inclui o estado das tarefas, os objetivos do projeto, os
@@ -131,27 +131,27 @@ Pilares e Papéis do Scrum
       </ul>
     </li>
   </ol>
-  <p class="txt-conteudo">
-    Os papéis no Método Scrum são claramente definidos e têm responsabilidades específicas que contribuem para o sucesso
-    do processo. O Product Owner, o Scrum Master e a equipe de Desenvolvimento trabalham em conjunto para maximizar o
-    valor do produto, remover obstáculos e entregar incrementos de produto funcionais e de alta qualidade a cada sprint.
-    Ao desempenhar efetivamente seus papéis e colaborar de forma eficaz, as equipes Scrum podem alcançar níveis mais
-    altos
-    de produtividade, qualidade e satisfação do cliente.
-  </p>
-  <p class="txt-conteudo">
-    No Scrum, a democracia é inerente ao seu funcionamento, pois valoriza a contribuição de todos os membros da equipe,
-    independentemente do papel que desempenham. Tanto o Product Owner quanto o Scrum Master têm funções específicas, mas
-    não detêm mais poder ou importância do que os membros da equipe de desenvolvimento.
-  </p>
-  <p class="txt-conteudo">
-    Cada voz é valorizada igualmente durante as discussões e decisões, promovendo um ambiente onde todos têm liberdade
-    para expressar suas opiniões, ideias e preocupações. Essa abordagem democrática garante que as melhores soluções
-    sejam
-    encontradas em conjunto, alinhadas com os objetivos do projeto e as necessidades do cliente, fortalecendo assim o
-    trabalho colaborativo e a eficácia do Scrum como um todo.
-  </p>
 </div>
+<p class="txt-conteudo">
+  Os papéis no Método Scrum são claramente definidos e têm responsabilidades específicas que contribuem para o sucesso
+  do processo. O Product Owner, o Scrum Master e a equipe de Desenvolvimento trabalham em conjunto para maximizar o
+  valor do produto, remover obstáculos e entregar incrementos de produto funcionais e de alta qualidade a cada sprint.
+  Ao desempenhar efetivamente seus papéis e colaborar de forma eficaz, as equipes Scrum podem alcançar níveis mais
+  altos
+  de produtividade, qualidade e satisfação do cliente.
+</p>
+<p class="txt-conteudo">
+  No Scrum, a democracia é inerente ao seu funcionamento, pois valoriza a contribuição de todos os membros da equipe,
+  independentemente do papel que desempenham. Tanto o Product Owner quanto o Scrum Master têm funções específicas, mas
+  não detêm mais poder ou importância do que os membros da equipe de desenvolvimento.
+</p>
+<p class="txt-conteudo">
+  Cada voz é valorizada igualmente durante as discussões e decisões, promovendo um ambiente onde todos têm liberdade
+  para expressar suas opiniões, ideias e preocupações. Essa abordagem democrática garante que as melhores soluções
+  sejam
+  encontradas em conjunto, alinhadas com os objetivos do projeto e as necessidades do cliente, fortalecendo assim o
+  trabalho colaborativo e a eficácia do Scrum como um todo.
+</p>
 {% endblock%}
 
 
@@ -283,6 +283,23 @@ Pilares e Papéis do Scrum
     </div>
   </div>
 </div>
+
+
+
+
+<button type="button" class="submit-btn" onclick="submitExam()">Enviar exame</button>
+
+<div id="resultPopup" class="popup" style="display: none;">
+  <div id="popupContent">
+  </div>
+</div>
+
+<div id="overlay" class="opaque" style="display: none;" onclick="closePopup()"></div>
+
+
+
+
+
 {% endblock quiz %}
 
 {%block nextpage%}
@@ -319,3 +336,54 @@ Pilares e Papéis do Scrum
   Papéis e Responsabilidades
 </a>
 {% endblock %}
+
+{%block quizjs%}
+<script>
+  function submitExam() {
+  
+    const correctAnswers = {
+      q1: 'b',
+      q2: 'b'
+    };
+
+  
+    let totalCorrect = 0;
+
+  
+    for (const question in correctAnswers) {
+      const selectedOption = document.querySelector(`input[name=${question}]:checked`);
+      const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
+      if (isCorrect) {
+        totalCorrect++;
+      }
+    }
+
+   
+    const popup = document.getElementById("resultPopup");
+    const overlay = document.getElementById("overlay");
+    const popupContent = document.getElementById("popupContent");
+    popupContent.innerHTML = `
+    <div class="card-cadastro1">
+        <span class="titulo-cadastro">Parabéns!</span>
+        <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${totalCorrect} de 2 questões.</p>
+        <div class="cadastro" style="display: flex;">
+          <a href="/artefatos-e-eventos-1">
+            <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
+          </a>
+        </div>
+    </div>
+    `;
+    popup.style.display = "block";
+    overlay.style.display = "block";
+  }
+
+ 
+  function closePopup() {
+    const popup = document.getElementById("resultPopup");
+    const overlay = document.getElementById("overlay");
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  }
+</script>
+
+{%endblock%}
