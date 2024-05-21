@@ -1,0 +1,122 @@
+<!-- a escolha de fazer um style exclusivo para essa página tiveram dois motivos: o primeiro que ele não utilizará quase nada
+da base e do css o segundo, para não conflitar os css ja existente, ja que classes como body, h1, h2, p estariam sendo
+usadas com outras categorizações -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon-32x32.png')}}">
+
+    <style>
+        @font-face {
+            font-family: 'Lucida';
+            src: url(../../static/fonts/Lucida/lucida-handwriting-italic.ttf) format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 2rem;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .certificado {
+            background-color: #ffffff;
+            width: 85%;
+            height: 85%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            align-items: center;
+
+        }
+
+        .fresca {
+            color: #000000;
+            font-family: 'Lucida';
+            font-size: 5.5rem;
+            word-wrap: break-word;
+            text-align: center;
+            align-items: center;
+            padding-top: 5%;
+
+
+        }
+
+        h1 {
+            color: #007bff;
+            margin-top: 10px;
+        }
+
+        p {
+            margin: 5px 0;
+            font-family: 'Lucida';
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        h4 {
+            font-size: small;
+        }
+        .rodape {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            
+        }
+        .rodape img {
+            height: 4rem
+        }
+
+        
+    </style>
+</head>
+
+
+<body>
+    <br>
+    <div class="certificado">
+        <br>
+        <div class="fresca">Certificado</div>
+        <br><br>
+        <p>Certificamos que o usuário</p>
+        <h1 id="Nome completo"></h1>
+        <p>completou com aproveitamento satisfatório o curso de Metodologia Scrum</p>
+        <br><br><br>
+        <h4>Emitido em: <span id="date"></span> pela plataforma digital de ensino Scrum Academy</h4>
+        <br>
+        <div class="rodape"> 
+            <div style="flex: 2"><img src="{{ url_for('static', filename='images/bug-busters-logo-black.png') }}" alt="Bug Busters">
+            </div>
+            <div style="flex: 1">
+            <img src="{{ url_for('static', filename='images/logo-principal-black.png') }}" alt="scrum academy">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const date = new Date().toLocaleDateString();
+        document.getElementById("date").innerText = date;
+    </script>
+</body>
+
+</html>
+
+<!-- 
+agora falta a parte lógica -->
