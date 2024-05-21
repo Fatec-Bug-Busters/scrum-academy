@@ -62,7 +62,6 @@ def cadastro():
 def avaliar():
     return render_template("components/avaliar.html")
 
-
 @app.route("/submit", methods=["POST"])
 def form1():
     nome = request.form.get("nome")
@@ -189,7 +188,6 @@ def result():
         comentario=comentario,
         fb=fb,
     )
-
 
 if __name__ == "__main__":
     app.run(debug=True)
