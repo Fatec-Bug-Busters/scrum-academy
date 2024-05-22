@@ -1,17 +1,12 @@
 
-from flask import Flask, render_template, jsonify, request, session, redirect, url_for
+from flask import Flask, render_template, jsonify, request, session
 from flask_mysqldb import MySQL
 import os
+import datetime
 
 app = Flask(__name__)
 app.secret_key = "12345678"
 
-
-lst_user = {
-    "user1@example.com": {"NameUser": "Alice", "CreatedAtDate": "2022-12-01", "id": 1},
-    "user2@example.com": {"NameUser": "Bob", "CreatedAtDate": "2022-11-01", "id": 2},
-    "user3@example.com": {"NameUser": "Charlie", "CreatedAtDate": "2022-10-01", "id": 3}
-}
 
 app.config["MYSQL_HOST"] = os.environ.get("MYSQL_HOST")
 app.config["MYSQL_USER"] = os.environ.get("MYSQL_USER")
@@ -88,27 +83,39 @@ def login():
     email = data['email']
     
 
-    if email in lst_user:
-        session['name_now'] = lst_user[email]["NameUser"]
-        session['email'] = email
-        return jsonify({'success': True})
-    else:
-        return jsonify({'success': False})
+    try:
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT id, name FROM users WHERE email = %s", (email,))
+        user = cur.fetchone()
+        cur.close()
 
+        if user:
+            session['user_id'] = user[0]
+            session['name_now'] = user[1]
+            session['email'] = email
+            return jsonify({'success': True})
+        else:
+            return jsonify({'success': False})
+    except Exception as e:
+        return jsonify({'success': False})
 
 @app.route('/register', methods=['POST'])
 def register():
     data = request.get_json()
     NameUser = data['NameUser']
     email = data['email']
-    
+    created_at = datetime.datetime.now()
     if len(NameUser.split()) > 1:
-        lst_user[email] = {"NameUser": NameUser}
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO users (name, email, created_at) VALUES (%s, %s,%s)", (NameUser, email, created_at))
+        mysql.connection.commit()
+        cur.close()
         session['name_now'] = NameUser
         session['email'] = email
         return jsonify({'NameUser': NameUser, 'email': email})
     else:
         return jsonify({'success': False, 'message': 'Invalid name'}), 400
+
 
 
 @app.route('/logout', methods=['POST'])
