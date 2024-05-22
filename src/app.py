@@ -138,16 +138,10 @@ def submit_score():
     print(f"Quantidade de questões corretas recebidas: {total_correct}")
     return jsonify({'status': 'success', 'totalCorrect': total_correct})
 
-@app.route("/questoes")
-def questoes():
-    return render_template("components/questoes.html")
-
-
 
 @app.route("/certificado")
 def certificado():
     return render_template("components/certificado.html")
-
 
 if __name__ == "__main__":
     app.run(debug=True)
