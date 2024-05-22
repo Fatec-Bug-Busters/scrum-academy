@@ -73,6 +73,7 @@ def conteudo():
 
 @app.route("/questoes")
 def questoes():
+
     name_now = session.get('name_now')
     return render_template("components/questoes.html", name_now=name_now)
 
@@ -136,6 +137,17 @@ def submit_score():
     total_correct = data.get('totalCorrect')
     print(f"Quantidade de questões corretas recebidas: {total_correct}")
     return jsonify({'status': 'success', 'totalCorrect': total_correct})
+
+@app.route("/questoes")
+def questoes():
+    return render_template("components/questoes.html")
+
+
+
+@app.route("/certificado")
+def certificado():
+    return render_template("components/certificado.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
