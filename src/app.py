@@ -2,7 +2,6 @@
 from flask import Flask, render_template, jsonify, request, session, redirect, url_for
 from flask_mysqldb import MySQL
 import os
-import datetime import date
 
 app = Flask(__name__)
 app.secret_key = "12345678"
@@ -104,7 +103,7 @@ def register():
     email = data['email']
     
     if len(NameUser.split()) > 1:
-        lst_user[email] = {"NameUser": NameUser, "CreatedAtDate": date.today().strftime("%Y-%m-%d"), "id": 4}
+        lst_user[email] = {"NameUser": NameUser}
         session['name_now'] = NameUser
         session['email'] = email
         return jsonify({'NameUser': NameUser, 'email': email})
@@ -118,7 +117,18 @@ def logout():
     session.pop('email', None)
     return jsonify({'success': True})
 
+# Testes para salvar o quizz
+@app.route("/introducao-teste")
+def introducaoteste():
+    name_now = session.get('name_now')
+    return render_template("conteudos/introducao-teste.html", name_now=name_now)
 
+@app.route('/submit-score', methods=['POST'])
+def submit_score():
+    data = request.json
+    total_correct = data.get('totalCorrect')
+    print(f"Quantidade de questões corretas recebidas: {total_correct}")
+    return jsonify({'status': 'success', 'totalCorrect': total_correct})
 
 if __name__ == "__main__":
     app.run(debug=True)
