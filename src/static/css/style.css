@@ -943,21 +943,17 @@ button:active {
   margin-bottom: 50px;
 }
 
-
-
-#comentario {
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-}
-#coment {
-  height: max-content;
+.estrelas {
+  display: inline;
+  margin-left: 25%;
+  align-items: center;
 }
 .estrelas input[type=radio] {
   display: none;
 }
 .estrelas label i.fa{
   font-size: 2.5em
+  
 }
 .estrelas label i.fa:before {
   content:'\f005';
@@ -965,4 +961,37 @@ button:active {
 }
 .estrelas input[type=radio]:checked ~ label i.fa:before {
   color: #CCC;
+}
+.txt-conteudo2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.txt-conteudo2 p{
+  margin: 30px 10% 20px 10% ;
+  font-size: 18px;
+  text-align: ;
+}
+.txt-conteudo2 img {
+  min-width: none;
+  min-height: auto;
+  max-width: 12rem;
+  max-height: 12rem;
+  margin-right: 2rem;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.submit-avaliar {
+  width: 30%;
+  background-color: var(--bs-secondary);
+  color: #fff;
+  border: none;
+  padding: 10px 20px ;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 0 0 0 2rem;
 }
