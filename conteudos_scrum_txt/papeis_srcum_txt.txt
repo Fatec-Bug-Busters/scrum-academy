@@ -1,0 +1,12 @@
+Conteúdo: Papéis - Auto-Organização
+
+No Scrum, a estrutura de papéis é fundamental para promover a eficiência e o sucesso dos projetos. Os três papéis principais são o Product Owner, o Scrum Master e a Equipe de Desenvolvimento. Cada um desempenha funções específicas para garantir que o trabalho seja realizado de forma eficaz e alinhado aos objetivos do produto.
+
+O Product Owner é responsável por representar os interesses dos stakeholders e garantir que o produto atenda às suas necessidades. Ele é o responsável por gerenciar o Product Backlog, priorizando os itens com base no valor para o cliente e fornecendo direção clara para a equipe de desenvolvimento.
+
+O Scrum Master atua como facilitador do processo Scrum, removendo impedimentos e garantindo que a equipe esteja aderindo aos princípios e práticas do Scrum. Ele promove a colaboração e a auto-organização da equipe, ajudando a resolver conflitos e facilitando a melhoria contínua do processo.
+
+A Equipe de Desenvolvimento é responsável por transformar os itens do Product Backlog em incrementos potencialmente entregáveis de produto a cada Sprint. Ela é auto-organizada e multifuncional, o que significa que os membros têm autonomia para decidir como realizar o trabalho e são capazes de desempenhar uma variedade de tarefas para atingir os objetivos da Sprint.
+
+A auto-organização é um princípio fundamental do Scrum, que confia na expertise e na responsabilidade dos membros da equipe para planejar e executar o trabalho de forma eficaz. Isso promove a motivação e o engajamento da equipe, resultando em maior produtividade e qualidade do produto. Em resumo, os papéis no Scrum são projetados para promover a auto-organização e a colaboração da equipe, permitindo que ela se adapte rapidamente às mudanças e entregue valor de forma consistente.
+ 
