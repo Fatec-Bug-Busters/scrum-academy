@@ -1,0 +1,28 @@
+Método Scrum: Definições e História
+
+Introdução ao Método Scrum
+O Método Scrum é uma estrutura de gerenciamento de projetos amplamente adotada no desenvolvimento ágil de software. Ele	 enfatiza a colaboração, a auto-organização e a entrega contínua de valor ao cliente. Originado na indústria de software, o Scrum tem sido adotado em várias outras áreas, desde marketing até pesquisa científica.
+
+Definição do Método Scrum
+
+O Método Scrum é baseado em princípios simples, mas poderosos. Ele organiza o trabalho em unidades de tempo chamadas "sprints", que geralmente duram de uma a quatro semanas. Durante cada sprint, uma equipe multifuncional trabalha para concluir um conjunto de tarefas prioritárias definidas no início do sprint.
+
+Elementos Chave do Método Scrum
+
+Product Backlog: Uma lista priorizada de todas as funcionalidades desejadas para um produto.
+Sprint Planning: Uma reunião na qual a equipe seleciona as tarefas a serem realizadas durante o sprint.
+Daily Scrum: Breves reuniões diárias nas quais a equipe compartilha o progresso, discute impedimentos e ajusta o plano conforme necessário.
+Sprint Review: Uma reunião realizada ao final de cada sprint para revisar o trabalho concluído e obter feedback.
+Sprint Retrospective: Uma reunião na qual a equipe reflete sobre o sprint passado e identifica maneiras de melhorar.
+
+História do Método Scrum
+
+O Scrum foi formalizado pela primeira vez por Jeff Sutherland e Ken Schwaber no início dos anos 1990. Ambos foram inspirados por métodos de fabricação lean e teorias de gestão ágil. Eles introduziram o Scrum como uma maneira de lidar com projetos complexos e em constante mudança.
+
+Desde então, o Scrum tem crescido em popularidade, especialmente na indústria de software. Em 2001, o Manifesto Ágil foi lançado, destacando valores como indivíduos e interações mais que processos e ferramentas, e o Scrum se alinhou bem com esses princípios.
+
+O Scrum continuou a evoluir com o tempo, com a criação de certificações, comunidades de prática e ferramentas especializadas. Atualmente, é uma das estruturas de gerenciamento de projetos mais amplamente adotadas em todo o mundo, sendo aplicada não apenas em software, mas em uma variedade de contextos empresariais.
+O Método Scrum oferece uma abordagem flexível e eficaz para gerenciar projetos complexos. Sua ênfase na colaboração, transparência e adaptação contínua tornou-o uma escolha popular para equipes que buscam entregar valor de maneira rápida e eficiente. Com uma base sólida em princípios ágeis e uma história de sucesso comprovada, o Scrum continua a moldar a maneira como as equipes abordam o trabalho em todo o mundo.
+
+
+
