@@ -1,0 +1,13 @@
+Conteúdo: Os Pilares de Scrum - Transparência, Inspeção, Adaptação
+•	Transparência:
+
+No contexto do Scrum, a transparência é um dos pilares fundamentais que sustentam a metodologia ágil. Ela se refere à necessidade de que todos os aspectos relevantes do trabalho sejam visíveis e compreensíveis para todos os membros da equipe. Isso inclui o estado das tarefas, os objetivos do projeto, os critérios de aceitação das entregas, as métricas de desempenho e qualquer obstáculo que esteja impedindo o progresso. Para garantir a transparência, as equipes frequentemente utilizam artefatos como quadros Kanban ou softwares de gestão de projetos, nos quais o status do trabalho é atualizado regularmente e pode ser acessado por todos os membros da equipe. A transparência promove a confiança e a colaboração, pois permite que todos tenham uma compreensão clara do que está acontecendo e do que precisa ser feito para alcançar os objetivos do projeto.
+
+•	Inspeção:
+
+A inspeção é outro pilar vital do Scrum, enfatizando a importância de avaliar regularmente o progresso do trabalho e os resultados obtidos. Isso ocorre por meio de diversas cerimônias e práticas, como as reuniões diárias (Daily Scrum), as revisões de sprint (Sprint Reviews) e as retrospectivas (Sprint Retrospectives). Durante essas reuniões, a equipe revisa o trabalho concluído, verifica se está alinhado com as expectativas e identifica áreas de melhoria ou possíveis obstáculos que precisam ser abordados. A inspeção contínua ajuda a garantir que o trabalho realizado esteja de acordo com as necessidades do cliente e com os padrões de qualidade estabelecidos, permitindo que a equipe faça ajustes rápidos e eficazes, quando necessário.
+
+•	Adaptação:
+
+Por fim, a adaptação completa o tripé dos pilares do Scrum. A capacidade de adaptação é essencial em um ambiente dinâmico e complexo, onde os requisitos e as circunstâncias podem mudar rapidamente. Com base nas informações obtidas durante as inspeções regulares, a equipe pode ajustar suas estratégias, redefinir prioridades, realocar recursos e até mesmo revisar o escopo do projeto, se necessário. Essa flexibilidade permite que a equipe responda de forma ágil e eficaz às mudanças e incertezas, maximizando as chances de sucesso do projeto. A adaptação é incentivada e suportada pelo framework Scrum, que fornece estruturas e práticas que permitem que as equipes sejam ágeis e responsivas às necessidades do cliente e às mudanças no ambiente de negócios.
+
