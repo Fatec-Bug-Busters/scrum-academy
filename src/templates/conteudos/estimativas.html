@@ -1,0 +1,184 @@
+{% extends "conteudo.html" %}
+
+
+<!-- Titulo da pagina -->
+{% block title %}Estimativas{% endblock %}
+
+
+<!-- Imagem cover -->
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/estimativas.png')}}" alt="Cover Conteudo">
+{% endblock %}
+
+
+<!-- Texto da cover -->
+{% block cover_text %}
+Estimativas do Scrum
+{% endblock %}
+
+
+<!-- Conteúdo / texto -->
+{% block text %}
+<h2>Estimativas</h2>
+
+<p class="txt-conteudo">
+  <img src="{{url_for('static', filename='images/fibonacci.png')}}" alt="agile today-img"
+    class="imagem-com-texto-paragrafo" id="imagem-planningmeetin">
+  No contexto ágil do Scrum, estimativas desempenham um papel crucial na determinação do esforço necessário para
+  completar as atividades do projeto. A compreensão do produto é essencial para fazer estimativas precisas, e isso
+  muitas vezes é alcançado por meio de User Stories. No entanto, em vez de utilizar a unidade de medida tradicional de
+  "tempo", o Scrum utiliza "Story Points" para estimar o esforço necessário para cada funcionalidade. Os Story Points
+  são uma unidade de medida relativa que leva em consideração o esforço envolvido na realização de uma determinada
+  funcionalidade. Essas estimativas são frequentemente feitas durante o Planning Poker, uma estratégia de construção de
+  estimativas que aproveita o conhecimento coletivo dos membros da equipe.
+</p>
+
+<p class="txt-conteudo">
+  O Planning Poker é uma técnica crucial dentro da metodologia Scrum para realizar estimativas de esforço das atividades
+  do projeto, especialmente para as User Stories. Nesse método, os membros da equipe atribuem valores de Story Points às
+  tarefas com base em sua complexidade, esforço e impacto. Esses pontos não representam diretamente o tempo necessário
+  para concluir uma atividade, mas sim uma medida relativa de sua dificuldade em relação a outras tarefas. Durante o
+  Planning Poker, cada membro da equipe recebe um conjunto de cartas com valores de estimativa, geralmente representados
+  por números da sequência Fibonacci.
+  Além do Planning Poker, existem outros métodos de estimativa que são comumente utilizados no Scrum. Outras três
+  principais ferramentas de estimativas no método Scrum são:
+</p>
+
+<p class="txt-conteudo">
+  O Product Owner apresenta uma User Story e esclarece dúvidas relacionadas a ela. Em seguida, cada membro escolhe uma
+  carta que represente sua estimativa para a tarefa, sem revelá-la aos outros membros. Após todos os membros escolherem
+  suas cartas, elas são reveladas simultaneamente. Se houver discrepâncias significativas entre as estimativas, os
+  membros discutem os motivos por trás de suas escolhas até chegar a um consenso. O Planning Poker promove discussões
+  colaborativas, permite o compartilhamento de diferentes perspectivas e ajuda a mitigar o viés individual na estimativa
+  de tarefas. Isso contribui para estimativas mais precisas e para o alinhamento da equipe em relação ao esforço
+  necessário para completar as atividades do projeto. Além do Planning Poker, existem outros métodos de estimativa que
+  são comumente utilizados no Scrum. Outras três principais ferramentas de estimativas no método Scrum são:
+</p>
+<ul class="txt-conteudo">
+  <li>
+    <strong>Estimativa em Pontos de Função::</strong> Esta técnica quantifica o software com base nas funções fornecidas
+    ao usuário, considerando a complexidade e o valor entregue por cada função. É uma abordagem objetiva que permite uma
+    avaliação mais precisa do esforço necessário para implementar uma determinada funcionalidade.
+  </li>
+  <br>
+  <li>
+    <strong>Estimativa de Tamanho de T-shirt::</strong>
+    este método, as tarefas são estimadas com base em tamanhos predefinidos, como P (Pequeno), M (Médio) e G (Grande).
+    Essa abordagem simplifica a estimativa, tornando-a mais acessível para equipes que preferem uma escala mais
+    intuitiva e menos técnica.
+  </li>
+  <br>
+  <li>
+    <strong>Estimativa Wideband Delphi: :</strong> Este método envolve uma abordagem mais estruturada, onde um grupo de
+    especialistas realiza estimativas independentes e, em seguida, discute suas justificativas em uma reunião
+    facilitada. Essa técnica promove a diversidade de perspectivas e permite uma avaliação mais abrangente dos riscos e
+    incertezas associados a cada estimativa.
+  </li>
+  <br>
+</ul>
+<p class="txt-conteudo">
+  Essas ferramentas complementam o Planning Poker, oferecendo opções variadas para as equipes Scrum escolherem aquela
+  que melhor se adapta às suas necessidades e preferências. Ao usar uma combinação dessas técnicas, as equipes podem
+  realizar estimativas mais precisas e informadas, contribuindo para o sucesso do projeto.
+</p>
+<p class="txt-conteudo">
+
+</p>
+
+{% endblock text %}
+
+
+<!-- Seção Em Resumo -->
+{% block em_resumo %}
+<div class="col-12 col-lg-3 ">
+  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos">
+</div>
+<div class="col">
+  <ul>
+    <li>Estimativas no Scrum são essenciais para determinar o esforço necessário nas atividades do projeto.</li>
+    <li>Story Points substituem a medida tradicional de tempo, considerando o esforço relativo para cada funcionalidade.
+    </li>
+    <li>Planning Poker é um método crucial para realizar estimativas, aproveitando o conhecimento coletivo da equipe.
+    </li>
+    <li>Além do Planning Poker, outras ferramentas são comuns no Scrum.</li>
+    <li>Estimativa em Pontos de Função quantificam o software com base nas funções fornecidas ao usuário.</li>
+    <li>Estimativa de Tamanho de T-shirt utiliza tamanhos predefinidos para simplificar a estimativa.</li>
+    <li>Estimativa Wideband Delphi envolve especialistas realizando estimativas independentes, seguidas de discussão
+      facilitada.</li>
+  </ul>
+</div>
+{% endblock em_resumo %}
+
+
+<!-- Seção Na Prática -->
+{% block na_pratica %}
+
+<p class="txt-conteudo">
+  Na prática, as ferramentas de estimativa no Scrum são fundamentais para guiar o planejamento e a execução de projetos
+  de forma eficiente e colaborativa. Uma das principais técnicas utilizadas é o Planning Poker, onde os membros da
+  equipe atribuem valores de Story Points às tarefas com base em sua complexidade e esforço. Durante essa atividade,
+  cada membro da equipe recebe um conjunto de cartas com valores de estimativa, geralmente representados por números da
+  sequência Fibonacci. Essa abordagem permite que todos contribuam para a estimativa de forma equitativa, aproveitando o
+  conhecimento coletivo da equipe.
+</p>
+
+<p class="txt-conteudo">
+  Além do Planning Poker, outras ferramentas de estimativa são comuns no Scrum, como a Estimativa em Pontos de Função.
+  Nessa técnica, a equipe quantifica o software com base nas funções fornecidas ao usuário, considerando sua
+  complexidade e valor entregue. Outra abordagem é a Estimativa de Tamanho de T-shirt, que simplifica a estimativa ao
+  utilizar tamanhos predefinidos, como P (Pequeno), M (Médio) e G (Grande). Essas técnicas oferecem flexibilidade e
+  adaptabilidade às diferentes necessidades e preferências das equipes ágeis.
+</p>
+
+<p class="txt-conteudo">
+  Durante a execução dessas atividades, é crucial promover discussões colaborativas e alcançar consenso entre os membros
+  da equipe. Se houver divergências significativas entre as estimativas, é importante discutir os motivos por trás
+  dessas diferenças até chegar a um acordo. Essas discussões ajudam a mitigar o viés individual e garantem que as
+  estimativas sejam fundamentadas em uma compreensão compartilhada das tarefas.
+</p>
+
+<p class="txt-conteudo">
+  Por fim, ao combinar várias técnicas de estimativa, as equipes Scrum podem obter uma visão mais abrangente e precisa
+  do esforço necessário para completar suas User Stories. Isso contribui para o sucesso do projeto, permitindo que a
+  equipe planeje suas iterações de forma mais eficaz e entregue valor de maneira consistente aos stakeholders. Assim, as
+  ferramentas de estimativa no Scrum desempenham um papel crucial na condução de projetos ágeis de maneira colaborativa
+  e orientada a resultados.
+</p>
+
+{% endblock na_pratica %}
+
+
+<!-- Seção Quiz -->
+{% block quiz %}
+<p class="card-text">
+  Questão 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+</div>
+<p class="card-text">
+  Questão 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+</div>
+{% endblock quiz %}
+
+
+<!-- Navegação interna  -->
+<!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
+<!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
+{% block navegacao_interna %}
+<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
+  Estimativas
+</a>
+{% endblock %}

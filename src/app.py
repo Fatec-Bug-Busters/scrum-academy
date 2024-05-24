@@ -52,9 +52,20 @@ def conteudo():
 def questoes():
     return render_template("components/questoes.html")
 
+
 @app.route("/cadastro")
 def cadastro():
     return render_template("components/cadastro.html")
+
+
+@app.route("/estimativas")
+def estimativas():
+    return render_template("conteudos/estimativas.html")
+
+
+@app.route("/artefatos-e-eventos-3")
+def artefatoseeventos3():
+    return render_template("conteudos/artefatos-e-eventos-3.html")
 
 
 if __name__ == "__main__":
