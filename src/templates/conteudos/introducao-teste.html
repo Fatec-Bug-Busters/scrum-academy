@@ -230,6 +230,7 @@ Introdução ao Scrum
       q2: 'd'
     };
 
+    const userAnswers = {};
     let totalCorrect = 0;
 
     for (const question in correctAnswers) {
@@ -238,6 +239,7 @@ Introdução ao Scrum
       if (isCorrect) {
         totalCorrect++;
       }
+      userAnswers[ question ] = selectedOption.value;
     }
 
     const popup = document.getElementById("resultPopup");
@@ -270,7 +272,7 @@ Introdução ao Scrum
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ totalCorrect: totalCorrect })
+        body: JSON.stringify({ totalCorrect: totalCorrect, userAnswers: userAnswers })
       });
 
       const result = await response.json();

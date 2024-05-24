@@ -134,9 +134,12 @@ def introducaoteste():
 @app.route('/submit-score', methods=['POST'])
 def submit_score():
     data = request.json
-    total_correct = data.get('totalCorrect')
+    total_correct = data.get("totalCorrect")
+    user_answers = data.get("userAnswers")
     print(f"Quantidade de questões corretas recebidas: {total_correct}")
-    return jsonify({'status': 'success', 'totalCorrect': total_correct})
+    return jsonify(
+        {"status": "success", "totalCorrect": total_correct, "userAnswer": user_answers}
+    )
 
 
 @app.route("/certificado")
