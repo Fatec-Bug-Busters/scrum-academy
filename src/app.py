@@ -125,23 +125,6 @@ def logout():
     session.pop('email', None)
     return jsonify({'success': True})
 
-# Testes para salvar o quizz
-@app.route("/introducao-teste")
-def introducaoteste():
-    name_now = session.get('name_now')
-    return render_template("conteudos/introducao-teste.html", name_now=name_now)
-
-@app.route('/submit-score', methods=['POST'])
-def submit_score():
-    data = request.json
-    total_correct = data.get("totalCorrect")
-    user_answers = data.get("userAnswers")
-    print(f"Quantidade de questões corretas recebidas: {total_correct}")
-    return jsonify(
-        {"status": "success", "totalCorrect": total_correct, "userAnswer": user_answers}
-    )
-
-
 @app.route("/certificado")
 def certificado():
     return render_template("components/certificado.html")
