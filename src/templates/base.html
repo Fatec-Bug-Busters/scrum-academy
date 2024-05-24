@@ -68,13 +68,13 @@
               {% if not name_now %}
               <a class="nav-link text-sm-left text-center" href="#" role="button" data-bs-toggle="modal"
                 data-bs-target="#ModalLogin" aria-expanded="true">
-                <img class="icon-navbar" src="{{ url_for('static', filename='images/User_icon.png') }}"
+                <img class="icon-navbar" src="{{ url_for('static', filename='images/User_Icon.png') }}"
                   alt="Icon Resultados">
                 Login
                 {% else %}
                 <a class="nav-link text-sm-left text-center" href="#" role="button" data-bs-toggle="modal"
                   data-bs-target="#ModalLogout" aria-expanded="true" style="white-space: nowrap;">
-                  <img class="icon-navbar" src="{{ url_for('static', filename='images/User_icon.png') }}"
+                  <img class="icon-navbar" src="{{ url_for('static', filename='images/User_Icon.png') }}"
                     alt="Icon Resultados">
                   <span class="d-lg-inline d-none"><br>{{ name_now }}</span>
                   <span class="d-inline d-lg-none">{{ name_now }}</span>
@@ -294,20 +294,20 @@
   </div>
 
   <!-- Modal Logout-->
-    <div class="modal fade" id="ModalLogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content rounded-pill">
-          <div class="card-cadastro1">
-            <div class="header-modal">
-              <span class="titulo-cadastro">Você tem certeza que deseja sair?</span>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <button type="button" class="btn btn-danger" id="btn_logout">Sair</button>
-
+  <div class="modal fade" id="ModalLogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-pill">
+        <div class="card-cadastro1">
+          <div class="header-modal">
+            <span class="titulo-cadastro">Você tem certeza que deseja sair?</span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          <button type="button" class="btn btn-danger" id="btn_logout">Sair</button>
+
         </div>
       </div>
     </div>
+  </div>
 
 
   <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
