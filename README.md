@@ -43,7 +43,7 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 [Backlog do Produto](./backlog-do-produto.xlsx)
 
-![Roadmap](./src/static/images/Roadmap.jpg)
+![Roadmap](./docs/Roadmap.jpg)
 
 | Sprint            | Previsão   | Status       |
 | ----------------- | ---------- | ------------ |
@@ -56,9 +56,9 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 ### Sprint 1. Concepção
 
-[Protótipo - Imagens](./prototipo.md)
-
-[Protótipo - Figma](./prototipo-figma.fig)
+- [Protótipo - Fase 1](./docs/prototipo-1.md)
+- [Protótipo - Fase 2](./docs/prototipo-2.md)
+- [Protótipo - Fase 3](./docs/prototipo-3.md)
 
 - [x] Protótipo interativo Figma;
 - [x] Protótipo da página principal;
