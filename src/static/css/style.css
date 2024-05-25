@@ -518,42 +518,6 @@ h3.titulo {
   background-color: var(--bs-secondary);
 }
 
-.nome-exame {
-  display: flex;
-  justify-content: center;
-  background-image: linear-gradient(
-    var(--gradient-darker),
-    var(--gradient-lighter)
-  );
-  padding: 20px;
-  max-width: 90%;
-  margin: 0 5%;
-  border-radius: 30px;
-  align-items: center;
-  gap: 30px;
-}
-
-.nome-exame input[type="text"] {
-  padding: 10px;
-  border: 1px solid var(--bs-body-color);
-  border-radius: 5px;
-  font-size: 20px;
-  width: 60%;
-  background-color: var(--bs-secondary);
-}
-
-.nome-exame input[type="text"]:focus {
-  border-color: var(--bs-body-bg);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.nome-exame input[type="text"]::placeholder {
-  background-image: linear-gradient(
-    var(--gradient-darker),
-    var(--gradient-lighter)
-  );
-}
-
 form .container {
   max-width: 90%;
   height: auto;
@@ -565,7 +529,6 @@ form .container {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
 .questoes-container {
@@ -574,11 +537,17 @@ form .container {
 
 .enunciado-questoes {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.enunciado-questoes p{
+  margin-top: 20px;
+}
 .numeracao-questoes {
-  align-content: center;
-  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
   height: 70px;
   border-radius: 50%;
   background-image: linear-gradient(

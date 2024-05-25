@@ -187,57 +187,8 @@ Introdução ao Scrum
     </div>
   </div>
 </div>
-<script>
-  function submitExam() {
-  
-    const correctAnswers = {
-      q1: 'b',
-      q2: 'd'
-    };
 
-    
-    let totalCorrect = 0;
-
-    
-    for (const question in correctAnswers) {
-      const selectedOption = document.querySelector(`input[name=${question}]:checked`);
-      const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
-      if (isCorrect) {
-        totalCorrect++;
-      }
-    }
-
-   
-    const popup = document.getElementById("resultPopup");
-    const overlay = document.getElementById("overlay");
-    const popupContent = document.getElementById("popupContent");
-    popupContent.innerHTML = `
-    <div class="card-cadastro1">
-        <span class="titulo-cadastro">Parabéns!</span>
-        <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${totalCorrect} de 2 questões.</p>
-        <div class="cadastro" style="display: flex;">
-          <a href="/papeis-e-pilares">
-            <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
-          </a>
-        </div>
-    </div>`
-    ;
-    popup.style.display = "block";
-    overlay.style.display = "block";
-  }
-
- 
-  function closePopup() {
-    const popup = document.getElementById("resultPopup");
-    const overlay = document.getElementById("overlay");
-    popup.style.display = "none";
-    overlay.style.display = "none";
-  }
-</script>
-
-
-<button type="button" class="submit-btn" onclick="submitExam()">Enviar exame</button>
-
+<button type="button" class="submit-btn" onclick="validateForm()">Enviar exame</button>
 
 <div id="resultPopup" class="popup" style="display: none;">
   <div id="popupContent">
@@ -245,11 +196,7 @@ Introdução ao Scrum
   </div>
 </div>
 
-
 <div id="overlay" class="opaque" style="display: none;" onclick="closePopup()"></div>
-
-
-
 
 {% endblock quiz %}
 
@@ -280,53 +227,64 @@ Introdução ao Scrum
 {% endblock %}
 
 {%block quizjs%}
-
 <script>
-  function submitExam() {
-  
+  async function validateForm() {
     const correctAnswers = {
       q1: 'b',
       q2: 'd'
     };
 
-    
+    const userAnswers = {};
     let totalCorrect = 0;
 
-    
     for (const question in correctAnswers) {
       const selectedOption = document.querySelector(`input[name=${question}]:checked`);
       const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
       if (isCorrect) {
         totalCorrect++;
       }
+      userAnswers[ question ] = selectedOption.value;
     }
 
-   
     const popup = document.getElementById("resultPopup");
     const overlay = document.getElementById("overlay");
     const popupContent = document.getElementById("popupContent");
     popupContent.innerHTML = `
-    <div class="card-cadastro1">
-        <span class="titulo-cadastro">Parabéns!</span>
-        <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${totalCorrect} de 2 questões.</p>
-        <div class="cadastro" style="display: flex;">
-          <a href="/papeis-e-pilares">
-            <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
-          </a>
-        </div>
-    </div>`
-    ;
+            <div class="card-cadastro1">
+                <span class="titulo-cadastro">Parabéns!</span>
+                <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${totalCorrect} de 2 questões.</p>
+                <div class="cadastro" style="display: flex;">
+                    <a href="/papeis-e-pilares">
+                        <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
+                    </a>
+                </div>
+            </div>`;
     popup.style.display = "block";
     overlay.style.display = "block";
+    
+    
+    // Enviar totalCorrect para o servidor Flask
+    try {
+      const response = await fetch('/submit-score', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ totalCorrect: totalCorrect, userAnswers: userAnswers })
+      });
+      
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error('Erro ao enviar dados:', error);
+    }
   }
-
- 
-  function closePopup() {
-    const popup = document.getElementById("resultPopup");
-    const overlay = document.getElementById("overlay");
-    popup.style.display = "none";
-    overlay.style.display = "none";
-  }
+function closePopup() {
+  const popup = document.getElementById("resultPopup");
+  const overlay = document.getElementById("overlay");
+  popup.style.display = "none";
+  overlay.style.display = "none";
+}
 </script>
 
 {%endblock%}
