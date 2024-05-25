@@ -762,26 +762,19 @@ button:active {
   background: white;
 }
 
-.modal-content{
-  width: auto;
-  margin-left: 85px;
-  border-radius: 20px;
-}
-.testes-modal-cadastro{
-  display: flex;
-  justify-content: center;
-  margin: 40px 0;
-  gap: 320px;
-}
-.container-cadastro{
+
+
+.container-cadastro {
   display: flex;
   justify-content: center;
   margin-top: 50px;
   gap: 100px;
-} 
+}
+
 
 .card-cadastro1 {
-  width: 300px;
+  width: 100%;
+  max-width: 500px; 
   height: auto;
   padding: 30px;
   text-align: center;
@@ -795,33 +788,48 @@ button:active {
     var(--gradient-darker)
   );
   border-radius: 20px;
+  box-sizing: border-box;
 }
-.header-modal{
+
+
+.header-modal {
   display: flex;
   justify-content: space-between;
+  width: 100%; 
 }
+
+
 .card-cadastro1 > * {
   margin: 0;
 }
+
 
 .titulo-cadastro {
   font-size: 23px;
   font-weight: 900;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  width: 100%; 
+  text-align: center;
 }
+
 
 .mensagem-cadastro {
   font-size: 16px;
   line-height: 18px;
   color: white;
+  width: 100%;
+  text-align: center;
 }
+
 
 .cadastro {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
+
 
 .cadastro input {
   margin-top: 10px;
@@ -832,7 +840,10 @@ button:active {
   border-radius: 14px;
   border: 1px solid #333;
   color: black;
+  width: 100%; 
+  box-sizing: border-box;
 }
+
 
 .cadastro button {
   border: 0;
@@ -841,11 +852,15 @@ button:active {
   padding: 15px;
   border-radius: 14px;
   font-weight: bold;
+  width: 100%; 
+  box-sizing: border-box; 
 }
+
 .botao-enviar-email:hover {
   background: var(--bs-secondary-text-emphasis);
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
+
 /* @media para Mobile */
 @media screen and (max-width: 767px){
   main .content {
