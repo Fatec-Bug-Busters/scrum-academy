@@ -662,7 +662,7 @@ form .container {
   padding: 15px;
 }
 
-.q4-container .btn {
+.question-assoc-container .btn {
   transition: background-color 0.3s ease;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
@@ -670,12 +670,12 @@ form .container {
   -o-transition: background-color 0.3s ease;
 }
 
-.q4-container .btn:hover {
+.question-assoc-container .btn:hover {
   background-color: var(--bs-dark);
   transition: 0.4s ease;
 }
 
-.q4-container .checked {
+.question-assoc-container .checked {
   background-color: var(--gradient-lighter) !important;
   border-color: var(--gradient-lighter) !important;
 }

@@ -4,6 +4,35 @@ function toggleText(container) {
 
 
 $(document).ready(function () {
+
+  /**
+   * Get this question container element
+   */
+  let getQuestionContainer = function (prefix) {
+    return $(`#${ prefix }-container`);
+  };
+
+  /**
+   * Get a checkbox by its value
+   * @param {string} value
+   * @returns
+   */
+  let getCheckboxByValue = function (prefix, value) {
+    const container = getQuestionContainer(prefix);
+    return container.find(`input[type=checkbox][value="${ value }"]`);
+  };
+
+  /**
+   * Get a checkbox label element by the checkbox value
+   * @param {string} value
+   * @returns
+   */
+  let getCheckboxLabel = function (prefix, value) {
+    const checkbox = getCheckboxByValue(prefix, value);
+    return checkbox.siblings("label");
+  };
+
+
   /**
    * Limita o número de opções escolhidas em uma lista de checkboxes
    *
@@ -16,7 +45,7 @@ $(document).ready(function () {
     $(`#${ prefix }a, #${ prefix }b, #${ prefix }c, #${ prefix }d, #${ prefix }e`).each(function () {
       // on click event of a checkbox
       $(this).on('click', function (event) {
-        let container = $(`#${ prefix }-container`);
+        const container = getQuestionContainer(prefix);
         let nsel = container.find(`input[name^="${ prefix }"]:checked`).length; // numero de checkboxes selecionados
 
         // numero maximo de escolhas atingido
@@ -55,7 +84,8 @@ $(document).ready(function () {
    * @param {Array} respostas  Array para guardar as respostas escolhidas
    */
   let fillBlanks = function (prefix, respostas) {
-    let inputs = $(`#${ prefix }-container input[name^="${ prefix }-"]`)
+    const container = getQuestionContainer(prefix);
+    let inputs = container.find(`input[name^="${ prefix }-"]`);
     inputs.attr("value", null);
 
     inputs.each(function (index, input) {
@@ -75,6 +105,13 @@ $(document).ready(function () {
    * @param {Object} respostas  Object Literal para guardar as respostas escolhidas
    */
   let assoc = function (prefix, respostas) {
+    /**
+     * Get the element that displays the associations made by the user
+     * @returns
+     */
+    let getTextContainer = function () {
+      return $(`#${ prefix }-associacoes p`);
+    }
 
     /**
      * Add valor as respostas.
@@ -154,8 +191,8 @@ $(document).ready(function () {
           if (key != "null" && respostas[ key ] != null) {
             const inputValue1 = key;
             const inputValue2 = respostas[ key ];
-            const label1 = getCheckboxLabel(inputValue1);
-            const label2 = getCheckboxLabel(inputValue2);
+            const label1 = getCheckboxLabel(prefix, inputValue1);
+            const label2 = getCheckboxLabel(prefix, inputValue2);
             const text1 = label1.text();
             const text2 = label2.text();
             pElem.append(`<span>${ text1 + " <i class='bi bi-arrow-left-right px-3'></i> " + text2 }</span>`);
@@ -173,10 +210,10 @@ $(document).ready(function () {
      */
     let addStyle = function (value) {
       // check the checkboxes and style the button
-      const checkbox = getCheckboxByValue(value);
+      const checkbox = getCheckboxByValue(prefix, value);
       checkbox.prop("checked", true);
       // css styles
-      const label = getCheckboxLabel(value);
+      const label = getCheckboxLabel(prefix, value);
       label.addClass("checked");
     };
 
@@ -187,11 +224,11 @@ $(document).ready(function () {
      * @param {string} value  Valor do checkbox
      */
     let removeStyle = function (value) {
-      const checkbox = getCheckboxByValue(value);
+      const checkbox = getCheckboxByValue(prefix, value);
       checkbox.prop("checked", false);
 
       // css styles
-      const label = getCheckboxLabel(value);
+      const label = getCheckboxLabel(prefix, value);
       label.removeClass("checked");
     };
 
@@ -223,42 +260,6 @@ $(document).ready(function () {
 
       return null;
     };
-
-
-    /**
-     * Get this question container element
-     */
-    let getQuestionContainer = function () {
-      return $(`.${ prefix }-container`);
-    };
-
-    /**
-     * Get a checkbox by its value
-     * @param {string} value
-     * @returns
-     */
-    let getCheckboxByValue = function (value) {
-      const container = getQuestionContainer();
-      return container.find(`input[type=checkbox][value="${ value }"]`);
-    };
-
-    /**
-     * Get a checkbox label element by the checkbox value
-     * @param {string} value
-     * @returns
-     */
-    let getCheckboxLabel = function (value) {
-      const checkbox = getCheckboxByValue(value);
-      return checkbox.siblings("label");
-    };
-
-    /**
-     * Get the element that displays the associations made by the user
-     * @returns
-     */
-    let getTextContainer = function () {
-      return $(`#${ prefix }-associacoes p`);
-    }
 
     /**
      * Impede botão de ser selecionado
