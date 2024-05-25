@@ -29,48 +29,29 @@ Hora de nos avaliar!
         </p>
         <div><img src="{{url_for('static', filename='images/avaliar.png')}}" alt="prancheta"></div>
       </div>
-
-      <form action="/submit2" method="POST">
-        <input type="hidden" name="nome" value="{{ nome }}">
-        <input type="hidden" name="q1" value="{{ q1 }}">
-        <input type="hidden" name="q2" value="{{ q2 }}">
-        <input type="hidden" name="q3" value="{{ q3 }}">
-        <input type="hidden" name="q4" value="{{ q4 }}">
-        <input type="hidden" name="q5" value="{{ q5 }}">
-        <input type="hidden" name="q6" value="{{ q6 }}">
-        <input type="hidden" name="q7" value="{{ q7 }}">
-        <input type="hidden" name="q8" value="{{ q8 }}">
-        <input type="hidden" name="q9" value="{{ q9 }}">
-        <input type="hidden" name="q10" value="{{ q10 }}">
+      <form action="/submit-avaliacao" method="POST">
         <div>
-          <div>
             <div class="txt-conteudo">
-              <label for="textarea-id">Deixe seu comentário:</label>
-              <textarea id="comentario" class="form-control" name="comentario" rows="3" cols="65" required></textarea>
+                <label for="textarea-id">Deixe seu comentário:</label>
+                <textarea id="comentario" class="form-control" name="comentario" rows="3" cols="65" required></textarea>
             </div>
-          </div>
-          <div class="estrelas">
-            <input type="radio" id="cm_star-empty" name="fb" value="0" />
-            <label for="cm_star-1"><i class="fa"></i></label>
-            <input type="radio" id="cm_star-1" name="fb" value="1" />
-            <label for="cm_star-2"><i class="fa"></i></label>
-            <input type="radio" id="cm_star-2" name="fb" value="2" />
-            <label for="cm_star-3"><i class="fa"></i></label>
-            <input type="radio" id="cm_star-3" name="fb" value="3" />
-            <label for="cm_star-4"><i class="fa"></i></label>
-            <input type="radio" id="cm_star-4" name="fb" value="4" />
-            <label for="cm_star-5"><i class="fa"></i></label>
-            <input type="radio" id="cm_star-5" name="fb" value="5" checked required />
-
-            <input type="submit" value="Enviar e ver o resultado" class="submit-avaliar">
-          </div>
-
+            <div class="estrelas">
+                <input type="radio" id="cm_star-empty" name="fb" value="0" />
+                <label for="cm_star-1"><i class="fa"></i></label>
+                <input type="radio" id="cm_star-1" name="fb" value="1" />
+                <label for="cm_star-2"><i class="fa"></i></label>
+                <input type="radio" id="cm_star-2" name="fb" value="2" />
+                <label for="cm_star-3"><i class="fa"></i></label>
+                <input type="radio" id="cm_star-3" name="fb" value="3" />
+                <label for="cm_star-4"><i class="fa"></i></label>
+                <input type="radio" id="cm_star-4" name="fb" value="4" />
+                <label for="cm_star-5"><i class="fa"></i></label>
+                <input type="radio" id="cm_star-5" name="fb" value="5" checked required />
+                <input type="submit" onclick=" validateForm()" value="Enviar e ver o resultado" class="submit-avaliar" >
+                
+            </div>
         </div>
-    
-
-        
-
-      </form>
+    </form>
     </div>
   </div>
 </div>
