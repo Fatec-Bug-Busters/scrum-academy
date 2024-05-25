@@ -102,6 +102,9 @@ $(document).ready(function () {
         }
         respostas[ found ] = value;
       }
+
+      addStyle(value);
+      escreveAssociacoes();
     };
 
     /**
@@ -111,24 +114,85 @@ $(document).ready(function () {
      * @param {int} column column 1 corresponde a key de `respostas`, coluna 2 corresponde ao value de `respostas`
      */
     let remove = function (value, column) {
+      inputValue1 = null;
+      inputValue2 = null;
+
       if (column == 1) {
-        // // se tiver valor nessa chave, add esse valor para chave nula (ou "") e apaga essa chave
-        // // se nao apaga a chave
-        // if (respostas[ value ]) {
-        //   // respostas[ null ] = respostas[ value ];
-        // }
+        inputValue1 = value;
+        inputValue2 = respostas[ value ];
+
         delete respostas[ value ];
       } else if (column == 2) {
         // se achar o valor nas respostas, apaga
         for (let key in respostas) {
           if (respostas.hasOwnProperty(key)) {
             if (respostas[ key ] == value) {
-              // respostas[ key ] == null;
+              inputValue1 = key;
+              inputValue2 = respostas[ key ];
+
               delete respostas[ key ];
             }
           }
         }
       }
+
+      // uncheck the checkboxes and style the button
+      removeStyle(inputValue1);
+      removeStyle(inputValue2);
+      escreveAssociacoes();
+    };
+
+    /**
+     * Mostra para o usuário as suas escolhas
+     */
+    let escreveAssociacoes = function () {
+      const pElem = getTextContainer();
+      pElem.text("");
+
+      for (key in respostas) {
+        if (respostas.hasOwnProperty(key)) {
+          if (key != "null" && respostas[ key ] != null) {
+            const inputValue1 = key;
+            const inputValue2 = respostas[ key ];
+            const label1 = getCheckboxLabel(inputValue1);
+            const label2 = getCheckboxLabel(inputValue2);
+            const text1 = label1.text();
+            const text2 = label2.text();
+            pElem.append(`<span>${ text1 + " <i class='bi bi-arrow-left-right px-3'></i> " + text2 }</span>`);
+            pElem.append("<br>");
+          }
+        }
+      }
+    };
+
+    /**
+     * Add style to the button by adding a CSS class to its label
+     *
+     * @param {string} prefix
+     * @param {string} value  Valor do checkbox
+     */
+    let addStyle = function (value) {
+      // check the checkboxes and style the button
+      const checkbox = getCheckboxByValue(value);
+      checkbox.prop("checked", true);
+      // css styles
+      const label = getCheckboxLabel(value);
+      label.addClass("checked");
+    };
+
+    /**
+     * Default the style of the button by removing the CSS class from it
+     *
+     * @param {string} prefix
+     * @param {string} value  Valor do checkbox
+     */
+    let removeStyle = function (value) {
+      const checkbox = getCheckboxByValue(value);
+      checkbox.prop("checked", false);
+
+      // css styles
+      const label = getCheckboxLabel(value);
+      label.removeClass("checked");
     };
 
     /**
@@ -160,6 +224,42 @@ $(document).ready(function () {
       return null;
     };
 
+
+    /**
+     * Get this question container element
+     */
+    let getQuestionContainer = function () {
+      return $(`.${ prefix }-container`);
+    };
+
+    /**
+     * Get a checkbox by its value
+     * @param {string} value
+     * @returns
+     */
+    let getCheckboxByValue = function (value) {
+      const container = getQuestionContainer();
+      return container.find(`input[type=checkbox][value="${ value }"]`);
+    };
+
+    /**
+     * Get a checkbox label element by the checkbox value
+     * @param {string} value
+     * @returns
+     */
+    let getCheckboxLabel = function (value) {
+      const checkbox = getCheckboxByValue(value);
+      return checkbox.siblings("label");
+    };
+
+    /**
+     * Get the element that displays the associations made by the user
+     * @returns
+     */
+    let getTextContainer = function () {
+      return $(`#${ prefix }-associacoes p`);
+    }
+
     /**
      * Impede botão de ser selecionado
      *
@@ -180,11 +280,11 @@ $(document).ready(function () {
           let column = this.id?.slice(-1);
           let otherColumn = column == 1 ? 2 : 1;
           let value = $(this).attr("value");
-          console.log(
-            'column', column,
-            'value', value,
-            'existe:', exists(null, column)
-          )
+          // console.log(
+          //   'column', column,
+          //   'value', value,
+          //   'existe:', exists(null, column)
+          // )
 
           if (exists(value, column)) {      // se existe uma key|value (na mesma coluna) com seu valor.
             // remove
@@ -202,7 +302,7 @@ $(document).ready(function () {
             // troca a cor - .btn:focus-visible
           }
 
-          console.log(respostas);
+          // console.log(respostas);
         });
       });
   }
