@@ -19,7 +19,7 @@ $(document).ready(function () {
    */
   let getCheckboxByValue = function (prefix, value) {
     const container = getQuestionContainer(prefix);
-    return container.find(`input[type=checkbox][value="${ value }"]`);
+    return container.find(`input[type=checkbox][value="${ value }"], input[type=radio][value="${ value }"]`);
   };
 
   /**
@@ -31,6 +31,74 @@ $(document).ready(function () {
     const checkbox = getCheckboxByValue(prefix, value);
     return checkbox.siblings("label");
   };
+
+
+  /**
+   * Add style to the button by adding a CSS class to its label
+   *
+   * @param {string} prefix
+   * @param {string} value  Valor do checkbox
+   */
+  let addStyle = function (prefix, value) {
+    // check the checkboxes and style the button
+    const checkbox = getCheckboxByValue(prefix, value);
+    checkbox.prop("checked", true);
+    // css styles
+    const label = getCheckboxLabel(prefix, value);
+    label.addClass("checked");
+  };
+
+  /**
+   * Default the style of the button by removing the CSS class from it
+   *
+   * @param {string} prefix
+   * @param {string} value  Valor do checkbox
+   */
+  let removeStyle = function (prefix, value) {
+    const checkbox = getCheckboxByValue(prefix, value);
+    checkbox.prop("checked", false);
+
+    // css styles
+    const label = getCheckboxLabel(prefix, value);
+    label.removeClass("checked");
+  };
+
+  /**
+   * Impede botão de ser selecionado
+   *
+   * @param event
+   * @returns bool
+   */
+  let preventChanging = function (event) {
+    event.stopPropagation();
+    return false;
+  };
+
+
+  /**
+   * Para questões com uma única escolha
+   * @param {string} prefix  Prefixo/ID dessa lista de checkboxes
+   * @param {Array} respostas  Array para guardar as respostas escolhidas
+   */
+  let choice = function (prefix, respostas) {
+    $(`#${ prefix }a, #${ prefix }b, #${ prefix }c, #${ prefix }d, #${ prefix }e`).each(function () {
+      $(this).on('click', function (event) {
+        let value = respostas[ 0 ];
+        let sel = getCheckboxByValue(prefix, value); // radio/checkboxes selecionados
+
+        // uncheck todos checked
+        removeStyle(prefix, sel.attr('value'));
+
+        // add valor e style
+        value = $(this).attr('value');
+        respostas = [];
+        respostas.push(value);
+        addStyle(prefix, value);
+
+        console.log(prefix, respostas);
+      });
+    });
+  }
 
 
   /**
@@ -51,8 +119,7 @@ $(document).ready(function () {
         // numero maximo de escolhas atingido
         if (nsel > maxSel) {
           // impede de selecionar mais opções
-          event.stopPropagation();
-          return false;
+          return preventChanging(event);
         } else {
           if (Array.isArray(respostas)) {
             value = $(this).attr('value');
@@ -62,9 +129,11 @@ $(document).ready(function () {
             if (index > -1) {
               // remove value
               respostas.splice(index, 1);
+              removeStyle(prefix, value);
             } else {
               // add value
               respostas.push(value);
+              addStyle(prefix, value);
             }
 
             if (typeof callback == "function") {
@@ -72,10 +141,11 @@ $(document).ready(function () {
             }
           }
         }
-        // console.log(respostas)
+        console.log(prefix, respostas)
       });
     });
   };
+
 
   /**
    * Preenche as lacunas de uma questão
@@ -140,8 +210,8 @@ $(document).ready(function () {
         respostas[ found ] = value;
       }
 
-      addStyle(value);
-      escreveAssociacoes();
+      addStyle(prefix, value);
+      writeAssociations();
     };
 
     /**
@@ -174,15 +244,15 @@ $(document).ready(function () {
       }
 
       // uncheck the checkboxes and style the button
-      removeStyle(inputValue1);
-      removeStyle(inputValue2);
-      escreveAssociacoes();
+      removeStyle(prefix, inputValue1);
+      removeStyle(prefix, inputValue2);
+      writeAssociations();
     };
 
     /**
      * Mostra para o usuário as suas escolhas
      */
-    let escreveAssociacoes = function () {
+    let writeAssociations = function () {
       const pElem = getTextContainer();
       pElem.text("");
 
@@ -202,35 +272,6 @@ $(document).ready(function () {
       }
     };
 
-    /**
-     * Add style to the button by adding a CSS class to its label
-     *
-     * @param {string} prefix
-     * @param {string} value  Valor do checkbox
-     */
-    let addStyle = function (value) {
-      // check the checkboxes and style the button
-      const checkbox = getCheckboxByValue(prefix, value);
-      checkbox.prop("checked", true);
-      // css styles
-      const label = getCheckboxLabel(prefix, value);
-      label.addClass("checked");
-    };
-
-    /**
-     * Default the style of the button by removing the CSS class from it
-     *
-     * @param {string} prefix
-     * @param {string} value  Valor do checkbox
-     */
-    let removeStyle = function (value) {
-      const checkbox = getCheckboxByValue(prefix, value);
-      checkbox.prop("checked", false);
-
-      // css styles
-      const label = getCheckboxLabel(prefix, value);
-      label.removeClass("checked");
-    };
 
     /**
       * Verifica se valor existe em respostas (key|value)
@@ -259,17 +300,6 @@ $(document).ready(function () {
       }
 
       return null;
-    };
-
-    /**
-     * Impede botão de ser selecionado
-     *
-     * @param event
-     * @returns bool
-     */
-    let preventChanging = function (event) {
-      event.stopPropagation();
-      return false;
     };
 
 
@@ -306,7 +336,12 @@ $(document).ready(function () {
           // console.log(respostas);
         });
       });
-  }
+  };
+
+
+  /* Questões Modelo 1: 1 alternativa correta - checkbox */
+  const respostasQ1 = []
+  choice('q1', respostasQ1);
 
   /* Questões Modelo: 2 altenativas corretas - checkbox */
   const respostasQ2 = []

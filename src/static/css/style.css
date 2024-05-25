@@ -662,6 +662,9 @@ form .container {
   padding: 15px;
 }
 
+.question-choice-container .btn,
+.question-multi-container .btn,
+.question-fill-container .btn,
 .question-assoc-container .btn {
   transition: background-color 0.3s ease;
   -webkit-transition: background-color 0.3s ease;
@@ -670,11 +673,17 @@ form .container {
   -o-transition: background-color 0.3s ease;
 }
 
+.question-choice-container .btn:hover,
+.question-multi-container .btn:hover,
+.question-fill-container .btn:hover,
 .question-assoc-container .btn:hover {
   background-color: var(--bs-dark);
   transition: 0.4s ease;
 }
 
+.question-choice-container .checked,
+.question-multi-container .checked,
+.question-fill-container .checked,
 .question-assoc-container .checked {
   background-color: var(--gradient-lighter) !important;
   border-color: var(--gradient-lighter) !important;
