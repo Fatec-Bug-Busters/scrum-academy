@@ -20,17 +20,13 @@ Exame Final
   <div class="conteudo-exame">
     <div class="alert alert-danger d-flex align-items-center" role="alert">
       <div style="color: #fff;">
-        Insira seu nome e não deixe nenhuma questão em branco. As respostas serão salvas após o término da prova.
+        Não deixe nenhuma questão em branco. As respostas serão salvas após o término da prova. Para responder às perguntas, basta clicar nelas e as alternativas aparecerão.
       </div>
     </div>
     <hr>
 
 
-    <form action="">
-      <div class="nome-exame">
-        <label for="nome" style="font-size: 30px;">Insira seu nome aqui:</label>
-        <input type="text" id="nome" name="nome">
-      </div>
+    <form action="/submit" method="POST">
       <!-- QUESTOES -->
 
       <div class="container" onclick="toggleText(this)">
@@ -39,7 +35,7 @@ Exame Final
         <div class="card-content">
           <div class="enunciado-questoes">
             <div class="numeracao-questoes">
-              <p style="padding: 30px; margin-top: 15px;">1</p>
+              <p>1</p>
             </div>
             <div class="enunciado-texto">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
@@ -53,7 +49,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q1" id="q1a" value="a">
+                <input type="radio" name="q1" id="q1a" value="a" required>
                 <label for="q1a">a) Lorem</label>
               </li>
               <li class="option">
@@ -81,7 +77,7 @@ Exame Final
         <div class="card-content">
           <div class="enunciado-questoes">
             <div class="numeracao-questoes">
-              <p style="padding: 30px; margin-top: 15px;">2</p>
+              <p>2</p>
             </div>
             <div class="enunciado-texto">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
@@ -94,7 +90,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q2" id="q2a" value="a">
+                <input type="radio" name="q2" id="q2a" value="a" required>
                 <label for="q2a">a) Lorem</label>
               </li>
               <li class="option">
@@ -122,7 +118,7 @@ Exame Final
         <div class="card-content">
           <div class="enunciado-questoes">
             <div class="numeracao-questoes">
-              <p style="padding: 30px; margin-top: 15px;">3</p>
+              <p>3</p>
             </div>
             <div class="enunciado-texto">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
@@ -135,7 +131,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q3" id="q3a" value="a">
+                <input type="radio" name="q3" id="q3a" value="a" required>
                 <label for="q3a">a) Lorem</label>
               </li>
               <li class="option">
@@ -163,7 +159,7 @@ Exame Final
         <div class="card-content">
           <div class="enunciado-questoes">
             <div class="numeracao-questoes">
-              <p style="padding: 30px; margin-top: 15px;">4</p>
+              <p>4</p>
             </div>
             <div class="enunciado-texto">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
@@ -176,7 +172,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q4" id="q4a" value="a">
+                <input type="radio" name="q4" id="q4a" value="a" required>
                 <label for="q4a">a) Lorem</label>
               </li>
               <li class="option">
@@ -204,7 +200,7 @@ Exame Final
         <div class="card-content">
           <div class="enunciado-questoes">
             <div class="numeracao-questoes">
-              <p style="padding: 30px; margin-top: 15px;">5</p>
+              <p>5</p>
             </div>
             <div class="enunciado-texto">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
@@ -217,7 +213,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q5" id="q5a" value="a">
+                <input type="radio" name="q5" id="q5a" value="a" required>
                 <label for="q5a">a) Lorem</label>
               </li>
               <li class="option">
@@ -245,7 +241,7 @@ Exame Final
         <div class="card-content">
           <div class="enunciado-questoes">
             <div class="numeracao-questoes">
-              <p style="padding: 30px; margin-top: 15px;">6</p>
+              <p>6</p>
             </div>
             <div class="enunciado-texto">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
@@ -258,7 +254,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q6" id="q6a" value="a">
+                <input type="radio" name="q6" id="q6a" value="a" required>
                 <label for="q6a">a) Lorem</label>
               </li>
               <li class="option">
@@ -286,7 +282,7 @@ Exame Final
         <div class="card-content">
           <div class="enunciado-questoes">
             <div class="numeracao-questoes">
-              <p style="padding: 30px; margin-top: 15px;">7</p>
+              <p>7</p>
             </div>
             <div class="enunciado-texto">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
@@ -299,7 +295,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q7" id="q7a" value="a">
+                <input type="radio" name="q7" id="q7a" value="a" required>
                 <label for="q7a">a) Lorem</label>
               </li>
               <li class="option">
@@ -327,7 +323,7 @@ Exame Final
         <div class="card-content">
           <div class="enunciado-questoes">
             <div class="numeracao-questoes">
-              <p style="padding: 30px; margin-top: 15px;">8</p>
+              <p>8</p>
             </div>
             <div class="enunciado-texto">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
@@ -340,7 +336,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q8" id="q8a" value="a">
+                <input type="radio" name="q8" id="q8a" value="a" required>
                 <label for="q8a">a) Lorem</label>
               </li>
               <li class="option">
@@ -368,7 +364,7 @@ Exame Final
         <div class="card-content">
           <div class="enunciado-questoes">
             <div class="numeracao-questoes">
-              <p style="padding: 30px; margin-top: 15px;">9</p>
+              <p>9</p>
             </div>
             <div class="enunciado-texto">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
@@ -381,7 +377,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q9" id="q9a" value="a">
+                <input type="radio" name="q9" id="q9a" value="a" required>
                 <label for="q9a">a) Lorem</label>
               </li>
               <li class="option">
@@ -409,7 +405,7 @@ Exame Final
         <div class="card-content">
           <div class="enunciado-questoes">
             <div class="numeracao-questoes">
-              <p style="padding: 30px; margin-top: 15px;">10</p>
+              <p>10</p>
             </div>
             <div class="enunciado-texto">
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab illo minima optio laboriosam, similique
@@ -422,7 +418,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q10" id="q10a" value="a">
+                <input type="radio" name="q10" id="q10a" value="a" required>
                 <label for="q10a">a) Lorem</label>
               </li>
               <li class="option">
@@ -445,9 +441,81 @@ Exame Final
           </div>
         </div>
       </div>
-
-      <button type="submit" class="submit-btn">Enviar exame</button>
     </form>
+
+    <button type="button" class="submit-btn" onclick="validateForm()">Enviar exame</button>
+
+    <div id="resultPopup" class="popup" style="display: none;">
+      <div id="popupContent">
+      </div>
+    </div>
+
+    <div id="overlay" class="opaque" style="display: none;"></div>
   </div>
-</section>
-{% endblock %}
+  {% endblock %}
+
+  {%block quizjs%}
+  <script>
+    async function validateForm() {
+      const correctAnswers = {
+        q1: 'b',
+        q2: 'b',
+        q3: 'b',
+        q4: 'b',
+        q5: 'b',
+        q6: 'b',
+        q7: 'b',
+        q8: 'b',
+        q9: 'b',
+        q10: 'b'
+      };
+
+      const userAnswers = {};
+      let totalCorrect = 0;
+
+      for (const question in correctAnswers) {
+        const selectedOption = document.querySelector(`input[name=${question}]:checked`);
+        const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
+        if (isCorrect) {
+          totalCorrect++;
+        }
+        userAnswers[question] = selectedOption.value;
+      }
+
+      const popup = document.getElementById("resultPopup");
+      const overlay = document.getElementById("overlay");
+      const popupContent = document.getElementById("popupContent");
+      popupContent.innerHTML = `
+          <div class="card-cadastro1">
+              <span class="titulo-cadastro">Parabéns!</span>
+              <p class="mensagem-cadastro" style="margin-bottom: 20px">Você concluiu o exame. Agora, para conseguir visualizar suas pontuações, faça uma rápida avaliação do nosso site.</p>
+              <div class="cadastro" style="display: flex;">
+                  <a href="/avaliar">
+                      <button class="botao-enviar-email">Realizar avaliação</button>
+                  </a>
+              </div>
+          </div>`;
+      popup.style.display = "block";
+      overlay.style.display = "block";
+
+
+      // Enviar totalCorrect para o servidor Flask
+      try {
+        const response = await fetch('/submit-score-exame', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ totalCorrect: totalCorrect, userAnswers: userAnswers })
+        });
+
+
+
+        const result = await response.json();
+        console.log(result);
+      } catch (error) {
+        console.error('Erro ao enviar dados:', error);
+      }
+    }
+  </script>
+  {% endblock %}
