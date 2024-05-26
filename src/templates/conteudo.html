@@ -41,6 +41,23 @@
     </div>
   </div>
 </div>
+<div class="title" id="referencias">
+  <h2>Referências</h2>
+  <div class="my-5 text-center">
+    <button class="btn btn-secondary btn-lg" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapseReferencias" aria-expanded="false" aria-controls="collapseReferencias">
+      Visualizar
+      <i class="bi bi-chevron-double-down p-2"></i>
+    </button>
+  </div>
+  <div class="collapse" id="collapseReferencias">
+    <div class="card w-75 border-0 my-4 mx-auto justify-content-center">
+      <div class="card-body w-100 mx-auto mx-sm-auto">
+        {% block referencias %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container-botao-nextpage">
 
   {%block nextpage%}
@@ -67,6 +84,9 @@
         </a>
         <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#quiz">
           Quiz
+        </a>
+        <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#referencias">
+          Referências
         </a>
       </div>
     </div>
