@@ -1,0 +1,89 @@
+{% extends "conteudo.html" %}
+
+
+<!-- Titulo da pagina -->
+{% block title %}Exemplo{% endblock %}
+
+
+<!-- Imagem cover -->
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/Conteudo1-img.jpg')}}" alt="Cover Conteudo">
+{% endblock %}
+
+
+<!-- Texto da cover -->
+{% block cover_text %}
+{% endblock %}
+
+
+<!-- Conteúdo / texto -->
+{% block text %}
+<h2>Título Conteúdo</h2>
+<p class="txt-conteudo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos sunt, harum nihil
+  rerum autem animi non totam dicta recusandae sint, eum, expedita laudantium odit accusantium deleniti nisi quia
+  architecto. Ipsa aliquam in, dolore laborum eligendi aperiam nobis, dolorum, blanditiis laudantium nam amet itaque
+  quis placeat facere ipsum architecto repellendus dicta.</p>
+
+<h2 id="titulo-2">Título 2</h2>
+{% endblock text %}
+
+
+<!-- Seção Em Resumo -->
+{% block em_resumo %}
+<div class="col-12 col-lg-3 ">
+  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos">
+</div>
+<div class="col">
+  <ul>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+  </ul>
+</div>
+{% endblock em_resumo %}
+
+
+<!-- Seção Na Prática -->
+{% block na_pratica %}
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos sunt, harum nihil
+rerum autem animi non totam dicta recusandae sint, eum, expedita laudantium odit accusantium deleniti nisi quia
+architecto. Ipsa aliquam in, dolore laborum eligendi aperiam nobis, dolorum, blanditiis laudantium nam amet itaque
+quis placeat facere ipsum architecto repellendus dicta.
+{% endblock na_pratica %}
+
+
+<!-- Seção Quiz -->
+{% block quiz %}
+<p class="card-text">
+  Questão 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+</div>
+<p class="card-text">
+  Questão 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+</div>
+{% endblock quiz %}
+
+
+<!-- Navegação interna  -->
+<!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
+<!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
+{% block navegacao_interna %}
+<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
+  Título 2
+</a>
+{% endblock %}

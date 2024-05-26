@@ -8,28 +8,83 @@ Para garantir um ambiente respeitável e inclusivo, leia e siga nosso [Código d
 
 ## Começando a Contribuir
 
-Contribuir para o nosso projeto é fácil e estamos ansiosos para receber suas contribuições! Aqui está um guia passo a passo sobre como você pode enviar suas contribuições de maneira eficaz:
+Contribuir para o nosso projeto é fácil e estamos ansiosos para receber suas contribuições! Antes de entrarmos ns passos para instalação da aplicação, precisamos passar pela lista de requisitos. Você precisará dos seguintes programas e acessos para contribuir com a nossa aplicação:
 
-1. Faça um Fork do Repositório
-2. Clone o Repositório Fork
+- Uma conta no [GitHub](https://github.com/)
+- O *version control system* [Git](https://git-scm.com/) instalado
+- Um IDE para o desenvolvimento. Recomendamos o [Visual Studio Code](https://code.visualstudio.com/). Confira também as [extensões indicadas](#algumas-indicações-opcionais) para o VSCode.
+- O interpretador da linguagem [Python](https://www.python.org/)
+- E um navegador de sua escolha
+
+Agora sim, aqui está um guia passo a passo sobre como você pode enviar suas contribuições de maneira eficaz:
+
+1. Clone o Repositório
 
     ```sh
-    git clone https://github.com/seu-usuario/scrum-academy.git
+    git clone https://github.com/Fatec-Bug-Busters/Busters.git
     ```
 
-3. Instale as dependências. Indicamos o uso de um ambiente virtual
+2. Navegue até o projeto
+
+    ```sh
+    cd scrum-academy
+    ```
+
+3. Indicamos o uso de um ambiente virtual, como o [venv](https://docs.python.org/3/library/venv.html)
+
+    ```sh
+    python -m venv venv
+
+    # Windows
+    source venv/Scripts/activate
+
+    # Linux
+    . venv/bin/activate
+
+    # Mac
+    source venv/bin/activate
+    ```
+
+4. Instale as dependências
 
     ```sh
     pip install -r requirements.txt
     ```
 
-4. Rode o servidor Flask
+4. Configure o Banco de Dados MySQL
+
+   Crie o banco de dados com o código em `scripts.sql`
+
+   ```sh
+   mysql -u root -p < scripts.sql
+   # ou
+   sudo mysql < scripts.sql
+   ```
+
+   Copie o arquivo `.env`
+
+   ```sh
+   # copie o arquivo .env
+   cp .env.template .env
+   ```
+
+   Insira as informações do banco de dados
+
+   ```env
+   MYSQL_HOST=localhost
+   MYSQL_USER=root
+   MYSQL_PASS=
+   MYSQL_DB=scrumacademy
+   ```
+
+5. Rode o servidor Flask
 
     ```sh
     # rodar o projeto localmente
     flask run
-    # abra http://localhost:5000 no navegador
     ```
+
+6. Abra em um navegador: [http://localhost:5000](http://localhost:5000)
 
 Com esses passos, você deve ter tudo pronto para começar a desenvolver.
 
@@ -41,9 +96,9 @@ E é isso! Assim que recebermos o seu pull request, faremos o possível para rev
 
 ## Relatando Problemas e Solicitando Recursos
 
-Se encontrar um bug ou tiver uma ideia para um novo recurso, adoraríamos saber! **Crie uma Issue no GitHub e Descreva o Problema ou a Solicitação**: seja claro e detalhado sobre o problema ou recurso desejado.
+Se encontrar um bug ou tiver uma ideia para um novo recurso, adoraríamos saber! **Crie uma [Issue aqui](https://github.com/Fatec-Bug-Busters/scrum-academy/issues) no GitHub e Descreva o Problema ou a Solicitação**: seja claro e detalhado sobre o problema ou recurso desejado.
 
-Fique Atualizado: Acompanhe a issue para ver as discussões e atualizações sobre o problema ou recurso.
+Fique Atualizado: Acompanhe sua issue para ver as discussões e atualizações sobre o problema ou recurso.
 
 ## Algumas indicações (Opcionais)
 

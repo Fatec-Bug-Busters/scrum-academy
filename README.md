@@ -8,9 +8,14 @@ Projeto fundamentado na metodologia ágil SCRUM que busca fomentar a proatividad
 | -------------- | ---------------------------------------------- | ------------ | -------------- | ----------------------------- |
 | Antonio Egydio | 1º ADS (Análise e Desenvolvimento de Sistemas) | Jean Carlos  | Antonio Egydio | <antonio.graca@fatec.sp.gov.br> |
 
+## Instalação
+
+Siga os passos em [CONTRUBUTING](./CONTRIBUTING.md).
+
 ## Índice
 
 - [Scrum Academy](#scrum-academy)
+  - [Instalação](#instalação)
   - [Índice](#índice)
   - [Objetivo do Projeto](#objetivo-do-projeto)
   - [Visão do Produto](#visão-do-produto)
@@ -38,22 +43,22 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 [Backlog do Produto](./backlog-do-produto.xlsx)
 
-![Roadmap](./src/static/images/Roadmap.jpg)
+![Roadmap](./docs/Roadmap.jpg)
 
 | Sprint            | Previsão   | Status       |
 | ----------------- | ---------- | ------------ |
 | Kick Off          | 15/03/2024 | concluído    |
 | 01                | 14/04/2024 | concluído    |
 | 02                | 05/05/2024 | concluído    |
-| 03                | 26/05/2024 | a fazer      |
+| 03                | 26/05/2024 | concluído    |
 | 04                | 16/06/2024 | a fazer      |
 | Feira de Soluções | 27/06/2024 | a fazer      |
 
 ### Sprint 1. Concepção
 
-[Protótipo - Imagens](./prototipo.md)
-
-[Protótipo - Figma](./prototipo-figma.fig)
+- [Protótipo - Fase 1](./docs/prototipo-1.md)
+- [Protótipo - Fase 2](./docs/prototipo-2.md)
+- [Protótipo - Fase 3](./docs/prototipo-3.md)
 
 - [x] Protótipo interativo Figma;
 - [x] Protótipo da página principal;
@@ -65,22 +70,23 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 ### Sprint 2. Desenvolvimento do Projeto
 
-- [x] Interface do usuário: páginas principais
-- [x] Conteúdo: Introdução à Metodologia Ágil SCRUM
-- [x] Conteúdo: Artefatos e Eventos
-- [x] Conteúdo: Algumas questões do conteúdo
+- [x] Interface do usuário: páginas principais;
+- [x] Conteúdo: Introdução à Metodologia Ágil SCRUM;
+- [x] Conteúdo: Artefatos e Eventos;
+- [x] Conteúdo: Algumas questões do conteúdo.
 
 ### Sprint 3. Implementação
 
-- [ ] Conteúdo detalhado;
-- [ ] Interface;
-- [ ] Quiz.
+- [x] Adição de Conteúdo;
+- [x] Adição de recursos na Interface;
+- [x] Funcionamento inicial do Quiz;
+- [x] Funcionamento inicial do Exames.
 
 ### Sprint 4. Operacionalização
 
-- [ ] Conteúdo;
-- [ ] Exames;
-- [ ] Correções.
+- [ ] Conteúdo completo sobre SCRUM;
+- [ ] Funcionamento completo do Quiz e Exames;
+- [ ] Correções de eventuais erros.
 
 ## Competências desenvolvidas
 
@@ -98,6 +104,7 @@ Hard skills desenvolvidas
   - Flask com Python
   - Git e GitHub
   - Ambiente virtual com pacote Python `venv`
+  - MySQL
 - Gestão de projetos;
 - Competências técnicas;
 - Trabalho com metodologia ágil SCRUM (papéis, seus eventos e artefatos).
@@ -131,6 +138,8 @@ Soft skills desenvolvidas
 
 ## Tecnologias Utilizadas
 
+![Tecnologias utilizadas](./docs/tecnologias-utilizadas.png)
+
 - Google Sheets
 - Figma
 - GitHub
@@ -142,6 +151,9 @@ Soft skills desenvolvidas
 - Bootstrap
 - Flask com Python
 - Git e GitHub
+- Draw.io
+- Markdown
+- MySQL
 
 ## Veja Também
 
@@ -160,4 +172,3 @@ Soft skills desenvolvidas
 | Team Member | Felipe Chagas | [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/oFelipeChagas) |
 
 ![Bug Busters](./src/static/images/bug-busters-logo-black.jpg)
-
