@@ -151,37 +151,96 @@ Estimativas do Scrum
 
 <!-- Seção Quiz -->
 {% block quiz %}
-<p class="card-text">
-  Questão 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
-</p>
-<div class="btns-quiz">
-  <button type="button" class="btn btn-secondary">Lorem.</button>
-  <button type="button" class="btn btn-secondary">Lorem.</button>
-  <button type="button" class="btn btn-secondary">Lorem.</button>
-  <button type="button" class="btn btn-secondary">Lorem.</button>
-  <button type="button" class="btn btn-secondary">Lorem.</button>
+<!-- QUESTÃO 1 - Modelo 2 -->
+<div id="q1-container" class="question-multi-container container">
+  <div class="d-flex gap-3 align-items-center text-center">
+    <h4 class="quiz-numeracao rounded-circle m-0 p-0 p-2 px-3">1</h4>
+    <p class="m-0 p-0">
+      Durante a Sprint Planning Meeting, quais artefatos são utilizados para identificar e estimar as
+      tarefas que serão realizadas na próxima sprint? <em>Escolha 2 (dois) artefatos</em>.
+    </p>
+  </div>
+  <div
+    class="d-flex flex-column flex-md-row flex-wrap m-4 w-100 row-gap-3 column-gap-lg-2 justify-content-stretch align-items-center">
+    <div class="mx-3">
+      <input type="checkbox" class="btn-check" name="q1" id="q1a" value="a" autocomplete="off">
+      <label class="btn btn-primary rounded-pill px-4" id="q1a-label" for="q1a">Product Backlog</label>
+    </div>
+    <div class="mx-3">
+      <input type="checkbox" class="btn-check" name="q1" id="q1b" value="b" autocomplete="off">
+      <label class="btn btn-primary rounded-pill px-4" id="q1b-label" for="q1b">Sprint Review</label>
+    </div>
+    <div class="mx-3">
+      <input type="checkbox" class="btn-check" name="q1" id="q1c" value="c" autocomplete="off">
+      <label class="btn btn-primary rounded-pill px-4" id="q1c-label" for="q1c">Sprint Backlog</label>
+    </div>
+    <div class="mx-3">
+      <input type="checkbox" class="btn-check" name="q1" id="q1d" value="d" autocomplete="off">
+      <label class="btn btn-primary rounded-pill px-4" id="q1d-label" for="q1d">Burndown Chart</label>
+    </div>
+  </div>
 </div>
-<p class="card-text">
-  Questão 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
-</p>
-<div class="btns-quiz">
-  <button type="button" class="btn btn-secondary">Lorem.</button>
-  <button type="button" class="btn btn-secondary">Lorem.</button>
-  <button type="button" class="btn btn-secondary">Lorem.</button>
-  <button type="button" class="btn btn-secondary">Lorem.</button>
-  <button type="button" class="btn btn-secondary">Lorem.</button>
+
+<!-- QUESTÃO 2 - Modelo 3 -->
+<div id="q2-container" class="question-fill-container container">
+  <div class="d-flex gap-3 align-items-center text-center">
+    <h4 class="quiz-numeracao rounded-circle m-0 p-0 p-2 px-3">2</h4>
+    <p class="m-0 p-0">
+      Ao utilizar User Stories, é comum utilizarmos uma unidade de medida relativa chamada
+      <input type="text" class="border-0 border-bottom bg-transparent mx-2 text-center" name="q2-1" id="q2-1" value=""
+        disabled>
+      para estimar o esforço necessário. No Planning Poker, cada membro do time recebe um conjunto de cartas com valores
+      que frequentemente seguem a sequência
+      <input type="text" class="border-0 border-bottom bg-transparent mx-2 text-center" name="q2-2" id="q2-2" value=""
+        disabled>
+      .
+    </p>
+  </div>
+  <div
+    class="d-flex flex-column flex-md-row flex-wrap m-4 w-100 row-gap-3 column-gap-lg-2 justify-content-stretch align-items-center">
+    <div class="mx-3">
+      <input type="checkbox" class="btn-check" name="q2" id="q2a" value="a" autocomplete="off">
+      <label class="btn btn-primary rounded-pill px-4" id="q2a-label" for="q2a">horas</label>
+    </div>
+    <div class="mx-3">
+      <input type="checkbox" class="btn-check" name="q2" id="q2b" value="b" autocomplete="off">
+      <label class="btn btn-primary rounded-pill px-4" id="q2b-label" for="q2b">Fibonacci</label>
+    </div>
+    <div class="mx-3">
+      <input type="checkbox" class="btn-check" name="q2" id="q2c" value="c" autocomplete="off">
+      <label class="btn btn-primary rounded-pill px-4" id="q2c-label" for="q2c">Story Points</label>
+    </div>
+    <div class="mx-3">
+      <input type="checkbox" class="btn-check" name="q2" id="q2d" value="d" autocomplete="off">
+      <label class="btn btn-primary rounded-pill px-4" id="q2d-label" for="q2d">exponencial</label>
+    </div>
+    <div class="mx-3">
+      <input type="checkbox" class="btn-check" name="q2" id="q2e" value="e" autocomplete="off">
+      <label class="btn btn-primary rounded-pill px-4" id="q2e-label" for="q2e">linear</label>
+    </div>
+  </div>
 </div>
+
+
+<button type="button" id="submit-quiz" class="submit-btn">Enviar exame</button>
+
+<div id="resultPopup" class="popup" style="display: none;">
+  <div id="popupContent">
+  </div>
+</div>
+<div id="overlay" class="opaque" style="display: none;"></div>
 {% endblock quiz %}
 
 {% block referencias %}
 <p>
-  <a href="https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf " target="_blank" rel="noopener noreferrer">
-    SCHWABER, Ken; SUTHERLAND, Jeff. The Scrum Guide - The Definitive Guide to Scrum: The Rules of the Game. Scrum Guide, 2020. Disponível em: https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf. Acesso em: 02 maio 2024.
+  <a href="https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf " target="_blank"
+    rel="noopener noreferrer">
+    SCHWABER, Ken; SUTHERLAND, Jeff. The Scrum Guide - The Definitive Guide to Scrum: The Rules of the Game. Scrum
+    Guide, 2020. Disponível em: https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf. Acesso em: 02
+    maio 2024.
   </a>
 </p>
 {% endblock %}
-
-SCHWABER, Ken; SUTHERLAND, Jeff. The Scrum Guide - The Definitive Guide to Scrum: The Rules of the Game. Scrum Guide, 2020. Disponível em: https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf. Acesso em: 02 maio 2024.
 
 
 <!-- Navegação interna  -->
@@ -191,4 +250,45 @@ SCHWABER, Ken; SUTHERLAND, Jeff. The Scrum Guide - The Definitive Guide to Scrum
 <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
   Estimativas
 </a>
-{% endblock %}
+{% endblock %}{% block quizjs %}
+<script>
+  $(document).ready(function () {
+
+    /* Questão 1 - Modelo 2: 2 altenativas corretas */
+    const respostasCorretasQ1 = [ 'a', 'c' ];
+    const respostasQ1 = [];   // Respostas do usuário
+    questoes.limitChoices(2, 'q1', respostasQ1);
+
+
+    /* Questão 2 - Modelo 3: 2 altenativas corretas - completar lacunas */
+    const respostasCorretasQ2 = [ 'c', 'b' ];
+    const respostasQ2 = []
+    questoes.limitChoices(2, 'q2', respostasQ2, questoes.fillBlanks);
+
+
+
+    $("#submit-quiz").on('click', function () {
+      let totalAcertos = 0;
+
+      // Corrige a questão 1
+      let certa1 = questoes.valida(respostasQ1, respostasCorretasQ1);
+      if (certa1) {
+        totalAcertos += 1;
+      }
+
+      // Corrige a questão 2
+      let certa2 = questoes.valida(respostasQ2, respostasCorretasQ2);
+      if (certa2) {
+        totalAcertos += 1;
+      }
+
+      let data = {
+        "totalCorrect": totalAcertos,
+        "userAnswers": [ respostasQ1, respostasQ2 ],
+      };
+
+      questoes.submitScore(data);
+    });
+  });
+</script>
+{% endblock quizjs %}

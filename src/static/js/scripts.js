@@ -180,7 +180,7 @@ $(document).ready(function () {
           respostas.push(value);
           addStyle(prefix, value);
 
-          console.log(prefix, respostas);
+          // console.log(prefix, respostas);
         });
       });
     }
@@ -226,7 +226,7 @@ $(document).ready(function () {
               }
             }
           }
-          console.log(prefix, respostas)
+          // console.log(prefix, respostas)
         });
       });
     };
@@ -423,16 +423,99 @@ $(document).ready(function () {
         });
     };
 
+    /**
+     * Corrige as respostas do usuário
+     *
+     * Compara as respostas com o esperado. É esperado que os dois tenham o mesmo número de ítens
+     * @param {Array|Object} respostas
+     * @param {Array|Object} esperado
+     * @returns {boolean} Se acertou ou não
+     */
+    let valida = function (respostas, esperado) {
+      let estaCorreta = false;
+
+      if (Array.isArray(esperado)) {
+        estaCorreta = esperado.every((resp, index) => resp == respostas[ index ]);
+      } else if (typeof esperado === 'object' && esperado !== null) {
+        // Modelo 4 - object literal - dictionaries
+        estaCorreta = true;
+        for (const [ key, value ] of Object.entries(esperado)) {
+          if (key in respostas == false || value != respostas[ key ]) {
+
+            estaCorreta = false;
+            break;
+          }
+        }
+      } else {
+        estaCorreta = esperado == respostas;
+      }
+      return estaCorreta;
+    };
+
+    /**
+     * Submit score to the server
+     */
+    let submitScore = function (data) {
+      /** Display popup to user */
+      let displayPopup = function (totalCorrect) {
+        const popup = $("#resultPopup");
+        const overlay = $("#overlay");
+        const popupContent = $("#popupContent");
+        popupContent.html(`
+        <div class="card-cadastro1">
+            <span class="titulo-cadastro">Parabéns!</span>
+            <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${ totalCorrect } de 2 questões.</p>
+            <div class="cadastro" style="display: flex;">
+                <a href="/estimativas">
+                    <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
+                </a>
+            </div>
+        </div>`);
+        popup.css({ display: "block" })
+        overlay.css({ display: "block" })
+      }
+      /** Close popup */
+      $("#overlay").on('click', function () {
+        // Close pop up
+        const popup = $("#resultPopup");
+        const overlay = $("#overlay");
+        popup.css({ display: "none" })
+        overlay.css({ display: "none" })
+      });
+
+
+      // Enviar para o servidor
+      $.ajax({
+        url: '/submit-score',
+        method: 'POST',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify(data),
+        success: function (dataS, status, jqXHR) {
+          // console.log('data', data)
+
+          // Mostrar mensagem ao usuário
+          displayPopup(dataS.totalCorrect);
+        },
+        error: function () {
+          console.error('Erro ao enviar dados:', error);
+        },
+      });
+    };
+
     // public methods
     return {
       choice: choice,
       limitChoices: limitChoices,
       fillBlanks: fillBlanks,
       assoc: assoc,
+      valida: valida,
+      submitScore: submitScore,
     };
   }
 
   window.questoes = questoes();
+
 
 })(this.jQuery);
 // end Modelos de Questões
