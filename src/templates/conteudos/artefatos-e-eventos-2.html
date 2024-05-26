@@ -20,19 +20,24 @@ Artefatos e Eventos - Parte 2
 
 <!-- Conteúdo / texto -->
 {% block text %}
-<h2>Sprint Planning Meeting </h2>
+<h2 id="titulo-1">Sprint Planning Meeting </h2>
 <div class="div-textoimagem">
   <p class="txt-conteudo">
-  <img src="{{url_for('static', filename='images/sprint-plan-met.png')}}" alt="introducao-img" class="imagem-com-texto-paragrafo" id="imagem-planningmeetin">
-  No Scrum, a Sprint Planning Meeting é uma etapa crucial que inaugura cada sprint, onde a equipe, junto ao Product
-  Owner e Scrum Master, colabora na definição dos objetivos e na seleção das histórias de usuário a serem trabalhadas.
-  Durante essa reunião, o Product Owner apresenta o Product Backlog, discutindo prioridades e metas com a equipe. Em
-  seguida, a equipe analisa as histórias de usuário, estimando esforços e selecionando as que comporão o Sprint Backlog.
-  A partir daí, inicia-se o desenvolvimento, visando produzir um Product Increment ao longo da sprint. Para assegurar a
-  qualidade, a equipe segue uma Definição de Pronto, estabelecendo critérios a serem cumpridos por cada história antes
-  de sua conclusão. Em síntese, a Sprint Planning Meeting é o ponto de partida para a definição do trabalho a ser
-  realizado, culminando na produção de valor consistente a cada sprint, fundamentando o sucesso do Scrum e a eficiência
-  da equipe.</p>
+    <img src="{{url_for('static', filename='images/sprint-plan-met.png')}}" alt="introducao-img"
+      class="imagem-com-texto-paragrafo" id="imagem-planningmeetin">
+    No Scrum, a Sprint Planning Meeting é uma etapa crucial que inaugura cada sprint, onde a equipe, junto ao Product
+    Owner e Scrum Master, colabora na definição dos objetivos e na seleção das histórias de usuário a serem trabalhadas.
+    Durante essa reunião, o Product Owner apresenta o Product Backlog, discutindo prioridades e metas com a equipe. Em
+    seguida, a equipe analisa as histórias de usuário, estimando esforços e selecionando as que comporão o Sprint
+    Backlog.
+    A partir daí, inicia-se o desenvolvimento, visando produzir um Product Increment ao longo da sprint. Para assegurar
+    a
+    qualidade, a equipe segue uma Definição de Pronto, estabelecendo critérios a serem cumpridos por cada história antes
+    de sua conclusão. Em síntese, a Sprint Planning Meeting é o ponto de partida para a definição do trabalho a ser
+    realizado, culminando na produção de valor consistente a cada sprint, fundamentando o sucesso do Scrum e a
+    eficiência
+    da equipe.
+  </p>
 </div>
 
 <div class="txt-conteudo">
@@ -118,21 +123,19 @@ Artefatos e Eventos - Parte 2
 
 <!-- Seção Em Resumo -->
 {% block em_resumo %}
-  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="img-em-resumo">
-  <ul >
-    <li>A Sprint Planning inicia cada sprint, onde equipe e Product Owner definem objetivos e selecionam histórias de
-      usuário.</li>
-    <li>Durante a reunião, o Product Owner apresenta o Product Backlog e a equipe escolhe as histórias para o Sprint
-      Backlog.</li>
-    <li>O objetivo da sprint é criar um Product Increment, uma versão entregável com novas funcionalidades.</li>
-    <li>Para garantir qualidade, a equipe segue uma Definição de Pronto com critérios específicos.</li>
-    <li>Esses passos são essenciais para o sucesso do Scrum, permitindo eficiência e entrega de valor a cada sprint.</li>
-    <li>O Sprint Backlog, complemento do Product Backlog, é uma lista de tarefas técnicas detalhadas necessárias para transformar os itens do Product Backlog em incrementos do produto.</li>
-    <li>O Sprint Backlog, complemento do Product Backlog, é uma lista de tarefas técnicas detalhadas necessárias para transformar os itens do Product Backlog em incrementos do produto.</li>
-    <li>Criado durante a Sprint Planning Meeting, o Sprint Backlog reflete as prioridades de curto prazo da equipe e fornece uma direção clara para a execução das atividades durante a sprint.</li>
-    <li>O método PACER foi desenvolvido como uma solução abrangente para resolver desafios comuns em projetos ágeis, enfatizando princípios como proatividade, autonomia, colaboração e entrega de resultados.</li>
-    <li>Ao implementar o PACER, as equipes ágeis podem promover um ambiente de trabalho dinâmico e colaborativo, maximizando a eficiência, produtividade e satisfação no trabalho através da antecipação de desafios, autonomia dos membros, colaboração eficaz e foco na entrega de resultados excepcionais.</li>
-  </ul>
+
+<img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="img-em-resumo">
+<ul>
+  <li>A Sprint Planning inicia cada sprint, onde equipe e Product Owner definem objetivos e selecionam histórias de
+    usuário.</li>
+  <li>Durante a reunião, o Product Owner apresenta o Product Backlog e a equipe escolhe as histórias para o Sprint
+    Backlog.</li>
+  <li>O objetivo da sprint é criar um Product Increment, uma versão entregável com novas funcionalidades.</li>
+  <li>Para garantir qualidade, a equipe segue uma Definição de Pronto com critérios específicos.</li>
+  <li>Esses passos são essenciais para o sucesso do Scrum, permitindo eficiência e entrega de valor a cada sprint.
+  </li>
+</ul>
+
 
 {% endblock em_resumo %}
 
@@ -140,7 +143,8 @@ Artefatos e Eventos - Parte 2
 <!-- Seção Na Prática -->
 {% block na_pratica %}
 
-<p class="txt-conteudo">O Scrum é uma metodologia ágil popular para gerenciamento de projetos, com a Sprint Planning Meeting sendo uma de
+<p class="txt-conteudo">O Scrum é uma metodologia ágil popular para gerenciamento de projetos, com a Sprint Planning
+  Meeting sendo uma de
   suas principais cerimônias. Durante essa reunião, a equipe define objetivos, seleciona histórias de usuário e cria o
   Sprint Backlog. Posteriormente, o foco é na produção de um Product Increment de qualidade, seguindo uma Definição de
   Pronto. Neste contexto, exploraremos cinco maneiras práticas de aplicar esses conhecimentos para aumentar a eficiência
@@ -165,13 +169,15 @@ Artefatos e Eventos - Parte 2
   </li>
   <br>
   <li>
-    <strong>Garantia de Qualidade com a Definição de Pronto:</strong> Adote uma Definição de Pronto clara e específica para cada história de usuário, incluindo
+    <strong>Garantia de Qualidade com a Definição de Pronto:</strong> Adote uma Definição de Pronto clara e específica
+    para cada história de usuário, incluindo
     critérios como testes, revisão de código e integração contínua, para garantir a qualidade do Product Increment
     entregue ao final da sprint.
   </li>
   <br>
   <li>
-    <strong>Melhoria Contínua e Reflexão:</strong> Após cada sprint, promova uma retrospectiva para identificar pontos fortes e áreas de melhoria no
+    <strong>Melhoria Contínua e Reflexão:</strong> Após cada sprint, promova uma retrospectiva para identificar pontos
+    fortes e áreas de melhoria no
     processo do Scrum, permitindo que a equipe ajuste e refine suas práticas para aumentar a eficiência e a entrega de
     valor em sprints futuras.
   </li>
@@ -190,7 +196,8 @@ Artefatos e Eventos - Parte 2
         <h4 class="text-center m-0 p-0">1</h4>
       </div>
       <div class="enunciado-texto d-flex align-items-center">
-        <p class="m-0 p-0">Durante a Sprint Planning Meeting, quem é responsável por apresentar e priorizar os itens do Product Backlog?</p>
+        <p class="m-0 p-0">Durante a Sprint Planning Meeting, quem é responsável por apresentar e priorizar os itens do
+          Product Backlog?</p>
       </div>
     </div>
     <!-- RESPOSTAS -->
@@ -314,6 +321,7 @@ Artefatos e Eventos - Parte 2
 <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#list-item-1">
   Sprint Planning Meeting
 </a>
+
 <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
   Sprint Backlog
 </a>
@@ -384,3 +392,4 @@ Artefatos e Eventos - Parte 2
 </script>
 
 {%endblock%}
+

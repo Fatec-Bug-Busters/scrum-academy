@@ -766,7 +766,7 @@ button:active {
 
 .imagem-com-texto-paragrafo {
   width: 50%;
-  min-width: 270px;
+  min-width: 300px !important;
   float: right;
   margin: 0 10px 10px 20px;
   border-radius: 30px;
@@ -777,6 +777,7 @@ button:active {
 }
 
 #imagem-planningmeetin {
+
   background: white;
 }
 
@@ -1001,3 +1002,19 @@ button:active {
   text-transform: uppercase;
   margin: 0 0 0 2rem;
 }
+
+.dropdown-conteudo .dropdown-item:hover {
+  background-color: #0c3954;
+  color: #1ba78f;
+}
+
+#linha-dropdown {
+  display: table-row;
+}
+
+#linha-dropdown .col-6 {
+  display: table-cell;
+}
+
+.dropdown-title {
+  font-weight: bold;

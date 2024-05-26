@@ -38,22 +38,46 @@
                 Home
               </a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown dropstart">
               <a class="nav-link text-sm-left text-center" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="true">
                 <img src="{{ url_for('static', filename='images/conteudo_icon.png') }}" alt="Icon Conteudo"
                   class="icon-navbar">
                 Conteúdo
               </a>
-              <div>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/introducao">Introdução</a></li>
-                  <li><a class="dropdown-item" href="/papeis-e-pilares">Pilares e papéis do Scrum</a></li>
-                  <li><a class="dropdown-item" href="/artefatos-e-eventos-1">Artefatos e Eventos - parte 1</a></li>
-                  <li><a class="dropdown-item" href="/artefatos-e-eventos-2">Artefatos e Eventos - parte 2</a></li>
-                  <li><a class="dropdown-item" href="/artefatos-e-eventos-3">Artefatos e Eventos - parte 3</a></li>
-                  <li><a class="dropdown-item" href="/estimativas">Estimativa</a></li>
-                </ul>
+              <div class="dropdown-menu dropdown-conteudo" aria-labelledby="dropdownMenuButton">
+                <div class="container">
+                  <div class="row" id="linha-dropdown">
+                    <div class="col-6">
+                      <a class="dropdown-item dropdown-title" href="/introducao">INTRODUÇÃO</a>
+                      <a class="dropdown-item" href="/introducao#titulo-1">- Introdução</a>
+                      <a class="dropdown-item" href="/introducao#titulo-2">- História</a>
+                      <a class="dropdown-item" href="/introducao#em-resumo">- Resumo</a>
+                      <a class="dropdown-item" href="/introducao#na-pratica">- Na Prática</a>
+                      <a class="dropdown-item" href="/introducao#quiz">- Quiz</a>
+                      <a class="dropdown-item dropdown-title" href="/papeis-e-pilares">PAPÉIS E
+                        PILARES</a>
+                      <a class="dropdown-item" href="/papeis-e-pilares#titulo-1">- Pilares do Scrum</a>
+                      <a class="dropdown-item" href="/papeis-e-pilares#titulo-2">- Papéis e responsabilidades</a>
+                      <a class="dropdown-item" href="/papeis-e-pilares#em-resumo">- Resumo</a>
+                      <a class="dropdown-item" href="/papeis-e-pilares#na-pratica">- Na Prática</a>
+                      <a class="dropdown-item" href="/papeis-e-pilares#quiz">- Quiz</a>
+                      <a class="dropdown-item dropdown-title" href="/artefatos-e-eventos-1">ARTEFATOS E
+                        EVENTOS 1</a>
+                      <a class="dropdown-item" href="/artefatos-e-eventos-1#titulo-1">- Product Backlog</a>
+                      <a class="dropdown-item" href="/artefatos-e-eventos-1#em-resumo">- Resumo</a>
+                      <a class="dropdown-item" href="/artefatos-e-eventos-1#na-pratica">- Na Prática</a>
+                      <a class="dropdown-item" href="/artefatos-e-eventos-1#quiz">- Quiz</a>
+                    </div>
+                    <div class="col-6">
+                      <a class="dropdown-item dropdown-title" href="/artefatos-e-eventos-2">ARTEFATOS E EVENTOS 2</a>
+                      <a class="dropdown-item" href="/artefatos-e-eventos-2#titulo-1">- Sprint Planning Meeting</a>
+                      <a class="dropdown-item" href="/artefatos-e-eventos-2#em-resumo">- Resumo</a>
+                      <a class="dropdown-item" href="/artefatos-e-eventos-2#na-pratica">- Na Prática</a>
+                      <a class="dropdown-item" href="/artefatos-e-eventos-2#quiz">- Quiz</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
             <li class="nav-item">
