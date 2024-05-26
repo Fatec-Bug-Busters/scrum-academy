@@ -184,3 +184,28 @@
   </div>
 </div>
 {% endblock content %}
+
+
+{% block quizjs %}
+<script>
+  $(document).ready(function () {
+
+    /* Questões Modelo 1: 1 alternativa correta - checkbox */
+    const respostasQ1 = []
+    questoes.choice('q1', respostasQ1);
+
+    /* Questões Modelo: 2 altenativas corretas - checkbox */
+    const respostasQ2 = []
+    questoes.limitChoices(2, 'q2', respostasQ2);
+
+    /* Questões Modelo 3: 2 altenativas corretas - completar lacunas */
+    const respostasQ3 = []
+    questoes.limitChoices(2, 'q3', respostasQ3, questoes.fillBlanks);
+
+    /** Questões Modelo 4: Associar colunas */
+    const respostasQ4 = {};
+    questoes.assoc('q4', respostasQ4);
+
+  });
+</script>
+{% endblock quizjs %}
