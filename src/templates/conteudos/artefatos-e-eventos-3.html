@@ -1,0 +1,141 @@
+{% extends "conteudo.html" %}
+
+
+<!-- Titulo da pagina -->
+{% block title %}Artefatos e Eventos - Parte 3{% endblock %}
+
+
+<!-- Imagem cover -->
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/pacer.png')}}" alt="Cover Conteudo">
+{% endblock %}
+
+
+<!-- Texto da cover -->
+{% block cover_text %}
+Artefatos e Eventos - Parte 3
+{% endblock %}
+
+
+<!-- Conteúdo / texto -->
+{% block text %}
+<h2>Sprints</h2>
+<div class="div-textoimagem">
+  <p class="txt-conteudo">
+    <img src="{{url_for('static', filename='images/AGILE-TODAY.png')}}" alt="agile today-img"
+      class="imagem-com-texto-paragrafo" id="imagem-planningmeetin">
+      Sprints são ciclos de duração pré-determinada que dividem o projeto em etapas de desenvolvimento. Cada sprint tem uma duração fixa, geralmente de duas a quatro semanas, mas pode variar conforme a necessidade do projeto. Ao fim de cada sprint, que tem duração de até um mês, o Product Owner apresenta o que foi desenvolvido pelo time, permitindo constantemente a validação do produto e ajustes no processo e na equipe. A cada sprint, a equipe revisa e adapta o backlog, priorizando as funcionalidades mais importantes para a próxima iteração.    As sprints são fundamentais para garantir a entrega contínua de valor e possibilitar ajustes rápidos conforme o feedback dos stakeholders e as mudanças nas condições do mercado ou nas necessidades dos usuários. Durante cada sprint, a equipe se concentra em completar um incremento funcional do produto que esteja potencialmente pronto para ser entregue ou utilizado. Sprints acontecem periodicamente até o prazo de finalização do projeto e contam com cerimônias fundamentais para seu funcionamento. A seguir iremos falar sobre as principais.
+  </p>
+</div>
+
+<div class="txt-conteudo">
+  <ul class="conteudo-papeis-pilares-lista">
+    <li><strong>Sprint Planning Meeting:</strong> Como vimos anteriormente, trata-se do primeiro evento de todo ciclo, no qual todo o Time Scrum elabora e planeja previamente a Sprint e decide o que será produzido durante ela e o que será entregue ao fim dela. As reuniões de planejamento de Sprint são fundamentais para organizar o Time Scrum e orientar o que deve ser produzido. Portanto, o fim de uma Sprint Planning Meeting é marcado pela produção do Backlog da Sprint, onde as funcionalidades a serem entregues são compiladas e hierarquizadas.
+    </li>
+    <br>
+    <li><strong>Daily Scrum:</strong> As Daily Scrum são estritamente necessárias para manter o andamento do projeto congruente para todo o Time Scrum. Consistem em reuniões diárias breves que permitem que todos possam comunicar e sincronizar seu trabalho ao decorrer da Sprint. Durante uma Daily Scrum, o Scrum Master faz três perguntas para que cada membro do Time Scrum as responda individualmente, sendo elas, por exemplo: 'O que foi feito ontem?', 'O que será feito hoje?' e 'Há algum impedimento?'. Dessa forma, o levantamento e a análise do andamento da Sprint são facilitados, permitindo que o Time de Desenvolvimento possa corrigir ou adaptar algum problema no processo o mais rapidamente possível.
+    </li>
+    <br>
+    <li><strong>Sprint Review:</strong> Representa a apresentação do desenvolvimento de uma Sprint após o fim dela. Aqui, o Product Owner se baseia no que foi entregue e compara com o que foi acordado durante o Sprint Planning Meeting para validar ou não a Sprint.
+      Normalmente, essa cerimônia é contemplada tanto pelo cliente quanto por um público interessado. Sendo assim, ao final de uma Sprint Review, o Time Scrum deve deixar nítido o que foi produzido e se dispor a responder quaisquer perguntas dos presentes.
+    </li>
+    <br>
+    <li><strong>Sprint Retrospective:</strong> O marco final de uma Sprint. Consiste em uma reunião envolvendo todo o Time Scrum, feita com o objetivo de levantar dados da Sprint que acabou de se encerrar. Aqui, o Time Scrum discute o que correu bem durante esse ciclo, levanta as dificuldades enfrentadas pela equipe, propõe soluções para tais problemas e define o que e de que forma melhorar na próxima Sprint.
+    </li>
+    <br>
+    <li> <strong>Release Planning Meeting:</strong> A cerimônia do Release Planning Meeting diz respeito a convenções feitas pelo Time Scrum para a concepção de uma Release. Esse evento Scrum ajuda a definir a visão a longo prazo do projeto, consolidar o caminho a ser seguido além de uma sprint, definindo um prazo estimado para a incrementação de certas funcionalidades requeridas do produto. Release é a entrega dos resultados de várias Sprints ao cliente/mercado. Não exige o projeto completo, mas necessita de funcionalidades que agreguem valor o bastante.
+   </li>
+    <br>
+  </ul>
+</div>
+{% endblock text %}
+
+
+<!-- Seção Em Resumo -->
+{% block em_resumo %}
+<div class="col-12 col-lg-3 ">
+  <img src="{{url_for('static', filename='images/kanban_cards.jpg')}}" alt="img 1" class="rounded img-card-sobre-nos">
+</div>
+<div class="col">
+  <ul>
+    <li>São ciclos de duração pré-determinada que dividem o projeto em etapas de desenvolvimento.</li>
+    <li>Cada sprint tem uma duração fixa, geralmente de duas a quatro semanas, permitindo a entrega contínua de valor.</li>
+    <li>Ao fim de cada sprint, o Product Owner apresenta o que foi desenvolvido pelo time, permitindo a validação do produto e ajustes no processo e no time.</li>
+    <li>Durante cada sprint, a equipe revisa e adapta o backlog, priorizando as funcionalidades mais importantes para a próxima iteração da equipe.</li>
+    <li>Elaboração e planejamento prévio da sprint.</li>
+    <li>Definição do que será produzido e entregue.</li>
+    <li>Reuniões diárias para comunicação e sincronização do trabalho.</li>
+    <li>Apresentação do desenvolvimento e validação do que foi entregue.</li>
+    <li>Discussão do que correu bem, dificuldades enfrentadas e propostas de melhoria.</li>
+    <li>Concepção de uma Release, definindo visão a longo prazo e prazo para incrementação de funcionalidades.</li>
+    <li>Release: Entrega dos resultados de várias Sprints ao cliente/mercado, exigindo funcionalidades de valor.</li>
+  </ul>
+</div>
+{% endblock em_resumo %}
+
+
+<!-- Seção Na Prática -->
+{% block na_pratica %}
+
+<p class="txt-conteudo">
+  Implementar o Scrum na prática começa dividindo o projeto em ciclos chamados de sprints, que têm uma duração pré-determinada, geralmente de duas a quatro semanas. Cada sprint é focada em alcançar objetivos específicos e entregar valor tangível ao final. Durante cada sprint, a equipe trabalha para completar um incremento funcional do produto que esteja potencialmente pronto para ser entregue ou utilizado. Isso permite uma entrega contínua de valor ao cliente, pois o produto está constantemente sendo desenvolvido e melhorado.
+</p>
+
+<p class="txt-conteudo">
+  O primeiro passo é o Sprint Planning Meeting, onde o Time Scrum elabora e planeja as atividades a serem realizadas durante a sprint. O Product Owner apresenta as funcionalidades mais importantes a serem desenvolvidas, e a equipe se compromete com o que será entregue até o fim da sprint. Durante a sprint, são realizadas reuniões diárias, conhecidas como Daily Scrum, para garantir que o trabalho esteja alinhado e para identificar e resolver problemas rapidamente.
+</p>
+
+<p class="txt-conteudo">
+  Ao final da sprint, ocorre a Sprint Review, onde o progresso do trabalho é apresentado ao Product Owner e aos stakeholders. Aqui, o que foi entregue é comparado com o planejado durante o Sprint Planning Meeting para validar a sprint e garantir que as expectativas foram atendidas. Após a revisão da sprint, ocorre a Sprint Retrospective, onde a equipe reflete sobre o que correu bem, identifica áreas de melhoria e define ações para a próxima sprint.
+</p>
+
+<p class="txt-conteudo">
+  Além das cerimônias durante a sprint, há o Release Planning Meeting, que define a visão a longo prazo do projeto e estabelece um plano para a entrega dos resultados de várias sprints. Isso garante que o produto seja entregue de forma consistente e alinhada com as necessidades do cliente ou mercado. Essas práticas proporcionam uma abordagem ágil e adaptativa ao desenvolvimento de projetos, permitindo que a equipe responda rapidamente às mudanças e entregue valor de forma consistente ao cliente.
+</p>
+
+{% endblock na_pratica %}
+
+
+<!-- Seção Quiz -->
+{% block quiz %}
+<p class="card-text">
+  Questão 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+</div>
+<p class="card-text">
+  Questão 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, placeat?
+</p>
+<div class="btns-quiz">
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+  <button type="button" class="btn btn-secondary">Lorem.</button>
+</div>
+{% endblock quiz %}
+
+{% block referencias %}
+<p>
+  <a href="https://www.scrum.org/resources/what-scrum-module " target="_blank" rel="noopener noreferrer">
+    WEST, Dave. What is Scrum?. Scrum.org, Miami, 23 mar. 2022. Disponível em: https://www.scrum.org/resources/what-scrum-module. Acesso em: 03 maio 2024.
+  </a>
+</p>
+{% endblock %}
+
+
+
+<!-- Navegação interna  -->
+<!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
+<!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
+{% block navegacao_interna %}
+<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
+  Sprints
+</a>
+{% endblock %}

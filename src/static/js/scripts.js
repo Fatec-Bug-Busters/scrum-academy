@@ -5,6 +5,85 @@ function toggleText(container) {
 
 $(document).ready(function () {
 
+  // Script Login
+  $('#loginForm').submit(function (event) {
+    event.preventDefault();
+    var formData = {
+      'email': $('#email').val(),
+    };
+
+    var email = ($("#email").val())
+    $.ajax({
+      type: 'POST',
+      url: '/login',
+      data: JSON.stringify(formData),
+      contentType: 'application/json',
+      success: function (response) {
+        $('#message').html(response.message);
+        if (response.success) {
+          $('#ModalLogin').modal('hide');
+          $('#ModalLoginSucess').modal('show');
+          setTimeout(function () {
+            window.location.reload();
+          }, 2000)
+        } else {
+
+          $('#ModalLogin').modal('hide');
+          $('#ModalNewUser').modal('show');
+        }
+      },
+      error: function (error) {
+        console.log(error);
+        $('#ModalLogin').modal('hide');
+        $('#ModalError').modal('show');
+      }
+    });
+  });
+
+
+  // Script New User
+  $('#NewUserForm').submit(function (event) {
+    event.preventDefault();
+    var formData = {
+      'email': $('#email').val(),
+      'NameUser': $('#NameUser').val()
+    };
+    $.ajax({
+      type: 'POST',
+      url: '/register',
+      data: JSON.stringify(formData),
+      contentType: 'application/json',
+      success: function (response) {
+        $('#ModalNewUser').modal('hide');
+        $('#ModalLoginSucess').modal('show');
+        setTimeout(function () {
+          window.location.reload();
+        }, 2000)
+      },
+      error: function (error) {
+        console.log(error);
+        $('#ModalNewUser').modal('hide');
+        $('#ModalIncompleteName').modal('show');
+        setTimeout(function () {
+          $('#ModalIncompleteName').modal('hide');
+          $('#ModalNewUser').modal('show');
+        }, 1500)
+      }
+    });
+  });
+
+
+  // Script Logout
+  $('#btn_logout').click(function () {
+    $.ajax({
+      type: 'POST',
+      url: '/logout',
+    });
+    window.location.reload();
+  });
+
+
+  // Modelos de Questões
   /**
    * Get this question container element
    */
@@ -169,7 +248,7 @@ $(document).ready(function () {
 
 
   /**
-   *
+   * Modelo de questões de associar duas colunas
    *
    * @param {string} prefix  Prefixo/ID dessa lista de checkboxes
    * @param {Object} respostas  Object Literal para guardar as respostas escolhidas
@@ -337,6 +416,7 @@ $(document).ready(function () {
         });
       });
   };
+  // end Modelos de QuestõesZ
 
 
   /* Questões Modelo 1: 1 alternativa correta - checkbox */
@@ -354,4 +434,7 @@ $(document).ready(function () {
   /** Questões Modelo 4: Associar colunas */
   const respostasQ4 = {};
   assoc('q4', respostasQ4);
+
+
+
 });

@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon-32x32.png')}}">
+
+  <!-- Bootstrap icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -65,7 +68,27 @@
                 Resultados
               </a>
             </li>
+            <li class="nav-item">
+              {% if not name_now %}
+              <a class="nav-link text-sm-left text-center" href="#" role="button" data-bs-toggle="modal"
+                data-bs-target="#ModalLogin" aria-expanded="true">
+                <img class="icon-navbar" src="{{ url_for('static', filename='images/User_Icon.png') }}"
+                  alt="Icon Resultados">
+                Login
+                {% else %}
+                <a class="nav-link text-sm-left text-center" href="#" role="button" data-bs-toggle="modal"
+                  data-bs-target="#ModalLogout" aria-expanded="true" style="white-space: nowrap;">
+                  <img class="icon-navbar" src="{{ url_for('static', filename='images/User_Icon.png') }}"
+                    alt="Icon Resultados">
+                  <span class="d-lg-inline d-none"><br>{{ name_now }}</span>
+                  <span class="d-inline d-lg-none">{{ name_now }}</span>
+
+
+                  {%endif%}
+                </a>
+            </li>
           </ul>
+
         </div>
       </div>
     </nav>
@@ -122,6 +145,7 @@
         <!-- Conteúdos -->
         <div class="col">
           <div class="btn-group">
+
             <button class="fw-bold bg-dark rounded-pill btn-link btn-conteudo-footer" data-bs-toggle="dropdown"
               aria-expanded="false">Conteúdo</button>
             <ul class="dropdown-menu" data-bs-theme="dark">
@@ -184,11 +208,118 @@
       </a>
     </p>
   </footer>
+  <!-- Modal Login -->
+  <div class="modal fade" id="ModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-pill">
+        <div class="card-cadastro1">
+          <div class="header-modal">
+            <span class="titulo-cadastro">Salve seu progresso!</span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <p class="mensagem-cadastro">Insira seu e-mail para que possamos salvar seu progresso e gravar sua
+            nota
+            final.
+          </p>
+          <form class="cadastro" id="loginForm">
+            <input placeholder="E-mail" type="email" id="email" name="email" required>
+            <button class="botao-enviar-email" type="submit"> Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script defer src="{{ url_for('static', filename='/js/jquery-3.7.1.min.js') }}"></script>
-  <script defer src="{{ url_for('static', filename='/js/bootstrap.bundle.js') }}"></script>
+  <!-- Modal New User-->
+  <div class="modal fade" id="ModalNewUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-pill">
+        <div class="card-cadastro1">
+          <div class="header-modal">
+            <span class="titulo-cadastro">Cadastre-se!</span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <p class="mensagem-cadastro" id="meuParagrafo">Parece que ainda não está em nosso sistema insira seu nome
+            completo.
+          </p>
+          <form class="cadastro" id="NewUserForm">
+            <input placeholder="Nome completo" type="text" id="NameUser">
+            <input placeholder="E-mail" type="hidden">
+            <button class="botao-enviar-email"> Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Login Sucess-->
+  <div class="modal fade" id="ModalLoginSucess" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-pill">
+        <div class="card-cadastro1">
+          <div class="header-modal">
+            <span class="titulo-cadastro">Logado com Sucesso!</span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Error-->
+  <div class="modal fade" id="ModalError" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-pill">
+        <div class="card-cadastro1">
+          <div class="header-modal">
+            <span class="titulo-cadastro">Erro no servidor tente novamente!</span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Incomplete Name-->
+  <div class="modal fade" id="ModalIncompleteName" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-pill">
+        <div class="card-cadastro1">
+          <div class="header-modal">
+            <span class="titulo-cadastro">Nome Incompleto</span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Logout-->
+  <div class="modal fade" id="ModalLogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-pill">
+        <div class="card-cadastro1">
+          <div class="header-modal">
+            <span class="titulo-cadastro">Você tem certeza que deseja sair?</span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <button type="button" class="btn btn-danger" id="btn_logout">Sair</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
   <script defer src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
   {%block quizjs%}{%endblock%}
+
 </body>
 
 </html>

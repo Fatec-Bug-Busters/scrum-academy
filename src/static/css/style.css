@@ -514,38 +514,6 @@ h3.titulo {
   background-color: var(--bs-secondary);
 }
 
-.nome-exame {
-  display: flex;
-  justify-content: center;
-  background-image: linear-gradient(var(--gradient-darker),
-      var(--gradient-lighter));
-  padding: 20px;
-  max-width: 90%;
-  margin: 0 5%;
-  border-radius: 30px;
-  align-items: center;
-  gap: 30px;
-}
-
-.nome-exame input[type="text"] {
-  padding: 10px;
-  border: 1px solid var(--bs-body-color);
-  border-radius: 5px;
-  font-size: 20px;
-  width: 60%;
-  background-color: var(--bs-secondary);
-}
-
-.nome-exame input[type="text"]:focus {
-  border-color: var(--bs-body-bg);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.nome-exame input[type="text"]::placeholder {
-  background-image: linear-gradient(var(--gradient-darker),
-      var(--gradient-lighter));
-}
-
 form .container {
   max-width: 90%;
   height: auto;
@@ -557,7 +525,6 @@ form .container {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
 .questoes-container {
@@ -566,11 +533,17 @@ form .container {
 
 .enunciado-questoes {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.enunciado-questoes p{
+  margin-top: 20px;
+}
 .numeracao-questoes {
-  align-content: center;
-  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
   height: 70px;
   border-radius: 50%;
   background-image: linear-gradient(var(--gradient-darker),
@@ -808,19 +781,6 @@ button:active {
   background: white;
 }
 
-.modal-content {
-  width: auto;
-  margin-left: 85px;
-  border-radius: 20px;
-}
-
-.testes-modal-cadastro {
-  display: flex;
-  justify-content: center;
-  margin: 40px 0;
-  gap: 320px;
-}
-
 .container-cadastro {
   display: flex;
   justify-content: center;
@@ -829,7 +789,8 @@ button:active {
 }
 
 .card-cadastro1 {
-  width: 300px;
+  width: 100%;
+  max-width: 500px; 
   height: auto;
   padding: 30px;
   text-align: center;
@@ -841,14 +802,16 @@ button:active {
   background-image: linear-gradient(var(--gradient-lighter),
       var(--gradient-darker));
   border-radius: 20px;
+  box-sizing: border-box;
 }
 
 .header-modal {
   display: flex;
   justify-content: space-between;
+  width: 100%; 
 }
 
-.card-cadastro1>* {
+.card-cadastro1 > * {
   margin: 0;
 }
 
@@ -857,19 +820,27 @@ button:active {
   font-weight: 900;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  width: 100%; 
+  text-align: center;
 }
+
 
 .mensagem-cadastro {
   font-size: 16px;
   line-height: 18px;
   color: white;
+  width: 100%;
+  text-align: center;
 }
+
 
 .cadastro {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
+
 
 .cadastro input {
   margin-top: 10px;
@@ -880,7 +851,10 @@ button:active {
   border-radius: 14px;
   border: 1px solid #333;
   color: black;
+  width: 100%; 
+  box-sizing: border-box;
 }
+
 
 .cadastro button {
   border: 0;
@@ -889,6 +863,8 @@ button:active {
   padding: 15px;
   border-radius: 14px;
   font-weight: bold;
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
 .botao-enviar-email:hover {
