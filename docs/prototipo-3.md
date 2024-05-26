@@ -19,3 +19,7 @@
 ## Sobre Nós
 
 ![Sobre Nós](./prototipo-fase-3/sobre-nos.gif)
+
+## Navegando pela aplicação
+
+![Navegação](./prototipo-fase-3/completo.gif)
