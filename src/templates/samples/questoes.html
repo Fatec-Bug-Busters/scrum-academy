@@ -12,7 +12,8 @@
       <h4 class="quiz-numeracao rounded-circle m-0 p-0 p-2 px-3">1</h4>
       <p class="m-0 p-0">Modelo: 1 alternativa correta - radio</p>
     </div>
-    <div class="d-flex m-4 align-items-center">
+    <div
+      class="d-flex flex-column flex-md-row flex-wrap m-4 w-100 row-gap-3 column-gap-lg-2 justify-content-stretch align-items-center">
       <div class="mx-3">
         <input type="radio" class="btn-check" name="q1" id="q1a" value="a" autocomplete="off">
         <label class="btn btn-primary rounded-pill px-4" for="q1a">amet</label>
@@ -42,7 +43,8 @@
       <h4 class="quiz-numeracao rounded-circle m-0 p-0 p-2 px-3">2</h4>
       <p class="m-0 p-0">Modelo: 2 altenativas corretas - checkbox</p>
     </div>
-    <div class="d-flex m-4 align-items-center">
+    <div
+      class="d-flex flex-column flex-md-row flex-wrap m-4 w-100 row-gap-3 column-gap-lg-2 justify-content-stretch align-items-center">
       <div class="mx-3">
         <input type="checkbox" class="btn-check" name="q2" id="q2a" value="a" autocomplete="off">
         <label class="btn btn-primary rounded-pill px-4" id="q2a-label" for="q2a">amet</label>
@@ -79,7 +81,8 @@
         .
       </p>
     </div>
-    <div class="d-flex m-4 align-items-center">
+    <div
+      class="d-flex flex-column flex-md-row flex-wrap m-4 w-100 row-gap-3 column-gap-lg-2 justify-content-stretch align-items-center">
       <div class="mx-3">
         <input type="checkbox" class="btn-check" name="q3" id="q3a" value="a" autocomplete="off">
         <label class="btn btn-primary rounded-pill px-4" id="q3a-label" for="q3a">amet</label>
@@ -109,9 +112,9 @@
       <h4 class="quiz-numeracao rounded-circle m-0 p-0 p-2 px-3">4</h4>
       <p class="m-0 p-0">Modelo 4: Associar colunas </p>
     </div>
-    <div class="d-flex m-4 justify-content-around align-items-center">
+    <div class="d-flex flex-column flex-md-row m-4 justify-content-around align-items-center">
       <!-- First column -->
-      <div class="d-flex flex-column justify-content-around align-items-center gap-4">
+      <div class="d-flex flex-column justify-content-around align-items-center gap-3">
         <div class="mx-3">
           <input type="checkbox" class="btn-check" name="q4" id="q4a1" value="a1" autocomplete="off">
           <label class="btn btn-primary rounded-pill px-4" for="q4a1">amet</label>
@@ -134,7 +137,7 @@
         </div>
       </div>
       <!-- Second column -->
-      <div class="d-flex flex-column justify-content-around align-items-center gap-4">
+      <div class="d-flex flex-column justify-content-around align-items-center gap-3 mt-4">
         <div class="mx-3">
           <input type="checkbox" class="btn-check" name="q4" id="q4a2" value="a2" autocomplete="off">
           <label class="btn btn-outline-primary rounded-pill px-4" for="q4a2">
@@ -168,19 +171,33 @@
     </div>
     <div id="q4-associacoes" class="d-flex flex-column justify-content-around align-items-center gap-4">
       <p></p>
-      <!-- <table class="table table-responsive table-borderless table-hover">
-        <tbody>
-          <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>@fat</td>
-          </tr>
-        </tbody>
-      </table> -->
     </div>
   </div>
+
 </div>
 {% endblock content %}
+
+
+{% block quizjs %}
+<script>
+  $(document).ready(function () {
+
+    /* Questões Modelo 1: 1 alternativa correta - checkbox */
+    const respostasQ1 = []
+    questoes.choice('q1', respostasQ1);
+
+    /* Questões Modelo: 2 altenativas corretas - checkbox */
+    const respostasQ2 = []
+    questoes.limitChoices(2, 'q2', respostasQ2);
+
+    /* Questões Modelo 3: 2 altenativas corretas - completar lacunas */
+    const respostasQ3 = []
+    questoes.limitChoices(2, 'q3', respostasQ3, questoes.fillBlanks);
+
+    /** Questões Modelo 4: Associar colunas */
+    const respostasQ4 = {};
+    questoes.assoc('q4', respostasQ4);
+
+  });
+</script>
+{% endblock quizjs %}
