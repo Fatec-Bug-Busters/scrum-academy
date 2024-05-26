@@ -348,10 +348,12 @@ h3.titulo {
   padding: 20px;
   border-radius: 50px;
   color: var(--bs-body-color);
+  display: flex;
+  align-items: center;
 }
 
 .conteudo:hover .informacoes-conteudo {
-  opacity: 0.8;
+  opacity: 0.9;
   background-color: var(--bs-dark);
   border-radius: 50px;
 }
@@ -405,6 +407,7 @@ h3.titulo {
 .card-sobre-nos {
   max-width: 80%;
   padding: 50px;
+  border-radius: 50px;
 }
 
 .img-em-resumo {
@@ -972,7 +975,6 @@ button:active {
 .txt-conteudo2 p {
   margin: 30px 10% 20px 10%;
   font-size: 18px;
-  text-align: ;
 }
 
 .txt-conteudo2 img {

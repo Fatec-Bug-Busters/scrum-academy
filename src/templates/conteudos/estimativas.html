@@ -20,7 +20,7 @@ Estimativas do Scrum
 
 <!-- Conteúdo / texto -->
 {% block text %}
-<h2>Estimativas</h2>
+<h2 id="titulo-1">Estimativas</h2>
 
 <p class="txt-conteudo">
   <img src="{{url_for('static', filename='images/fibonacci.png')}}" alt="agile today-img"
@@ -181,14 +181,31 @@ Estimativas do Scrum
 </p>
 {% endblock %}
 
-SCHWABER, Ken; SUTHERLAND, Jeff. The Scrum Guide - The Definitive Guide to Scrum: The Rules of the Game. Scrum Guide, 2020. Disponível em: https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf. Acesso em: 02 maio 2024.
-
-
+{%block nextpage%}
+<a href="/artefatos-e-eventos-3">
+  <button class="botao-nextpage botao-previouspage">
+    <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
+      <path d="M24.25 37L42.75 18.5L41.25 17L22.75 37L41.25 57.5L42.75 56L24.25 37Z" fill="white"></path>
+    </svg>
+    <span>Conteúdo Anterior</span>
+  </button>
+</a>
+<a href="/exame">
+  <button class="botao-nextpage">
+    <span>Realizar exame</span>
+    <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
+      <path d="M49.5 37L31 55.5L32.5 57L51 37L32.5 17.5L31 19L49.5 37Z" fill="white"></path>
+    </svg>
+  </button>
+</a>
+{%endblock%}
 <!-- Navegação interna  -->
 <!-- O conteúdo preenchido acima, poderá ter elementos com ID definido e um "atalho" add para eles aqui. -->
 <!-- Nesse exemplo, existe o elemento lá em cima com  id="titulo-2"  e abaixo em  href="#titulo-2" -->
 {% block navegacao_interna %}
-<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
+<a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-1">
   Estimativas
 </a>
 {% endblock %}
