@@ -77,9 +77,7 @@ def questoes():
 
 @app.route("/cadastro")
 def cadastro():
-    return render_template("components/cadastro.html")
-
-    name_now = session.get("name_now")
+    name_now = session.get('name_now')
     return render_template("components/questoes.html", name_now=name_now)
 
 
@@ -135,7 +133,8 @@ def logout():
 
 @app.route("/avaliar")
 def avaliar():
-    return render_template("components/avaliar.html")
+    name_now = session.get('name_now')
+    return render_template("components/avaliar.html", name_now=name_now)
 
 
 @app.route("/certificado")
@@ -213,12 +212,14 @@ def submit_avaliacao():
 
 @app.route("/estimativas")
 def estimativas():
-    return render_template("conteudos/estimativas.html")
+    name_now = session.get('name_now')
+    return render_template("conteudos/estimativas.html", name_now=name_now)
 
 
 @app.route("/artefatos-e-eventos-3")
 def artefatoseeventos3():
-    return render_template("conteudos/artefatos-e-eventos-3.html")
+    name_now = session.get('name_now')
+    return render_template("conteudos/artefatos-e-eventos-3.html", name_now=name_now)
 
 
 if __name__ == "__main__":
