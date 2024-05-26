@@ -178,10 +178,8 @@ body {
 
 header,
 header nav {
-  background-image: linear-gradient(
-    var(--gradient-lighter),
-    var(--gradient-darker)
-  );
+  background-image: linear-gradient(var(--gradient-lighter),
+      var(--gradient-darker));
 }
 
 header .logo-navbar {
@@ -363,10 +361,8 @@ h3.titulo {
   background-color: var(--bs-secondary-bg);
   color: var(--bs-secondary-color);
   width: 90%;
-  background-image: linear-gradient(
-    var(--gradient-darker),
-    var(--gradient-lighter)
-  );
+  background-image: linear-gradient(var(--gradient-darker),
+      var(--gradient-lighter));
   margin-top: 50px;
   padding: 6%;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -466,7 +462,7 @@ h3.titulo {
 }
 
 .txt-conteudo {
-  margin: 50px 10% 20px 10% ;
+  margin: 50px 10% 20px 10%;
   font-size: 18px;
   text-align: justify;
 }
@@ -550,20 +546,16 @@ form .container {
   padding: 30px;
   height: 70px;
   border-radius: 50%;
-  background-image: linear-gradient(
-    var(--gradient-darker),
-    var(--gradient-lighter)
-  );
+  background-image: linear-gradient(var(--gradient-darker),
+      var(--gradient-lighter));
   color: #fff;
   font-size: 24px;
   font-weight: bold;
 }
 
 .quiz-numeracao {
-  background-image: linear-gradient(
-    var(--gradient-darker),
-    var(--gradient-lighter)
-  );
+  background-image: linear-gradient(var(--gradient-darker),
+      var(--gradient-lighter));
   color: #fff;
 }
 
@@ -607,18 +599,18 @@ form .container {
   display: none;
 }
 
-.option input[type="radio"]:hover + label {
+.option input[type="radio"]:hover+label {
   background-color: var(--bs-dark);
   padding: 40px;
   transition: 0.4s ease;
 }
 
-.option input[type="radio"]:checked + label {
+.option input[type="radio"]:checked+label {
   background-color: var(--gradient-lighter);
   box-shadow: 0px 0px 10px 0px rgba(60, 167, 65, 0.5);
 }
 
-.option input[type="radio"]:checked + label::before {
+.option input[type="radio"]:checked+label::before {
   content: "\2714";
   display: inline-block;
   margin-right: 10px;
@@ -641,6 +633,33 @@ form .container {
   background-color: var(--gradient-lighter);
   transition: 0.4s ease;
   padding: 15px;
+}
+
+.question-choice-container .btn,
+.question-multi-container .btn,
+.question-fill-container .btn,
+.question-assoc-container .btn {
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+}
+
+.question-choice-container .btn:hover,
+.question-multi-container .btn:hover,
+.question-fill-container .btn:hover,
+.question-assoc-container .btn:hover {
+  background-color: var(--bs-dark);
+  transition: 0.4s ease;
+}
+
+.question-choice-container .checked,
+.question-multi-container .checked,
+.question-fill-container .checked,
+.question-assoc-container .checked {
+  background-color: var(--gradient-lighter) !important;
+  border-color: var(--gradient-lighter) !important;
 }
 
 .alert {
@@ -744,7 +763,7 @@ button:active {
 
 .imagem-com-texto-paragrafo {
   width: 50%;
-  min-width: 270px ;
+  min-width: 270px;
   float: right;
   margin: 0 10px 10px 20px;
   border-radius: 30px;
@@ -762,15 +781,12 @@ button:active {
   background: white;
 }
 
-
-
 .container-cadastro {
   display: flex;
   justify-content: center;
   margin-top: 50px;
   gap: 100px;
 }
-
 
 .card-cadastro1 {
   width: 100%;
@@ -783,14 +799,11 @@ button:active {
   justify-content: center;
   flex-direction: column;
   gap: 12px;
-  background-image: linear-gradient(
-    var(--gradient-lighter),
-    var(--gradient-darker)
-  );
+  background-image: linear-gradient(var(--gradient-lighter),
+      var(--gradient-darker));
   border-radius: 20px;
   box-sizing: border-box;
 }
-
 
 .header-modal {
   display: flex;
@@ -798,11 +811,9 @@ button:active {
   width: 100%; 
 }
 
-
 .card-cadastro1 > * {
   margin: 0;
 }
-
 
 .titulo-cadastro {
   font-size: 23px;
@@ -862,7 +873,7 @@ button:active {
 }
 
 /* @media para Mobile */
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   main .content {
     margin-top: 310px;
     min-height: 500px;
@@ -873,6 +884,7 @@ button:active {
     -ms-border-radius: 40px 40px 80px 80px;
     -o-border-radius: 40px 40px 80px 80px;
   }
+
   .covere img {
     width: 100%;
     height: 300px;
@@ -881,7 +893,7 @@ button:active {
 }
 
 /* @media para tablet */
-@media screen and (min-width: 768px) and (max-width: 1023px){
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   main .content {
     margin-top: 500px;
     min-height: 500px;
@@ -892,13 +904,15 @@ button:active {
     -ms-border-radius: 40px 40px 80px 80px;
     -o-border-radius: 40px 40px 80px 80px;
   }
+
   .covere img {
     width: 100%;
     height: 600px;
     opacity: 0.8;
   }
-  
+
 }
+
 .popup {
   position: fixed;
   top: 50%;
@@ -932,30 +946,35 @@ button:active {
   margin-left: 25%;
   align-items: center;
 }
+
 .estrelas input[type=radio] {
   display: none;
 }
-.estrelas label i.fa{
+
+.estrelas label i.fa {
   font-size: 2.5em
-  
 }
+
 .estrelas label i.fa:before {
-  content:'\f005';
+  content: '\f005';
   color: #FC0;
 }
-.estrelas input[type=radio]:checked ~ label i.fa:before {
+
+.estrelas input[type=radio]:checked~label i.fa:before {
   color: #CCC;
 }
+
 .txt-conteudo2 {
   display: flex;
   flex-direction: row;
 }
 
-.txt-conteudo2 p{
-  margin: 30px 10% 20px 10% ;
+.txt-conteudo2 p {
+  margin: 30px 10% 20px 10%;
   font-size: 18px;
   text-align: ;
 }
+
 .txt-conteudo2 img {
   min-width: none;
   min-height: auto;
@@ -968,12 +987,13 @@ button:active {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
+
 .submit-avaliar {
   width: 30%;
   background-color: var(--bs-secondary);
   color: #fff;
   border: none;
-  padding: 10px 20px ;
+  padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
   text-transform: uppercase;
