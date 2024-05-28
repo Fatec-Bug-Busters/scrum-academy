@@ -41,7 +41,10 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 ## Cronograma e Sprints
 
-[Backlog do Produto](./backlog-do-produto.xlsx)
+- [Backlog do Produto](./backlog-do-produto.xlsx)
+- [Protótipo - Fase 1](./docs/prototipo-1.md)
+- [Protótipo - Fase 2](./docs/prototipo-2.md)
+- [Protótipo - Fase 3](./docs/prototipo-3.md)
 
 ![Roadmap](./docs/Roadmap.jpg)
 
@@ -55,10 +58,6 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 | Feira de Soluções | 27/06/2024 | a fazer      |
 
 ### Sprint 1. Concepção
-
-- [Protótipo - Fase 1](./docs/prototipo-1.md)
-- [Protótipo - Fase 2](./docs/prototipo-2.md)
-- [Protótipo - Fase 3](./docs/prototipo-3.md)
 
 - [x] Protótipo interativo Figma;
 - [x] Protótipo da página principal;
