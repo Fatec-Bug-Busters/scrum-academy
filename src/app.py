@@ -18,55 +18,82 @@ mysql = MySQL(app)
 
 @app.route("/")
 def index():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("index.html", name_now=name_now)
 
 
 @app.route("/sobre_nos")
 def sobre_nos():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("sobre_nos.html", name_now=name_now)
 
 
 @app.route("/exame")
 def exame():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("exame.html", name_now=name_now)
 
 
 @app.route("/resultados")
 def resultados():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("resultados.html", name_now=name_now)
 
 
 @app.route("/artefatos-e-eventos-1")
 def artefatoseeventos1():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/artefatos-e-eventos-1.html", name_now=name_now)
 
 
 @app.route("/introducao")
 def introducao():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/introducao.html", name_now=name_now)
 
 
 @app.route("/artefatos-e-eventos-2")
 def artefatoseeventos2():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/artefatos-e-eventos-2.html", name_now=name_now)
 
 
 @app.route("/papeis-e-pilares")
 def papeisepilares():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/papeis-e-pilares.html", name_now=name_now)
 
 
 @app.route("/exemplo")
 def conteudo():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/exemplo.html", name_now=name_now)
 
 
@@ -77,7 +104,10 @@ def questoes():
 
 @app.route("/cadastro")
 def cadastro():
-    name_now = session.get('name_now')
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("components/questoes.html", name_now=name_now)
 
 
@@ -116,7 +146,10 @@ def register():
             (NameUser, email, created_at),
         )
         mysql.connection.commit()
+        cur.execute("SELECT id FROM users WHERE email = %s", (email,))
+        user = cur.fetchone()
         cur.close()
+        session["user_id"] = user[0]
         session["name_now"] = NameUser
         session["email"] = email
         return jsonify({"NameUser": NameUser, "email": email})
@@ -128,12 +161,16 @@ def register():
 def logout():
     session.pop("name_now", None)
     session.pop("email", None)
+    session.pop("user_id", None)
     return jsonify({"success": True})
 
 
 @app.route("/avaliar")
 def avaliar():
-    name_now = session.get('name_now')
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("components/avaliar.html", name_now=name_now)
 
 
@@ -212,13 +249,19 @@ def submit_avaliacao():
 
 @app.route("/estimativas")
 def estimativas():
-    name_now = session.get('name_now')
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/estimativas.html", name_now=name_now)
 
 
 @app.route("/artefatos-e-eventos-3")
 def artefatoseeventos3():
-    name_now = session.get('name_now')
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/artefatos-e-eventos-3.html", name_now=name_now)
 
 
