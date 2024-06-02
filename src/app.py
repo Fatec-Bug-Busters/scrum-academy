@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, jsonify, session, redirect, u
 from flask_mysqldb import MySQL
 import os
 import datetime
+from functools import wraps
+
 
 app = Flask(__name__)
 app.secret_key = "12345678"
@@ -37,7 +39,13 @@ def exame():
 @app.route("/resultados")
 def resultados():
     name_now = session.get("name_now")
-    return render_template("resultados.html", name_now=name_now)
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM minha_view2")
+    data = cur.fetchall()
+    cur.close()
+    print(data)
+    
+    return render_template("resultados.html", name_now=name_now, data=data)
 
 
 @app.route("/artefatos-e-eventos-1")
@@ -130,16 +138,26 @@ def logout():
     session.pop("email", None)
     return jsonify({"success": True})
 
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'name_now' not in session:
+            return redirect(url_for('index'))
+        return f(*args, **kwargs)
+    return decorated_function
 
 @app.route("/avaliar")
+@login_required
 def avaliar():
     name_now = session.get('name_now')
     return render_template("components/avaliar.html", name_now=name_now)
 
 
 @app.route("/certificado")
+@login_required
 def certificado():
-    return render_template("components/certificado.html")
+    user_name = session.get('name_now')
+    return render_template("components/certificado.html", user_name=user_name)
 
 
 # Quizz ainda nao funcionando pois falta o interaction_id
