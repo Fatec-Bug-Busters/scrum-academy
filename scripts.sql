@@ -37,7 +37,13 @@ create table exams (
     `users_answer` varchar(255) not null,
     `created_at` datetime not null
 );
+CREATE VIEW minha_view2 AS
+SELECT t1.id, t1.name, t2.score, t3.review_comment, t3.review_score
+FROM users t1, exams t2, iterations t3;
 
+CREATE VIEW minha_view2 AS
+SELECT t1.id, t1.name, t2.score, t3.review_comment, t3.review_score
+FROM users t1, exams t2, iterations t3;
 
 -- create user
 CREATE USER 'scrum'@'localhost' IDENTIFIED WITH caching_sha2_password BY '123456';
