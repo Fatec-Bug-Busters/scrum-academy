@@ -327,8 +327,11 @@ Pilares e Papéis do Scrum
 
 {% block referencias %}
 <p>
-  <a href="https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf" target="_blank" rel="noopener noreferrer">
-    SCHWABER, Ken; SUTHERLAND, Jeff. The Scrum Guide - The Definitive Guide to Scrum: The Rules of the Game. Scrum Guide, 2020. Disponível em: https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf. Acesso em: 02 maio 2024.
+  <a href="https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf" target="_blank"
+    rel="noopener noreferrer">
+    SCHWABER, Ken; SUTHERLAND, Jeff. The Scrum Guide - The Definitive Guide to Scrum: The Rules of the Game. Scrum
+    Guide, 2020. Disponível em: https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf. Acesso em: 02
+    maio 2024.
   </a>
 </p>
 {% endblock %}
@@ -342,7 +345,7 @@ Pilares e Papéis do Scrum
   Pilares do Scrum
 </a>
 <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
-  Papéis e Responsabilidades
+  Papéis e Funções
 </a>
 {% endblock %}
 
@@ -363,7 +366,7 @@ Pilares e Papéis do Scrum
       if (isCorrect) {
         totalCorrect++;
       }
-      userAnswers[ question ] = selectedOption.value;
+      userAnswers[question] = selectedOption.value;
     }
 
     const popup = document.getElementById("resultPopup");
@@ -381,8 +384,8 @@ Pilares e Papéis do Scrum
             </div>`;
     popup.style.display = "block";
     overlay.style.display = "block";
-    
-    
+
+
     // Enviar totalCorrect para o servidor Flask
     try {
       const response = await fetch('/submit-score', {
@@ -392,7 +395,7 @@ Pilares e Papéis do Scrum
         },
         body: JSON.stringify({ totalCorrect: totalCorrect, userAnswers: userAnswers })
       });
-      
+
       const result = await response.json();
       console.log(result);
     } catch (error) {
@@ -407,4 +410,3 @@ Pilares e Papéis do Scrum
   }
 </script>
 {%endblock%}
-
