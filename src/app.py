@@ -1,13 +1,15 @@
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for
+from flask import Flask, render_template, request, jsonify, session, redirect, url_for, send_file
 from flask_mysqldb import MySQL
 import os
 import datetime
-from functools import wraps
-
+import matplotlib
+matplotlib.use('Agg')  # Definir o backend antes de importar pyplot
+import matplotlib.pyplot as plt
+import io
+from functools import wraps  # Adicionar esta linha
 
 app = Flask(__name__)
 app.secret_key = "12345678"
-
 
 app.config["MYSQL_HOST"] = os.environ.get("MYSQL_HOST")
 app.config["MYSQL_USER"] = os.environ.get("MYSQL_USER")
@@ -15,31 +17,42 @@ app.config["MYSQL_PASSWORD"] = os.environ.get("MYSQL_PASS")
 app.config["MYSQL_DB"] = os.environ.get("MYSQL_DB")
 mysql = MySQL(app)
 
-# now = datetime.datetime.now()
-
-
 @app.route("/")
 def index():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("index.html", name_now=name_now)
+
+
 
 
 @app.route("/sobre_nos")
 def sobre_nos():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("sobre_nos.html", name_now=name_now)
 
 
 @app.route("/exame")
 def exame():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     
     return render_template("exame.html", name_now=name_now)
 
 
 @app.route("/resultados")
 def resultados():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     user_id = session.get('user_id')
     cur = mysql.connection.cursor()
     cur.execute("SELECT i.id, u.name, i.total_score, i.review_score, i.review_comment, u.id FROM iterations i INNER JOIN users u on i.users_id = u.id;")
@@ -53,31 +66,46 @@ def resultados():
 
 @app.route("/artefatos-e-eventos-1")
 def artefatoseeventos1():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/artefatos-e-eventos-1.html", name_now=name_now)
 
 
 @app.route("/introducao")
 def introducao():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/introducao.html", name_now=name_now)
 
 
 @app.route("/artefatos-e-eventos-2")
 def artefatoseeventos2():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/artefatos-e-eventos-2.html", name_now=name_now)
 
 
 @app.route("/papeis-e-pilares")
 def papeisepilares():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/papeis-e-pilares.html", name_now=name_now)
 
 
 @app.route("/exemplo")
 def conteudo():
-    name_now = session.get("name_now")
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/exemplo.html", name_now=name_now)
 
 
@@ -88,7 +116,10 @@ def questoes():
 
 @app.route("/cadastro")
 def cadastro():
-    name_now = session.get('name_now')
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("components/questoes.html", name_now=name_now)
 
 
@@ -113,7 +144,6 @@ def login():
     except Exception as e:
         return jsonify({"success": False})
 
-
 @app.route("/register", methods=["POST"])
 def register():
     data = request.get_json()
@@ -127,7 +157,10 @@ def register():
             (NameUser, email, created_at),
         )
         mysql.connection.commit()
+        cur.execute("SELECT id FROM users WHERE email = %s", (email,))
+        user = cur.fetchone()
         cur.close()
+        session["user_id"] = user[0]
         session["name_now"] = NameUser
         session["email"] = email
         return jsonify({"NameUser": NameUser, "email": email})
@@ -153,7 +186,10 @@ def login_required(f):
 @app.route("/avaliar")
 @login_required
 def avaliar():
-    name_now = session.get('name_now')
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("components/avaliar.html", name_now=name_now)
 
 
@@ -236,15 +272,58 @@ def submit_avaliacao():
 
 @app.route("/estimativas")
 def estimativas():
-    name_now = session.get('name_now')
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/estimativas.html", name_now=name_now)
 
 
 @app.route("/artefatos-e-eventos-3")
 def artefatoseeventos3():
-    name_now = session.get('name_now')
+    if session.get('name_now'):
+        name_now = session.get('name_now').split()[0]
+    else:
+        name_now = None
     return render_template("conteudos/artefatos-e-eventos-3.html", name_now=name_now)
 
+# Função para calcular a média de acertos
+def calcular_media_acertos():
+    cursor = mysql.connection.cursor()
+    cursor.execute("""
+        SELECT AVG(total_score) AS media_total_score
+        FROM iterations
+    """)
+
+    media_de_acertos = cursor.fetchone()[0]
+    media_de_acertos = (media_de_acertos / 16) * 100
+    cursor.close()
+
+
+
+    return media_de_acertos
+@app.route('/plot.png')
+def plot_png():
+
+    media_de_acertos = calcular_media_acertos()
+
+
+    values = [100 - media_de_acertos, media_de_acertos]
+    labels = ['Erros', 'Acertos']
+    colors = ['red', 'green']
+
+
+    img = io.BytesIO()
+    plt.figure(figsize=(5, 5))
+    plt.pie(values, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140, 
+            textprops={'color': 'white', 'fontweight': 'bold'}, labeldistance=1.1)
+    plt.axis('equal')
+    plt.title('Média de Aproveitamento', color='white', fontweight='bold')
+    plt.savefig(img, format='png', transparent=True)
+    img.seek(0)
+    plt.close()
+
+    return send_file(img, mimetype='image/png')
 
 if __name__ == "__main__":
     app.run(debug=True)
