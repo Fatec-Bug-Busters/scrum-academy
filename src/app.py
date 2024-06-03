@@ -222,7 +222,7 @@ def submit_avaliacao():
     id_user = session.get('user_id')
 
     print(f"Comentário: {comentario}, Estrelas: {estrelas}")
-
+    print (id_user)
     cursor = mysql.connection.cursor()
     cursor.execute(
         """ INSERT INTO iterations(review_comment, review_score, created_at, users_id) VALUES(%s, %s, NOW(), %s) """,
