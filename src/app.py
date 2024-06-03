@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, jsonify, session, redirect, u
 from flask_mysqldb import MySQL
 import os
 import datetime
+from functools import wraps
+
 
 app = Flask(__name__)
 app.secret_key = "12345678"
@@ -31,13 +33,22 @@ def sobre_nos():
 @app.route("/exame")
 def exame():
     name_now = session.get("name_now")
+    
     return render_template("exame.html", name_now=name_now)
 
 
 @app.route("/resultados")
 def resultados():
     name_now = session.get("name_now")
-    return render_template("resultados.html", name_now=name_now)
+    user_id = session.get('user_id')
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT i.id, u.name, i.total_score, i.review_score, i.review_comment, u.id FROM iterations i INNER JOIN users u on i.users_id = u.id;")
+    data = cur.fetchall()
+    cur.close()
+    
+    
+    
+    return render_template("resultados.html", name_now=name_now, data=data, user_id=user_id)
 
 
 @app.route("/artefatos-e-eventos-1")
@@ -128,18 +139,29 @@ def register():
 def logout():
     session.pop("name_now", None)
     session.pop("email", None)
+    session.pop("user_id", None)
     return jsonify({"success": True})
 
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'name_now' not in session:
+            return redirect(url_for('index'))
+        return f(*args, **kwargs)
+    return decorated_function
 
 @app.route("/avaliar")
+@login_required
 def avaliar():
     name_now = session.get('name_now')
     return render_template("components/avaliar.html", name_now=name_now)
 
 
 @app.route("/certificado")
+@login_required
 def certificado():
-    return render_template("components/certificado.html")
+    user_name = session.get('name_now')
+    return render_template("components/certificado.html", user_name=user_name)
 
 
 # Quizz ainda nao funcionando pois falta o interaction_id
@@ -197,12 +219,14 @@ def submit_avaliacao():
     comentario = request.form["comentario"]
     estrelas = request.form["fb"]
 
-    print(f"Comentário: {comentario}, Estrelas: {estrelas}")
+    id_user = session.get('user_id')
 
+    print(f"Comentário: {comentario}, Estrelas: {estrelas}")
+    print (id_user)
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """ INSERT INTO iterations(review_comment, review_score, created_at) VALUES(%s, %s, NOW()) """,
-        (comentario, estrelas),
+        """ INSERT INTO iterations(review_comment, review_score, created_at, users_id) VALUES(%s, %s, NOW(), %s) """,
+        (comentario, estrelas, id_user),
     )
     mysql.connection.commit()
     cursor.close()

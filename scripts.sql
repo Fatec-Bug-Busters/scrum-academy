@@ -12,12 +12,14 @@ create table users (
 
 create table iterations (
     `id` int auto_increment primary key,
+    `users_id` int not null,
     `is_finished` boolean not null default false,
     `total_score` int null,
     `review_score` int null,
     `review_comment` varchar(255) null,
     `created_at` datetime not null,
-    `finished_at` datetime null
+    `finished_at` datetime null,
+    foreign key (users_id) references users(id)
 );
 
 create table quizzes (
@@ -27,7 +29,6 @@ create table quizzes (
     `score` int not null,
     `users_answer` varchar(127) not null,
     `created_at` datetime not null,
-
     foreign key (iteration_id) references iterations(id)
 );
 
