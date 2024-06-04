@@ -3,10 +3,10 @@ from flask_mysqldb import MySQL
 import os
 import datetime
 import matplotlib
-matplotlib.use('Agg')  # Definir o backend antes de importar pyplot
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import io
-from functools import wraps  # Adicionar esta linha
+from functools import wraps
 
 app = Flask(__name__)
 app.secret_key = "12345678"

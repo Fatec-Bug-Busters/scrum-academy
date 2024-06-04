@@ -8,4 +8,4 @@ MarkupSafe==2.1.5
 mysqlclient==2.2.4
 python-dotenv==1.0.1
 Werkzeug==3.0.2
-matplotlib==3.7.1
+matplotlib==3.9.0
