@@ -66,31 +66,10 @@ Resultados
     <h2>Aproveitamento</h2>
   </div>
   <div class="p-5">
-    <div class="card mx-auto">
-      <div class="card-body mx-0 mb-5">
-        <div class="row gy-5">
-          <div class="col-12 col-md-6 offset-md-3 offset-lg-0 px-3 text-center">
-            <img src="{{ url_for('static', filename='images/sample-resultados-chart.png') }}" style="max-width: 80%">
-          </div>
-          <div class="col-12 col-lg-6 text-center">
-            <div class="resultados-stats d-flex flex-column justify-content-around">
-              <div>
-                <h3>Média de acertos</h3>
-                <p>75%</p>
-              </div>
-              <div>
-                <h3>Média de erros</h3>
-                <p>25%</p>
-              </div>
-              <div>
-                <h3>Número de participantes</h3>
-                <p>12 participantes</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <center>
+        <img src="{{ url_for('plot_png') }}" alt="Gráfico de Pizza" class="img-fluid mx-auto d-block">
+    </center>
+</div>
+
 </section>
 {% endblock content %}
