@@ -19,8 +19,10 @@ mysql = MySQL(app)
 
 @app.route("/")
 def index():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
+
     else:
         name_now = None
     return render_template("index.html", name_now=name_now)
@@ -30,8 +32,8 @@ def index():
 
 @app.route("/sobre_nos")
 def sobre_nos():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
     return render_template("sobre_nos.html", name_now=name_now)
@@ -39,35 +41,36 @@ def sobre_nos():
 
 @app.route("/exame")
 def exame():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
-    
     return render_template("exame.html", name_now=name_now)
 
 
 @app.route("/resultados")
 def resultados():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
-    user_id = session.get('user_id')
+    user_id = session.get("user_id")
     cur = mysql.connection.cursor()
-    cur.execute("SELECT i.id, u.name, i.total_score, i.review_score, i.review_comment, u.id FROM iterations i INNER JOIN users u on i.users_id = u.id;")
+    cur.execute(
+        "SELECT i.id, u.name, i.total_score, i.review_score, i.review_comment, u.id FROM iterations i INNER JOIN users u on i.users_id = u.id;"
+    )
     data = cur.fetchall()
     cur.close()
-    
-    
-    
-    return render_template("resultados.html", name_now=name_now, data=data, user_id=user_id)
+
+    return render_template(
+        "resultados.html", name_now=name_now, data=data, user_id=user_id
+    )
 
 
 @app.route("/artefatos-e-eventos-1")
 def artefatoseeventos1():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
     return render_template("conteudos/artefatos-e-eventos-1.html", name_now=name_now)
@@ -75,8 +78,8 @@ def artefatoseeventos1():
 
 @app.route("/introducao")
 def introducao():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
     return render_template("conteudos/introducao.html", name_now=name_now)
@@ -84,8 +87,8 @@ def introducao():
 
 @app.route("/artefatos-e-eventos-2")
 def artefatoseeventos2():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
     return render_template("conteudos/artefatos-e-eventos-2.html", name_now=name_now)
@@ -93,8 +96,8 @@ def artefatoseeventos2():
 
 @app.route("/papeis-e-pilares")
 def papeisepilares():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
     return render_template("conteudos/papeis-e-pilares.html", name_now=name_now)
@@ -102,8 +105,8 @@ def papeisepilares():
 
 @app.route("/exemplo")
 def conteudo():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
     return render_template("conteudos/exemplo.html", name_now=name_now)
@@ -116,8 +119,8 @@ def questoes():
 
 @app.route("/cadastro")
 def cadastro():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
     return render_template("components/questoes.html", name_now=name_now)
@@ -175,19 +178,22 @@ def logout():
     session.pop("user_id", None)
     return jsonify({"success": True})
 
+
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if 'name_now' not in session:
-            return redirect(url_for('index'))
+        if "name_now" not in session:
+            return redirect(url_for("index"))
         return f(*args, **kwargs)
+
     return decorated_function
+
 
 @app.route("/avaliar")
 @login_required
 def avaliar():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
     return render_template("components/avaliar.html", name_now=name_now)
@@ -196,7 +202,7 @@ def avaliar():
 @app.route("/certificado")
 @login_required
 def certificado():
-    user_name = session.get('name_now')
+    user_name = session.get("name_now")
     return render_template("components/certificado.html", user_name=user_name)
 
 
@@ -255,10 +261,10 @@ def submit_avaliacao():
     comentario = request.form["comentario"]
     estrelas = request.form["fb"]
 
-    id_user = session.get('user_id')
+    id_user = session.get("user_id")
 
     print(f"Comentário: {comentario}, Estrelas: {estrelas}")
-    print (id_user)
+    print(id_user)
     cursor = mysql.connection.cursor()
     cursor.execute(
         """ INSERT INTO iterations(review_comment, review_score, created_at, users_id) VALUES(%s, %s, NOW(), %s) """,
@@ -272,8 +278,8 @@ def submit_avaliacao():
 
 @app.route("/estimativas")
 def estimativas():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
     return render_template("conteudos/estimativas.html", name_now=name_now)
@@ -281,8 +287,8 @@ def estimativas():
 
 @app.route("/artefatos-e-eventos-3")
 def artefatoseeventos3():
-    if session.get('name_now'):
-        name_now = session.get('name_now').split()[0]
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
     else:
         name_now = None
     return render_template("conteudos/artefatos-e-eventos-3.html", name_now=name_now)
