@@ -154,6 +154,7 @@ Soft skills desenvolvidas
 - Draw.io
 - Markdown
 - MySQL
+- AWS
 
 ## Veja Também
 
