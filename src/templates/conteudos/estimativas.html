@@ -279,13 +279,13 @@ Estimativas do Scrum
   $(document).ready(function () {
 
     /* Questão 1 - Modelo 2: 2 altenativas corretas */
-    const respostasCorretasQ1 = ['a', 'c'];
+    const respostasCorretasQ1 = [ 'a', 'c' ];
     const respostasQ1 = [];   // Respostas do usuário
     questoes.limitChoices(2, 'q1', respostasQ1);
 
 
     /* Questão 2 - Modelo 3: 2 altenativas corretas - completar lacunas */
-    const respostasCorretasQ2 = ['c', 'b'];
+    const respostasCorretasQ2 = [ 'c', 'b' ];
     const respostasQ2 = []
     questoes.limitChoices(2, 'q2', respostasQ2, questoes.fillBlanks);
 
@@ -308,10 +308,10 @@ Estimativas do Scrum
 
       let data = {
         "totalCorrect": totalAcertos,
-        "userAnswers": [respostasQ1, respostasQ2],
+        "userAnswers": [ respostasQ1, respostasQ2 ],
       };
 
-      questoes.submitScore(data);
+      questoes.submitScore(data, "/exame", "Próximo: Realizar o Exame");
     });
   });
 </script>

@@ -379,12 +379,12 @@ Artefatos e Eventos - Parte 2
     let totalCorrect = 0;
 
     for (const question in correctAnswers) {
-      const selectedOption = document.querySelector(`input[name=${question}]:checked`);
-      const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
+      const selectedOption = document.querySelector(`input[name=${ question }]:checked`);
+      const isCorrect = selectedOption ? selectedOption.value === correctAnswers[ question ] : false;
       if (isCorrect) {
         totalCorrect++;
       }
-      userAnswers[question] = selectedOption.value;
+      userAnswers[ question ] = selectedOption.value;
     }
 
     const popup = document.getElementById("resultPopup");
@@ -393,10 +393,10 @@ Artefatos e Eventos - Parte 2
     popupContent.innerHTML = `
             <div class="card-cadastro1">
                 <span class="titulo-cadastro">Parabéns!</span>
-                <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${totalCorrect} de 2 questões.</p>
+                <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${ totalCorrect } de 2 questões.</p>
                 <div class="cadastro" style="display: flex;">
                     <a href="/artefatos-e-eventos-3">
-                        <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
+                        <button class="botao-enviar-email"> Próximo: Eventos da Sprints</button>
                     </a>
                 </div>
             </div>`;
