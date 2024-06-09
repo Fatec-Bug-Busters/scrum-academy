@@ -469,6 +469,9 @@ $(document).ready(function () {
                 <a href="/estimativas">
                     <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
                 </a>
+                <a href="/">
+                  <button class="botao-enviar-email">Voltar para o início</button>
+                </a>
             </div>
         </div>`);
         popup.css({ display: "block" })
