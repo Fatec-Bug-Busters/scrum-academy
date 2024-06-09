@@ -46,7 +46,7 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 - [Protótipo - Fase 2](./docs/prototipo-2.md)
 - [Protótipo - Fase 3](./docs/prototipo-3.md)
 
-![Roadmap](./docs/Roadmap.jpg)
+![Roadmap](./docs/roadmap.png)
 
 | Sprint            | Previsão   | Status    |
 | ----------------- | ---------- | --------- |
