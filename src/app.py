@@ -267,7 +267,7 @@ def submit_avaliacao():
     print(id_user)
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """ INSERT INTO iterations(review_comment, review_score, created_at, users_id) VALUES(%s, %s, NOW(), %s) """,
+        """ INSERT INTO iterations(review_comment, review_score, users_id) VALUES(%s, %s, %s) """,
         (comentario, estrelas, id_user),
     )
     mysql.connection.commit()

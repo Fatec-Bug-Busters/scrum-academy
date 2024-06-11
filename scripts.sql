@@ -49,14 +49,14 @@ INSERT into users (id, name, email, created_at) VALUES
 ('12', 'Frida Kahlo', 'leonmiamor@onioproyect.com', "2024-06-02 18:01:09");
 
 INSERT into iterations (users_id, total_score, review_score, review_comment, created_at) VALUES
-('5', '10', '5', 'El mejor sitio para agregar conocimientos en Scrum', "2024-06-02 18:01:09" ),
-('6', '9', '5', 'Aonde é que eu assino para pegar o certificado?' , "2024-06-02 18:01:09"),
-('7', '10', '4','Não sei como fui aprovado, foi um processo muito intenso e imersivo', "2024-06-02 18:01:09" ),
-('8', '8', '5', "Eu sabia que detrás de um cachorro, que estava escondido atrás da figura de um menino, havia hight tec tec", "2024-06-02 18:01:09"),
-('9', '8', '5', 'Trama típica de uma das minhas novelas!', "2024-06-02 18:01:09"),
-('10', '10', '3', 'Vocês usaram bem a matemática que eu inventei, rapazes!', "2024-06-02 18:01:09"),
-('11', '5', '2', 'Só fiz porque minha mulher mandou', "2024-06-02 18:01:09"),
-('12', '10', '4', 'O de cima é meu pau-mandado', "2024-06-02 18:01:09");
+('5', '16', '5', 'El mejor sitio para agregar conocimientos en Scrum', "2024-06-02 18:01:09" ),
+('6', '14', '5', 'Aonde é que eu assino para pegar o certificado?' , "2024-06-02 18:01:09"),
+('7', '16', '4','Não sei como fui aprovado, foi um processo muito intenso e imersivo', "2024-06-02 18:01:09" ),
+('8', '12', '5', "Eu sabia que detrás de um cachorro, que estava escondido atrás da figura de um menino, havia hight tec tec", "2024-06-02 18:01:09"),
+('9', '12', '5', 'Trama típica de uma das minhas novelas!', "2024-06-02 18:01:09"),
+('10', '16', '3', 'Vocês usaram bem a matemática que eu inventei, rapazes!', "2024-06-02 18:01:09"),
+('11', '8', '2', 'Só fiz porque minha mulher mandou', "2024-06-02 18:01:09"),
+('12', '16', '4', 'O de cima é meu pau-mandado', "2024-06-02 18:01:09");
 
 -- create user
 CREATE USER 'scrum'@'localhost' IDENTIFIED WITH caching_sha2_password BY '123456';
