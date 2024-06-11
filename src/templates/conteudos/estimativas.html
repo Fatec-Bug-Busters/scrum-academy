@@ -222,7 +222,7 @@ Estimativas do Scrum
 </div>
 
 
-<button type="button" id="submit-quiz" class="submit-btn">Enviar exame</button>
+<button type="button" id="submit-quiz" class="submit-btn">Enviar quiz</button>
 
 <div id="resultPopup" class="popup" style="display: none;">
   <div id="popupContent">
@@ -311,7 +311,7 @@ Estimativas do Scrum
         "userAnswers": [ respostasQ1, respostasQ2 ],
       };
 
-      questoes.submitScore(data);
+      questoes.submitScore(data, "/exame", "Próximo: Realizar o Exame");
     });
   });
 </script>

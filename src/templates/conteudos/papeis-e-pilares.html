@@ -292,7 +292,7 @@ Pilares e Papéis do Scrum
 </div>
 
 
-<button type="button" class="submit-btn" onclick="validateForm()">Enviar exame</button>
+<button type="button" class="submit-btn" onclick="validateForm()">Enviar quiz</button>
 
 <div id="resultPopup" class="popup" style="display: none;">
   <div id="popupContent">
@@ -361,12 +361,12 @@ Pilares e Papéis do Scrum
     let totalCorrect = 0;
 
     for (const question in correctAnswers) {
-      const selectedOption = document.querySelector(`input[name=${question}]:checked`);
-      const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
+      const selectedOption = document.querySelector(`input[name=${ question }]:checked`);
+      const isCorrect = selectedOption ? selectedOption.value === correctAnswers[ question ] : false;
       if (isCorrect) {
         totalCorrect++;
       }
-      userAnswers[question] = selectedOption.value;
+      userAnswers[ question ] = selectedOption.value;
     }
 
     const popup = document.getElementById("resultPopup");
@@ -375,10 +375,10 @@ Pilares e Papéis do Scrum
     popupContent.innerHTML = `
             <div class="card-cadastro1">
                 <span class="titulo-cadastro">Parabéns!</span>
-                <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${totalCorrect} de 2 questões.</p>
+                <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${ totalCorrect } de 2 questões.</p>
                 <div class="cadastro" style="display: flex;">
                     <a href="/artefatos-e-eventos-1">
-                        <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
+                        <button class="botao-enviar-email"> Próximo: Artefatos e Eventos</button>
                     </a>
                 </div>
             </div>`;

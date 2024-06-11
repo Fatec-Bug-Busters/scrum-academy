@@ -235,7 +235,7 @@ Artefatos e Eventos - Parte 3
 </div>
 
 
-<button type="button" id="submit-quiz" class="submit-btn">Enviar exame</button>
+<button type="button" id="submit-quiz" class="submit-btn">Enviar quiz</button>
 
 <div id="resultPopup" class="popup" style="display: none;">
   <div id="popupContent">
@@ -264,7 +264,7 @@ Artefatos e Eventos - Parte 3
     <span>Conteúdo Anterior</span>
   </button>
 </a>
-<a href="/estimativas">
+<a href="e">
   <button class="botao-nextpage">
     <span>Proximo Conteúdo</span>
     <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -326,7 +326,7 @@ Artefatos e Eventos - Parte 3
         "userAnswers": [ respostasQ1, respostasQ2 ],
       };
 
-      questoes.submitScore(data);
+      questoes.submitScore(data, "/estimativas", "Próximo: Estimativas");
     });
   });
 </script>

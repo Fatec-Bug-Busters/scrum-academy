@@ -794,7 +794,7 @@ button:active {
 
 .card-cadastro1 {
   width: 100%;
-  max-width: 500px; 
+  max-width: 500px;
   height: auto;
   padding: 30px;
   text-align: center;
@@ -812,7 +812,7 @@ button:active {
 .header-modal {
   display: flex;
   justify-content: space-between;
-  width: 100%; 
+  width: 100%;
 }
 
 .card-cadastro1 > * {
@@ -824,7 +824,7 @@ button:active {
   font-weight: 900;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  width: 100%; 
+  width: 100%;
   text-align: center;
 }
 
@@ -855,7 +855,7 @@ button:active {
   border-radius: 14px;
   border: 1px solid #333;
   color: black;
-  width: 100%; 
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -867,8 +867,8 @@ button:active {
   padding: 15px;
   border-radius: 14px;
   font-weight: bold;
-  width: 100%; 
-  box-sizing: border-box; 
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .botao-enviar-email:hover {
@@ -1018,3 +1018,4 @@ button:active {
 
 .dropdown-title {
   font-weight: bold;
+}

@@ -455,19 +455,24 @@ $(document).ready(function () {
     /**
      * Submit score to the server
      */
-    let submitScore = function (data) {
+    let submitScore = function (data, redirectUrl, redirectText = null) {
       /** Display popup to user */
       let displayPopup = function (totalCorrect) {
         const popup = $("#resultPopup");
         const overlay = $("#overlay");
         const popupContent = $("#popupContent");
+        let redText = redirectText ?? "Ir para o Próximo conteúdo";
+
         popupContent.html(`
         <div class="card-cadastro1">
             <span class="titulo-cadastro">Parabéns!</span>
             <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${ totalCorrect } de 2 questões.</p>
             <div class="cadastro" style="display: flex;">
-                <a href="/estimativas">
-                    <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
+                <a href="${ redirectUrl }">
+                    <button class="botao-enviar-email"> ${ redText }</button>
+                </a>
+                <a href="/">
+                  <button class="botao-enviar-email">Voltar para o início</button>
                 </a>
             </div>
         </div>`);
