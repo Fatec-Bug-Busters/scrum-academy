@@ -1,9 +1,19 @@
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for, send_file
+from flask import (
+    Flask,
+    render_template,
+    request,
+    jsonify,
+    session,
+    redirect,
+    url_for,
+    send_file,
+)
 from flask_mysqldb import MySQL
 import os
 import datetime
 import matplotlib
-matplotlib.use('Agg')
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import io
 from functools import wraps
@@ -17,6 +27,7 @@ app.config["MYSQL_PASSWORD"] = os.environ.get("MYSQL_PASS")
 app.config["MYSQL_DB"] = os.environ.get("MYSQL_DB")
 mysql = MySQL(app)
 
+
 @app.route("/")
 def index():
 
@@ -28,6 +39,15 @@ def index():
     return render_template("index.html", name_now=name_now)
 
 
+@app.route("/ferramentas")
+def ferramentas():
+
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
+
+    else:
+        name_now = None
+    return render_template("ferramentas.html", name_now=name_now)
 
 
 @app.route("/sobre_nos")
@@ -146,6 +166,7 @@ def login():
             return jsonify({"success": False})
     except Exception as e:
         return jsonify({"success": False})
+
 
 @app.route("/register", methods=["POST"])
 def register():
@@ -293,43 +314,52 @@ def artefatoseeventos3():
         name_now = None
     return render_template("conteudos/artefatos-e-eventos-3.html", name_now=name_now)
 
+
 # Função para calcular a média de acertos
 def calcular_media_acertos():
     cursor = mysql.connection.cursor()
-    cursor.execute("""
+    cursor.execute(
+        """
         SELECT AVG(total_score) AS media_total_score
         FROM iterations
-    """)
+    """
+    )
 
     media_de_acertos = cursor.fetchone()[0]
     media_de_acertos = (media_de_acertos / 16) * 100
     cursor.close()
 
-
-
     return media_de_acertos
-@app.route('/plot.png')
+
+
+@app.route("/plot.png")
 def plot_png():
 
     media_de_acertos = calcular_media_acertos()
 
-
     values = [100 - media_de_acertos, media_de_acertos]
-    labels = ['Erros', 'Acertos']
-    colors = ['red', 'green']
-
+    labels = ["Erros", "Acertos"]
+    colors = ["red", "green"]
 
     img = io.BytesIO()
     plt.figure(figsize=(5, 5))
-    plt.pie(values, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140, 
-            textprops={'color': 'white', 'fontweight': 'bold'}, labeldistance=1.1)
-    plt.axis('equal')
-    plt.title('Média de Aproveitamento', color='white', fontweight='bold')
-    plt.savefig(img, format='png', transparent=True)
+    plt.pie(
+        values,
+        labels=labels,
+        colors=colors,
+        autopct="%1.1f%%",
+        startangle=140,
+        textprops={"color": "white", "fontweight": "bold"},
+        labeldistance=1.1,
+    )
+    plt.axis("equal")
+    plt.title("Média de Aproveitamento", color="white", fontweight="bold")
+    plt.savefig(img, format="png", transparent=True)
     img.seek(0)
     plt.close()
 
-    return send_file(img, mimetype='image/png')
+    return send_file(img, mimetype="image/png")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
