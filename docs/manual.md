@@ -1,6 +1,6 @@
 # Manual de usuário
 
-1. Introdução
+## 1. Introdução
 
 ### Objetivo do Manual
 
@@ -10,7 +10,7 @@ Este manual tem como objetivo guiar os usuários na utilização do site Scrum A
 
 O Scrum Academy é uma plataforma online dedicada a ensinar a metodologia ágil Scrum, ajudando funcionários a incorporá-la em suas rotinas de trabalho.
 
-2. Primeiros Passos
+## 2. Primeiros Passos
 
 ### Requisitos de Sistema
 
@@ -28,7 +28,7 @@ http://scrumacademy.ddns.net:5000/
 
 - Confirme a busca (tecla “Enter”, por exemplo)
 
-3. Navegação pelo Site
+## 3. Navegação pelo Site
 
 ### Página Inicial
 
@@ -40,7 +40,7 @@ No rodapé, há o ícone do GitHub que se clicado, levará para o GitHub de noss
 
 O menu de navegação, ou barra de navegação está localizada no canto superior do site e está presente em todas as páginas de conteúdo. Nele, há o botão “Home” que levará para a página inicial, botão “Conteúdo” que mostrará todos os conteúdos do curso que se clicados, levarão o usuário até eles, botão “Exames”,  que levará à página de exame final, botão “Resultados” que levará para a página de resultados
 
-4. Funcionalidades do Site
+## 4. Funcionalidades do Site
 
 ### Cadastro e Login
 
@@ -53,7 +53,7 @@ O menu de navegação, ou barra de navegação está localizada no canto superio
 
 - Receba certificados ao concluir cursos.
 
-5. Utilização dos Conteúdos
+## 5. Utilização dos Conteúdos
 
 ### Como Iniciar um Conteúdo
 
@@ -74,7 +74,7 @@ O menu de navegação, ou barra de navegação está localizada no canto superio
 - Complete os quizzes ao final de cada conteúdo para testar seu conhecimento.
 - Os quizzes tem questões de múltipla escolha ou escolha única, relação e escolha de palavras que melhor se encaixam no texto mostrado.
 
-6. User Pathing
+## 6. User Pathing
 
 # User Pathing
 
