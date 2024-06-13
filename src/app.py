@@ -302,7 +302,7 @@ def calcular_media_acertos():
     """)
 
     media_de_acertos = cursor.fetchone()[0]
-    media_de_acertos = (media_de_acertos / 16) * 100
+    media_de_acertos = (media_de_acertos / 10) * 100
     cursor.close()
 
 
