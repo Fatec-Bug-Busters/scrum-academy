@@ -76,9 +76,8 @@ O menu de navegação, ou barra de navegação está localizada no canto superio
 
 ## 6. User Pathing
 
-# User Pathing
 
-###Caminho do Usuário
+### Caminho do Usuário
 
 - Digite a URL do site:
 ![Imagem URL](./manual-images/1.png)

@@ -160,6 +160,8 @@ Soft skills desenvolvidas
 
 [Como Contribuir](./CONTRIBUTING.md) para você que quer contribuir no desenvolvimento desse projeto.
 
+[Manual do Usuário](./docs/manual.md) para você que quer entender como utilizar o nosso site.
+
 ## Autores
 
 |    Função     | Nome             |                                                                                                                                               GitHub |
