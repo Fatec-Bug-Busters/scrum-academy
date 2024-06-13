@@ -2,12 +2,44 @@
 
 {% block title %}Ferramentas{% endblock %}
 
+{% block cover_img %}
+<br>
+<img src="{{url_for('static', filename='images/ferramentas.png')}}" alt="Cover Conteudo">
+{% endblock %}
+
+
+<!-- Texto da cover -->
+{% block cover_text %} Ferramentas Sugeridas {% endblock %}
+
 {% block content %}
 <div class="title">
-  <h2>Ferramentas sugeridas</h2>
+  <h2>Product Backlog</h2>
 </div>
 <div class="texto-introducao-home">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae corrupti quia beatae soluta, esse vero
-    laboriosam adipisci officia voluptas illum.</p>
+  <p>O Product Backlog é uma lista ordenada de todas as funcionalidades, melhorias, correções e requisitos que precisam ser implementados no produto. Mantido pelo Product Owner, o backlog é dinâmico e evolui conforme o produto e o mercado mudam. Serve como a fonte principal de requisitos para o produto. Cada item do backlog (chamado de Product Backlog Item, ou PBI) tem uma descrição, prioridade e estimativa de esforço. O Product Backlog permite que a equipe de desenvolvimento foque nos itens de maior valor para o negócio, garantindo que o trabalho realizado esteja alinhado com as necessidades e prioridades dos stakeholders. </p>
+  <p>Aqui está um exemplo simples de Product Backlog:</p>
+  <img src="{{url_for('static', filename='images/back-ex.png')}}" alt="backlog"><br>
+  <br>Você também pode clicar <a href="{{url_for('static', filename='images/back-ex.png')}}" download>aqui</a> para baixar essa imagem.
 </div>
+
+<div class="title">
+  <h2>Sprint Backlog</h2>
+</div>
+<div class="texto-introducao-home">
+  <p>O Sprint Backlog é uma lista de itens do Product Backlog selecionados para serem trabalhados na Sprint atual, junto com um plano detalhado de como a equipe irá entregar esses itens. É criado durante a Sprint Planning e é propriedade da equipe de desenvolvimento. Serve para detalhar o trabalho que a equipe de desenvolvimento se compromete a concluir durante a Sprint. Inclui não apenas os itens do backlog, mas também as tarefas específicas necessárias para completá-los. Isso ajuda a equipe a manter o foco e a gerenciar seu tempo e recursos de maneira eficaz durante a Sprint. </p>
+  <p>Aqui está um exemplo simples de Sprint Backlog:</p>
+  <img src="{{url_for('static', filename='images/sprint-ex.png')}}" alt="sprint backlog"><br>
+  <br>Você também pode clicar <a href="{{url_for('static', filename='images/sprint-ex.png')}}" download>aqui</a> para baixar essa imagem.
+</div>
+
+<div class="title">
+  <h2>Burndown Chart</h2>
+</div>
+<div class="texto-introducao-home">
+  <p>O Burndown Chart é um gráfico que mostra a quantidade de trabalho restante (eixo y) contra o tempo (eixo x) ao longo da Sprint. A linha de burndown deve idealmente descer de forma consistente, indicando que o trabalho está sendo concluído. Serve para monitorar o progresso da equipe em direção à conclusão dos itens da Sprint. É uma ferramenta visual que ajuda a identificar se a equipe está no caminho certo para completar o trabalho no prazo. Se a linha de burndown não está descendo como esperado, isso pode indicar problemas que precisam ser resolvidos. </p>
+  <p>Aqui está um exemplo simples de Burndown Chart:</p>
+  <img src="{{url_for('static', filename='images/burndown-ex.png')}}" alt="burndown chart" id="burndown-ex"><br>
+  <br>Você também pode clicar <a href="{{url_for('static', filename='images/burndown-ex.png')}}" download>aqui</a> para baixar essa imagem.
+</div>
+<br>
 {% endblock %}

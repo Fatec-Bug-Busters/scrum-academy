@@ -1019,3 +1019,8 @@ button:active {
 .dropdown-title {
   font-weight: bold;
 }
+
+#burndown-ex {
+  max-width: 75%;
+  height: auto;
+}
