@@ -94,10 +94,18 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-sm-left text-center" href="/exame">
+              {%if not name_now%}
+              <a class="nav-link text-sm-left text-center" href="#" role="button" data-bs-toggle="modal"
+                data-bs-target="#ModalLogin" aria-expanded="true">
                 <img class="icon-navbar" src="{{ url_for('static', filename='images/exam_icon.png') }}"
                   alt="Icon Exame">
                 Exames
+                {% else %}
+                <a class="nav-link text-sm-left text-center" href="/exame">
+                  <img class="icon-navbar" src="{{ url_for('static', filename='images/exam_icon.png') }}"
+                    alt="Icon Exame">
+                  Exames</a>
+                {%endif%}
               </a>
             </li>
             <li class="nav-item">
@@ -183,8 +191,7 @@
         <div class="col">
           <div class="btn-group">
 
-            <button class=" btn-conteudo-footer" data-bs-toggle="dropdown"
-              aria-expanded="false">Conteúdo</button>
+            <button class=" btn-conteudo-footer" data-bs-toggle="dropdown" aria-expanded="false">Conteúdo</button>
             <ul class="dropdown-menu" data-bs-theme="dark">
               <li>
                 <a class="dropdown-item" href="/introducao" style="font-size: 120%;">
@@ -217,9 +224,16 @@
           </div>
         </div>
         <!-- Exames -->
+        {%if not name_now%}
+        <div class="col">
+          <a class="link-light link-underline-opacity-0 botao-footer" href="#" role="button" data-bs-toggle="modal"
+            data-bs-target="#ModalLogin" aria-expanded="true">Exames</a>
+        </div>
+        {% else %}
         <div class="col">
           <a class="link-light link-underline-opacity-0 botao-footer" href="/exame">Exames</a>
         </div>
+        {%endif%}
 
         <!-- Resultados -->
         <div class="col">
