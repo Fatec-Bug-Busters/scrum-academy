@@ -1,9 +1,20 @@
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for, send_file
+from flask import (
+    Flask,
+    render_template,
+    request,
+    jsonify,
+    session,
+    redirect,
+    url_for,
+    send_file,
+)
 from flask_mysqldb import MySQL
 import os
 import datetime
 import matplotlib
-matplotlib.use('Agg')
+
+matplotlib.use("Agg")
+from matplotlib.backend_tools import cursors
 import matplotlib.pyplot as plt
 import io
 from functools import wraps
@@ -17,6 +28,7 @@ app.config["MYSQL_PASSWORD"] = os.environ.get("MYSQL_PASS")
 app.config["MYSQL_DB"] = os.environ.get("MYSQL_DB")
 mysql = MySQL(app)
 
+
 @app.route("/")
 def index():
 
@@ -26,8 +38,6 @@ def index():
     else:
         name_now = None
     return render_template("index.html", name_now=name_now)
-
-
 
 
 @app.route("/sobre_nos")
@@ -57,10 +67,24 @@ def resultados():
     user_id = session.get("user_id")
     cur = mysql.connection.cursor()
     cur.execute(
-        "SELECT i.id, u.name, i.total_score, i.review_score, i.review_comment, u.id FROM iterations i INNER JOIN users u on i.users_id = u.id;"
+        """SELECT
+        u.id, u.name, e.score, e.users_answer, e.review_score, e.review_comment, e.created_at
+        FROM exams AS e
+        INNER JOIN users AS u ON u.id = e.user_id;"""
     )
-    data = cur.fetchall()
+    exams = cur.fetchall()
     cur.close()
+
+    data = []
+    for ex in exams:
+        res = {
+            "user_id": ex[0],
+            "user_name": ex[1],
+            "score": ex[2],
+            "review_score": ex[4],
+            "review_comment": ex[5],
+        }
+        data.append(res)
 
     return render_template(
         "resultados.html", name_now=name_now, data=data, user_id=user_id
@@ -146,6 +170,7 @@ def login():
             return jsonify({"success": False})
     except Exception as e:
         return jsonify({"success": False})
+
 
 @app.route("/register", methods=["POST"])
 def register():
@@ -233,14 +258,16 @@ def submit_score_exame():
     total_correct = data.get("totalCorrect")
     users_answer = data.get("userAnswers")
 
+    cursor = mysql.connection.cursor()
+
     try:
-        cursor = mysql.connection.cursor()
+        user_id = session.get("user_id")
         cursor.execute(
             """
-            INSERT INTO exams (score, users_answer, created_at)
-            VALUES (%s, %s, NOW())
-        """,
-            (total_correct, users_answer),
+            INSERT INTO exams (user_id, score, users_answer, created_at)
+            VALUES (%s, %s, %s, NOW())
+            """,
+            (user_id, total_correct, users_answer),
         )
         mysql.connection.commit()
         cursor.close()
@@ -267,7 +294,9 @@ def submit_avaliacao():
     print(id_user)
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """ INSERT INTO iterations(review_comment, review_score, users_id) VALUES(%s, %s, %s) """,
+        """ UPDATE exams
+        SET review_comment = %s, review_score = %s
+        WHERE user_id = %s AND review_score IS NULL""",
         (comentario, estrelas, id_user),
     )
     mysql.connection.commit()
@@ -293,43 +322,52 @@ def artefatoseeventos3():
         name_now = None
     return render_template("conteudos/artefatos-e-eventos-3.html", name_now=name_now)
 
+
 # Função para calcular a média de acertos
 def calcular_media_acertos():
     cursor = mysql.connection.cursor()
-    cursor.execute("""
-        SELECT AVG(total_score) AS media_total_score
-        FROM iterations
-    """)
+    cursor.execute(
+        """
+        SELECT AVG(score) AS media_total_score
+        FROM exams
+    """
+    )
 
     media_de_acertos = cursor.fetchone()[0]
     media_de_acertos = (media_de_acertos / 16) * 100
     cursor.close()
 
-
-
     return media_de_acertos
-@app.route('/plot.png')
+
+
+@app.route("/plot.png")
 def plot_png():
 
     media_de_acertos = calcular_media_acertos()
 
-
     values = [100 - media_de_acertos, media_de_acertos]
-    labels = ['Erros', 'Acertos']
-    colors = ['red', 'green']
-
+    labels = ["Erros", "Acertos"]
+    colors = ["red", "green"]
 
     img = io.BytesIO()
     plt.figure(figsize=(5, 5))
-    plt.pie(values, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140, 
-            textprops={'color': 'white', 'fontweight': 'bold'}, labeldistance=1.1)
-    plt.axis('equal')
-    plt.title('Média de Aproveitamento', color='white', fontweight='bold')
-    plt.savefig(img, format='png', transparent=True)
+    plt.pie(
+        values,
+        labels=labels,
+        colors=colors,
+        autopct="%1.1f%%",
+        startangle=140,
+        textprops={"color": "white", "fontweight": "bold"},
+        labeldistance=1.1,
+    )
+    plt.axis("equal")
+    plt.title("Média de Aproveitamento", color="white", fontweight="bold")
+    plt.savefig(img, format="png", transparent=True)
     img.seek(0)
     plt.close()
 
-    return send_file(img, mimetype='image/png')
+    return send_file(img, mimetype="image/png")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

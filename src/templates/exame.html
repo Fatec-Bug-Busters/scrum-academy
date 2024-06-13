@@ -20,7 +20,8 @@ Exame Final
   <div class="conteudo-exame">
     <div class="alert alert-danger d-flex align-items-center" role="alert">
       <div style="color: #fff;">
-        Não deixe nenhuma questão em branco. As respostas serão salvas após o término da prova. Para responder às perguntas, basta clicar nelas e as alternativas aparecerão.
+        Não deixe nenhuma questão em branco. As respostas serão salvas após o término da prova. Para responder às
+        perguntas, basta clicar nelas e as alternativas aparecerão.
       </div>
     </div>
     <hr>
@@ -49,7 +50,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q1" id="q1a" value="a" required>
+                <input type="radio" name="q1" id="q1a" value="a">
                 <label for="q1a">a) Lorem</label>
               </li>
               <li class="option">
@@ -90,7 +91,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q2" id="q2a" value="a" required>
+                <input type="radio" name="q2" id="q2a" value="a">
                 <label for="q2a">a) Lorem</label>
               </li>
               <li class="option">
@@ -131,7 +132,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q3" id="q3a" value="a" required>
+                <input type="radio" name="q3" id="q3a" value="a">
                 <label for="q3a">a) Lorem</label>
               </li>
               <li class="option">
@@ -172,7 +173,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q4" id="q4a" value="a" required>
+                <input type="radio" name="q4" id="q4a" value="a">
                 <label for="q4a">a) Lorem</label>
               </li>
               <li class="option">
@@ -213,7 +214,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q5" id="q5a" value="a" required>
+                <input type="radio" name="q5" id="q5a" value="a">
                 <label for="q5a">a) Lorem</label>
               </li>
               <li class="option">
@@ -254,7 +255,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q6" id="q6a" value="a" required>
+                <input type="radio" name="q6" id="q6a" value="a">
                 <label for="q6a">a) Lorem</label>
               </li>
               <li class="option">
@@ -295,7 +296,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q7" id="q7a" value="a" required>
+                <input type="radio" name="q7" id="q7a" value="a">
                 <label for="q7a">a) Lorem</label>
               </li>
               <li class="option">
@@ -336,7 +337,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q8" id="q8a" value="a" required>
+                <input type="radio" name="q8" id="q8a" value="a">
                 <label for="q8a">a) Lorem</label>
               </li>
               <li class="option">
@@ -377,7 +378,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q9" id="q9a" value="a" required>
+                <input type="radio" name="q9" id="q9a" value="a">
                 <label for="q9a">a) Lorem</label>
               </li>
               <li class="option">
@@ -418,7 +419,7 @@ Exame Final
           <div class="question hidden">
             <ul class="options">
               <li class="option">
-                <input type="radio" name="q10" id="q10a" value="a" required>
+                <input type="radio" name="q10" id="q10a" value="a">
                 <label for="q10a">a) Lorem</label>
               </li>
               <li class="option">
@@ -474,12 +475,12 @@ Exame Final
       let totalCorrect = 0;
 
       for (const question in correctAnswers) {
-        const selectedOption = document.querySelector(`input[name=${question}]:checked`);
-        const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
+        const selectedOption = document.querySelector(`input[name=${ question }]:checked`);
+        const isCorrect = selectedOption ? selectedOption.value === correctAnswers[ question ] : false;
         if (isCorrect) {
           totalCorrect++;
         }
-        userAnswers[question] = selectedOption.value;
+        userAnswers[ question ] = selectedOption.value;
       }
 
       const popup = document.getElementById("resultPopup");
