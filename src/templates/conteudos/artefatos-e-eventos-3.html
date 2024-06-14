@@ -321,12 +321,16 @@ Artefatos e Eventos - Parte 3
         totalAcertos += 1;
       }
 
+      questoes.displayPopover(totalAcertos, "/estimativas", "Próximo: Estimativas")
+
+      /*
       let data = {
         "totalCorrect": totalAcertos,
         "userAnswers": [ respostasQ1, respostasQ2 ],
       };
 
-      questoes.submitScore(data, "/estimativas", "Próximo: Estimativas");
+      questoes.submitScore(data);
+      */
     });
   });
 </script>
