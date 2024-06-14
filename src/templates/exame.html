@@ -22,6 +22,8 @@ Exame Final
       <div style="color: #fff;">
         Não deixe nenhuma questão em branco. As respostas serão salvas após o término da prova. Para responder às
         perguntas, basta clicar nelas e as alternativas aparecerão.
+        Não deixe nenhuma questão em branco. As respostas serão salvas após o término da prova. Para responder às
+        perguntas, basta clicar nelas e as alternativas aparecerão.
       </div>
     </div>
     <hr>
@@ -912,12 +914,12 @@ Exame Final
       let totalCorrect = 0;
 
       for (const question in correctAnswers) {
-        const selectedOption = document.querySelector(`input[name=${question}]:checked`);
-        const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
+        const selectedOption = document.querySelector(`input[name=${ question }]:checked`);
+        const isCorrect = selectedOption ? selectedOption.value === correctAnswers[ question ] : false;
         if (isCorrect) {
           totalCorrect++;
         }
-        userAnswers[question] = selectedOption.value;
+        userAnswers[ question ] = selectedOption.value;
       }
 
       const popup = document.getElementById("resultPopup");
