@@ -21,6 +21,7 @@ create table exams (
     foreign key (user_id) references users(id)
 );
 
+<<<<<<< Updated upstream
 
 INSERT into users (id, name, email, created_at) VALUES
 ('5', 'Guilhermo Lasso', 'guilaso@bol.com', "2024-06-02 18:01:09" ),
@@ -42,6 +43,8 @@ INSERT into users (id, name, email, created_at) VALUES
 -- ('11', '8', '2', 'Só fiz porque minha mulher mandou'),
 -- ('12', '16', '4', 'O de cima é meu pau-mandado');
 
+=======
+>>>>>>> Stashed changes
 -- create user
 CREATE USER 'scrum'@'localhost' IDENTIFIED WITH caching_sha2_password BY '123456';
 GRANT ALL PRIVILEGES ON scrumacademy.* TO 'scrum'@'localhost' WITH GRANT OPTION;
