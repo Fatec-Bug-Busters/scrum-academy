@@ -94,18 +94,10 @@
               </div>
             </li>
             <li class="nav-item">
-              {%if not name_now%}
-              <a class="nav-link text-sm-left text-center" href="#" role="button" data-bs-toggle="modal"
-                data-bs-target="#ModalLogin" aria-expanded="true">
-                <img class="icon-navbar" src="{{ url_for('static', filename='images/exam_icon.png') }}"
-                  alt="Icon Exame">
-                Exames
-                {% else %}
                 <a class="nav-link text-sm-left text-center" href="/exame">
                   <img class="icon-navbar" src="{{ url_for('static', filename='images/exam_icon.png') }}"
                     alt="Icon Exame">
-                  Exames</a>
-                {%endif%}
+                  Exames</a>  
               </a>
             </li>
             <li class="nav-item">
@@ -224,16 +216,9 @@
           </div>
         </div>
         <!-- Exames -->
-        {%if not name_now%}
-        <div class="col">
-          <a class="link-light link-underline-opacity-0 botao-footer" href="#" role="button" data-bs-toggle="modal"
-            data-bs-target="#ModalLogin" aria-expanded="true">Exames</a>
-        </div>
-        {% else %}
         <div class="col">
           <a class="link-light link-underline-opacity-0 botao-footer" href="/exame">Exames</a>
         </div>
-        {%endif%}
 
         <!-- Resultados -->
         <div class="col">
@@ -285,7 +270,7 @@
             final.
           </p>
           <form class="cadastro" id="loginForm">
-            <input placeholder="E-mail" type="email" id="email" name="email" required>
+            <input placeholder="E-mail" type="email" id="email" name="email" focus required>
             <button class="botao-enviar-email" type="submit"> Enviar</button>
           </form>
         </div>
@@ -306,7 +291,7 @@
             completo.
           </p>
           <form class="cadastro" id="NewUserForm">
-            <input placeholder="Nome completo" type="text" id="NameUser">
+            <input placeholder="Nome completo" type="text" id="NameUser" focus required>
             <input placeholder="E-mail" type="hidden">
             <button class="botao-enviar-email"> Enviar</button>
           </form>
@@ -381,6 +366,29 @@
   <script defer src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
   <script defer src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
+  <script>
+    $(document).ready(function(){
+      var requireLogin = (new URL(location.href)).searchParams.get('require_login');
+      var redirectFor = (new URL(location.href)).searchParams.get('redirect_for');
+      console.log(redirectFor);
+      // window.location.replace("http://localhost:5000/introducao") 
+      
+      if (requireLogin == "True") {
+        $('#ModalLogin').modal({show:false})
+        $('#ModalLogin').modal('show')
+        
+        $('#ModalLoginSucess').on('hide.bs.modal', function () {
+          console.log("redirecting..")
+          window.location.assign(redirectFor);
+        }) ;
+      }
+      
+      $("#ModalLogout").on("hide.bs.modal", function () {
+        window.location.assign("/")
+      });
+    });
+  </script>
+  
   {%block quizjs%}{%endblock%}
 
 </body>

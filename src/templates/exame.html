@@ -455,6 +455,14 @@ Exame Final
   {% endblock %}
 
   {%block quizjs%}
+  {%if not name_now%}
+  <script>
+    $(document).ready(function(){
+        $('#ModalLogin').modal({show:false})
+       $('#ModalLogin').modal('show')
+    })
+  </script>
+  {%endif%}
   <script>
     async function validateForm() {
       const correctAnswers = {

@@ -39,13 +39,6 @@ def sobre_nos():
     return render_template("sobre_nos.html", name_now=name_now)
 
 
-@app.route("/exame")
-def exame():
-    if session.get("name_now"):
-        name_now = session.get("name_now").split()[0]
-    else:
-        name_now = None
-    return render_template("exame.html", name_now=name_now)
 
 
 @app.route("/resultados")
@@ -183,11 +176,19 @@ def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if "name_now" not in session:
-            return redirect(url_for("index"))
+            return redirect(url_for("index", require_login = True, redirect_for = '/exame'))
         return f(*args, **kwargs)
 
     return decorated_function
 
+@app.route("/exame")
+@login_required
+def exame():
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
+    else:
+        name_now = None
+    return render_template("exame.html", name_now=name_now)
 
 @app.route("/avaliar")
 @login_required
