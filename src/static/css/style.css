@@ -297,7 +297,7 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .button-icon {
@@ -630,7 +630,7 @@ form .container {
 .enunciado-questoes {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 .enunciado-questoes p{
   margin-top: 20px;

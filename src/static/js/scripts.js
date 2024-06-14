@@ -1,5 +1,5 @@
 function toggleText(container) {
-  container.classList.toggle('active');
+  container.classList.add('active');
 }
 
 
