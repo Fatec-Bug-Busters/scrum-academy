@@ -539,9 +539,11 @@ form .container {
   align-items: center;
   justify-content: center;
 }
-.enunciado-questoes p{
+
+.enunciado-questoes p {
   margin-top: 20px;
 }
+
 .numeracao-questoes {
   display: flex;
   align-items: center;
@@ -815,7 +817,7 @@ button:active {
   width: 100%;
 }
 
-.card-cadastro1 > * {
+.card-cadastro1>* {
   margin: 0;
 }
 
@@ -1023,4 +1025,8 @@ button:active {
 #burndown-ex {
   max-width: 75%;
   height: auto;
+}
+
+#btn-fer {
+  width: auto;
 }
