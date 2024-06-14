@@ -14,6 +14,8 @@ import datetime
 import matplotlib
 
 matplotlib.use("Agg")
+from matplotlib.backend_tools import cursors
+
 import matplotlib.pyplot as plt
 import io
 from functools import wraps
@@ -66,10 +68,24 @@ def resultados():
     user_id = session.get("user_id")
     cur = mysql.connection.cursor()
     cur.execute(
-        "SELECT i.id, u.name, i.total_score, i.review_score, i.review_comment, u.id FROM iterations i INNER JOIN users u on i.users_id = u.id;"
+        """SELECT
+        u.id, u.name, e.score, e.users_answer, e.review_score, e.review_comment, e.created_at
+        FROM exams AS e
+        INNER JOIN users AS u ON u.id = e.user_id;"""
     )
-    data = cur.fetchall()
+    exams = cur.fetchall()
     cur.close()
+
+    data = []
+    for ex in exams:
+        res = {
+            "user_id": ex[0],
+            "user_name": ex[1],
+            "score": ex[2],
+            "review_score": ex[4],
+            "review_comment": ex[5],
+        }
+        data.append(res)
 
     return render_template(
         "resultados.html", name_now=name_now, data=data, user_id=user_id
@@ -221,16 +237,16 @@ def submit_score_exame():
     data = request.json
     total_correct = data.get("totalCorrect")
     users_answer = data.get("userAnswers")
+    user_id = session.get("user_id")
 
     try:
         cursor = mysql.connection.cursor()
-        cursor = mysql.connection.cursor()
         cursor.execute(
             """
-            INSERT INTO exams (score, users_answer, created_at)
-            VALUES (%s, %s, NOW())
-        """,
-            (total_correct, users_answer),
+            INSERT INTO exams (user_id, score, users_answer, created_at)
+            VALUES (%s, %s, %s, NOW())
+            """,
+            (user_id, total_correct, users_answer),
         )
         mysql.connection.commit()
         cursor.close()
@@ -257,7 +273,9 @@ def submit_avaliacao():
     print(id_user)
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """ INSERT INTO iterations(review_comment, review_score, created_at, users_id) VALUES(%s, %s, NOW(), %s) """,
+        """ UPDATE exams
+        SET review_comment = %s, review_score = %s
+        WHERE user_id = %s AND review_score IS NULL""",
         (comentario, estrelas, id_user),
     )
     mysql.connection.commit()
@@ -289,13 +307,13 @@ def calcular_media_acertos():
     cursor = mysql.connection.cursor()
     cursor.execute(
         """
-        SELECT AVG(total_score) AS media_total_score
-        FROM iterations
-    """
+        SELECT AVG(score) AS media_total_score
+        FROM exams
+        """
     )
 
     media_de_acertos = cursor.fetchone()[0]
-    media_de_acertos = (media_de_acertos / 16) * 100
+    media_de_acertos = (media_de_acertos / 10) * 100
     cursor.close()
 
     return media_de_acertos
