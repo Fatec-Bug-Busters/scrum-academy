@@ -15,6 +15,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 from matplotlib.backend_tools import cursors
+
 import matplotlib.pyplot as plt
 import io
 from functools import wraps
@@ -231,37 +232,15 @@ def certificado():
     return render_template("components/certificado.html", user_name=user_name)
 
 
-# Quizz ainda nao funcionando pois falta o interaction_id
-@app.route("/submit-score", methods=["POST"])
-def submit_score():
-    data = request.json
-    total_correct = data.get("totalCorrect")
-    user_answers = data.get("userAnswers")
-    print(f"Quantidade de questões corretas recebidas: {total_correct}")
-
-    # cursor = mysql.connection.cursor()
-    # cursor.execute('''
-    #     INSERT INTO quizzes (score, users_answer)
-    #     VALUES (%s, %s)
-    # ''', (total_correct, user_answers))
-    # mysql.connection.commit()
-    # cursor.close()
-
-    return jsonify(
-        {"status": "success", "totalCorrect": total_correct, "userAnswer": user_answers}
-    )
-
-
 @app.route("/submit-score-exame", methods=["POST"])
 def submit_score_exame():
     data = request.json
     total_correct = data.get("totalCorrect")
     users_answer = data.get("userAnswers")
-
-    cursor = mysql.connection.cursor()
+    user_id = session.get("user_id")
 
     try:
-        user_id = session.get("user_id")
+        cursor = mysql.connection.cursor()
         cursor.execute(
             """
             INSERT INTO exams (user_id, score, users_answer, created_at)
@@ -330,7 +309,7 @@ def calcular_media_acertos():
         """
         SELECT AVG(score) AS media_total_score
         FROM exams
-    """
+        """
     )
 
     media_de_acertos = cursor.fetchone()[0]
