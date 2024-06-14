@@ -10,14 +10,7 @@ create table users (
     `created_at` datetime not null
 );
 
-create table quizzes (
-    `id` int auto_increment primary key,
-    `user_id` int not null,
-    `index` int not null,
-    `score` int not null,
-    `users_answer` varchar(127) not null,
-    foreign key (user_id) references users(id)
-);
+
 
 create table exams (
     `id` int auto_increment primary key,
