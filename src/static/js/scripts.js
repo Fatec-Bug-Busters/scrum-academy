@@ -79,7 +79,7 @@ $(document).ready(function () {
       type: 'POST',
       url: '/logout',
     });
-    window.location.reload();
+    window.location.assign("/");
   });
 
 
