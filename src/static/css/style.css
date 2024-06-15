@@ -271,7 +271,8 @@ footer .logo-bug-busters {
   margin-bottom: 40px;
 }
 
-.title h2 {
+.title h2,
+.title h3 {
   display: inline;
   padding: 8px 32px 8px 10%;
   text-align: right;
