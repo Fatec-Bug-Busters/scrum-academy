@@ -45,6 +45,7 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 - [Protótipo - Fase 1](./docs/prototipo-1.md)
 - [Protótipo - Fase 2](./docs/prototipo-2.md)
 - [Protótipo - Fase 3](./docs/prototipo-3.md)
+- [Protótipo - Fase 3](./docs/prototipo-4.md)
 
 ![Roadmap](./docs/roadmap.png)
 
@@ -54,7 +55,7 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 | 01                | 14/04/2024 | concluído |
 | 02                | 05/05/2024 | concluído |
 | 03                | 26/05/2024 | concluído |
-| 04                | 16/06/2024 | a fazer   |
+| 04                | 16/06/2024 | concluído |
 | Feira de Soluções | 27/06/2024 | a fazer   |
 
 ### Sprint 1. Concepção
@@ -83,9 +84,9 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 ### Sprint 4. Operacionalização
 
-- [ ] Conteúdo completo sobre SCRUM;
-- [ ] Funcionamento completo do Quiz e Exames;
-- [ ] Correções de eventuais erros.
+- [x] Conteúdo completo sobre SCRUM;
+- [x] Funcionamento completo do Quiz e Exames;
+- [x] Correções de eventuais erros.
 
 ## Competências desenvolvidas
 
@@ -118,7 +119,7 @@ Soft skills desenvolvidas
 - Comunicação;
 - Trabalho em equipe.
 
-| <!--               | Tecnologia/Metodologia | Classificação |
+<!-- |              | Tecnologia/Metodologia | Classificação |
 | ------------------ | ---------------------- |
 | GitHub             | ★ ★ ★ ★ ★ ★ ★ ☆ ☆ ☆    |
 | Gestão de Projetos | ★ ★ ★ ★ ★ ★ ☆ ☆ ☆ ☆    |
@@ -134,7 +135,7 @@ Soft skills desenvolvidas
 | Pensamento Crítico     | ★ ★ ★ ★ ★ ★ ★ ☆ ☆ ☆ |
 | Gerenciamento de Tempo | ★ ★ ★ ★ ★ ★ ★ ☆ ☆ ☆ |
 | Adaptabilidade         | ★ ★ ★ ★ ★ ★ ★ ☆ ☆ ☆ |
-| Resiliência            | ★ ★ ★ ★ ★ ★ ★ ☆ ☆ ☆ | --> |
+| Resiliência            | ★ ★ ★ ★ ★ ★ ★ ☆ ☆ ☆ | | -->
 
 ## Tecnologias Utilizadas
 
