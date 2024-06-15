@@ -1022,7 +1022,7 @@ button:active {
   font-weight: bold;
 }
 
-#burndown-ex {
+.burndown-ex img {
   max-width: 75%;
   height: auto;
 }

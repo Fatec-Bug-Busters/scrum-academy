@@ -4,7 +4,9 @@
 
 {% block cover_img %}
 <br>
-<img src="{{url_for('static', filename='images/ferramentas.png')}}" alt="Cover Conteudo">
+<div class="burndown-ex text-center">
+  <img src="{{url_for('static', filename='images/ferramentas.png')}}" alt="Cover Conteudo">
+</div>
 {% endblock %}
 
 
@@ -29,9 +31,12 @@
     de desenvolvimento foque nos itens de maior valor para o negócio, garantindo que o trabalho realizado esteja
     alinhado com as necessidades e prioridades dos stakeholders. </p>
   <p>Aqui está um exemplo simples de Product Backlog:</p>
-  <img src="{{url_for('static', filename='images/back-ex.png')}}" alt="backlog"><br>
-  <br>Você também pode clicar <a href="{{url_for('static', filename='images/back-ex.png')}}" download>aqui</a> para
-  baixar essa imagem.
+  <div class="burndown-ex text-center">
+    <img class="my-4" src="{{url_for('static', filename='images/back-ex.png')}}" alt="backlog"><br>
+    <p>Você também pode clicar <a href="{{url_for('static', filename='images/back-ex.png')}}">aqui</a> para
+      baixar essa imagem.</p>
+  </div>
+
 </div>
 
 <div class="title">
@@ -45,9 +50,13 @@
     completá-los. Isso ajuda a equipe a manter o foco e a gerenciar seu tempo e recursos de maneira eficaz durante a
     Sprint. </p>
   <p>Aqui está um exemplo simples de Sprint Backlog:</p>
-  <img src="{{url_for('static', filename='images/sprint-ex.png')}}" alt="sprint backlog"><br>
-  <br>Você também pode clicar <a href="{{url_for('static', filename='images/sprint-ex.png')}}" download>aqui</a> para
-  baixar essa imagem.
+  <div class="burndown-ex text-center">
+    <img class="my-4" src="{{url_for('static', filename='images/sprint-ex.png')}}" alt="sprint backlog"><br>
+    <p>Você também pode clicar <a href="{{url_for('static', filename='images/sprint-ex.png')}}">aqui</a>
+      para
+      baixar essa imagem.</p>
+  </div>
+
 </div>
 
 <div class="title">
@@ -60,9 +69,13 @@
     ferramenta visual que ajuda a identificar se a equipe está no caminho certo para completar o trabalho no prazo. Se a
     linha de burndown não está descendo como esperado, isso pode indicar problemas que precisam ser resolvidos. </p>
   <p>Aqui está um exemplo simples de Burndown Chart:</p>
-  <img src="{{url_for('static', filename='images/burndown-ex.png')}}" alt="burndown chart" id="burndown-ex"><br>
-  <br>Você também pode clicar <a href="{{url_for('static', filename='images/burndown-ex.png')}}" download>aqui</a> para
-  baixar essa imagem.
+  <div class="burndown-ex text-center">
+    <img class="my-4" src="{{url_for('static', filename='images/burndown-ex.png')}}" alt="burndown chart"><br>
+    <p>Você também pode clicar <a href="{{url_for('static', filename='images/burndown-ex.png')}}">aqui</a>
+      para
+      baixar essa imagem.</p>
+  </div>
+
 </div>
 
 <div class="title">
@@ -77,9 +90,38 @@
     Também promove a responsabilidade individual e coletiva, pois cada membro da equipe sabe o que os outros estão
     fazendo.</p>
   <p>Aqui está um exemplo simples de Scrum Board:</p>
-  <img src="{{url_for('static', filename='images/scrumboard.png')}}" alt="burndown chart" id="burndown-ex"><br>
-  <br>Você também pode clicar <a href="{{url_for('static', filename='images/scrumboard.png')}}" download>aqui</a> para
-  baixar essa imagem.
+  <div class="burndown-ex text-center">
+    <img class="my-4" src="{{url_for('static', filename='images/scrumboard.png')}}" alt="burndown chart"><br>
+    <p>Você também pode clicar <a href="{{url_for('static', filename='images/scrumboard.png')}}">aqui</a>
+      para
+      baixar essa imagem.</p>
+  </div>
+
+</div>
+
+<div class="title">
+  <h2>Avaliação com PACER</h2>
+</div>
+<div class="texto-introducao-home">
+  <p>O PACER é uma metodologia estruturada para avaliar e melhorar o desempenho de equipes em projetos ágeis. Consiste
+    em quatro princípios fundamentais: Proatividade, Autonomia, Colaboração e Entrega de Resultados. Utilizando o PACER,
+    cada membro da equipe realiza autoavaliações periódicas para medir seu próprio desempenho em relação a esses
+    pilares. Serve como uma ferramenta de desenvolvimento contínuo, ajudando a equipe a identificar e capitalizar as
+    áreas de força enquanto aborda as necessidades de melhoria. O processo de avaliação PACER incentiva a reflexão
+    individual e o diálogo construtivo dentro da equipe, garantindo que todos os membros estejam alinhados e
+    comprometidos com os objetivos ágeis do projeto. Além disso, a implementação do PACER pode ser integrada às práticas
+    de Scrum, como parte das reuniões de retrospectiva, onde as avaliações podem ser discutidas e planos de ação podem
+    ser formulados para futuras Sprints. Esta metodologia não apenas reforça a cultura de feedback contínuo, mas também
+    promove um ambiente de trabalho mais dinâmico e responsivo, essencial para o sucesso em ambientes ágeis.</p>
+  <p>Aqui está uma <a href="https://github.com/WesleyGoncalves/pacer" target="_blank">ferramenta instalável</a> para
+    realizar a avaliação PACER:</p>
+  <div class="burndown-ex text-center">
+    <img class="my-4" src="{{url_for('static', filename='images/pacer-screen.png')}}" alt="burndown chart"><br>
+    <p>Você pode acessar essa ferramenta no GitHub <em>wesleygoncalves/pacer</em> ou clicando <a
+        href="https://github.com/WesleyGoncalves/pacer" target="_blank">aqui</a>.
+    </p>
+  </div>
+
 </div>
 <br>
 {% endblock %}
