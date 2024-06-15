@@ -14,6 +14,7 @@ import datetime
 import matplotlib
 
 matplotlib.use("Agg")
+from matplotlib.backend_tools import cursors
 import matplotlib.pyplot as plt
 import io
 from functools import wraps
@@ -49,7 +50,6 @@ def ferramentas():
         name_now = None
     return render_template("ferramentas.html", name_now=name_now)
 
-
 @app.route("/sobre_nos")
 def sobre_nos():
     if session.get("name_now"):
@@ -59,13 +59,6 @@ def sobre_nos():
     return render_template("sobre_nos.html", name_now=name_now)
 
 
-@app.route("/exame")
-def exame():
-    if session.get("name_now"):
-        name_now = session.get("name_now").split()[0]
-    else:
-        name_now = None
-    return render_template("exame.html", name_now=name_now)
 
 
 @app.route("/resultados")
@@ -77,10 +70,24 @@ def resultados():
     user_id = session.get("user_id")
     cur = mysql.connection.cursor()
     cur.execute(
-        "SELECT i.id, u.name, i.total_score, i.review_score, i.review_comment, u.id FROM iterations i INNER JOIN users u on i.users_id = u.id;"
+        """SELECT
+        u.id, u.name, e.score, e.users_answer, e.review_score, e.review_comment, e.created_at
+        FROM exams AS e
+        INNER JOIN users AS u ON u.id = e.user_id;"""
     )
-    data = cur.fetchall()
+    exams = cur.fetchall()
     cur.close()
+
+    data = []
+    for ex in exams:
+        res = {
+            "user_id": ex[0],
+            "user_name": ex[1],
+            "score": ex[2],
+            "review_score": ex[4],
+            "review_comment": ex[5],
+        }
+        data.append(res)
 
     return render_template(
         "resultados.html", name_now=name_now, data=data, user_id=user_id
@@ -204,11 +211,19 @@ def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if "name_now" not in session:
-            return redirect(url_for("index"))
+            return redirect(url_for("index", require_login = True, redirect_for = '/exame'))
         return f(*args, **kwargs)
 
     return decorated_function
 
+@app.route("/exame")
+@login_required
+def exame():
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
+    else:
+        name_now = None
+    return render_template("exame.html", name_now=name_now)
 
 @app.route("/avaliar")
 @login_required
@@ -227,41 +242,21 @@ def certificado():
     return render_template("components/certificado.html", user_name=user_name)
 
 
-# Quizz ainda nao funcionando pois falta o interaction_id
-@app.route("/submit-score", methods=["POST"])
-def submit_score():
-    data = request.json
-    total_correct = data.get("totalCorrect")
-    user_answers = data.get("userAnswers")
-    print(f"Quantidade de questões corretas recebidas: {total_correct}")
-
-    # cursor = mysql.connection.cursor()
-    # cursor.execute('''
-    #     INSERT INTO quizzes (score, users_answer)
-    #     VALUES (%s, %s)
-    # ''', (total_correct, user_answers))
-    # mysql.connection.commit()
-    # cursor.close()
-
-    return jsonify(
-        {"status": "success", "totalCorrect": total_correct, "userAnswer": user_answers}
-    )
-
-
 @app.route("/submit-score-exame", methods=["POST"])
 def submit_score_exame():
     data = request.json
     total_correct = data.get("totalCorrect")
     users_answer = data.get("userAnswers")
+    user_id = session.get("user_id")
 
     try:
         cursor = mysql.connection.cursor()
         cursor.execute(
             """
-            INSERT INTO exams (score, users_answer, created_at)
-            VALUES (%s, %s, NOW())
-        """,
-            (total_correct, users_answer),
+            INSERT INTO exams (user_id, score, users_answer, created_at)
+            VALUES (%s, %s, %s, NOW())
+            """,
+            (user_id, total_correct, users_answer),
         )
         mysql.connection.commit()
         cursor.close()
@@ -288,7 +283,9 @@ def submit_avaliacao():
     print(id_user)
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """ INSERT INTO iterations(review_comment, review_score, created_at, users_id) VALUES(%s, %s, NOW(), %s) """,
+        """ UPDATE exams
+        SET review_comment = %s, review_score = %s
+        WHERE user_id = %s AND review_score IS NULL""",
         (comentario, estrelas, id_user),
     )
     mysql.connection.commit()
@@ -320,13 +317,13 @@ def calcular_media_acertos():
     cursor = mysql.connection.cursor()
     cursor.execute(
         """
-        SELECT AVG(total_score) AS media_total_score
-        FROM iterations
-    """
+        SELECT AVG(score) AS media_total_score
+        FROM exams
+        """
     )
 
     media_de_acertos = cursor.fetchone()[0]
-    media_de_acertos = (media_de_acertos / 16) * 100
+    media_de_acertos = (media_de_acertos / 10) * 100
     cursor.close()
 
     return media_de_acertos

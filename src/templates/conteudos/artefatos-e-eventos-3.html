@@ -264,7 +264,7 @@ Artefatos e Eventos - Parte 3
     <span>Conteúdo Anterior</span>
   </button>
 </a>
-<a href="e">
+<a href="/estimativas">
   <button class="botao-nextpage">
     <span>Proximo Conteúdo</span>
     <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -321,12 +321,16 @@ Artefatos e Eventos - Parte 3
         totalAcertos += 1;
       }
 
+      questoes.displayPopover(totalAcertos, "/estimativas", "Próximo: Estimativas")
+
+      /*
       let data = {
         "totalCorrect": totalAcertos,
         "userAnswers": [ respostasQ1, respostasQ2 ],
       };
 
-      questoes.submitScore(data, "/estimativas", "Próximo: Estimativas");
+      questoes.submitScore(data);
+      */
     });
   });
 </script>
