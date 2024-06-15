@@ -95,8 +95,9 @@ O menu de navegação, ou barra de navegação está localizada no canto superio
 - Se já estiver cadastrado:
 ![Janela - Logado](./manual-images/5.png)
 
-
-- Se ainda não se cadastrou, preencha com nome completo:
+>*Obs:* *Atenção, o nome que for cadastrado aqui não poderá ser alterado e será ele que aparecerá em seu certificado ao finalizar o curso.
+- Se ainda não se cadastrou, preencha com nome completo:*
+>
 ![Janela - Colocar nome](./manual-images/6.png)
 
 
