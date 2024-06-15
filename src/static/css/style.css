@@ -364,7 +364,8 @@ footer p {
   margin-bottom: 40px;
 }
 
-.title h2 {
+.title h2,
+.title h3 {
   display: inline;
   padding: 8px 32px 8px 10%;
   text-align: right;
@@ -632,9 +633,11 @@ form .container {
   align-items: center;
   justify-content: left;
 }
-.enunciado-questoes p{
+
+.enunciado-questoes p {
   margin-top: 20px;
 }
+
 .numeracao-questoes {
   display: flex;
   align-items: center;
@@ -896,7 +899,7 @@ button:active {
   width: 100%;
 }
 
-.card-cadastro1 > * {
+.card-cadastro1>* {
   margin: 0;
 }
 
@@ -1099,4 +1102,13 @@ button:active {
 
 .dropdown-title {
   font-weight: bold;
+}
+
+.burndown-ex img {
+  max-width: 75%;
+  height: auto;
+}
+
+#btn-fer {
+  width: auto;
 }

@@ -15,7 +15,6 @@ import matplotlib
 
 matplotlib.use("Agg")
 from matplotlib.backend_tools import cursors
-
 import matplotlib.pyplot as plt
 import io
 from functools import wraps
@@ -40,6 +39,16 @@ def index():
         name_now = None
     return render_template("index.html", name_now=name_now)
 
+
+@app.route("/ferramentas")
+def ferramentas():
+
+    if session.get("name_now"):
+        name_now = session.get("name_now").split()[0]
+
+    else:
+        name_now = None
+    return render_template("ferramentas.html", name_now=name_now)
 
 @app.route("/sobre_nos")
 def sobre_nos():
