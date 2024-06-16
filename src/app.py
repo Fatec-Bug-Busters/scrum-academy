@@ -87,7 +87,10 @@ def resultados():
             "review_score": ex[3],
             "review_comment": ex[4],
             # "created_at": datetime.datetime.strptime(str(ex[5]), "%d/%m/%Y %H:%M"),
-            "created_at": ex[5].strftime("%d/%m/%Y %H:%M"),
+            "created_at": ex[5]
+            .replace(tzinfo=datetime.timezone(datetime.timedelta(hours=+3)))
+            .astimezone(tz=None)
+            .strftime("%d/%m/%Y %H:%M"),
         }
         data.append(res)
 
