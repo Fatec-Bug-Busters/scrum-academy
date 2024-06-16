@@ -1018,8 +1018,24 @@ Exame Final
 
 
         // Enviar totalCorrect para o servidor
-        const data = { totalCorrect: totalCorrect, userAnswers: userAnswers }
-        questoes.submitScore(data, (dataS, status) => console.log("Server response", dataS));
+        const data = { totalCorrect: totalCorrect }
+        // questoes.submitScore(data, (dataS, status) => console.log("Server response", dataS));
+        $.ajax({
+          url: '/submit-score-exame',
+          method: 'POST',
+          contentType: 'application/json',
+          dataType: 'json',
+          data: JSON.stringify(data),
+          success: function (dataS, status, jqXHR) {
+            console.log('data', data);
+
+            // // Mostrar mensagem ao usuário
+            // displayPopover(dataS.totalCorrect);
+          },
+          error: function () {
+            console.error('Erro ao enviar dados:', error);
+          },
+        });
         /*
         try {
 

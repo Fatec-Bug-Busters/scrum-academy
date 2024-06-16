@@ -14,7 +14,6 @@ create table exams (
     `id` int auto_increment primary key,
     `user_id` int not null,
     `score` int not null,
-    `users_answer` varchar(255) not null,
     `review_score` int null,
     `review_comment` varchar(255) null,
     `created_at` datetime not null,

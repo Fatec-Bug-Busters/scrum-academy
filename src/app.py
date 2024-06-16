@@ -70,7 +70,7 @@ def resultados():
     cur = mysql.connection.cursor()
     cur.execute(
         """SELECT
-        u.id, u.name, e.score, e.users_answer, e.review_score, e.review_comment, e.created_at
+        u.id, u.name, e.score, e.review_score, e.review_comment, e.created_at
         FROM exams AS e
         INNER JOIN users AS u ON u.id = e.user_id
         ORDER BY e.created_at DESC;"""
@@ -248,17 +248,16 @@ def certificado():
 def submit_score_exame():
     data = request.json
     total_correct = data.get("totalCorrect")
-    users_answer = data.get("userAnswers")
     user_id = session.get("user_id")
 
     try:
         cursor = mysql.connection.cursor()
         cursor.execute(
             """
-            INSERT INTO exams (user_id, score, users_answer, created_at)
+            INSERT INTO exams (user_id, score, created_at)
             VALUES (%s, %s, %s, NOW())
             """,
-            (user_id, total_correct, users_answer),
+            (user_id, total_correct),
         )
         mysql.connection.commit()
         cursor.close()
@@ -267,7 +266,6 @@ def submit_score_exame():
             {
                 "status": "success",
                 "totalCorrect": total_correct,
-                "userAnswers": users_answer,
             }
         )
     except Exception as e:
