@@ -1112,3 +1112,7 @@ button:active {
 #btn-fer {
   width: auto;
 }
+.botao-footer {
+  white-space: nowrap;
+}
+
