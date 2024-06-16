@@ -41,7 +41,7 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 
 ## Cronograma e Sprints
 
-- [Backlog do Produto](./backlog-do-produto.xlsx)
+- [Backlog do Produto](./docs/Backlog%20do%20produto.xlsx)
 - [Protótipo - Fase 1](./docs/prototipo-1.md)
 - [Protótipo - Fase 2](./docs/prototipo-2.md)
 - [Protótipo - Fase 3](./docs/prototipo-3.md)
