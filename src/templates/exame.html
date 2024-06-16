@@ -29,7 +29,7 @@ Exame Final
     <hr>
 
 
-    <form action="/submit" method="POST">
+    <form action="/" method="POST">
       <!-- QUESTOES -->
 
       <div class="container" onclick="toggleText(this)">
@@ -456,11 +456,12 @@ Exame Final
                 <p class="m-0 p-0">
                   O evento Scrum chamado
                   <input type="text" class="border-0 border-bottom bg-transparent mx-2 text-center" name="q11-1"
-                    id="q11-1" value="" disabled>
-                    ocorre diariamente e permite ao time sincronizar atividades e planejar o trabalho das próximas 24 horas, enquanto o
+                    id="q11-1" value="" disabled required>
+                  ocorre diariamente e permite ao time sincronizar atividades e planejar o trabalho das próximas 24
+                  horas, enquanto o
                   <input type="text" class="border-0 border-bottom bg-transparent mx-2 text-center" name="q11-2"
-                    id="q11-2" value="" disabled>
-                    é realizado no final de cada Sprint para inspecionar e adaptar o processo.
+                    id="q11-2" value="" disabled required>
+                  é realizado no final de cada Sprint para inspecionar e adaptar o processo.
                 </p>
               </div>
               <div
@@ -479,7 +480,8 @@ Exame Final
                 </div>
                 <div class="mx-3">
                   <input type="checkbox" class="btn-check" name="q11" id="q11d" value="d" autocomplete="off">
-                  <label class="btn btn-primary rounded-pill px-4" id="q11d-label" for="q11d">Sprint Retrospective</label>
+                  <label class="btn btn-primary rounded-pill px-4" id="q11d-label" for="q11d">Sprint
+                    Retrospective</label>
                 </div>
                 <div class="mx-3">
                   <input type="checkbox" class="btn-check" name="q11" id="q11e" value="e" autocomplete="off">
@@ -507,11 +509,11 @@ Exame Final
                 <p class="m-0 p-0">
                   Durante o Sprint Planning, o time de desenvolvimento define o
                   <input type="text" class="border-0 border-bottom bg-transparent mx-2 text-center" name="q12-1"
-                    id="q12-1" value="" disabled>
-                    que será realizado durante a Sprint, enquanto o
+                    id="q12-1" value="" disabled required>
+                  que será realizado durante a Sprint, enquanto o
                   <input type="text" class="border-0 border-bottom bg-transparent mx-2 text-center" name="q12-2"
-                    id="q12-2" value="" disabled>
-                    é revisado e priorizado para refletir as mudanças e novas prioridades.
+                    id="q12-2" value="" disabled required>
+                  é revisado e priorizado para refletir as mudanças e novas prioridades.
                   .
                 </p>
               </div>
@@ -531,7 +533,8 @@ Exame Final
                 </div>
                 <div class="mx-3">
                   <input type="checkbox" class="btn-check" name="q12" id="q12d" value="d" autocomplete="off">
-                  <label class="btn btn-primary rounded-pill px-4" id="q12d-label" for="q12d">Sprint Retrospective</label>
+                  <label class="btn btn-primary rounded-pill px-4" id="q12d-label" for="q12d">Sprint
+                    Retrospective</label>
                 </div>
                 <div class="mx-3">
                   <input type="checkbox" class="btn-check" name="q12" id="q12e" value="e" autocomplete="off">
@@ -559,11 +562,11 @@ Exame Final
                 <p class="m-0 p-0">
                   Na metodologia ágil Scrum, o
                   <input type="text" class="border-0 border-bottom bg-transparent mx-2 text-center" name="q13-1"
-                    id="q13-1" value="" disabled>
-                    é responsável por remover impedimentos que atrapalham o progresso do time, enquanto o
+                    id="q13-1" value="" disabled required>
+                  é responsável por remover impedimentos que atrapalham o progresso do time, enquanto o
                   <input type="text" class="border-0 border-bottom bg-transparent mx-2 text-center" name="q13-2"
-                    id="q13-2" value="" disabled>
-                    é responsável por maximizar o valor do trabalho realizado pela equipe.
+                    id="q13-2" value="" disabled required>
+                  é responsável por maximizar o valor do trabalho realizado pela equipe.
                 </p>
               </div>
               <div
@@ -586,7 +589,8 @@ Exame Final
                 </div>
                 <div class="mx-3">
                   <input type="checkbox" class="btn-check" name="q13" id="q13e" value="e" autocomplete="off">
-                  <label class="btn btn-primary rounded-pill px-4" id="q13e-label" for="q13e">Time de Desenvolvimento</label>
+                  <label class="btn btn-primary rounded-pill px-4" id="q13e-label" for="q13e">Time de
+                    Desenvolvimento</label>
                 </div>
               </div>
             </div>
@@ -601,7 +605,8 @@ Exame Final
               <p>14</p>
             </div>
             <div class="enunciado-texto">
-              <p>Associe a primeira e a segunda coluna, relacionando os eventos e artefatos do Scrum com suas descrições.</p>
+              <p>Associe a primeira e a segunda coluna, relacionando os eventos e artefatos do Scrum com suas
+                descrições.</p>
             </div>
           </div>
           <div class="question hidden">
@@ -814,7 +819,8 @@ Exame Final
                   </div>
                   <div class="mx-3">
                     <input type="checkbox" class="btn-check" name="q16" id="q16e2" value="e2" autocomplete="off">
-                    <label class="btn btn-outline-primary rounded-pill px-4" for="q16e2">Revisão contínua para garantir a qualidade do produto.
+                    <label class="btn btn-outline-primary rounded-pill px-4" for="q16e2">Revisão contínua para garantir
+                      a qualidade do produto.
                     </label>
                   </div>
                 </div>
@@ -827,11 +833,9 @@ Exame Final
         </div>
       </div>
 
-
-
     </form>
 
-    <button type="button" class="submit-btn" onclick="validateForm()">Enviar exame</button>
+    <button type="button" id="submit-exam" class="submit-btn">Enviar exame</button>
 
     <div id="resultPopup" class="popup" style="display: none;">
       <div id="popupContent">
@@ -845,9 +849,9 @@ Exame Final
   {%block quizjs%}
   {%if not name_now%}
   <script>
-    $(document).ready(function(){
-        $('#ModalLogin').modal({show:false})
-       $('#ModalLogin').modal('show')
+    $(document).ready(function () {
+      $('#ModalLogin').modal({ show: false })
+      $('#ModalLogin').modal('show')
     })
   </script>
   {%endif%}
@@ -855,17 +859,17 @@ Exame Final
     $(document).ready(function () {
 
       /* Questões Modelo 3: 2 altenativas corretas - completar lacunas */
-      const respostasCorretasQ11 = ['b', 'd'];
+      const respostasCorretasQ11 = [ 'b', 'd' ];
       const respostasQ11 = []
       questoes.limitChoices(2, 'q11', respostasQ11, questoes.fillBlanks);
 
       /* Questões Modelo 3: 2 altenativas corretas - completar lacunas */
-      const respostasCorretasQ12 = ['a', 'b'];
+      const respostasCorretasQ12 = [ 'a', 'b' ];
       const respostasQ12 = []
       questoes.limitChoices(2, 'q12', respostasQ12, questoes.fillBlanks);
 
       /* Questões Modelo 3: 2 altenativas corretas - completar lacunas */
-      const respostasCorretasQ13 = ['a', 'b'];
+      const respostasCorretasQ13 = [ 'a', 'b' ];
       const respostasQ13 = []
       questoes.limitChoices(2, 'q13', respostasQ13, questoes.fillBlanks);
 
@@ -880,8 +884,8 @@ Exame Final
       const respostasQ14 = {};
       questoes.assoc('q14', respostasQ14);
 
-       /** Questões Modelo 4: Associar colunas */
-       const respostasCorretasQ15 = {
+      /** Questões Modelo 4: Associar colunas */
+      const respostasCorretasQ15 = {
         'a1': 'b2',
         'b1': 'a2',
         'c1': 'c2',
@@ -891,79 +895,155 @@ Exame Final
       const respostasQ15 = {};
       questoes.assoc('q15', respostasQ15)
 
-         /** Questões Modelo 4: Associar colunas */
-         const respostasCorretasQ16 = {
-          'a1': 'd2',
-          'b1': 'c2',
-          'c1': 'a2',
-          'd1': 'b2',
-          'e1': 'e2',
-        };
-        const respostasQ16 = {};
-        questoes.assoc('q16', respostasQ16)
-
-    });
-
-    async function validateForm() {
-      const correctAnswers = {
-        q1: 'a',
-        q2: 'b',
-        q3: 'd',
-        q4: 'b',
-        q5: 'a',
-        q6: 'a',
-        q7: 'a',
-        q8: 'c',
-        q9: 'b',
-        q10: 'd'
+      /** Questões Modelo 4: Associar colunas */
+      const respostasCorretasQ16 = {
+        'a1': 'd2',
+        'b1': 'c2',
+        'c1': 'a2',
+        'd1': 'b2',
+        'e1': 'e2',
       };
+      const respostasQ16 = {};
+      questoes.assoc('q16', respostasQ16)
 
-      const userAnswers = {};
-      let totalCorrect = 0;
+      // Valida questões e envia para o servidor
+      $("#submit-exam").on('click', function () {
+        const correctAnswers = {
+          q1: 'a',
+          q2: 'b',
+          q3: 'd',
+          q4: 'b',
+          q5: 'a',
+          q6: 'a',
+          q7: 'a',
+          q8: 'c',
+          q9: 'b',
+          q10: 'd'
+        };
 
-      for (const question in correctAnswers) {
-        const selectedOption = document.querySelector(`input[name=${ question }]:checked`);
-        const isCorrect = selectedOption ? selectedOption.value === correctAnswers[ question ] : false;
-        if (isCorrect) {
-          totalCorrect++;
+        const userAnswers = {};
+        let totalCorrect = 0;
+
+        for (const question in correctAnswers) {
+          const selectedOption = document.querySelector(`input[name=${ question }]:checked`);
+          if (selectedOption) {
+            // check if the answer is correct
+            if (selectedOption.value === correctAnswers[ question ]) {
+              totalCorrect++;
+            }
+            userAnswers[ question ] = selectedOption.value;
+          }
         }
-        userAnswers[ question ] = selectedOption.value;
-      }
 
-      const popup = document.getElementById("resultPopup");
-      const overlay = document.getElementById("overlay");
-      const popupContent = document.getElementById("popupContent");
-      popupContent.innerHTML = `
-          <div class="card-cadastro1">
-              <span class="titulo-cadastro">Parabéns!</span>
-              <p class="mensagem-cadastro" style="margin-bottom: 20px">Você concluiu o exame. Agora, para conseguir visualizar suas pontuações, faça uma rápida avaliação do nosso site.</p>
-              <div class="cadastro" style="display: flex;">
-                  <a href="/avaliar">
-                      <button class="botao-enviar-email">Realizar avaliação</button>
-                  </a>
-              </div>
-          </div>`;
-      popup.style.display = "block";
-      overlay.style.display = "block";
+        // Corrige a questão 11 a 16
+        let certa11 = questoes.valida(respostasQ11, respostasCorretasQ11);
+        if (certa11) {
+          totalCorrect += 1;
+        }
+        let certa12 = questoes.valida(respostasQ12, respostasCorretasQ12);
+        if (certa12) {
+          totalCorrect += 1;
+        }
+        let certa13 = questoes.valida(respostasQ13, respostasCorretasQ13);
+        if (certa13) {
+          totalCorrect += 1;
+        }
+        let certa14 = questoes.valida(respostasQ14, respostasCorretasQ14);
+        if (certa14) {
+          totalCorrect += 1;
+        }
+        let certa15 = questoes.valida(respostasQ15, respostasCorretasQ15);
+        if (certa15) {
+          totalCorrect += 1;
+        }
+        let certa16 = questoes.valida(respostasQ16, respostasCorretasQ16);
+        if (certa16) {
+          totalCorrect += 1;
+        }
+
+        // add questões 11 a 16 às respostas do usuário
+        userAnswers[ 'q11' ] = respostasQ11;
+        userAnswers[ 'q12' ] = respostasQ12;
+        userAnswers[ 'q13' ] = respostasQ13;
+        userAnswers[ 'q14' ] = respostasQ14;
+        userAnswers[ 'q15' ] = respostasQ15;
+        userAnswers[ 'q16' ] = respostasQ16;
+
+        // Verifica se todas as questões foram respondidas
+        console.log('user answers', userAnswers);
+        console.log(Object.keys(userAnswers).length)
+        if (Object.keys(userAnswers).length < 16) {
+          // display popover
+          const popup = document.getElementById("resultPopup");
+          const overlay = document.getElementById("overlay");
+          const popupContent = document.getElementById("popupContent");
+          popupContent.innerHTML = `
+            <div class="card-cadastro1">
+                <span class="titulo-cadastro">Responda todas as questões!</span>
+                <p class="mensagem-cadastro" style="margin-bottom: 20px">Confira se você respondeu todas as questões antes de enviar as suas respostas.</p>
+                <div class="cadastro" style="display: flex;">
+                  <button id="voltar" class="botao-enviar-email">Voltar</button>
+                </div>
+            </div>`;
+          popup.style.display = "block";
+          overlay.style.display = "block";
+
+          /** Close popup */
+          $("#overlay, #voltar").on('click', function () {
+            // Close pop up
+            const popup = $("#resultPopup");
+            const overlay = $("#overlay");
+            popup.css({ display: "none" })
+            overlay.css({ display: "none" })
+          });
+
+          return false;
+        }
 
 
-      // Enviar totalCorrect para o servidor Flask
-      try {
-        const response = await fetch('/submit-score-exame', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ totalCorrect: totalCorrect, userAnswers: userAnswers })
-        });
+        // display popover
+        const popup = document.getElementById("resultPopup");
+        const overlay = document.getElementById("overlay");
+        const popupContent = document.getElementById("popupContent");
+        popupContent.innerHTML = `
+            <div class="card-cadastro1">
+                <span class="titulo-cadastro">Parabéns!</span>
+                <p class="mensagem-cadastro" style="margin-bottom: 20px">Você concluiu o exame. Agora, para conseguir visualizar suas pontuações, faça uma rápida avaliação do nosso site.</p>
+                <div class="cadastro" style="display: flex;">
+                    <a href="/avaliar">
+                        <button class="botao-enviar-email">Realizar avaliação</button>
+                    </a>
+                </div>
+            </div>`;
+        popup.style.display = "block";
+        overlay.style.display = "block";
+
+
+        // Enviar totalCorrect para o servidor
+        const data = { totalCorrect: totalCorrect, userAnswers: userAnswers }
+        console.log(data)
+        questoes.submitScore(data, (dataS, status) => console.log("Server response", dataS));
+        /*
+        try {
+
+          // submit score to server
+          const response = await fetch('/submit-score-exame', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ totalCorrect: totalCorrect, userAnswers: userAnswers })
+          });
 
 
 
-        const result = await response.json();
-        console.log(result);
-      } catch (error) {
-        console.error('Erro ao enviar dados:', error);
-      }
-    }
+          const result = await response.json();
+          console.log(result);
+        } catch (error) {
+          console.error('Erro ao enviar dados:', error);
+        }
+        */
+      });
+    });
   </script>
   {% endblock %}
