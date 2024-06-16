@@ -378,19 +378,14 @@
       var redirectFor = urlParams.get('redirect_for');
 
       if (requireLogin == "True") {
-        $('#ModalLogin').modal({ show: false })
-        $('#ModalLogin').modal('show')
+        console.log('Mostrando ModalLogin');
+        $('#ModalLogin').modal('show');
 
-        // redirect after login
-        $('#ModalLoginSucess').on('hide.bs.modal', function () {
-          window.location.assign(redirectFor);
+        $('#ModalLogin').on('hidden.bs.modal', function () {
+            console.log('Mostrando ModalLoginSucess');
+            window.location.assign(redirectFor);
         });
       }
-
-      // redirect on logout
-      $("#ModalLogout").on("hide.bs.modal", function () {
-        window.location.assign("/")
-      });
     });
   </script>
 
