@@ -36,7 +36,7 @@ Resultados
         <th>Nome</th>
         <th>Nota</th>
         <th>Avaliação</th>
-
+        <th class="d-none d-sm-table-cell">Data</th>
         <th>Certificado</th>
       </tr>
     </thead>
@@ -68,6 +68,9 @@ Resultados
             <i class="bi bi-chat-dots"></i>
           </button>
           {% endif %}
+        </td>
+        <td class="d-none d-sm-table-cell">
+          {{ ex["created_at"]}}
         </td>
 
         {% if user_id == ex['user_id'] %}

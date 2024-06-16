@@ -84,8 +84,10 @@ def resultados():
             "user_id": ex[0],
             "user_name": ex[1],
             "score": ex[2],
-            "review_score": ex[4],
-            "review_comment": ex[5],
+            "review_score": ex[3],
+            "review_comment": ex[4],
+            # "created_at": datetime.datetime.strptime(str(ex[5]), "%d/%m/%Y %H:%M"),
+            "created_at": ex[5].strftime("%d/%m/%Y %H:%M"),
         }
         data.append(res)
 
@@ -250,26 +252,23 @@ def submit_score_exame():
     total_correct = data.get("totalCorrect")
     user_id = session.get("user_id")
 
-    try:
-        cursor = mysql.connection.cursor()
-        cursor.execute(
-            """
-            INSERT INTO exams (user_id, score, created_at)
-            VALUES (%s, %s, %s, NOW())
-            """,
-            (user_id, total_correct),
-        )
-        mysql.connection.commit()
-        cursor.close()
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """
+        INSERT INTO exams (user_id, score, created_at)
+        VALUES (%s, %s, NOW())
+        """,
+        (user_id, total_correct),
+    )
+    mysql.connection.commit()
+    cursor.close()
 
-        return jsonify(
-            {
-                "status": "success",
-                "totalCorrect": total_correct,
-            }
-        )
-    except Exception as e:
-        return jsonify({"status": "error", "message": str(e)}), 500
+    return jsonify(
+        {
+            "status": "success",
+            "totalCorrect": total_correct,
+        }
+    )
 
 
 @app.route("/submit-avaliacao", methods=["POST"])
