@@ -380,10 +380,17 @@
         console.log('Mostrando ModalLogin');
         $('#ModalLogin').modal('show');
 
-        $('#ModalLogin').on('hidden.bs.modal', function () {
-            console.log('Mostrando ModalLoginSucess');
-            window.location.assign(redirectFor);
-        });
+        if($('#ModalLogin').on('hidden.bs.modal')){
+          $('#ModalLogin').on('hidden.bs.modal', function () {
+              console.log('Mostrando ModalLoginSucess');
+              window.location.assign(redirectFor);
+          });
+        }else{
+          $('#ModalNewUser').on('hidden.bs.modal', function () {
+              console.log('Mostrando ModalLoginSucess');
+              window.location.assign('/exame');
+          });
+        }
       }
     });
   </script>
