@@ -182,4 +182,4 @@ O menu de navegação, ou barra de navegação está localizada no canto superio
 - Agora, na página resultados, você poderá ver quanto você e os outros usuários tiraram em seus exames. Caso sua nota seja maior que 70%, poderá abrir seu certificado no botão ao lado de seus dados na tabela (note que há um gráfico com a taxa de aproveitamento geral dos usuário em relação ao curso):
 ![Página resultados](./manual-images/26.png)
 
--Se você chegou até aqui, parabéns! Você concluiu todo o User Pathing de nosso site "Scrum Academy"!
+- ## Se você chegou até aqui, parabéns! Você concluiu todo o User Pathing de nosso site "Scrum Academy"!
