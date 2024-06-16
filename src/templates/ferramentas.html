@@ -2,11 +2,10 @@
 
 {% block title %}Ferramentas{% endblock %}
 
+<!-- Imagem cover -->
 {% block cover_img %}
 <br>
-<div class="burndown-ex text-center">
-  <img src="{{url_for('static', filename='images/ferramentas.png')}}" alt="Cover Conteudo">
-</div>
+<img src="{{url_for('static', filename='images/ferramentas.jpg')}}" alt="Ferramentas sugeridas para Scrum">
 {% endblock %}
 
 
@@ -14,141 +13,167 @@
 {% block cover_text %} Ferramentas Sugeridas {% endblock %}
 
 {% block content %}
-<div class="texto-introducao-home">
-  <p>Essas ferramentas são essenciais para a implementação eficaz do Scrum, promovendo a transparência, a comunicação e
-    a melhoria contínua no processo de desenvolvimento de software. Elas ajudam a equipe a manter o foco, gerenciar seu
-    trabalho de maneira eficaz e entregar valor continuamente aos stakeholders.</p>
-</div>
-
-<div class="title">
-  <h2>Product Backlog</h2>
-</div>
-<div class="texto-introducao-home">
-  <p>O Product Backlog é uma lista ordenada de todas as funcionalidades, melhorias, correções e requisitos que precisam
-    ser implementados no produto. Mantido pelo Product Owner, o backlog é dinâmico e evolui conforme o produto e o
-    mercado mudam. Serve como a fonte principal de requisitos para o produto. Cada item do backlog (chamado de Product
-    Backlog Item, ou PBI) tem uma descrição, prioridade e estimativa de esforço. O Product Backlog permite que a equipe
-    de desenvolvimento foque nos itens de maior valor para o negócio, garantindo que o trabalho realizado esteja
-    alinhado com as necessidades e prioridades dos stakeholders. </p>
-  <p>Aqui está um exemplo simples de Product Backlog:</p>
-  <div class="burndown-ex text-center">
-    <figure>
-      <img class="my-4" src="{{url_for('static', filename='images/back-ex.png')}}" alt="backlog"><br>
-      <figcaption>Exemplo de Product Backlog feito em planilha</figcaption>
-    </figure>
-  </div>
-</div>
-
-<div class="title">
-  <h2>Sprint Backlog</h2>
-</div>
-<div class="texto-introducao-home">
-  <p>O Sprint Backlog é uma lista de itens do Product Backlog selecionados para serem trabalhados na Sprint atual, junto
-    com um plano detalhado de como a equipe irá entregar esses itens. É criado durante a Sprint Planning e é propriedade
-    da equipe de desenvolvimento. Serve para detalhar o trabalho que a equipe de desenvolvimento se compromete a
-    concluir durante a Sprint. Inclui não apenas os itens do backlog, mas também as tarefas específicas necessárias para
-    completá-los. Isso ajuda a equipe a manter o foco e a gerenciar seu tempo e recursos de maneira eficaz durante a
-    Sprint. </p>
-</div>
-
-<div class="title">
-  <h3>Jira</h3>
-</div>
-<div class="texto-introducao-home">
-  <p>
-    O Jira é uma plataforma robusta de gerenciamento de projetos utilizada em ambientes ágeis para planejar,
-    desenvolver e acompanhar o desempenho da do projeto e da equipe. Uma das suas funcionalidades chave é o
-    gerenciamento do Sprint Backlog, que permite aos times visualizar e organizar tarefas durante cada Sprint. No Jira,
-    o Sprint Backlog é uma coleção interativa de itens selecionados do Product Backlog, junto com um plano detalhado
-    para a entrega desses itens. Esta ferramenta facilita a distribuição de tarefas, o ajuste de prioridades em tempo
-    real e o monitoramento do progresso através de interfaces visuais intuitivas. O Jira não só ajuda a manter a equipe
-    alinhada com os objetivos do Sprint, mas também proporciona uma visão clara do fluxo de trabalho, desde a concepção
-    até a conclusão, garantindo que todos os envolvidos estejam informados sobre o andamento do projeto.
-  </p>
-  <div class="burndown-ex text-center">
-    <figure>
-      <img class="my-4" src="{{url_for('static', filename='images/jira-screen.png')}}" alt="Tela do Jira">
-      <figcaption>
-        Página do Sprint Backlog no programa
-        <a href="https://www.atlassian.com/software/jira" target="_blank">Jira da
-          Atlassian</a>.
-      </figcaption>
-    </figure>
-  </div>
-</div>
-
-
-<div class="title">
-  <h2>Burndown Chart</h2>
-</div>
-<div class="texto-introducao-home">
-  <p>O Burndown Chart é um gráfico que mostra a quantidade de trabalho restante (eixo y) contra o tempo (eixo x) ao
-    longo da Sprint. A linha de burndown deve idealmente descer de forma consistente, indicando que o trabalho está
-    sendo concluído. Serve para monitorar o progresso da equipe em direção à conclusão dos itens da Sprint. É uma
-    ferramenta visual que ajuda a identificar se a equipe está no caminho certo para completar o trabalho no prazo. Se a
-    linha de burndown não está descendo como esperado, isso pode indicar problemas que precisam ser resolvidos. </p>
-  <p>Aqui está um exemplo simples de Burndown Chart:</p>
-  <div class="burndown-ex text-center">
-    <figure>
-      <img class="my-4" src="{{url_for('static', filename='images/burndown-ex.png')}}" alt="burndown chart"><br>
-      <figcaption>
-        Exemplo do gráfico Burndown chart que mostra o andamento e conclusão das tarefas do projeto.
-      </figcaption>
-    </figure>
-
+<div id="body-f">
+  <div class="texto-introducao-home">
+    <p>Essas ferramentas são essenciais para a implementação eficaz do Scrum, promovendo a transparência, a comunicação
+      e
+      a melhoria contínua no processo de desenvolvimento de software. Elas ajudam a equipe a manter o foco, gerenciar
+      seu
+      trabalho de maneira eficaz e entregar valor continuamente aos stakeholders.</p>
   </div>
 
-</div>
-
-<div class="title">
-  <h2>Scrum Board</h2>
-</div>
-<div class="texto-introducao-home">
-  <p>O Scrum Board é um quadro visual que ajuda a gerenciar as tarefas de uma Sprint. Pode ser um quadro físico com
-    post-its ou uma ferramenta digital como Jira, Trello, ou Azure DevOps. O quadro geralmente está dividido em colunas
-    que representam os diferentes estados das tarefas: To Do (A Fazer), In Progress (Em Progresso), e Done (Feito).
-    Serve para proporcionar visibilidade sobre o andamento das tarefas. Permite que a equipe veja, em tempo real, o que
-    está sendo trabalhado e o que já foi concluído, facilitando a identificação de gargalos e a priorização de tarefas.
-    Também promove a responsabilidade individual e coletiva, pois cada membro da equipe sabe o que os outros estão
-    fazendo.</p>
-  <p>Aqui está um exemplo simples de Scrum Board:</p>
-  <div class="burndown-ex text-center">
-    <figure>
-      <img class="my-4" src="{{url_for('static', filename='images/scrumboard.png')}}" alt="burndown chart"><br>
-      <figcaption>
-        Exemplo de Scrum Board que organiza as tarefas de acordo com o seu estado de conclusão.
-      </figcaption>
-    </figure>
+  <div class="title">
+    <h2>Product Backlog</h2>
+  </div>
+  <div class="texto-introducao-home">
+    <p>O Product Backlog é uma lista ordenada de todas as funcionalidades, melhorias, correções e requisitos que
+      precisam
+      ser implementados no produto. Mantido pelo Product Owner, o backlog é dinâmico e evolui conforme o produto e o
+      mercado mudam. Serve como a fonte principal de requisitos para o produto. Cada item do backlog (chamado de Product
+      Backlog Item, ou PBI) tem uma descrição, prioridade e estimativa de esforço. O Product Backlog permite que a
+      equipe
+      de desenvolvimento foque nos itens de maior valor para o negócio, garantindo que o trabalho realizado esteja
+      alinhado com as necessidades e prioridades dos stakeholders. </p>
+    <div class="media-f">
+      <p>Aqui está um exemplo simples de Product Backlog:</p>
+      <div class="burndown-ex text-center">
+        <figure>
+          <img class="my-4" src="{{url_for('static', filename='images/back-ex.png')}}" alt="backlog"><br>
+          <figcaption>Exemplo de Product Backlog feito em planilha</figcaption>
+        </figure>
+      </div>
+    </div>
   </div>
 
-</div>
-
-<div class="title">
-  <h2>Avaliação com PACER</h2>
-</div>
-<div class="texto-introducao-home">
-  <p>O PACER é uma metodologia estruturada para avaliar e melhorar o desempenho de equipes em projetos ágeis. Consiste
-    em quatro princípios fundamentais: Proatividade, Autonomia, Colaboração e Entrega de Resultados. Utilizando o PACER,
-    cada membro da equipe realiza autoavaliações periódicas para medir seu próprio desempenho em relação a esses
-    pilares. Serve como uma ferramenta de desenvolvimento contínuo, ajudando a equipe a identificar e capitalizar as
-    áreas de força enquanto aborda as necessidades de melhoria. O processo de avaliação PACER incentiva a reflexão
-    individual e o diálogo construtivo dentro da equipe, garantindo que todos os membros estejam alinhados e
-    comprometidos com os objetivos ágeis do projeto. Além disso, a implementação do PACER pode ser integrada às práticas
-    de Scrum, como parte das reuniões de retrospectiva, onde as avaliações podem ser discutidas e planos de ação podem
-    ser formulados para futuras Sprints. Esta metodologia não apenas reforça a cultura de feedback contínuo, mas também
-    promove um ambiente de trabalho mais dinâmico e responsivo, essencial para o sucesso em ambientes ágeis.</p>
-  <p>Aqui está uma <a href="https://github.com/WesleyGoncalves/pacer" target="_blank">ferramenta instalável</a> para
-    realizar a avaliação PACER:</p>
-  <div class="burndown-ex text-center">
-    <figure>
-      <img class="my-4" src="{{url_for('static', filename='images/pacer-screen.png')}}" alt="burndown chart"><br>
-      <figcaption>
-        Página de avaliação com os princípios do PACER. Essa ferramenta está disponível no GitHub
-        <a href="https://github.com/WesleyGoncalves/pacer" target="_blank">wesleygoncalves/pacer</a>.
-      </figcaption>
-    </figure>
+  <div class="title">
+    <h2>Sprint Backlog</h2>
+  </div>
+  <div class="texto-introducao-home">
+    <p>O Sprint Backlog é uma lista de itens do Product Backlog selecionados para serem trabalhados na Sprint atual,
+      junto
+      com um plano detalhado de como a equipe irá entregar esses itens. É criado durante a Sprint Planning e é
+      propriedade
+      da equipe de desenvolvimento. Serve para detalhar o trabalho que a equipe de desenvolvimento se compromete a
+      concluir durante a Sprint. Inclui não apenas os itens do backlog, mas também as tarefas específicas necessárias
+      para
+      completá-los. Isso ajuda a equipe a manter o foco e a gerenciar seu tempo e recursos de maneira eficaz durante a
+      Sprint. </p>
   </div>
 
+  <div class="title">
+    <h3>Jira</h3>
+  </div>
+  <div class="texto-introducao-home">
+    <p>
+      O Jira é uma plataforma robusta de gerenciamento de projetos utilizada em ambientes ágeis para planejar,
+      desenvolver e acompanhar o desempenho da do projeto e da equipe. Uma das suas funcionalidades chave é o
+      gerenciamento do Sprint Backlog, que permite aos times visualizar e organizar tarefas durante cada Sprint. No
+      Jira,
+      o Sprint Backlog é uma coleção interativa de itens selecionados do Product Backlog, junto com um plano detalhado
+      para a entrega desses itens. Esta ferramenta facilita a distribuição de tarefas, o ajuste de prioridades em tempo
+      real e o monitoramento do progresso através de interfaces visuais intuitivas. O Jira não só ajuda a manter a
+      equipe
+      alinhada com os objetivos do Sprint, mas também proporciona uma visão clara do fluxo de trabalho, desde a
+      concepção
+      até a conclusão, garantindo que todos os envolvidos estejam informados sobre o andamento do projeto.
+    <div class="media-f">
+      </p>
+      <div class="burndown-ex text-center">
+        <figure>
+          <img class="my-4" src="{{url_for('static', filename='images/jira-screen.png')}}" alt="Tela do Jira">
+          <figcaption>
+            Página do Sprint Backlog no programa
+            <a href="https://www.atlassian.com/software/jira" target="_blank">Jira da
+              Atlassian</a>.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="title">
+    <h2>Burndown Chart</h2>
+  </div>
+  <div class="texto-introducao-home">
+    <p>O Burndown Chart é um gráfico que mostra a quantidade de trabalho restante (eixo y) contra o tempo (eixo x) ao
+      longo da Sprint. A linha de burndown deve idealmente descer de forma consistente, indicando que o trabalho está
+      sendo concluído. Serve para monitorar o progresso da equipe em direção à conclusão dos itens da Sprint. É uma
+      ferramenta visual que ajuda a identificar se a equipe está no caminho certo para completar o trabalho no prazo. Se
+      a
+      linha de burndown não está descendo como esperado, isso pode indicar problemas que precisam ser resolvidos. </p>
+    <div class="media-f">
+      <p>Aqui está um exemplo simples de Burndown Chart:</p>
+      <div class="burndown-ex text-center">
+        <figure>
+          <img class="my-4" src="{{url_for('static', filename='images/burndown-ex.png')}}" alt="burndown chart"><br>
+          <figcaption>
+            Exemplo do gráfico Burndown chart que mostra o andamento e conclusão das tarefas do projeto.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="title">
+    <h2>Scrum Board</h2>
+  </div>
+  <div class="texto-introducao-home">
+    <p>O Scrum Board é um quadro visual que ajuda a gerenciar as tarefas de uma Sprint. Pode ser um quadro físico com
+      post-its ou uma ferramenta digital como Jira, Trello, ou Azure DevOps. O quadro geralmente está dividido em
+      colunas
+      que representam os diferentes estados das tarefas: To Do (A Fazer), In Progress (Em Progresso), e Done (Feito).
+      Serve para proporcionar visibilidade sobre o andamento das tarefas. Permite que a equipe veja, em tempo real, o
+      que
+      está sendo trabalhado e o que já foi concluído, facilitando a identificação de gargalos e a priorização de
+      tarefas.
+      Também promove a responsabilidade individual e coletiva, pois cada membro da equipe sabe o que os outros estão
+      fazendo.</p>
+    <div class="media-f">
+      <p>Aqui está um exemplo simples de Scrum Board:</p>
+      <div class="burndown-ex text-center">
+        <figure>
+          <img class="my-4" src="{{url_for('static', filename='images/scrumboard.png')}}" alt="burndown chart"><br>
+          <figcaption>
+            Exemplo de Scrum Board que organiza as tarefas de acordo com o seu estado de conclusão.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="title">
+    <h2>Avaliação com PACER</h2>
+  </div>
+  <div class="texto-introducao-home">
+    <p>O PACER é uma metodologia estruturada para avaliar e melhorar o desempenho de equipes em projetos ágeis. Consiste
+      em quatro princípios fundamentais: Proatividade, Autonomia, Colaboração e Entrega de Resultados. Utilizando o
+      PACER,
+      cada membro da equipe realiza autoavaliações periódicas para medir seu próprio desempenho em relação a esses
+      pilares. Serve como uma ferramenta de desenvolvimento contínuo, ajudando a equipe a identificar e capitalizar as
+      áreas de força enquanto aborda as necessidades de melhoria. O processo de avaliação PACER incentiva a reflexão
+      individual e o diálogo construtivo dentro da equipe, garantindo que todos os membros estejam alinhados e
+      comprometidos com os objetivos ágeis do projeto. Além disso, a implementação do PACER pode ser integrada às
+      práticas
+      de Scrum, como parte das reuniões de retrospectiva, onde as avaliações podem ser discutidas e planos de ação podem
+      ser formulados para futuras Sprints. Esta metodologia não apenas reforça a cultura de feedback contínuo, mas
+      também
+      promove um ambiente de trabalho mais dinâmico e responsivo, essencial para o sucesso em ambientes ágeis.</p>
+    <div class="media-f">
+      <p>Aqui está uma <a href="https://github.com/WesleyGoncalves/pacer" target="_blank">ferramenta instalável</a> para
+        realizar a avaliação PACER:</p>
+      <div class="burndown-ex text-center">
+        <figure>
+          <img class="my-4" src="{{url_for('static', filename='images/pacer-screen.png')}}" alt="burndown chart"><br>
+          <figcaption>
+            Página de avaliação com os princípios do PACER. Essa ferramenta está disponível no GitHub
+            <a href="https://github.com/WesleyGoncalves/pacer" target="_blank">wesleygoncalves/pacer</a>.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <br>
 </div>
-<br>
 {% endblock %}
