@@ -258,16 +258,18 @@ footer {
 footer p {
   margin: 0;
 }
-.copyright{
+
+.copyright {
   padding: 20px;
 }
-.botao-footer{
+
+.botao-footer {
   border: 2px #ffffffb7 solid;
   border-radius: 5px;
   padding: 10px;
 }
 
-.botao-footer:hover{
+.botao-footer:hover {
   border-color: #457068;
   background-color: #457068;
   padding: 20px;
@@ -293,7 +295,8 @@ footer p {
   padding: 20px;
   transition: 0.3s;
 }
-.github-icone{
+
+.github-icone {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -353,6 +356,7 @@ footer p {
   color: #fff;
   transform: rotateX(-90deg) translate3d(0, 18px, 2em);
 }
+
 .front {
   background: var(--bs-tertiary-bg2);
   color: #fff;
@@ -364,7 +368,8 @@ footer p {
   margin-bottom: 40px;
 }
 
-.title h2 {
+.title h2,
+.title h3 {
   display: inline;
   padding: 8px 32px 8px 10%;
   text-align: right;
@@ -632,9 +637,11 @@ form .container {
   align-items: center;
   justify-content: left;
 }
-.enunciado-questoes p{
+
+.enunciado-questoes p {
   margin-top: 20px;
 }
+
 .numeracao-questoes {
   display: flex;
   align-items: center;
@@ -896,7 +903,7 @@ button:active {
   width: 100%;
 }
 
-.card-cadastro1 > * {
+.card-cadastro1>* {
   margin: 0;
 }
 
@@ -1099,4 +1106,27 @@ button:active {
 
 .dropdown-title {
   font-weight: bold;
+}
+
+.burndown-ex img {
+  max-width: 100%;
+  height: auto;
+}
+
+#btn-fer {
+  width: auto;
+}
+
+.my-4 {
+  min-width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+  .media-f {
+    display: none;
+  }
+
+  #body-f p {
+    font-size: 16px;
+  }
 }
