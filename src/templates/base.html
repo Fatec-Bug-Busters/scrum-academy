@@ -377,18 +377,15 @@
       var redirectFor = urlParams.get('redirect_for');
 
       if (requireLogin == "True") {
-        console.log('Mostrando ModalLogin');
         $('#ModalLogin').modal('show');
 
-        if($('#ModalLogin').on('hidden.bs.modal')){
+        if ($('#ModalNewUser').is(':visible')) {
           $('#ModalLogin').on('hidden.bs.modal', function () {
-              console.log('Mostrando ModalLoginSucess');
-              window.location.assign(redirectFor);
+            window.location.assign(redirectFor);
           });
-        }else{
+        } else {
           $('#ModalNewUser').on('hidden.bs.modal', function () {
-              console.log('Mostrando ModalLoginSucess');
-              window.location.assign('/exame');
+            window.location.assign('/exame');
           });
         }
       }
