@@ -178,3 +178,6 @@ O menu de navegação, ou barra de navegação está localizada no canto superio
 
 - Antes de ir para a página de resultados, é obrigatório dar um feedback que consiste em uma nota de 1 a 5 que é dada através das estrelas, e um comentário breve. Esperamos sinceridade em seus feedbacks, pois assim, saberemos como melhorar:
 ![Página feedback](./manual-images/25.png)
+
+- Agora, na página resultados, você poderá ver quanto você e os outros usuários tiraram em seus exames. Caso sua nota seja maior que 70%, poderá abrir seu certificado no botão ao lado de seus dados na tabela (note que há um gráfico com a taxa de aproveitamento geral dos usuário em relação ao curso):
+![Página resultados](./manual-images/26.png)
