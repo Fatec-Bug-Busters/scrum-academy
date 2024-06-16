@@ -50,6 +50,7 @@ def ferramentas():
         name_now = None
     return render_template("ferramentas.html", name_now=name_now)
 
+
 @app.route("/sobre_nos")
 def sobre_nos():
     if session.get("name_now"):
@@ -57,8 +58,6 @@ def sobre_nos():
     else:
         name_now = None
     return render_template("sobre_nos.html", name_now=name_now)
-
-
 
 
 @app.route("/resultados")
@@ -73,7 +72,8 @@ def resultados():
         """SELECT
         u.id, u.name, e.score, e.users_answer, e.review_score, e.review_comment, e.created_at
         FROM exams AS e
-        INNER JOIN users AS u ON u.id = e.user_id;"""
+        INNER JOIN users AS u ON u.id = e.user_id
+        ORDER BY e.created_at DESC;"""
     )
     exams = cur.fetchall()
     cur.close()
@@ -211,10 +211,11 @@ def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if "name_now" not in session:
-            return redirect(url_for("index", require_login = True, redirect_for = '/exame'))
+            return redirect(url_for("index", require_login=True, redirect_for="/exame"))
         return f(*args, **kwargs)
 
     return decorated_function
+
 
 @app.route("/exame")
 @login_required
@@ -224,6 +225,7 @@ def exame():
     else:
         name_now = None
     return render_template("exame.html", name_now=name_now)
+
 
 @app.route("/avaliar")
 @login_required

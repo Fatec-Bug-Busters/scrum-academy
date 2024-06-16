@@ -46,8 +46,13 @@ Resultados
         <td>{{ ex["user_id"] }}</td>
         <td>{{ ex['user_name'] }}</td>
         <td>{{ ex['score'] }}</td>
-        <td>{{ ex['review_score'] }}<svg height="24px" id="Layer_1" version="1.2" viewBox="0 0 24 24" width="24px"
-            xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <td>
+          {% if ex['review_score'] == None %}
+          -
+          {% else %}
+          {{ ex['review_score'] }}
+          <svg height="24px" id="Layer_1" version="1.2" viewBox="0 0 24 24" width="24px" xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g>
               <g>
                 <path
@@ -56,11 +61,14 @@ Resultados
               </g>
             </g>
           </svg>
-          </label> <button type="button" class="btn " data-bs-toggle="popover" data-bs-placement="top"
+          </label>
+          <button type="button" class="btn " data-bs-toggle="popover" data-bs-placement="top"
             data-bs-trigger="hover focus touch" data-bs-custom-class="custom-popover"
             data-bs-title="Comentário do Usuário:" data-bs-content="{{ ex['review_comment'] }}">
             <i class="bi bi-chat-dots"></i>
-          </button></td>
+          </button>
+          {% endif %}
+        </td>
 
         {% if user_id == ex['user_id'] %}
         <td><a href="/certificado"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

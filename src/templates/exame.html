@@ -970,8 +970,6 @@ Exame Final
         userAnswers[ 'q16' ] = respostasQ16;
 
         // Verifica se todas as questões foram respondidas
-        console.log('user answers', userAnswers);
-        console.log(Object.keys(userAnswers).length)
         if (Object.keys(userAnswers).length < 16) {
           // display popover
           const popup = document.getElementById("resultPopup");
@@ -1021,7 +1019,6 @@ Exame Final
 
         // Enviar totalCorrect para o servidor
         const data = { totalCorrect: totalCorrect, userAnswers: userAnswers }
-        console.log(data)
         questoes.submitScore(data, (dataS, status) => console.log("Server response", dataS));
         /*
         try {
