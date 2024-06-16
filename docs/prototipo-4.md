@@ -1,4 +1,4 @@
-# Protótipo Fase 3
+# Protótipo Fase 4
 
 ## Home
 
@@ -8,14 +8,18 @@
 
 ![Login](./prototipo-fase-4/login.gif)
 
+## Introdução
+
+![Introdução](./prototipo-fase-4/introducao.gif)
+
 ## Exame
 
-![Exame](./prototipo-fase-3/exame.gif)
+![Exame](./prototipo-fase-4/exame.gif)
 
 ## Resultados
 
-![Resultados](./prototipo-fase-3/resultados.gif)
+![Resultados](./prototipo-fase-4/resultados.gif)
 
 ## Navegando pela aplicação
 
-![Navegação](./prototipo-fase-3/final-total.gif)
+![Navegação](./prototipo-fase-4/final-total.gif)
