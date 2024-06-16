@@ -45,7 +45,7 @@ Edificar-se como exemplo de excelência no que diz respeito à divulgação de i
 - [Protótipo - Fase 1](./docs/prototipo-1.md)
 - [Protótipo - Fase 2](./docs/prototipo-2.md)
 - [Protótipo - Fase 3](./docs/prototipo-3.md)
-- [Protótipo - Fase 3](./docs/prototipo-4.md)
+- [Protótipo - Fase 4](./docs/prototipo-4.md)
 
 ![Roadmap](./docs/roadmap.png)
 

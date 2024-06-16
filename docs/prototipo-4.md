@@ -14,12 +14,12 @@
 
 ## Exame
 
-![Exame](./prototipo-fase-4/exame-avaliar.gif)
+![Exame](./prototipo-fase-4/exame.gif)
 
 ## Resultados
 
-![Resultados](./prototipo-fase-4/resultados-certificado.gif)
+![Resultados](./prototipo-fase-4/resultados.gif)
 
 ## Navegando pela aplicação
 
-![Navegação](./prototipo-fase-4/completo.gif)
+![Navegação](./prototipo-fase-4/final-total.gif)
