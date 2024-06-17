@@ -2,6 +2,8 @@ function toggleText(container) {
   container.classList.add('active');
 }
 
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 $(document).ready(function () {
 
@@ -486,28 +488,33 @@ $(document).ready(function () {
     });
 
     /**
-     * Submit score to the server
+     * Submit exam to the server
+     *
+     * @param {mixed} data  Data to sent to server
+     * @param {Callable} onSuccess  callback executed on success
      */
-    let submitScore = function (data) {
-      /*
-      // Enviar para o servidor
+    let submitScore = function (data, onSuccess) {
       $.ajax({
-        url: '/submit-score',
+        url: '/submit-score-exame',
         method: 'POST',
         contentType: 'application/json',
         dataType: 'json',
         data: JSON.stringify(data),
         success: function (dataS, status, jqXHR) {
           // console.log('data', data)
+          console.log(typeof onSuccess)
 
-          // Mostrar mensagem ao usuário
-          displayPopover(dataS.totalCorrect);
+          // if (onSuccess) {
+          //    onSuccess(dataS, status);
+          // }
+
+          // // Mostrar mensagem ao usuário
+          // displayPopover(dataS.totalCorrect);
         },
         error: function () {
           console.error('Erro ao enviar dados:', error);
         },
       });
-      */
     }
 
     // public methods

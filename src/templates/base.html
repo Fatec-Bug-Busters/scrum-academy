@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon-32x32.png')}}">
 </head>
 
@@ -377,19 +376,18 @@
       var redirectFor = urlParams.get('redirect_for');
 
       if (requireLogin == "True") {
-        $('#ModalLogin').modal({ show: false })
-        $('#ModalLogin').modal('show')
+        $('#ModalLogin').modal('show');
 
-        // redirect after login
-        $('#ModalLoginSucess').on('hide.bs.modal', function () {
-          window.location.assign(redirectFor);
-        });
+        if ($('#ModalNewUser').is(':visible')) {
+          $('#ModalLogin').on('hidden.bs.modal', function () {
+            window.location.assign(redirectFor);
+          });
+        } else {
+          $('#ModalNewUser').on('hidden.bs.modal', function () {
+            window.location.assign('/exame');
+          });
+        }
       }
-
-      // redirect on logout
-      $("#ModalLogout").on("hide.bs.modal", function () {
-        window.location.assign("/")
-      });
     });
   </script>
 

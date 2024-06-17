@@ -50,6 +50,7 @@ def ferramentas():
         name_now = None
     return render_template("ferramentas.html", name_now=name_now)
 
+
 @app.route("/sobre_nos")
 def sobre_nos():
     if session.get("name_now"):
@@ -57,8 +58,6 @@ def sobre_nos():
     else:
         name_now = None
     return render_template("sobre_nos.html", name_now=name_now)
-
-
 
 
 @app.route("/resultados")
@@ -71,9 +70,10 @@ def resultados():
     cur = mysql.connection.cursor()
     cur.execute(
         """SELECT
-        u.id, u.name, e.score, e.users_answer, e.review_score, e.review_comment, e.created_at
+        u.id, u.name, e.score, e.review_score, e.review_comment, e.created_at
         FROM exams AS e
-        INNER JOIN users AS u ON u.id = e.user_id;"""
+        INNER JOIN users AS u ON u.id = e.user_id
+        ORDER BY e.created_at DESC;"""
     )
     exams = cur.fetchall()
     cur.close()
@@ -84,8 +84,13 @@ def resultados():
             "user_id": ex[0],
             "user_name": ex[1],
             "score": ex[2],
-            "review_score": ex[4],
-            "review_comment": ex[5],
+            "review_score": ex[3],
+            "review_comment": ex[4],
+            # "created_at": datetime.datetime.strptime(str(ex[5]), "%d/%m/%Y %H:%M"),
+            "created_at": ex[5]
+            .replace(tzinfo=datetime.timezone(datetime.timedelta(hours=+3)))
+            .astimezone(tz=None)
+            .strftime("%d/%m/%Y %H:%M"),
         }
         data.append(res)
 
@@ -211,10 +216,11 @@ def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if "name_now" not in session:
-            return redirect(url_for("index", require_login = True, redirect_for = '/exame'))
+            return redirect(url_for("index", require_login=True, redirect_for="/exame"))
         return f(*args, **kwargs)
 
     return decorated_function
+
 
 @app.route("/exame")
 @login_required
@@ -224,6 +230,7 @@ def exame():
     else:
         name_now = None
     return render_template("exame.html", name_now=name_now)
+
 
 @app.route("/avaliar")
 @login_required
@@ -246,30 +253,25 @@ def certificado():
 def submit_score_exame():
     data = request.json
     total_correct = data.get("totalCorrect")
-    users_answer = data.get("userAnswers")
     user_id = session.get("user_id")
 
-    try:
-        cursor = mysql.connection.cursor()
-        cursor.execute(
-            """
-            INSERT INTO exams (user_id, score, users_answer, created_at)
-            VALUES (%s, %s, %s, NOW())
-            """,
-            (user_id, total_correct, users_answer),
-        )
-        mysql.connection.commit()
-        cursor.close()
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """
+        INSERT INTO exams (user_id, score, created_at)
+        VALUES (%s, %s, NOW())
+        """,
+        (user_id, total_correct),
+    )
+    mysql.connection.commit()
+    cursor.close()
 
-        return jsonify(
-            {
-                "status": "success",
-                "totalCorrect": total_correct,
-                "userAnswers": users_answer,
-            }
-        )
-    except Exception as e:
-        return jsonify({"status": "error", "message": str(e)}), 500
+    return jsonify(
+        {
+            "status": "success",
+            "totalCorrect": total_correct,
+        }
+    )
 
 
 @app.route("/submit-avaliacao", methods=["POST"])
