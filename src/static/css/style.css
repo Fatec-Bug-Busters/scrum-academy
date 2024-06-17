@@ -1117,6 +1117,11 @@ button:active {
   width: auto;
 }
 
+.botao-footer {
+  white-space: nowrap;
+}
+
+
 .my-4 {
   min-width: 100%;
 }
@@ -1130,3 +1135,4 @@ button:active {
     font-size: 16px;
   }
 }
+
