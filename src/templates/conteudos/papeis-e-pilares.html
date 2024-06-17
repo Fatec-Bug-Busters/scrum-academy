@@ -292,7 +292,7 @@ Pilares e Papéis do Scrum
 </div>
 
 
-<button type="button" class="submit-btn" onclick="validateForm()">Enviar exame</button>
+<button type="button" class="submit-btn" onclick="validateForm()">Enviar quiz</button>
 
 <div id="resultPopup" class="popup" style="display: none;">
   <div id="popupContent">
@@ -327,8 +327,11 @@ Pilares e Papéis do Scrum
 
 {% block referencias %}
 <p>
-  <a href="https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf" target="_blank" rel="noopener noreferrer">
-    SCHWABER, Ken; SUTHERLAND, Jeff. The Scrum Guide - The Definitive Guide to Scrum: The Rules of the Game. Scrum Guide, 2020. Disponível em: https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf. Acesso em: 02 maio 2024.
+  <a href="https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf" target="_blank"
+    rel="noopener noreferrer">
+    SCHWABER, Ken; SUTHERLAND, Jeff. The Scrum Guide - The Definitive Guide to Scrum: The Rules of the Game. Scrum
+    Guide, 2020. Disponível em: https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf. Acesso em: 02
+    maio 2024.
   </a>
 </p>
 {% endblock %}
@@ -342,7 +345,7 @@ Pilares e Papéis do Scrum
   Pilares do Scrum
 </a>
 <a class="list-group-item list-group-item-action Items-Scrollspy-conteudo mb-4" href="#titulo-2">
-  Papéis e Responsabilidades
+  Papéis e Funções
 </a>
 {% endblock %}
 
@@ -358,8 +361,8 @@ Pilares e Papéis do Scrum
     let totalCorrect = 0;
 
     for (const question in correctAnswers) {
-      const selectedOption = document.querySelector(`input[name=${question}]:checked`);
-      const isCorrect = selectedOption ? selectedOption.value === correctAnswers[question] : false;
+      const selectedOption = document.querySelector(`input[name=${ question }]:checked`);
+      const isCorrect = selectedOption ? selectedOption.value === correctAnswers[ question ] : false;
       if (isCorrect) {
         totalCorrect++;
       }
@@ -372,18 +375,19 @@ Pilares e Papéis do Scrum
     popupContent.innerHTML = `
             <div class="card-cadastro1">
                 <span class="titulo-cadastro">Parabéns!</span>
-                <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${totalCorrect} de 2 questões.</p>
+                <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${ totalCorrect } de 2 questões.</p>
                 <div class="cadastro" style="display: flex;">
                     <a href="/artefatos-e-eventos-1">
-                        <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
+                        <button class="botao-enviar-email"> Próximo: Artefatos e Eventos</button>
                     </a>
                 </div>
             </div>`;
     popup.style.display = "block";
     overlay.style.display = "block";
-    
-    
+
+
     // Enviar totalCorrect para o servidor Flask
+    /*
     try {
       const response = await fetch('/submit-score', {
         method: 'POST',
@@ -392,12 +396,13 @@ Pilares e Papéis do Scrum
         },
         body: JSON.stringify({ totalCorrect: totalCorrect, userAnswers: userAnswers })
       });
-      
+
       const result = await response.json();
       console.log(result);
     } catch (error) {
       console.error('Erro ao enviar dados:', error);
     }
+      */
   }
   function closePopup() {
     const popup = document.getElementById("resultPopup");
@@ -407,4 +412,3 @@ Pilares e Papéis do Scrum
   }
 </script>
 {%endblock%}
-

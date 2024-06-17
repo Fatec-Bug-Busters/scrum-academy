@@ -21,7 +21,7 @@ Agora sim, aqui está um guia passo a passo sobre como você pode enviar suas co
 1. Clone o Repositório
 
     ```sh
-    git clone https://github.com/Fatec-Bug-Busters/Busters.git
+    git clone https://github.com/Fatec-Bug-Busters/scrum-academy.git
     ```
 
 2. Navegue até o projeto
@@ -68,7 +68,7 @@ Agora sim, aqui está um guia passo a passo sobre como você pode enviar suas co
    cp .env.template .env
    ```
 
-   Insira as informações do banco de dados
+   Insira as informações do banco de dados no arquivo `.env`
 
    ```env
    MYSQL_HOST=localhost

@@ -123,6 +123,7 @@
   --bs-tertiary-color: #d7edfb;
   --bs-tertiary-color-rgb: 215, 237, 251;
   --bs-tertiary-bg: #232d33;
+  --bs-tertiary-bg2: #1a2125;
   --bs-tertiary-bg-rgb: 35, 45, 51;
   --bs-tertiary-text-emphasis: #d7edfb;
   /* Success * /
@@ -210,11 +211,12 @@ main .content {
   margin-top: 700px;
   min-height: 500px;
   background: var(--bs-tertiary-bg);
-  border-radius: 80px 80px 80px 80px;
-  -webkit-border-radius: 80px 80px 80px 80px;
-  -moz-border-radius: 80px 80px 80px 80px;
-  -ms-border-radius: 80px 80px 80px 80px;
-  -o-border-radius: 80px 80px 80px 80px;
+  border-radius: 80px 80px 0px 0px;
+  -webkit-border-radius: 80px 80px 0px 0px;
+  -moz-border-radius: 80px 80px 0px 0px;
+  -ms-border-radius: 80px 80px 0px 0px;
+  -o-border-radius: 80px 80px 0px 0px;
+  padding-bottom: 30px;
 }
 
 /* COVER */
@@ -249,21 +251,116 @@ main .content {
 
 footer {
   color: var(--bs-body-color);
+  padding-top: 60px;
+  background-color: var(--bs-tertiary-bg2);
 }
 
 footer p {
   margin: 0;
 }
 
-footer .logo-github {
-  margin-left: 2%;
-  min-width: 40px;
-  width: 3%;
+.copyright {
+  padding: 20px;
 }
 
-footer .logo-bug-busters {
-  width: 10%;
-  min-width: 100px;
+.botao-footer {
+  border: 2px #ffffffb7 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.botao-footer:hover {
+  border-color: #457068;
+  background-color: #457068;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.btn-conteudo-footer {
+  display: flex;
+  border: 2px #ffffffb7 solid;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  height: 43px;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.btn-conteudo-footer:hover {
+  color: white !important;
+  border-color: #457068;
+  background-color: #457068;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.github-icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.button-icon {
+  display: flex;
+  border: 3px #fff solid;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.icon {
+  background-color: #fff;
+  padding: 15px 15px 10px 15px;
+  border-radius: 3px;
+}
+
+.icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.cube {
+  transition: all 0.4s;
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 20px;
+}
+
+.button-icon:hover {
+  border-color: #457068;
+}
+
+.button-icon:hover .cube {
+  transform: rotateX(90deg);
+}
+
+.side {
+  position: absolute;
+  height: 56px;
+  width: 200px;
+  display: flex;
+  font-size: 0.8em;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.top {
+  background: #457068;
+  color: #fff;
+  transform: rotateX(-90deg) translate3d(0, 18px, 2em);
+}
+
+.front {
+  background: var(--bs-tertiary-bg2);
+  color: #fff;
+  transform: translate3d(0, 0, 1em);
 }
 
 .title {
@@ -271,7 +368,8 @@ footer .logo-bug-busters {
   margin-bottom: 40px;
 }
 
-.title h2 {
+.title h2,
+.title h3 {
   display: inline;
   padding: 8px 32px 8px 10%;
   text-align: right;
@@ -537,11 +635,13 @@ form .container {
 .enunciado-questoes {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
-.enunciado-questoes p{
+
+.enunciado-questoes p {
   margin-top: 20px;
 }
+
 .numeracao-questoes {
   display: flex;
   align-items: center;
@@ -682,18 +782,6 @@ form .container {
   height: 100%;
 }
 
-.btn-conteudo-footer {
-  display: flex;
-  border-color: rgba(0, 0, 255, 0);
-  color: white;
-  text-decoration: none;
-  height: 43px;
-  align-items: center;
-}
-
-.btn-conteudo-footer:hover {
-  color: white !important;
-}
 
 .bg-cards-conteudo-index {
   background-color: #45706874;
@@ -794,7 +882,7 @@ button:active {
 
 .card-cadastro1 {
   width: 100%;
-  max-width: 500px; 
+  max-width: 500px;
   height: auto;
   padding: 30px;
   text-align: center;
@@ -812,10 +900,10 @@ button:active {
 .header-modal {
   display: flex;
   justify-content: space-between;
-  width: 100%; 
+  width: 100%;
 }
 
-.card-cadastro1 > * {
+.card-cadastro1>* {
   margin: 0;
 }
 
@@ -824,7 +912,7 @@ button:active {
   font-weight: 900;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  width: 100%; 
+  width: 100%;
   text-align: center;
 }
 
@@ -855,7 +943,7 @@ button:active {
   border-radius: 14px;
   border: 1px solid #333;
   color: black;
-  width: 100%; 
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -867,8 +955,8 @@ button:active {
   padding: 15px;
   border-radius: 14px;
   font-weight: bold;
-  width: 100%; 
-  box-sizing: border-box; 
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .botao-enviar-email:hover {
@@ -882,11 +970,11 @@ button:active {
     margin-top: 310px;
     min-height: 500px;
     background: var(--bs-tertiary-bg);
-    border-radius: 40px 40px 80px 80px;
-    -webkit-border-radius: 40px 40px 80px 80px;
-    -moz-border-radius: 40px 40px 80px 80px;
-    -ms-border-radius: 40px 40px 80px 80px;
-    -o-border-radius: 40px 40px 80px 80px;
+    border-radius: 40px 40px 0px 0px;
+    -webkit-border-radius: 40px 40px 0px 0px;
+    -moz-border-radius: 40px 40px 0px 0px;
+    -ms-border-radius: 40px 40px 0px 0px;
+    -o-border-radius: 40px 40px 0px 0px;
   }
 
   .covere img {
@@ -902,11 +990,11 @@ button:active {
     margin-top: 500px;
     min-height: 500px;
     background: var(--bs-tertiary-bg);
-    border-radius: 40px 40px 80px 80px;
-    -webkit-border-radius: 40px 40px 80px 80px;
-    -moz-border-radius: 40px 40px 80px 80px;
-    -ms-border-radius: 40px 40px 80px 80px;
-    -o-border-radius: 40px 40px 80px 80px;
+    border-radius: 40px 40px 0px 0px;
+    -webkit-border-radius: 40px 40px 0px 0px;
+    -moz-border-radius: 40px 40px 0px 0px;
+    -ms-border-radius: 40px 40px 0px 0px;
+    -o-border-radius: 40px 40px 0px 0px;
   }
 
   .covere img {
@@ -1018,3 +1106,33 @@ button:active {
 
 .dropdown-title {
   font-weight: bold;
+}
+
+.burndown-ex img {
+  max-width: 100%;
+  height: auto;
+}
+
+#btn-fer {
+  width: auto;
+}
+
+.botao-footer {
+  white-space: nowrap;
+}
+
+
+.my-4 {
+  min-width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+  .media-f {
+    display: none;
+  }
+
+  #body-f p {
+    font-size: 16px;
+  }
+}
+

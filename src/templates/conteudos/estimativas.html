@@ -222,7 +222,7 @@ Estimativas do Scrum
 </div>
 
 
-<button type="button" id="submit-quiz" class="submit-btn">Enviar exame</button>
+<button type="button" id="submit-quiz" class="submit-btn">Enviar quiz</button>
 
 <div id="resultPopup" class="popup" style="display: none;">
   <div id="popupContent">
@@ -252,6 +252,7 @@ Estimativas do Scrum
     <span>Conteúdo Anterior</span>
   </button>
 </a>
+
 <a href="/exame">
   <button class="botao-nextpage">
     <span>Realizar exame</span>
@@ -261,6 +262,7 @@ Estimativas do Scrum
     </svg>
   </button>
 </a>
+
 {%endblock%}
 
 
@@ -306,12 +308,26 @@ Estimativas do Scrum
         totalAcertos += 1;
       }
 
-      let data = {
-        "totalCorrect": totalAcertos,
-        "userAnswers": [ respostasQ1, respostasQ2 ],
-      };
 
+      questoes.displayPopover(totalAcertos, "/exame", "Próximo: Realizar o Exame")
+      /*
+      let data = {
+        index: 5,
+        totalCorrect: totalAcertos,
+        userAnswers: { q1: respostasQ1.toString(), q2: respostasQ2.toString(), },
+      };
       questoes.submitScore(data);
+
+      const response = await fetch('/submit-score', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      */
     });
   });
 </script>

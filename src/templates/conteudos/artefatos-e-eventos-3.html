@@ -235,7 +235,7 @@ Artefatos e Eventos - Parte 3
 </div>
 
 
-<button type="button" id="submit-quiz" class="submit-btn">Enviar exame</button>
+<button type="button" id="submit-quiz" class="submit-btn">Enviar quiz</button>
 
 <div id="resultPopup" class="popup" style="display: none;">
   <div id="popupContent">
@@ -321,12 +321,16 @@ Artefatos e Eventos - Parte 3
         totalAcertos += 1;
       }
 
+      questoes.displayPopover(totalAcertos, "/estimativas", "Próximo: Estimativas")
+
+      /*
       let data = {
         "totalCorrect": totalAcertos,
         "userAnswers": [ respostasQ1, respostasQ2 ],
       };
 
       questoes.submitScore(data);
+      */
     });
   });
 </script>

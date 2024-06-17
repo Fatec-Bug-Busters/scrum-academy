@@ -1,7 +1,9 @@
 function toggleText(container) {
-  container.classList.toggle('active');
+  container.classList.add('active');
 }
 
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 $(document).ready(function () {
 
@@ -79,7 +81,7 @@ $(document).ready(function () {
       type: 'POST',
       url: '/logout',
     });
-    window.location.reload();
+    window.location.assign("/");
   });
 
 
@@ -452,56 +454,68 @@ $(document).ready(function () {
       return estaCorreta;
     };
 
+
+    /** Display popover to user */
+    let displayPopover = function (totalCorrect, redirectUrl, redirectText = null) {
+      const popup = $("#resultPopup");
+      const overlay = $("#overlay");
+      const popupContent = $("#popupContent");
+      let redText = redirectText ?? "Ir para o Próximo conteúdo";
+
+      popupContent.html(`
+      <div class="card-cadastro1">
+          <span class="titulo-cadastro">Parabéns!</span>
+          <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${ totalCorrect } de 2 questões.</p>
+          <div class="cadastro" style="display: flex;">
+              <a href="${ redirectUrl }">
+                  <button class="botao-enviar-email"> ${ redText }</button>
+              </a>
+              <a href="/">
+                <button class="botao-enviar-email">Voltar para o início</button>
+              </a>
+          </div>
+      </div>`);
+      popup.css({ display: "block" })
+      overlay.css({ display: "block" })
+    }
+    /** Close popup */
+    $("#overlay").on('click', function () {
+      // Close pop up
+      const popup = $("#resultPopup");
+      const overlay = $("#overlay");
+      popup.css({ display: "none" })
+      overlay.css({ display: "none" })
+    });
+
     /**
-     * Submit score to the server
+     * Submit exam to the server
+     *
+     * @param {mixed} data  Data to sent to server
+     * @param {Callable} onSuccess  callback executed on success
      */
-    let submitScore = function (data) {
-      /** Display popup to user */
-      let displayPopup = function (totalCorrect) {
-        const popup = $("#resultPopup");
-        const overlay = $("#overlay");
-        const popupContent = $("#popupContent");
-        popupContent.html(`
-        <div class="card-cadastro1">
-            <span class="titulo-cadastro">Parabéns!</span>
-            <p class="mensagem-cadastro" style="margin-bottom: 20px">Você acertou um total de ${ totalCorrect } de 2 questões.</p>
-            <div class="cadastro" style="display: flex;">
-                <a href="/estimativas">
-                    <button class="botao-enviar-email"> Ir para o Próximo conteúdo</button>
-                </a>
-            </div>
-        </div>`);
-        popup.css({ display: "block" })
-        overlay.css({ display: "block" })
-      }
-      /** Close popup */
-      $("#overlay").on('click', function () {
-        // Close pop up
-        const popup = $("#resultPopup");
-        const overlay = $("#overlay");
-        popup.css({ display: "none" })
-        overlay.css({ display: "none" })
-      });
-
-
-      // Enviar para o servidor
+    let submitScore = function (data, onSuccess) {
       $.ajax({
-        url: '/submit-score',
+        url: '/submit-score-exame',
         method: 'POST',
         contentType: 'application/json',
         dataType: 'json',
         data: JSON.stringify(data),
         success: function (dataS, status, jqXHR) {
           // console.log('data', data)
+          console.log(typeof onSuccess)
 
-          // Mostrar mensagem ao usuário
-          displayPopup(dataS.totalCorrect);
+          // if (onSuccess) {
+          //    onSuccess(dataS, status);
+          // }
+
+          // // Mostrar mensagem ao usuário
+          // displayPopover(dataS.totalCorrect);
         },
         error: function () {
           console.error('Erro ao enviar dados:', error);
         },
       });
-    };
+    }
 
     // public methods
     return {
@@ -510,6 +524,7 @@ $(document).ready(function () {
       fillBlanks: fillBlanks,
       assoc: assoc,
       valida: valida,
+      displayPopover: displayPopover,
       submitScore: submitScore,
     };
   }
